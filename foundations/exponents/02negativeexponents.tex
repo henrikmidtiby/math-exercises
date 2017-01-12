@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+\newenvironment{exercise}[1]{\newpage\section{#1}}{}
+\newcommand{\answerbox}[1]{\fbox{$#1$}}
+\newcommand{\hint}{\subsection*{Hint}}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Differentiering 1-1}
+
+Bestem $\frac{d}{dx} x^2$.
+
+\answerbox{2x}
+
+\hint
+
+Benyt formlen
+\[
+\frac{d}{dx} x^n = n \cdot x^{n - 1}
+\]
+
+\hint
+
+Sæt $n = 2$
+\[
+\frac{d}{dx} x^2 = 2 \cdot x^{2 - 1} = 2 x
+\]
+
+\end{exercise}
+
+\end{document}
