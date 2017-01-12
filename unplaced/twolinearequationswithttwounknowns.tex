@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+
+\newenvironment{exercise}[1]{\newpage\section{#1}}{}
+
+\newcommand{\answerbox}[1]{\fbox{$#1$}}
+
+\newenvironment{multichoice}[1][]{\par\noindent{}Parametre: #1\begin{itemize}}{\end{itemize}}
+\newcommand{\itemtrue}{\item (true) }
+\newcommand{\itemfalse}{\item (false) }
+
+\newenvironment{answermatrix}{\(\begin{pmatrix}}{\end{pmatrix}\)}
+
+
+\newcommand{\hint}{\subsection*{Hint}}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Ligningssystemer 1-1}
+
+Givet ligningerne \(2x + y = 3\) og \(x - y = 0\) bestem \(x\) og \(y\).
+
+\(x = \) \answerbox{1}
+
+\(y = \) \answerbox{1}
+
+\hint
+
+Læg de to ligninger sammen, det giver \(3x = 3\). Derefter kan \(x\) findes og vi har \(x = 1\).
+
+\hint
+Indsæt \(x = 1\) i den første ligning. 
+
+\hint
+Det giver \(2 \cdot 1 + y = 3\), der forenkles til \(2 + y = 3\), 
+hvoraf \(y = 1\) findes.
+
+\end{exercise}
+
+
+
+\begin{exercise}{Ligningssystemer 1-2}
+
+Givet ligningerne \(4x + y = 11\) og \(x - y = -1\) bestem \(x\) og \(y\).
+
+\(x = \) \answerbox{2}
+
+\(y = \) \answerbox{3}
+
+\hint
+
+Læg de to ligninger sammen, det giver \(5x = 10\). Derefter kan \(x\) findes og vi har \(x = 2\).
+
+\hint
+Indsæt \(x = 2\) i den første ligning. 
+
+\hint
+Det giver \(4 \cdot 2 + y = 11\), der forenkles til \(8 + y = 11\), 
+hvoraf \(y = 3\) findes.
+
+\end{exercise}
+
+
+
+\begin{exercise}{Multiple choice test 1}
+
+Er ligningen herunder linært i $x$, $y$ og $z$?
+\[
+2x + 3y + z = 2
+\]
+
+\begin{multichoice}[randomizeorder, selectmultiple]
+\itemtrue ja
+\itemfalse nej
+\end{multichoice}
+
+\hint
+Test
+
+\end{exercise}
+
+
+\begin{exercise}{Matrix test 1}
+
+Skriv ligningssystemet herunder på matrix form
+\[
+2x + 3y = 2 \qquad \qquad
+x - y = 1
+\]
+
+Dvs. skriv det på formen
+\[
+A \cdot \vec{x} = \vec{b} \qquad \qquad \vec{x} = (x, y)^T
+\]
+og angiv værdierne i \(A\) og \(\vec{b}\).
+
+\( A = \)
+\begin{answermatrix}
+2 & 3 \\
+1 & -1
+\end{answermatrix}
+
+
+\( \vec{b} = \)
+\begin{answermatrix}
+2 \\
+1
+\end{answermatrix}
+
+\hint
+Test
+\end{exercise}
+
+
+
+\end{document}

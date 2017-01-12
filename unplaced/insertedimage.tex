@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+
+\newenvironment{exercise}[1]{\newpage\section{#1}}{}
+
+\newcommand{\answerbox}[1]{\fbox{$#1$}}
+\newcommand{\image}[2]{\includegraphics[scale=#1]{#2}}
+
+\newcommand{\hint}{\subsection*{Hint}}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Øvelse med billede}
+
+\image{0.25}{mathexerciseimages/complexnumbers/modulusandargument/modulusandargument.png}
+
+
+Tester
+
+Skriv et i feltet herunder.
+
+
+\answerbox{1}
+
+\hint
+Skriv $1$.
+\end{exercise}
+
+\end{document}

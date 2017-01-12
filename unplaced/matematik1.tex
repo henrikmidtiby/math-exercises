@@ -1,0 +1,965 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+
+\newenvironment{exercise}[1]{\newpage\section{#1}}{}
+
+\newcommand{\answerbox}[1]{\fbox{$#1$}}
+
+\newcommand{\hint}{\subsection*{Hint}}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Blok 01 - Differentiering 1 - 01}
+
+Bestem $\frac{d}{dx} x^2$.
+
+\answerbox{2x}
+
+\hint
+
+Benyt formlen
+\[
+\frac{d}{dx} x^n = n \cdot x^{n - 1}
+\]
+
+\hint
+
+Sæt $n = 2$
+\[
+\frac{d}{dx} x^2 = 2 \cdot x^{2 - 1} = 2 x
+\]
+\end{exercise}
+
+\begin{exercise}{Blok 01 - Differentiering 1 - 02}
+
+Bestem $\frac{d}{dx} x^3$.
+
+\answerbox{3x^2}
+
+\hint
+
+Benyt formlen
+\[
+\frac{d}{dx} x^n = n \cdot x^{n - 1}
+\]
+
+\hint
+
+Sæt $n = 3$
+\[
+\frac{d}{dx} x^3 = 3 \cdot x^{3 - 1} = 3 x^2
+\]
+\end{exercise}
+
+\begin{exercise}{Blok 01 - Differentiering 1 - 03}
+
+Bestem $\frac{d}{dx} x^4$.
+
+\answerbox{4x^3}
+
+\hint
+
+Benyt formlen
+\[
+\frac{d}{dx} x^n = n \cdot x^{n - 1}
+\]
+
+\hint
+
+Sæt $n = 4$
+\[
+\frac{d}{dx} x^4 = 4 \cdot x^{4 - 1} = 4 x^3
+\]
+\end{exercise}
+
+\begin{exercise}{Blok 01 - Differentiering 1 - 04}
+
+Bestem $\frac{d}{dx} x^5$.
+
+\answerbox{5x^4}
+
+\hint
+
+Benyt formlen
+\[
+\frac{d}{dx} x^n = n \cdot x^{n - 1}
+\]
+
+\hint
+
+Sæt $n = 5$
+\[
+\frac{d}{dx} x^5 = 5 \cdot x^{5 - 1} = 5 x^4
+\]
+\end{exercise}
+
+\begin{exercise}{Blok 01 - Differentiering 1 - 05}
+
+Bestem $\frac{d}{dx} x^6$.
+
+\answerbox{6x^5}
+
+\hint
+
+Benyt formlen
+\[
+\frac{d}{dx} x^n = n \cdot x^{n - 1}
+\]
+
+\hint
+
+Sæt $n = 6$
+\[
+\frac{d}{dx} x^6 = 6 \cdot x^{6 - 1} = 6 x^5
+\]
+\end{exercise}
+
+\begin{exercise}{Blok 01 - Differentiering 2 - 01}
+
+Bestem $\frac{d}{dx} (x + 3)^4$.
+
+\answerbox{4 (x + 3)^3}
+
+\hint
+Benyt kæde reglen
+\[
+\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+\]
+
+\hint
+Sæt $f(x) = x^4$ og $g(x) = x + 3$ og bestem $f'(x)$ og $g'(x)$.
+\[
+f'(x) = 4 x^3 \qquad g'(x) = 1
+\]
+
+\hint
+Indsæt i kædereglen
+\[
+\frac{d}{dx} (x + 3)^4 = 4 (x + 3)^3 \cdot 1 = 4 (x + 3)^3
+\]
+
+\end{exercise}
+
+\begin{exercise}{Blok 01 - Differentiering 2 - 02}
+
+Bestem $\frac{d}{dx} e^{2x + x^2}$.
+
+\answerbox{e^{2x + x^2} \cdot (2 + 2x)}
+
+\hint
+Benyt kæde reglen
+\[
+\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+\]
+
+\hint
+Sæt $f(x) = e^x$ og $g(x) = 2x + x^2$ og bestem $f'(x)$ og $g'(x)$.
+\[
+f'(x) = e^x \qquad g'(x) = 2 + 2x
+\]
+
+\hint
+Indsæt i kædereglen
+\[
+\frac{d}{dx} e^{2x + x^2} = e^{2x + x^2} \cdot (2 + 2x)
+\]
+
+\end{exercise}
+
+
+\begin{exercise}{Blok 01 - Differentiering 3 - 01}
+Bestem $\frac{d}{dx} \left( x \cdot e^{2x^2} \right)$.
+
+\answerbox{e^{2x^2} \cdot (1 + 4x^2)}
+
+\hint
+Benyt produkt reglen
+\[
+\frac{d}{dx} \left( f(x) \cdot g(x) \right) = \frac{d}{dx} \left( f(x) \right) \cdot g(x) + f(x) \cdot \frac{d}{dx} \left( g(x) \right)
+\]
+
+\hint
+Sæt $f(x) = x$ og $g(x) = e^{2x^2}$
+\[
+\frac{d}{dx} \left( x \cdot e^{2x^2} \right) = \frac{d}{dx} \left( x \right) \cdot e^{2x^2} + x \cdot \frac{d}{dx} \left( e^{2x^2} \right)
+\]
+
+\hint
+Differentier delled 1.
+\[
+\frac{d}{dx} \left( x \right) = 1
+\]
+og delled 2, her skal kædereglen benyttes for at finde resultatet.
+\[
+\frac{d}{dx} \left( e^{2x^2} \right) = e^{2x^2} \cdot 4x
+\]
+
+
+\hint
+Delresultaterne indsættes og vi får
+\[
+\frac{d}{dx} \left( x \cdot e^{2x^2} \right) = 1 \cdot e^{2x^2} + x \cdot e^{2x^2} \cdot 4x
+\]
+
+\hint
+Der forenkles til 
+\[
+\frac{d}{dx} \left( x \cdot e^{2x^2} \right) = e^{2x^2} \cdot (1 + 4x^2) 
+\]
+
+\end{exercise}
+
+
+
+\begin{exercise}{Blok 01 - Differentiering 3 - 02}
+Bestem $\frac{d}{dx} \left( e^x \cdot \sin(x) \right)$.
+
+\answerbox{e^x \cdot \sin(x) + e^x \cdot \cos(x)}
+
+\hint
+Benyt produkt reglen
+\[
+\frac{d}{dx} \left( f(x) \cdot g(x) \right) = \frac{d}{dx} \left( f(x) \right) \cdot g(x) + f(x) \cdot \frac{d}{dx} \left( g(x) \right)
+\]
+
+\hint
+Sæt $f(x) = e^x$ og $g(x) = \sin(x)$
+\[
+\frac{d}{dx} \left( e^x \cdot \sin(x) \right) = \frac{d}{dx} \left( e^x \right) \cdot \sin(x) + e^x \cdot \frac{d}{dx} \left( \sin(x) \right)
+\]
+
+\hint
+Differentier delled.
+\[
+\frac{d}{dx} \left( x \cdot \sin(x) \right) = e^x \cdot \sin(x) + e^x \cdot \cos(x)
+\]
+\end{exercise}
+
+
+
+\begin{exercise}{Blok 01 - Differentiering 3 - 03}
+Bestem $\frac{d}{dx} \left( \sin(e^x) \right)$.
+
+\answerbox{e^x \cdot \cos(e^x)}
+
+\hint
+Benyt kæde reglen
+\[
+\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+\]
+
+\hint
+Sæt $f(x) = \sin(x)$ og $g(x) = e^x$ og bestem $f'(x)$ og $g'(x)$.
+\[
+f'(x) = \cos(x) \qquad g'(x) = e^x
+\]
+
+\hint
+Indsæt i kædereglen
+\[
+\frac{d}{dx} \sin(e^x) = \cos(e^x) \cdot e^x
+\]
+\end{exercise}
+
+
+\begin{exercise}{Blok 01 - Differentiering 4 - 01}
+% Adams 3.5.19
+Bestem $\frac{d}{dx} \arcsin\left( \frac{2x-1}{3} \right)$.
+
+\answerbox{(2+x-x^2)^{-1/2}}
+
+
+\hint
+\[
+\frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1 - x^ 2}}
+\]
+
+
+\hint
+Benyt kæde reglen
+\[
+\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+\]
+
+\hint
+Sæt $f(x) = \arcsin(x)$ og $g(x) = \frac{2x - 1}{3}$.
+
+\hint
+Bestem $f'(x)$ og $g'(x)$.
+\[
+f'(x) = \frac{1}{\sqrt{1 - x^ 2}} \qquad g'(x) = 2/3
+\]
+
+\hint
+Indsæt i kædereglen
+\[
+\frac{d}{dx} \arcsin\left( \frac{2x-1}{3} \right) = \frac{1}{\sqrt{1 - \left( \frac{2x - 1}{3} \right)^ 2}} \cdot \frac{2}{3}
+\]
+
+\hint
+Fjern parentesen under kvadratrodstegnet
+\[
+\frac{1}{\sqrt{1 - \left( \frac{2x - 1}{3} \right)^ 2}} \cdot \frac{2}{3}
+= \frac{1}{\sqrt{\frac{9 - 4x^2 + 4x - 1}{9}}} \cdot \frac{2}{3}
+\]
+
+\hint
+Lidt forenklinger
+\[
+\frac{1}{\sqrt{\frac{9 - 4x^2 + 4x - 1}{9}}} \cdot \frac{2}{3}
+= \frac{2}{\sqrt{8 - 4x^2 + 4x}}
+= \frac{1}{\sqrt{2 - x^2 + x}}
+\]
+\end{exercise}
+
+
+
+
+\begin{exercise}{Blok 01 - Differentiering 4 - 02}
+% Adams 3.5.20
+Differentier udtrykket $\arctan\left( a x + b \right)$ med hensyn til $x$.
+
+\answerbox{\frac{a}{1+(a \cdot x +b)^2}}
+
+\hint
+\[
+\frac{d}{dx} \arctan(x) = \frac{1}{1 + x^ 2}
+\]
+
+
+\hint
+Benyt kæde reglen
+\[
+\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+\]
+
+\hint
+Sæt $f(x) = \arctan(x)$ og $g(x) = a \cdot x + b$.
+
+\hint
+Bestem $f'(x)$ og $g'(x)$.
+\[
+f'(x) = \frac{1}{1 + x^ 2} \qquad g'(x) = a
+\]
+
+\hint
+Indsæt i kædereglen
+\[
+\frac{d}{dx} \arctan\left( a \cdot x + b \right) = \frac{1}{1 + \left( a \cdot x + b \right)^2} \cdot a
+\]
+
+\hint
+Lidt forenklinger
+\[
+\frac{a}{1 + \left( a \cdot x + b \right)^2}
+\]
+\end{exercise}
+
+
+\begin{exercise}{Linearisering 1}
+% Adams 4.9.7
+Lineariser nedenstående funktion omkring punktet $x = \pi$.
+\[
+\sin(x)
+\]
+
+\answerbox{\pi - x}
+
+\hint
+Lineariseringen af en funktion $f(x)$
+omkring punktet $x_0$ er givet ved
+\[
+f(x_0) + f'(x_0) \cdot (x - x_0)
+\]
+
+\hint
+Vi anvender $f(x) = \sin(x)$ og $x_0 = \pi$.
+
+\hint
+$f'(x)$ bestemmes
+\[
+f'(x) = \cos(x)
+\]
+
+\hint
+Værdierne fra opgaven indsættes i udtrykket for lineariseringen.
+\[
+\sin(\pi) + \cos(\pi) \cdot (x - \pi)
+\]
+
+\hint
+Der forsimples
+\[
+\sin(\pi) = 0 \qquad 
+\cos(\pi) = -1
+\]
+og indsættes i udtrykket
+\[
+(0) + (-1) \cdot (x - \pi) = 
+\pi - x
+\]
+
+\end{exercise}
+
+
+\begin{exercise}{Linearisering 2}
+% Adams 4.9.19
+Benyt en passende linearisering til at approksimere
+\[
+\cos(49^\circ)
+\]
+angiv resultatet med fire decimalaer i boksen herunder.
+\answerbox{0.6577}
+
+\hint
+Først skal vi vælge den funktion der skal approksimeres
+og det punkt som der skal bruges som udgangspunkt for 
+approksimationen.
+For at vi kan bestemme approksimationen skal vi 
+kende funktionsværdien og dens afledte i punktet.
+
+\hint
+Vi vælger funktionen $f(x) = \cos(x)$ og at approksimere den 
+omkring $x_0 = 45^\circ = \pi / 4$.
+Så kan vi nemlig godt finde værdierne af $f(\pi / 4)$ og $f'(\pi / 4)$.
+\[
+f(\pi / 4) = \cos(\pi / 4) = \frac{1}{\sqrt{2}}
+\]
+\[
+f'(\pi / 4) = -\sin(\pi / 4) = \frac{-1}{\sqrt{2}}
+\]
+
+\hint
+Lineariseringen opskrives
+\[
+L(x) = \frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}} \cdot (x - \pi / 4)
+\]
+
+\hint
+Værdien i punktet bestemmes
+\[
+L(49 \cdot \pi / 180) = \frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}} \cdot (49 \cdot \pi / 180 - \pi / 4) 
+\]
+det forsimples til 
+\[
+\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}} \cdot \pi / 45
+\]
+som vha. lommeregner bestemmes til 
+\[
+0.657741 \simeq 0.6577
+\]
+
+\hint
+For at vurdere fejlen på approksimationen, ser på anden 
+ordens taylor udviklingen (en orden højere end den 
+anvendte linearisering).
+\[
+f(x_0) 
+	+ \frac{f'(x_0)}{1!} \cdot (x - x_0) 
+	+ \frac{f''(x_0)}{2!} \cdot (x - x_0)^2
+\]
+Fejlen er relateret til det sidste led i det ovenstående udtryk.
+Hvor $f''(x_0)$ udskiftes med $f''(c)$ hvor $c \in [x_0; x]$.
+\[
+\textrm{fejl} = \frac{f''(c)}{2!} \cdot (x - x_0)^2
+\]
+
+\hint 
+Antager man at $c = \pi/4$, fåes følgende fejlvurdering
+\[
+\textrm{fejl} = \frac{f''(\pi/4)}{2!} \cdot (49 \cdot \pi / 180 - \pi / 4)^2 = 
+-0.00172318\]
+
+\hint
+Sammenligning mellem reel værdi, approksimeret værdi og estimeret maksimal fejl.
+\[
+\cos(49 \cdot \pi/180) = 0.656059
+\]
+\[
+L(49 \cdot \pi/180) = 0.657741
+\]
+\[
+\cos(49 \cdot \pi/180) - L(49 \cdot \pi/180) = -0.001682
+\]
+
+\end{exercise}
+
+
+\begin{exercise}{Taylor polynomier 1}
+
+Lav et fjerde ordens Taylor polynomie for $f(x) = e^{-x}$
+omkring $x = 0$.
+
+\answerbox{1 - x + \frac{x^2}{2} - \frac{x^3}{6} + \frac{x^4}{24}}
+
+\hint
+Et fjerde ordens Taylor polynomie for en funktion $f(x)$
+omkring $x_0$ er givet ved
+\[
+f(x_0) + \frac{f'(x_0)}{1!} \cdot (x - x_0) + \frac{f''(x_0)}{2!} \cdot (x - x_0)^2 + \frac{f'''(x_0)}{3!} \cdot (x - x_0)^3 + \frac{f''''(x_0)}{4!} \cdot (x - x_0)^4
+\]
+
+\hint
+Bestem $f(x_0) = f(0)$
+\[
+f(0) = e^{-0} = 1
+\]
+
+\hint
+Bestem $f'(x_0) = f'(0)$
+\[
+f'(0) = \frac{d}{dx} e^{-x} \Big|_{x = 0} = -e^{-0} = -1
+\]
+
+\hint
+Bestem $f''(x_0) = f''(0)$
+\[
+f''(0) = \frac{d^2}{dx^2} e^{-x} \Big|_{x = 0} = e^{-0} = 1
+\]
+
+\hint
+Bestem $f'''(x_0) = f'''(0)$
+\[
+f'''(0) = \frac{d^3}{dx^3} e^{-x} \Big|_{x = 0} = -e^{-0} = -1
+\]
+
+\hint
+Bestem $f''''(x_0) = f''''(0)$
+\[
+f''''(0) = \frac{d^4}{dx^4} e^{-x} \Big|_{x = 0} = e^{-0} = 1
+\]
+
+\hint
+Sæt værdierne ind i opskriften givet i det første hint.
+\[
+1 + \frac{-1}{1!} \cdot (x - 0) + \frac{1}{2!} \cdot (x - 0)^2 + \frac{-1}{3!} \cdot (x - 0)^3 + \frac{1}{4!} \cdot (x - 0)^4
+\]
+
+\hint
+Forenkel udtrykket
+\[
+1 - x + \frac{x^2}{2} - \frac{x^3}{6} + \frac{x^4}{24}
+\]
+
+\end{exercise}
+
+
+\begin{exercise}{Taylor polynomier 2}
+
+Lav et treje ordens Taylor polynomie for $f(x) = \sqrt{x}$
+omkring $x = 4$.
+
+\answerbox{1 + \frac{x - 4}{4} - \frac{(x - 4)^2}{64} + \frac{(x - 4)^3}{512}}
+
+\hint
+Et trejde ordens Taylor polynomie for en funktion $f(x)$
+omkring $x_0$ er givet ved
+\[
+f(x_0) + \frac{f'(x_0)}{1!} \cdot (x - x_0) + \frac{f''(x_0)}{2!} \cdot (x - x_0)^2 + \frac{f'''(x_0)}{3!} \cdot (x - x_0)^3
+\]
+
+\hint
+Bestem $f(x_0) = f(4)$
+\[
+f(4) = \sqrt{4} = 2
+\]
+
+\hint
+Bestem $f'(x_0) = f'(4)$
+\[
+f'(4) = \frac{d}{dx} x^{1/2} \Big|_{x = 4} = \frac{1}{2} \cdot x^{-1/2} \Big|_{x = 4} = \frac{1}{4}
+\]
+
+\hint
+Bestem $f''(x_0) = f''(4)$
+\[
+f''(4) = \frac{d}{dx} \left( \frac{1}{2} \cdot x^{-1/2} \right) \Big|_{x = 4} = \frac{1}{2} \cdot \frac{-1}{2} \cdot x^{-3/2} \Big|_{x = 4} = \frac{-1}{4} \cdot \frac{1}{8} = \frac{-1}{32}
+\]
+
+\hint
+Bestem $f'''(x_0) = f'''(0)$
+\[
+f'''(4) = \frac{d}{dx} \left( \frac{-1}{4} \cdot x^{-3/2} \right) \Big|_{x = 4} = \frac{-1}{4} \cdot \frac{-3}{2} \cdot x^{-5/2} \Big|_{x = 4} = \frac{3}{8} \cdot \frac{1}{32} = \frac{3}{256} 
+\]
+
+\hint
+Sæt værdierne ind i opskriften givet i det første hint.
+\[
+1 + \frac{1/4}{1!} \cdot (x - 4) + \frac{-1 / 32}{2!} \cdot (x - 4)^2 + \frac{3 / 256}{3!}  \cdot (x - 4)^3
+\]
+
+\hint
+Forenkel udtrykket
+\[
+1 + \frac{x - 4}{4} - \frac{(x - 4)^2}{64} + \frac{(x - 4)^3}{512}
+\]
+
+\end{exercise}
+
+\begin{exercise}{Taylor polynomier 3}
+
+Bestem et første ordens taylor polynomie for $f(x) = x^3 - x + 1$
+omkring $x_0 = -1$.
+
+\answerbox{1 + (x + 1)}
+
+\hint
+Et første ordens taylor polynomie (dvs. en linearisering) 
+er givet ved
+\[
+p_1(x) = f(x_0) + \frac{f'(x_0)}{1!} \cdot (x - x_0)
+\]
+
+
+\hint
+Bestem først $f'(x)$
+\[
+f'(x) = 3x^2 - 1
+\]
+
+\hint
+Bestem $f(x_0) = f(-1) = 1$.
+
+\hint
+Bestem $f'(x_0) = f'(-1) = 2$.
+
+\hint
+Sæt det hele sammen
+\[
+p_1(x) = 1 + \frac{2}{1!} \cdot \left(x - (-1)\right)
+\]
+
+\hint
+Forenkel udtrykket
+\[
+p_1(x) = 1 + (x + 1)
+\]
+
+
+\end{exercise}
+
+
+\begin{exercise}{Taylor polynomier 4}
+
+Bestem et anden ordens taylor polynomie for $f(x) = x^4 - 7x$
+omkring $x_0 = 2$.
+
+\answerbox{2 + 25 \cdot (x - 2) + 24 \cdot (x - 2)^2}
+
+\hint
+Et anden ordens taylor polynomie 
+er givet ved
+\[
+p_2(x) = f(x_0) + \frac{f'(x_0)}{1!} \cdot (x - x_0)
+ + \frac{f''(x_0)}{2!} \cdot (x - x_0)^2
+\]
+
+
+\hint
+Bestem $f(x_0)$
+\[
+f(x_0) = f(2) = 2
+\]
+
+\hint
+Bestem $f'(x)$ og $f'(x_0)$
+\[
+f'(x) = 4x^3-7 \qquad f'(x_0) = f'(2) = 25
+\]
+
+\hint
+Bestem $f''(x)$ og $f''(x_0)$
+\[
+f''(x) = 12 x^2 \qquad f''(x_0) = f''(2) = 48
+\]
+
+\hint
+Sæt det hele sammen
+\[
+p_2(x) = 2 + \frac{25}{1!} \cdot \left(x - 2\right) + \frac{48}{2!} \cdot \left(x - 2\right)^2
+\]
+
+\hint
+Forenkel udtrykket
+\[
+p_2(x) = 2 + 25 \cdot \left(x - 2\right) + 24 \cdot \left(x - 2\right)^2
+\]
+
+
+\end{exercise}
+
+
+\begin{exercise}{Taylor polynomier 5}
+
+Bestem et anden ordens taylor polynomie for $f(x) = 3 x^2 + x^3$
+omkring $x_0 = 1$.
+Benyt taylor polynomiet til at estimere $f(1.1)$.
+
+\answerbox{4.96}
+
+\hint
+Et anden ordens taylor polynomie 
+er givet ved
+\[
+p_2(x) = f(x_0) + \frac{f'(x_0)}{1!} \cdot (x - x_0)
+ + \frac{f''(x_0)}{2!} \cdot (x - x_0)^2
+\]
+
+
+\hint
+Bestem $f(x_0)$
+\[
+f(x_0) = f(1) = 3 \cdot 1^2 + 1^3 = 4
+\]
+
+\hint
+Bestem $f'(x)$ og $f'(x_0)$
+\[
+f'(x) = 6 x + 3 x^2 \qquad f'(x_0) = f'(1) = 9
+\]
+
+\hint
+Bestem $f''(x)$ og $f''(x_0)$
+\[
+f''(x) = 6 + 6x \qquad f''(x_0) = f''(1) = 12
+\]
+
+\hint
+Sæt det hele sammen
+\[
+p_2(x) = 4 + \frac{9}{1!} \cdot \left(x - 1\right) + \frac{12}{2!} \cdot \left(x - 1\right)^2
+\]
+
+\hint
+Forenkel udtrykket
+\[
+p_2(x) = 4 + 9 \cdot \left(x - 1\right) + 6 \cdot \left(x - 1\right)^2
+\]
+
+\hint
+Estimer $f(1.1)$ vha. taylor polynomiet, ved at indsætte i $p_2(x)$.
+Evaluer $p_2(1.1)$.
+
+\hint
+\[
+p_2(1.1) = 4 + 9 \cdot \left(1.1 - 1\right) + 6 \cdot \left(1.1 - 1\right)^2 
+ = 4 + 9 \cdot 0.1 + 6 \cdot 0.01 = 4.96
+\]
+
+
+
+\end{exercise}
+
+\begin{exercise}{LHopital 1}
+Bestem grænseværdien.
+\[
+\lim_{x \to 1} \frac{e^x - 1}{(x - 1)^2}
+\]
+
+Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
+
+\answerbox{uendelig}
+
+\hint
+Først undersøges det om vi må anvende L'Hopital.
+
+\hint
+Grænserne af tælleren og nævneren bestemmes.
+\[
+\lim_{x \to 1} (e^x - 1) = e^1 - 1 = e - 1 \neq 0 \\
+\lim_{x \to 1} (x - 1)^2 = (1 - 1)^2 = 0
+\]
+
+\hint
+Da de to grænser ikke begge er nul eller uendelig, må vi ikke anvende L'Hopitals regel. 
+
+\hint
+Vi ender i følgende situtation.
+\[
+\left[ \frac{e - 1}{0} \right]
+\]
+
+\hint
+Hvor noget endeligt ($e - 1$) deles med noget der går mod nul.
+Bemærk at $(x - 1)^2$ altid er større eller lig med nul. 
+
+Derfor går hele værdien mod uendelig.
+\[
+\lim_{x \to 1} \frac{e^x - 1}{(x - 1)^2} = \infty
+\]
+
+\end{exercise}
+
+\begin{exercise}{Separabel differentialligning 1}
+
+Løs den separable differentialligning:
+\[
+\frac{dy}{dx} = \frac{1}{x} \cdot \frac{1}{y^2}
+\]
+
+Indskriv et udtryk for $y^3$.
+
+\answerbox{3 \ln(x) + C}
+
+\hint
+
+
+Først konstateres det at ligningen er separabel, derefter 
+ganges der igennem med $y^2$.
+\[
+y^2 \cdot \frac{dy}{dx} = \frac{1}{x}
+\]
+
+\hint
+Så integreres der mht. $x$.
+\[
+\int y^2 \cdot \frac{dy}{dx} \, dx = \int \frac{1}{x} \, dx
+\]
+
+\hint
+$dx$'erne går ud med hinanden på venstresiden.
+\[
+\int y^2 \, dy = \int \frac{1}{x} \, dx
+\]
+
+\hint
+Integralerne løses.
+\[
+\frac{1}{3} y^3 + C_1 = \ln(x) + C_2
+\]
+
+\hint
+Der ganges igennem med 3 og konstanterne samles i $C$.
+\[
+y^3 = 3 \ln(x) + C
+\]
+
+\end{exercise}
+
+
+\begin{exercise}{Rumgeometri 1}
+
+Find en enhedsvektor der er vinkelret på det plan
+der indholder punkterne $(a, 0, 0)$, $(0, b, 0)$ og
+$(0, 0, c)$.
+Hvad er arealet af den trekant der er udspændt af 
+disse tre punkter?
+
+Intet svar...
+\answerbox{0}
+
+\hint
+Kan løses ved at finde to vektorer der ligger i planet
+og derefter finde en vektor der er vinkelret på 
+disse to vektorer.
+
+\hint
+Krydsproduktet kan bruges til at finde en vektor der
+er vinkelret på to andre vektorer.
+
+\hint
+Krydsproduktet kan også bruges til at bestemme arealet.
+
+\end{exercise}
+
+
+\begin{exercise}{Rumgeometri 2}
+
+Find en enhedsvektor med en positiv $\mathbf{k}$ komponent, 
+der er vinkelret på både
+$2 \mathbf{i} - \mathbf{j} - 2 \mathbf{k}$
+og 
+$2 \mathbf{i} - 3\mathbf{j} + \mathbf{k}$.
+
+Intet svar...
+\answerbox{0}
+
+\hint
+Krydsproduktet kan bruges til at finde en vektor der
+er vinkelret på to andre vektorer.
+
+\hint
+Gang vektoren med en skalar for at få det rigtige fortegn
+på den ene koordinat.
+
+\end{exercise}
+
+
+\begin{exercise}{Rumgeometri 3}
+
+Bestem ligningen for det plan der går igennem
+punktet $(0, 2, -3)$ og er vinkelret på vektoren
+$4 \mathbf{i} - \mathbf{j} - 2 \mathbf{k}$.
+
+Intet svar...
+\answerbox{0}
+
+\hint
+\[
+\vec{n} \cdot \left( \vec{p} - \vec{p}_0 \right) = 0
+\]
+
+\end{exercise}
+
+
+\begin{exercise}{Rumgeometri 4}
+
+Bestem ligningen for det plan der går igennem
+de tre punter: (1, 1, 0), (2, 0, 2) og (0, 3, 3). 
+
+Intet svar...
+\answerbox{0}
+
+\hint
+Kan løses ved at finde to vektorer der ligger i planet
+og derefter finde en vektor der er vinkelret på 
+disse to vektorer.
+
+\hint
+Krydsproduktet kan bruges til at finde en vektor der
+er vinkelret på to andre vektorer.
+
+\hint
+\[
+\vec{n} \cdot \left( \vec{p} - \vec{p}_0 \right) = 0
+\]
+
+
+\end{exercise}
+
+
+\begin{exercise}{Rumgeometri 5}
+
+Under hvilke geometriske forhold vil tre punkter i 
+$\mathcal{R}^3$ ikke beskrive et unikt plan der går igennem
+alle punkterne?
+Hvordan kan denne betingelse skrives matematisk / algebraisk
+ud fra positionsvektorerne $\mathbf{r}_1$, $\mathbf{r}_2$ og
+$\mathbf{r}_3$ for de tre punkter?
+
+Intet svar...
+\answerbox{0}
+
+\hint
+Kan punkterne placeret uheldigt?
+
+\hint
+Hvad hvis de ligger på linje.
+
+\hint
+Lav en matrix med de koordinaterne til de tre punkter
+i hver linje.
+Hvis determinanten af matricen er 0 ligger punkterne på en linje, 
+og planet er derfor ikke bestemt.
+
+\end{exercise}
+
+
+\end{document}
