@@ -130,14 +130,30 @@ def render_exercise(exercise):
     return rendered_exercise
 
 
+def render_exercises(exercises):
+    rendered_exercises = []
+    for exercise in exercises:
+        rendered_exercise = render_exercise(exercise)
+        rendered_exercises.append(rendered_exercise)
+    return rendered_exercises
+
+
+def write_exercises_to_file(output_file, rendered_exercises):
+    output_file.write("[")
+    for exercise_number, exercise in enumerate(rendered_exercises):
+        if exercise_number > 0:
+            output_file.write(",")
+        output_file.write(exercise)
+    output_file.write("\n]\n")
+
+
 def extract_exercises_from_file(input_filename):
     output_filename = re.sub('\.tex', '.json', input_filename)
     with codecs.open(input_filename, "r", "utf-8") as fh, \
             codecs.open(output_filename, 'w', 'utf-8') as output_file:
         exercises = list(get_exercises(change_part_of_markup(fh)))
-        for exercise in exercises:
-            rendered_exercise = render_exercise(exercise)
-            output_file.write(rendered_exercise)
+        rendered_exercises = render_exercises(exercises)
+        write_exercises_to_file(output_file, rendered_exercises)
 
     print()
     print("found %d exercises" % exercises.__len__())
