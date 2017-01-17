@@ -1,0 +1,563 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+
+\newenvironment{exercise}[1]{\newpage\section{#1}}{}
+
+\newcommand{\answerbox}[1]{\fbox{$#1$}}
+
+\newcommand{\hint}{\subsection*{Hint}}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Separabel differentialligning 1-1}
+
+
+Find den generelle løsning til differentialligningen 
+\[
+\frac{dy}{dx} = x 
+\]
+Kald den ukendte konstant for A.
+
+$\textrm{Generel løsning } y(x)$ = \answerbox{\frac{1}{2}x^2 + A}
+
+\hint
+
+Først konstateres det at ligningen er separabel, idet den er på formen
+\[
+\frac{dy}{dx} = f(x) \cdot g(y)
+\]
+
+
+\hint
+
+Integrer på begge sider af lighedstegnet mht. x
+\[
+\int\frac{dy}{dx}\, dx= \int x\,dx
+\]
+
+\hint
+
+$dx$'erne går ud med hinanden på venstresiden.
+\[
+\int\ dy\,= \int x\,dx
+\]
+
+\hint
+
+Integralerne løses
+\[
+y + K_1 = \frac{1}{2} x^2 + K_2
+\]
+
+
+\hint
+
+Konstanter samles i $A$
+\[
+y = \frac{1}{2}x^2 + A
+\]
+hvor $A=K_2-K_1$
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Separabel differentialligning 1-2}
+
+	
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(x) = \frac{1}{2}x^2 + A
+	\]
+	Bestem konstanten A givet startbetingelsen $y(2)=7$.
+	
+	$A$ = \answerbox{5}
+	
+	\hint
+	
+	Indsæt startbetingelse i den generelle løsning. 
+
+	
+	\hint
+	
+	Vi indsætter først $x=2$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(2)= \frac{1}{2}(2)^2+A = 2 + A
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y=7$.
+
+	\hint 
+	
+	Det giver 
+		\[
+	7 = 2 + A \Rightarrow A = 5
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Separabel differentialligning 1-3}
+
+	
+	Find den generelle løsning til differentialligningen 
+	\[
+	\frac{dy}{dx} = x  \cdot \frac{1}{y}
+	\]
+	Kald den ukendte konstant for A.
+	
+	$\textrm{Generel løsning } y(x)$ = \answerbox{\pm \sqrt{x^2 + A}}
+	
+	\hint
+	
+	Først konstateres det at ligningen er separabel, idet den er på formen
+	\[
+	\frac{dy}{dx} = f(x) \cdot g(y)
+	\]
+	
+	\hint 
+	Der ganges igennem med $y$ på begge sider af lighedstegnet
+	\[
+	y \frac{dy}{dx} = x
+	\]
+	
+	\hint
+	
+	Integrer på begge sider af lighedstegnet mht. x
+	\[
+	\int\ y \frac{dy}{dx}\, dx= \int x\,dx
+	\]
+	
+	\hint
+	
+	$dx$'erne går ud med hinanden på venstresiden.
+	\[
+	\int\ y \, dy= \int x\,dx
+	\]
+	
+	\hint
+	
+	Integralerne løses
+	\[
+	\frac{1}{2} y^2 + K_1 = \frac{1}{2} x^2 + K_2
+	\]
+	
+	
+	\hint
+	
+	Der ganges igennem med 2, og konstanter samles i $A$
+	\[
+	y^2 = x^2 + A
+	\]
+	hvor $A=2(K_2-K_1)$
+	
+	\hint
+	$y$ isoleres ved at tage kvadratroden af begge sider
+	\[
+	y = \pm \sqrt{x^2 + A}
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Separabel differentialligning 1-4}
+
+	
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(x) = \sqrt{x^2 + A}
+	\]
+	Bestem konstanten A givet startbetingelsen $y(2)=5$.
+	
+	$A$ = \answerbox{21}
+	
+	\hint
+	
+	Indsæt startbetingelse i den generelle løsning. 
+	
+	
+	\hint
+	
+	Vi indsætter først $x=2$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(2)= \sqrt{2^2 + A} = \sqrt{4 + A}
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y=5$.
+	
+	\hint 
+	
+	Det giver 
+	\[
+	5 = \sqrt{4 + A} \Rightarrow 25 = 4 + A \Leftrightarrow A = 21	
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Separabel differentialligning 1-5}
+
+
+	Find den generelle løsning til differentialligningen 
+	\[
+	\frac{dy}{dx} = \sin(x)
+	\]
+	Kald den ukendte konstant for A.
+	
+	$\textrm{Generel løsning } y(x)$ = \answerbox{- \cos(x) + A}
+	
+	\hint
+	
+	Først konstateres det at ligningen er separabel, idet den er på formen
+	\[
+	\frac{dy}{dx} = f(x) \cdot g(y)
+	\]
+	
+	\hint
+	
+	Integrer på begge sider af lighedstegnet mht. x
+	\[
+	\int\ \frac{dy}{dx}\, dx= \int \sin (x)\,dx
+	\]
+	
+	\hint
+	
+	$dx$'erne går ud med hinanden på venstresiden.
+	\[
+	\int\ \, dy= \int \sin(x)\,dx
+	\]
+	
+	\hint
+	
+	Integralerne løses
+	\[
+	y + K_1 =- \cos (x) + K_2
+	\]
+	
+	
+	\hint
+	
+	Konstanter samles i A
+	\[
+	y = - \cos(x) + A
+	\]
+	hvor $A=K_2-K_1$
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Separabel differentialligning 1-6}
+
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(x) = - \cos(x) + A
+	\]
+	Bestem konstanten A givet startbetingelsen $y(\pi)=5$.
+	
+	$A$ = \answerbox{4}
+	
+	\hint
+	
+	Indsæt startbetingelse i den generelle løsning. 
+	
+	
+	\hint
+	
+	Vi indsætter først $x=\pi$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(\pi)= -\cos (\pi) + A = 1 + A
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y=5$.
+	
+	\hint 
+	
+	Det giver 
+	\[
+	5 = 1 + A  \Rightarrow A = 4
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Separabel differentialligning 1-7}
+
+	
+	Find den generelle løsning til differentialligningen 
+	\[
+	\frac{dy}{dx} = 5y
+	\]
+	Kald den ukendte konstant for A.
+	
+	$\textrm{Generel løsning } y(x)$ = \answerbox{A \cdot e^{5x}}
+	
+	\hint
+	
+	Først konstateres det at ligningen er separabel, idet den er på formen
+	\[
+	\frac{dy}{dx} = f(x) \cdot g(y)
+	\]
+	
+	\hint 
+	Der divideres med y på begge sider af lighedstegnet
+	\[
+	\frac{1}{y} \frac{dy}{dx} = 5
+	\]
+	
+	\hint
+	
+	Integrer på begge sider af lighedstegnet mht. x
+	\[
+	\int\ \frac{1}{y} \frac{dy}{dx} \, dx= \int 5 \,dx
+	\]
+	
+	\hint
+	
+	$dx$'erne går ud med hinanden på venstresiden og konstanten 5 trækkes uden for integrationstegnet
+	\[
+	\int\ \frac{1}{y}\, dy= 5 \cdot \int \,dx
+	\]
+	
+	\hint
+	
+	Integralerne løses
+	\[
+	\ln(y) + K_1 =5x + K_2
+	\]
+	
+	
+	\hint
+	
+	Konstanter samles i $K_3$
+	\[
+	\ln(y) =5x + K_3
+	\]
+	hvor $K_3=K_2-K_1$
+	
+	\hint 
+	
+	Vi opløfter begge sider i $e$ for at slippe af med $\ln(y)$
+	\[
+	y = e^{5x+K_3}
+	\]
+	
+	\hint
+	
+	Vha.  af potensregneregler omskrives udtrykket
+	\[
+	y = e^{5x} \cdot e^{K_3}
+	\]
+	
+	\hint
+	
+	Konstanter samles i $A$
+	\[
+	y = A \cdot e^{5x}
+	\]
+	hvor $ A= e^{K_3}$
+	
+	\end{exercise}
+
+\newpage
+
+\begin{exercise}{Separabel differentialligning 1-8}
+
+	
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(x) =  A \cdot e^{5x}
+	\]
+	Bestem konstanten A givet startbetingelsen $y(0)=7$.
+	
+	$A$ = \answerbox{7}
+	
+	\hint
+	
+	Indsæt startbetingelse i den generelle løsning. 
+	
+	
+	\hint
+	
+	Vi indsætter først $x=0$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(0)=  A \cdot e^{5 \cdot 0} = A \cdot e^0  = A
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y=7$.
+	
+	\hint 
+	
+	Det giver 
+	\[
+	7  = A  
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Separabel differentialligning 1-9}
+	
+	
+	Find den generelle løsning til differentialligningen 
+	\[
+	\frac{dy}{dx} = \frac{y}{2x}
+	\]
+	Kald den ukendte konstant for A.
+	
+	$\textrm{Generel løsning } y(x)$ = \answerbox{A \cdot \sqrt{x}}
+	
+	\hint
+	
+	Først konstateres det at ligningen er separabel, idet den er på formen
+	\[
+	\frac{dy}{dx} = f(x) \cdot g(y)
+	\]
+	
+	\hint 
+	Der divideres med y på begge sider af lighedstegnet
+	\[
+	\frac{1}{y} \frac{dy}{dx} = \frac{1}{2x}
+	\]
+	
+	\hint
+	
+	Integrer på begge sider af lighedstegnet mht. x
+	\[
+	\int\ \frac{1}{y} \frac{dy}{dx} \, dx= \int \frac{1}{2x} \,dx
+	\]
+	
+	\hint
+	
+	$dx$'erne går ud med hinanden på venstresiden og konstanten $\frac{1}{2}$ trækkes uden for integrationstegnet
+	\[
+	\int\ \frac{1}{y}\, dy= 5 \cdot \int \frac{1}{x}\,dx
+	\]
+	
+	\hint
+	
+	Integralerne løses
+	\[
+	\ln(y) + K_1 =\frac{1}{2} \ln(x) + K_2
+	\]
+	
+	
+	\hint
+	
+	Konstanter samles i $K_3$
+	\[
+	\ln(y) =\frac{1}{2} \ln(x) + K_3
+	\]
+	hvor $K_3=K_2-K_1$
+	
+	\hint 
+	
+	Vi opløfter begge sider i $e$ for at slippe af med $\ln(y)$
+	\[
+	y = e^{\frac{1}{2} \ln(x) + K_3}
+	\]
+	
+	\hint
+	
+	Vha.  af potensregneregler omskrives udtrykket
+	\[
+	y = e^{\frac{1}{2} \ln(x) + K_3} = e^{\frac{1}{2} \ln(x)}  \cdot e^{K_3}
+	\]
+	
+	\hint
+	
+	Konstanter samles i $A$
+	\[
+	y = A \cdot e^{\frac{1}{2} \ln(x)}
+	\]
+	hvor $ A= e^{K_3}$
+	
+	\hint 
+	
+	Udtrykket omskrives vha. logaritmeregler
+	\[
+	y = A \cdot e^{\frac{1}{2} \ln(x)} = A \cdot e^{\ln(x^{\frac{1}{2})}} = A \cdot x^{\frac{1}{2}} = A \cdot \sqrt{x}
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Separabel differentialligning 1-10}
+	
+	
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(x) =  A \cdot \sqrt{x}
+	\]
+	Bestem konstanten A givet startbetingelsen $y(9)=12$, hvor $A>0$.
+	
+	$A$ = \answerbox{4}
+	
+	\hint
+	
+	Indsæt startbetingelse i den generelle løsning. 
+	
+	
+	\hint
+	
+	Vi indsætter først $x=9$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(0)=  A \cdot \sqrt{9} = A	\cdot 3
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y=12$.
+	
+	\hint 
+	
+	Det giver 
+	\[
+	12  = 3A  \Rightarrow A = 4
+	\]
+	
+\end{exercise}
+
+\end{document}
+
