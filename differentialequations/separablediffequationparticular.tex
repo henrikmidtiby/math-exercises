@@ -1,0 +1,230 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+
+\newenvironment{exercise}[1]{\newpage\section{#1}}{}
+
+\newcommand{\answerbox}[1]{\fbox{$#1$}}
+
+\newcommand{\hint}{\subsection*{Hint}}
+
+\begin{document}
+\tableofcontents
+
+\newpage
+
+\begin{exercise}{Separabel differentialligning 2-1}
+
+	
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(x) = \frac{1}{2}x^2 + A
+	\]
+	Bestem konstanten A givet startbetingelsen $y(2)=7$.
+	
+	$A$ = \answerbox{5}
+	
+	\hint
+	
+	Indsæt startbetingelse i den generelle løsning. 
+
+	
+	\hint
+	
+	Vi indsætter først $x=2$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(2)= \frac{1}{2}(2)^2+A = 2 + A
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y(2)=7$.
+
+	\hint 
+	
+	Det giver 
+		\[
+	7 = 2 + A \Rightarrow A = 5
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Separabel differentialligning 2-2}
+
+	
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(x) = \sqrt{x^2 + A}
+	\]
+	Bestem konstanten A givet startbetingelsen $y(2)=5$.
+	
+	$A$ = \answerbox{21}
+	
+	\hint
+	
+	Indsæt startbetingelse i den generelle løsning. 
+	
+	
+	\hint
+	
+	Vi indsætter først $x=2$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(2)= \sqrt{2^2 + A} = \sqrt{4 + A}
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y(2)=5$.
+	
+	\hint 
+	
+	Det giver 
+	\[
+	5 = \sqrt{4 + A} \Rightarrow 25 = 4 + A \Leftrightarrow A = 21	
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Separabel differentialligning 2-3}
+
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(x) = - \cos(x) + A
+	\]
+	Bestem konstanten A givet startbetingelsen $y(\pi)=5$.
+	
+	$A$ = \answerbox{4}
+	
+	\hint
+	
+	Indsæt startbetingelse i den generelle løsning. 
+	
+	
+	\hint
+	
+	Vi indsætter først $x=\pi$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(\pi)= -\cos (\pi) + A = 1 + A
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y(\pi)=5$.
+	
+	\hint 
+	
+	Det giver 
+	\[
+	5 = 1 + A  \Rightarrow A = 4
+	\]
+	
+\end{exercise}
+
+\newpage
+
+
+\begin{exercise}{Separabel differentialligning 2-4}
+
+	
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(x) =  A \cdot e^{5x}
+	\]
+	Bestem konstanten A givet startbetingelsen $y(0)=7$.
+	
+	$A$ = \answerbox{7}
+	
+	\hint
+	
+	Indsæt startbetingelse i den generelle løsning. 
+	
+	
+	\hint
+	
+	Vi indsætter først $x=0$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(0)=  A \cdot e^{5 \cdot 0} = A \cdot e^0  = A
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y(0)=7$.
+	
+	\hint 
+	
+	Det giver 
+	\[
+	7  = A  
+	\]
+	
+\end{exercise}
+
+\newpage
+
+
+\begin{exercise}{Separabel differentialligning 1-5}
+	
+	
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(x) =  A \cdot \sqrt{x}
+	\]
+	Bestem konstanten A givet startbetingelsen $y(9)=12$, hvor $A>0$.
+	
+	$A$ = \answerbox{4}
+	
+	\hint
+	
+	Indsæt startbetingelse i den generelle løsning. 
+	
+	
+	\hint
+	
+	Vi indsætter først $x=9$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(0)=  A \cdot \sqrt{9} = A	\cdot 3
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y(9)=12$.
+	
+	\hint 
+	
+	Det giver 
+	\[
+	12  = 3A  \Rightarrow A = 4
+	\]
+	
+\end{exercise}
+
+\end{document}
+
