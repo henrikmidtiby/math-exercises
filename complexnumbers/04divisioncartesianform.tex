@@ -1,0 +1,510 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+\newenvironment{exercise}[1]{\newpage\section{#1}}{}
+\newcommand{\answerbox}[1]{\fbox{$#1$}}
+\newcommand{\hint}{\subsection*{Hint}}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Division på kartesisk form 1-1}
+
+Bestem $\frac{2+2i}{3+5i}$.
+
+\answerbox{\frac{8}{17} - \frac{2}{17}i}
+
+
+\hint 
+
+Forlæng brøk med den kompleks konjungerede af nævneren
+\[
+\frac{2+2i}{3+5i} = \frac{(2+2i)(3-5i)}{(3+5i)(3-5i)}
+\]
+
+\hint
+
+Gang parenteser ud
+\[
+\frac{(2+2i)(3-5i)}{(3+5i)(3-5i)} = \frac{2 \cdot 3 + 2\cdot (-5i) + 2i \cdot 3 + 2i \cdot (-5i)}{3 \cdot 3 + 3\cdot (-5i)+5i \cdot 3 + 5i \cdot (-5i)}
+\]
+
+\hint 
+
+Saml led og udnyt at $i^2 = -1$
+\[
+\frac{6-10i+6i-10i^2}{9-15i+15i-25i^2} = \frac{6-10i+6i-10 \cdot (-1)}{9-15i+15i-25 \cdot (-1)} 
+\]
+
+\hint
+
+Saml reelle led
+
+\hint
+
+Det giver
+\[
+\frac{6-10i+6i+10}{9-15i+15i+ 25} = \frac{16 -10i + 6i}{34}
+\]
+
+\hint
+
+Saml imaginære led
+
+
+\hint
+
+Det giver 
+\[
+\frac{16 -10i + 6i}{34} = \frac{16-4i}{34}
+\]
+
+\hint
+
+Reducér udtryk
+\[
+\frac{16}{34} - \frac{4}{34}i  =\frac{8}{17} - \frac{2}{17}i
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Division på kartesisk form 1-2}
+	
+	Bestem $\frac{3+2i}{2+3i}$.
+	
+	\answerbox{\frac{12}{13} - \frac{5}{13}i}
+	
+	
+	\hint 
+	
+	Forlæng brøk med den kompleks konjungerede af nævneren
+	\[
+	\frac{3+2i}{2+3i} = \frac{(3+2i)(2-3i)}{(2+3i)(2-3i)}
+	\]
+	
+	\hint
+	
+	Gang parenteser ud
+	\[
+	\frac{(3+2i)(2-3i)}{(2+3i)(2-3i)} = \frac{3 \cdot 2 + 3 \cdot (-3i) + 2i \cdot 2 + 2i \cdot (-3i)}{2 \cdot 2 + 2\cdot (-3i) + 3i \cdot 2 + 3i \cdot (-3i)}
+	\]
+	
+	\hint 
+	
+	Saml led og udnyt at $i^2 = -1$
+	\[
+	\frac{6 -9i +4i-6i^2}{4 - 6i + 6i -9i^2} = 	\frac{6 -9i +4i-6 \cdot (-1)}{4 - 6i + 6i -9 \cdot (-1)}
+	\]
+	
+	\hint
+	
+	Saml reelle led
+	
+	\hint
+	
+	Det giver
+	\[
+	\frac{6 -9i +4i+6}{4 - 6i + 6i +9} = \frac{12 - 9i +4i}{13}
+	\]
+	
+	\hint
+	
+	Saml imaginære led
+	
+	
+	\hint
+	
+	Det giver 
+	\[
+	\frac{12 - 9i +4i}{13} = \frac{12 -5i}{13}
+	\]
+	
+	\hint
+	
+	Reducér udtryk
+	\[
+	 \frac{12 -5i}{13} = \frac{12}{13} - \frac{5}{13}i
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Division på kartesisk form 1-3}
+	
+	Bestem $\frac{2+4i}{6+2i}$.
+	
+	\answerbox{\frac{1}{2} + \frac{1}{2}i}
+	
+	
+	\hint 
+	
+	Forlæng brøk med den kompleks konjungerede af nævneren
+	\[
+	\frac{2+4i}{6+2i} = \frac{(2+4i)(6-2i)}{(6+2i)(6-2i)} 
+	\]
+	
+	\hint
+	
+	Gang parenteser ud
+	\[
+	 \frac{2 \cdot 6 + 2 \cdot (-2i) + 4i \cdot 6 + 4i \cdot (-2i)}{6 \cdot 6 + 6 \cdot (-2i) + 2i \cdot 6 + 2i \cdot (-2i)}
+	\]
+	
+	\hint 
+	
+	Saml led og udnyt at $i^2 = -1$
+	\[
+	\frac{12 - 4i + 24i -8i^2}{36 -12i + 12i - 4i^2} = \frac{12 - 4i + 24i -8 \cdot (-1)}{36 -12i + 12i - 4 \cdot (-1)} 
+	\]
+	
+	\hint
+	
+	Saml reelle led
+	
+	\hint
+	
+	Det giver
+	\[
+	\frac{12 - 4i + 24i +8}{36 -12i + 12i + 4} = \frac{20-4i +24i}{40}
+	\]
+	
+	\hint
+	
+	Saml imaginære led
+	
+	
+	\hint
+	
+	Det giver 
+	\[
+	 \frac{20 -4i +24i}{40}  = \frac{20 + 20i}{40}
+	\]
+	
+	\hint
+	
+	Reducér udtryk
+	\[
+	\frac{20}{40} + \frac{20}{40}i  = \frac{1}{2} + \frac{1}{2}i
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Division på kartesisk form 1-4}
+	
+	Bestem $\frac{5+3i}{2+i}$.
+	
+	\answerbox{\frac{13}{5} + \frac{1}{5}i}
+	
+	
+	\hint 
+	
+	Forlæng brøk med den kompleks konjungerede af nævneren
+	\[
+	\frac{5+3i}{2+i} = \frac{(5+3i)(2-i)}{(2+i)(2-i)}
+	\]
+	
+	\hint
+	
+	Gang parenteser ud
+	\[
+	\frac{(5+3i)(2-i)}{(2+i)(2-i)} = \frac{5 \cdot 2 + 5 \cdot (-i) + 3i \cdot 2 + 3i \cdot (-i)}{2 \cdot 2 + 2 \cdot (-i) + i \cdot 2 + i \cdot (-i)}
+	\]
+	
+	\hint 
+	
+	Saml led og udnyt at $i^2 = -1$
+	\[
+	\frac{10 -5i + 6i -3i^2}{4 - 2i +2i -i^2} = \frac{10 -5i + 6i -3 \cdot (-1)}{4 - 2i +2i -(-1)} 
+	\]
+	
+	\hint
+	
+	Saml reelle led
+	
+	\hint
+	
+	Det giver
+	\[
+	\frac{10 -5i +6i+3}{4 -2i+2i +1} = \frac{13 - 5i +6i}{5}
+	\]
+	
+	\hint
+	
+	Saml imaginære led
+	
+	
+	\hint
+	
+	Det giver 
+	\[
+	\frac{13 - 5i +6i}{5} = \frac{13 +i}{5}
+	\]
+	
+	\hint
+	
+	Reducér udtryk
+	\[
+	\frac{13 +i}{5} = \frac{13}{5} + \frac{1}{5}i
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Division på kartesisk form 1-5}
+	
+	Bestem $\frac{2+i}{3-i}$.
+	
+	\answerbox{ \frac{1}{2}+\frac{1}{2}i }
+	
+	
+	\hint 
+	
+	Forlæng brøk med den kompleks konjungerede af nævneren
+	\[
+	\frac{2+i}{3-i} = \frac{(2+i)(3+i)}{(3-i)(3+i)}
+	\]
+	
+	\hint
+	
+	Gang parenteser ud
+	\[
+	\frac{(2+i)(3+i)}{(3-i)(3+i)} = \frac{2 \cdot 3 + 2 \cdot i + i \cdot 3 +i \cdot i}{3 \cdot 3 + 3 \cdot i -i \cdot 3 -i \cdot i}
+	\]
+	
+	\hint 
+	
+	Saml led og udnyt at $i^2 = -1$
+	\[
+	\frac{6+2i+3i+i^2}{9 + 3i -3i -i^2} = \frac{6+2i+3i-1}{9 + 3i -3i -(-1)}
+	\]
+	
+	\hint
+	
+	Saml reelle led
+	
+	\hint
+	
+	Det giver
+	\[
+	\frac{6+2i+3i-1}{9 + 3i -3i +1} = \frac{5 + 2i +3i}{10}
+	\]
+	
+	\hint
+	
+	Saml imaginære led
+	
+	
+	\hint
+	
+	Det giver 
+	\[
+	\frac{5 + 2i +3i}{10} = \frac{5+5i}{10}
+	\]
+	
+	\hint
+	
+	Reducér udtryk
+	\[
+	\frac{5}{10}+\frac{5}{10}i = \frac{1}{2}+\frac{1}{2}i 
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Division på kartesisk form 1-6}
+	
+	Bestem $\frac{4+2i}{8-3i}$.
+	
+	\answerbox{	\frac{26}{73} + \frac{28}{73}i}
+	
+	
+	\hint 
+	
+	Forlæng brøk med den kompleks konjungerede af nævneren
+	\[
+	\frac{4+2i}{8-3i} = \frac{(4+2i)(8+3i)}{(8-3i)(8+3i)}
+	\]
+	
+	\hint
+	
+	Gang parenteser ud
+	\[
+	\frac{(4+2i)(8+3i)}{(8-3i)(8+3i)} = \frac{4 \cdot 8 + 4 \cdot 3i + 2i \cdot 8 + 2i \cdot 3i}{8 \cdot 8 + 8 \cdot 3i - 3i \cdot 8 -3i \cdot 3i}
+	\]
+	
+	\hint 
+	
+	Saml led og udnyt at $i^2 = -1$
+	\[
+	 \frac{32+12i+16i+6i^2}{64+24i-24i-9i^2} = \frac{32+12i+16i+6 \cdot (-1)}{64+24i-24i-9 \cdot (-1)}
+	\]
+	
+	\hint
+	
+	Saml reelle led
+	
+	\hint
+	
+	Det giver
+	\[
+	\frac{32+12i+16i- 6}{64+24i-24i+9 } = \frac{26+12i +16i}{73}
+	\]
+	
+	\hint
+	
+	Saml imaginære led
+	
+	
+	\hint
+	
+	Det giver 
+	\[
+	\frac{26+12i +16i}{73} = \frac{26+28i}{73}
+	\]
+	
+	\hint
+	
+	Reducér udtryk
+	\[
+	\frac{26}{73} + \frac{28}{73}i
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Division på kartesisk form 1-7}
+	
+	Bestem $\frac{7+2i}{3+3i}$.
+	
+	\answerbox{\frac{3}{2} - \frac{5}{6}i}
+	
+	
+	\hint 
+	
+	Forlæng brøk med den kompleks konjungerede af nævneren
+	\[
+	\frac{(7+2i)(3-3i)}{(3+3i)(3-3i)}
+	\]
+	
+	\hint
+	
+	Gang parenteser ud
+	\[
+	\frac{(7+2i)(3-3i)}{(3+3i)(3-3i)} = \frac{7 \cdot 3 + 7 \cdot (-3i)+2i \cdot 3 + 2i \cdot (-3i)}{3 \cdot 3 + 3 \cdot (-3i) + 3i \cdot 3 + 3i \cdot (-3i)}
+	\]
+	
+	\hint 
+	
+	Saml led og udnyt at $i^2 = -1$
+	\[
+	\frac{21 -21i +6i - 6i^2}{9 -9 i +9i-9i^2} = \frac{21 -21i +6i - 6 \cdot (-1)}{9 -9 i +9i-9 \cdot (-1)}
+	\]
+	
+	\hint
+	
+	Saml reelle led
+	
+	\hint
+	
+	Det giver
+	\[
+	\frac{21 -21i +6i + 6 }{9 -9 i +9i+9} = \frac{27 -21i+6i}{18}
+	\]
+	
+	\hint
+	
+	Saml imaginære led
+	
+	
+	\hint
+	
+	Det giver 
+	\[
+	\frac{27 -21i+6i}{18} = \frac{27-15i}{18}
+	\]
+	
+	\hint
+	
+	Reducér udtryk
+	\[
+	\frac{27}{18} - \frac{15}{18}i = \frac{3}{2} - \frac{5}{6}i
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Division på kartesisk form 1-8}
+	
+	Bestem $\frac{6-4i}{2+8i}$.
+	
+	\answerbox{-\frac{5}{17} - \frac{14}{17}i}
+	
+	
+	\hint 
+	
+	Forlæng brøk med den kompleks konjungerede af nævneren
+	\[
+	\frac{6-4i}{2+8i} = \frac{(6-4i)(2-8i)}{(2+8i)(2-8i)}
+	\]
+	
+	\hint
+	
+	Gang parenteser ud
+	\[
+	\frac{(6-4i)(2-8i)}{(2+8i)(2-8i)} = \frac{6 \cdot 2 + 6 \cdot (-8i) -4i \cdot 2 -4i \cdot (-8i)}{2 \cdot 2 + 2 \cdot (-8i) + 8i \cdot 2 + 8i \cdot (-8i)}
+	\]
+	
+	\hint 
+	
+	Saml led og udnyt at $i^2 = -1$
+	\[
+	\frac{12 -48i -8i+32i^2}{4 -16i +16i -64i^2} = \frac{12 -48i -8i+32 \cdot (-1)}{4 -16i +16i -64 \cdot (-1)} 
+	\]
+	
+	\hint
+	
+	Saml reelle led
+	
+	\hint
+	
+	Det giver
+	\[
+	\frac{12 -48i -8i-32}{4 -16i +16i +64}  = \frac{-20 -48i-8i}{68}	
+	\]
+	
+	\hint
+	
+	Saml imaginære led
+	
+	
+	\hint
+	
+	Det giver 
+	\[
+	\frac{-20 -48i-8i}{68} = \frac{-20 -56i}{68}
+	\]
+	
+	\hint
+	
+	Reducér udtryk
+	\[
+	\frac{-20}{68} - \frac{56}{68}i = -\frac{5}{17} - \frac{14}{17}i
+	\]
+	
+\end{exercise}
+
+\end{document}
