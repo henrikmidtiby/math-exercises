@@ -9,7 +9,7 @@ class ChangeHintMarkup:
     def __init__(self):
         self.question = ""
         self.detected_hints = []
-        self.hint_matcher = re.compile('\\\\hint')
+        self.hint_matcher = re.compile('\s*\\\\hint')
 
     def add_hint(self, count, storage):
         while storage[0] == '' or storage[0] == '\n':
