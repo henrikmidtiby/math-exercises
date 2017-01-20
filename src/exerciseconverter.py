@@ -63,6 +63,7 @@ def change_part_of_markup(input_lines):
         line = line.replace("\\begin{align*}", "[[eq ")
         line = line.replace("\\end{align*}", "]]")
         line = line.replace("\n\t", " ")
+        line = line.replace("\t", " ")
         yield line
 
 
