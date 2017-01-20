@@ -145,7 +145,7 @@ def write_exercises_to_file(output_file, rendered_exercises):
         if exercise_number > 0:
             output_file.write(",")
         output_file.write(exercise)
-    output_file.write("\n]\n")
+    output_file.write("\n]\n\n")
 
 
 def extract_exercises_from_file(input_filename):
