@@ -1,0 +1,575 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+\newenvironment{exercise}[1]{\newpage\section{#1}}{}
+\newcommand{\answerbox}[1]{\fbox{$#1$}}
+\newcommand{\hint}{\subsection*{Hint}}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+% (1-x) = kritisk dæmpning. 
+% (2-x) = overdæmpning. 
+% (3-x) = underdæmpning.
+
+\begin{exercise}{Homogen 2. ordens differentialligning 1-1}
+
+Find den generelle løsning til den homogene 2. ordens differentialligning
+\[
+2y'' + 4y' + 2y = 0
+\]
+Kald de to ubestemte konstanter for A og B
+
+$y(t)$ = \answerbox{A \cdot e^{-t} + B \cdot t \cdot e^{-t}}
+
+
+\hint 
+
+Opskriv karakterligningen
+
+\hint
+
+\[
+2 r^2 + 4r + 2 = 0
+\]
+
+
+\hint
+
+Bestem determinanten D for karakterligningen
+
+
+\hint 
+\[
+D = b^2 - 4 \cdot a \cdot c = 4^2 - 4 \cdot 2 \cdot 2  = 0
+\]
+
+\hint 
+Find rødderne af karakterligningen
+
+
+\hint
+
+\[
+r = \frac{-b \pm \sqrt{D}}{2 \cdot a} = \frac{-4}{2 \cdot 2} = -1
+\]
+
+\hint
+
+Indsæt roden i den generelle løsning
+
+\hint
+\[
+y(t) = A \cdot e^{r \cdot t} + B \cdot t \cdot e^{r \cdot t}
+\]
+
+\hint
+
+\[
+y(t) = A \cdot e^{-t} + B \cdot t \cdot e^{-t}
+\]
+
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 1-2}
+	
+	Find den generelle løsning til den homogene 2. ordens differentialligning
+	\[
+	y'' - 4y' + 4y = 0
+	\]
+	Kald de to ubestemte konstanter for A og B
+	
+	$y(t)$ = \answerbox{A \cdot e^{2t} + B \cdot t \cdot e^{2t}}
+	
+	
+	\hint 
+	
+	Opskriv karakterligningen
+	
+	\hint
+	
+	\[
+	r^2 - 4r + 4 = 0
+	\]
+	
+	
+	\hint
+	
+	Bestem determinanten D for karakterligningen
+	
+	
+	\hint 
+	\[
+	D = b^2 - 4 \cdot a \cdot c = (-4)^2 - 4 \cdot 1 \cdot 4  = 0
+	\]
+	
+	\hint 
+	Find rødderne af karakterligningen
+	
+	
+	\hint
+	
+	\[
+	r = \frac{-b \pm \sqrt{D}}{2 \cdot a} = \frac{4}{2 \cdot 1} = 2
+	\]
+	
+	\hint
+	
+	Indsæt roden i den generelle løsning
+	
+	\hint
+	\[
+	y(t) = A \cdot e^{r \cdot t} + B \cdot t \cdot e^{r \cdot t}
+	\]
+	
+	\hint
+	
+	\[
+	y(t) = A \cdot e^{2t} + B \cdot t \cdot e^{2t}
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 1-3}
+	
+	Find den generelle løsning til den homogene 2. ordens differentialligning
+	\[
+	y'' + 4y' + 4y = 0
+	\]
+	Kald de to ubestemte konstanter for A og B
+	
+	$y(t)$ = \answerbox{A \cdot e^{-2t} + B \cdot t \cdot e^{-2t}}
+	
+	
+	\hint 
+	
+	Opskriv karakterligningen
+	
+	\hint
+	
+	\[
+	r^2 + 4r + 4 = 0
+	\]
+	
+	
+	\hint
+	
+	Bestem determinanten D for karakterligningen
+	
+	
+	\hint 
+	\[
+	D = b^2 - 4 \cdot a \cdot c = 4^2 - 4 \cdot 1 \cdot 4  = 0
+	\]
+	
+	\hint 
+	Find rødderne af karakterligningen
+	
+	
+	\hint
+	
+	\[
+	r = \frac{-b \pm \sqrt{D}}{2 \cdot a} = \frac{-4}{2 \cdot 1} = -2
+	\]
+	
+	\hint
+	
+	Indsæt roden i den generelle løsning
+	
+	\hint
+	\[
+	y(t) = A \cdot e^{r \cdot t} + B \cdot t \cdot e^{r\cdot t}
+	\]
+	
+	\hint
+	
+	\[
+	y(t) = A \cdot e^{-2t} + B \cdot t \cdot e^{-2t}
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 2-1}
+	
+	Find den generelle løsning til den homogene 2. ordens differentialligning
+	\[
+	y'' - 5y' + 6y = 0
+	\]
+	Kald de to ubestemte konstanter for A og B
+	
+	$y(t)$ = \answerbox{A \cdot e^{3t} + B \cdot e^{2t}}
+	
+	
+	\hint 
+	
+	Opskriv karakterligningen
+	
+	\hint
+	
+	\[
+	r^2 -5r + 6 = 0
+	\]
+	
+	
+	\hint
+	
+	Bestem determinanten D for karakterligningen
+	
+	
+	\hint 
+	\[
+	D = b^2 - 4 \cdot a \cdot c = (-5)^2 - 4 \cdot 1 \cdot 6  = 25 - 24 = 1
+	\]
+	
+	\hint 
+	Find rødderne af karakterligningen
+	
+	
+	\hint
+	
+	\[
+	r = \frac{-b \pm \sqrt{D}}{2 \cdot a} \qquad  \Rightarrow \qquad r_1 = \frac{5 + 1}{2 \cdot 1} = 3 \qquad \wedge \qquad r_2 = \frac{5 - 1}{2 \cdot 1} = 2
+	\]
+	
+	\hint
+	
+	Indsæt rødderne i den generelle løsning
+	
+	\hint
+	\[
+	y(t) = A \cdot e^{r_1 \cdot t} + B \cdot e^{r_2\cdot t}
+	\]
+	
+	\hint
+	
+	\[
+	y(t) = A \cdot e^{3t} + B \cdot e^{2t}
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 2-2}
+	
+	Find den generelle løsning til den homogene 2. ordens differentialligning
+\[
+y'' - 10y' + 9y = 0
+\]
+Kald de to ubestemte konstanter for A og B
+
+$y(t)$ = \answerbox{ A \cdot e^{9t} + B \cdot e^{t}}
+
+
+\hint 
+
+Opskriv karakterligningen
+
+\hint
+
+\[
+r^2 -10r + 9 = 0
+\]
+
+
+\hint
+
+Bestem determinanten D for karakterligningen
+
+
+\hint 
+\[
+D = b^2 - 4 \cdot a \cdot c = (-10)^2 - 4 \cdot 1 \cdot 9  = 100 - 36 = 64
+\]
+
+\hint 
+Find rødderne af karakterligningen
+
+
+\hint
+
+\[
+r = \frac{-b \pm \sqrt{D}}{2 \cdot a} \qquad  \Rightarrow \qquad r_1 = \frac{10 + 8}{2 \cdot 1} = 9 \qquad \wedge \qquad r_2 = \frac{10 - 8}{2 \cdot 1} = 1
+\]
+
+\hint
+
+Indsæt rødderne i den generelle løsning
+
+\hint
+\[
+y(t) = A \cdot e^{r_1 \cdot t} + B \cdot e^{r_2\cdot t}
+\]
+
+\hint
+
+\[
+y(t) = A \cdot e^{9t} + B \cdot e^{t}
+\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 2-3}
+	
+	Find den generelle løsning til den homogene 2. ordens differentialligning
+\[
+y'' - 8y' + 15y = 0
+\]
+Kald de to ubestemte konstanter for A og B
+
+$y(t)$ = \answerbox{A \cdot e^{5t} + B \cdot e^{3t}}
+
+
+\hint 
+
+Opskriv karakterligningen
+
+\hint
+
+\[
+r^2 -8r + 15 = 0
+\]
+
+
+\hint
+
+Bestem determinanten D for karakterligningen
+
+
+\hint 
+\[
+D = b^2 - 4 \cdot a \cdot c = (-8)^2 - 4 \cdot 1 \cdot 15  = 64 - 60 = 4
+\]
+
+\hint 
+Find rødderne af karakterligningen
+
+
+\hint
+
+\[
+r = \frac{-b \pm \sqrt{D}}{2 \cdot a} \qquad  \Rightarrow \qquad r_1 = \frac{8 + 2}{2 \cdot 1} = 5 \qquad \wedge \qquad r_2 = \frac{8- 2}{2 \cdot 1} = 3
+\]
+
+\hint
+
+Indsæt rødderne i den generelle løsning
+
+\hint
+\[
+y(t) = A \cdot e^{r_1 \cdot t} + B \cdot e^{r_2\cdot t}
+\]
+
+\hint
+
+\[
+y(t) = A \cdot e^{5t} + B \cdot e^{3t}
+\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 3-1}
+	
+	Find den generelle løsning til den homogene 2. ordens differentialligning
+	\[
+	y'' + 4y' + 8y = 0
+	\]
+	Kald de to ubestemte konstanter for A og B
+	
+	$y(t)$ = \answerbox{A \cdot e^{-2 t}  \cdot \cos(2 t)+ B \cdot e^{-2 t}  \cdot \sin(2 t)}
+	
+	
+	\hint 
+	
+	Opskriv karakterligningen
+	
+	\hint
+	
+	\[
+	r^2+ 4r + 8 = 0
+	\]
+	
+	
+	\hint
+	
+	Bestem determinanten D for karakterligningen
+	
+	
+	\hint 
+	\[
+	D = b^2 - 4 \cdot a \cdot c = 4^2 - 4 \cdot 1 \cdot 8  = 16 -32 = -16
+	\]
+	
+	\hint 
+	Da determinanten er negativ vil vi få en kompleks rod. Bestem den reelle rod $k$ og imaginære rod $\omega$ af karakterligningen.
+	
+	
+	\hint
+	
+	\[
+	k = \frac{-b}{2 \cdot a} = \frac{-4}{2 \cdot 1} = -2 \qquad \wedge \qquad \omega = \frac{\sqrt{-D}}{2 \cdot a} = \frac{\sqrt{16}}{2 \cdot 1} = \frac{4}{2} = 2
+	\]
+	
+	\hint
+	
+	Indsæt rødderne i den generelle løsning
+	
+	\hint
+	\[
+	y(t) = A \cdot e^{k \cdot t}  \cdot \cos(\omega t)+ B \cdot e^{k \cdot t}  \cdot \sin(\omega t)
+	\]
+	
+	\hint
+	
+	\[
+	y(t) = A \cdot e^{-2 t}  \cdot \cos(2 t)+ B \cdot e^{-2 t}  \cdot \sin(2 t)
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 3-2}
+	
+	Find den generelle løsning til den homogene 2. ordens differentialligning
+	\[
+	y'' - 2y' + 10y = 0
+	\]
+	Kald de to ubestemte konstanter for A og B
+	
+	$y(t)$ = \answerbox{A \cdot e^{t}  \cdot \cos(3 t)+ B \cdot e^{t}  \cdot \sin(3 t)}
+	
+	
+	\hint 
+	
+	Opskriv karakterligningen
+	
+	\hint
+	
+	\[
+	r^2 - 2r + 10 = 0
+	\]
+	
+	
+	\hint
+	
+	Bestem determinanten D for karakterligningen
+	
+	
+	\hint 
+	\[
+	D = b^2 - 4 \cdot a \cdot c = (-2)^2 - 4 \cdot 1 \cdot 10  = 4- 40 = -36
+	\]
+	
+	\hint 
+	Da determinanten er negativ vil vi få en kompleks rod. Bestem den reelle rod $k$ og imaginære rod $\omega$ af karakterligningen.
+	
+	
+	\hint
+	
+	\[
+	k = \frac{-b}{2 \cdot a} = \frac{2}{2 \cdot 1} = 1 \qquad \wedge \qquad \omega = \frac{\sqrt{-D}}{2 \cdot a} = \frac{\sqrt{36}}{2 \cdot 1} = \frac{6}{2} = 3
+	\]
+	
+	\hint
+	
+	Indsæt rødderne i den generelle løsning
+	
+	\hint
+	\[
+	y(t) = A \cdot e^{k \cdot t}  \cdot \cos(\omega t)+ B \cdot e^{k \cdot t}  \cdot \sin(\omega t)
+	\]
+	
+	\hint
+	
+	\[
+	y(t) = A \cdot e^{t}  \cdot \cos(3 t)+ B \cdot e^{ t}  \cdot \sin(3t)
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 3-3}
+	
+	Find den generelle løsning til den homogene 2. ordens differentialligning
+	\[
+	y'' - 4y' + 5y = 0
+	\]
+	Kald de to ubestemte konstanter for A og B
+	
+	$y(t)$ = \answerbox{A \cdot e^{2 t}  \cdot \cos(t)+ B \cdot e^{2 t}  \cdot \sin(t)}
+	
+	
+	\hint 
+	
+	Opskriv karakterligningen
+	
+	\hint
+	
+	\[
+	r^2 - 4r + 5 = 0
+	\]
+	
+	
+	\hint
+	
+	Bestem determinanten D for karakterligningen
+	
+	
+	\hint 
+	\[
+	D = b^2 - 4 \cdot a \cdot c = (-4)^2 - 4 \cdot 1 \cdot 5 = 16 - 20 = -4
+	\]
+	
+	\hint 
+	Da determinanten er negativ vil vi få en kompleks rod. Bestem den reelle rod $k$ og imaginære rod $\omega$ af karakterligningen.
+	
+	
+	\hint
+	
+	\[
+	k = \frac{-b}{2 \cdot a} = \frac{4}{2 \cdot 1} = 2 \qquad \wedge \qquad \omega = \frac{\sqrt{-D}}{2 \cdot a} = \frac{\sqrt{4}}{2 \cdot 1} = \frac{2}{2} = 1
+	\]
+	
+	\hint
+	
+	Indsæt rødderne i den generelle løsning
+	
+	\hint
+	\[
+	y(t) = A \cdot e^{k \cdot t}  \cdot \cos(\omega t)+ B \cdot e^{k \cdot t}  \cdot \sin(\omega t)
+	\]
+	
+	\hint
+	
+	\[
+	y(t) = A \cdot e^{2 t}  \cdot \cos(t)+ B \cdot e^{2 t}  \cdot \sin(t)
+	\]
+	
+\end{exercise}
+
+
+
+
+
+\end{document}

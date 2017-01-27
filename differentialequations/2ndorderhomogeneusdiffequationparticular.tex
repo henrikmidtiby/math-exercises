@@ -1,0 +1,787 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[colorlinks, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+\newenvironment{exercise}[1]{\newpage\section{#1}}{}
+\newcommand{\answerbox}[1]{\fbox{$#1$}}
+\newcommand{\hint}{\subsection*{Hint}}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+% (1-x) = kritisk dæmpning. 
+% (2-x) = overdæmpning. 
+% (3-x) = underdæmpning.
+
+\begin{exercise}{Homogen 2. ordens differentialligning 1-1}
+
+Vi har løst en differentialligning og fundet den generelle løsning
+\[
+y(t) = A \cdot e^{-t} + B \cdot t \cdot e^{-t}
+\]
+Bestem konstanterne $A$ og $B$ givet startbetingelserne $y(0)=5$ og $y'(0)=3$.
+
+
+$A$ = \answerbox{5}		$B$ = \answerbox{8}
+
+\hint
+
+Indsæt den første startbetingelse i den generelle løsning. 
+
+
+\hint
+
+Vi indsætter først $x=0$.
+
+\hint
+
+Det giver
+\[
+y(0)=  A \cdot e^{0} + B \cdot 0 \cdot e^{0}
+\]
+
+\hint
+
+Derefter indsættes $y(0)=5$.
+
+\hint 
+
+Det giver 
+\[
+5 = A \cdot 1 + B \cdot 0 \cdot 1 \qquad \Rightarrow \qquad A = 5
+\]
+
+\hint 
+
+Differentier den generelle løsning mht. $t$
+\[
+y'(t)= \left(A \cdot e^{-t} + B \cdot t \cdot e^{-t} \right)' = -A e^{-t} + B \left( e^{-t} - t e^{-t} \right)
+\]
+
+\hint 
+
+Indsæt den anden startbetingelse i den afledte af den generelle løsning
+
+\hint
+
+Vi indsætter $x=0$.
+
+\hint 
+
+Det giver
+\[
+y'(0) = -A e^{0} + B \left( e^{0} - 0 \cdot e^{0} \right)
+\]
+
+\hint 
+
+Derefter indsættes $y'(0)=3$.
+
+\hint
+
+Det giver
+\[
+3 = -A \cdot 1 + B \left(1- 0 \cdot 1 \right) \qquad \Rightarrow \qquad B = 3 + A = 3 + 5 = 8
+\]
+
+
+
+
+
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 1-2}
+	
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(t) = A \cdot e^{2t} + B \cdot t \cdot e^{2t}
+	\]
+	Bestem konstanterne $A$ og $B$ givet startbetingelserne $y(0)=2$ og $y'(0)=4$.
+	
+	
+	$A$ = \answerbox{2}		$B$ = \answerbox{0}
+	
+	\hint
+	
+	Indsæt den første startbetingelse i den generelle løsning. 
+	
+	
+	\hint
+	
+	Vi indsætter først $x=0$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(0)=  A \cdot e^{0} + B \cdot 0 \cdot e^{0}
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y(0)=2$.
+	
+	\hint 
+	
+	Det giver 
+	\[
+	2 = A \cdot 1 + B \cdot 0 \cdot 1 \qquad \Rightarrow \qquad A = 2
+	\]
+	
+	\hint 
+	
+	Differentier den generelle løsning mht. $t$
+	\[
+	y'(t)= \left(A \cdot e^{2t} + B \cdot t \cdot e^{2t} \right)' = 2A e^{2t} + B \left( e^{2t} +2 t e^{2t} \right)
+	\]
+	
+	\hint 
+	
+	Indsæt den anden startbetingelse i den afledte af den generelle løsning
+	
+	\hint
+	
+	Vi indsætter $x=0$.
+	
+	\hint 
+	
+	Det giver
+	\[
+	y'(0) = 2A e^{0} + B \left( e^{0} + 0 \cdot e^{0} \right)
+	\]
+	
+	\hint 
+	
+	Derefter indsættes $y'(0)=4$.
+	
+	\hint
+	
+	Det giver
+	\[
+	4 = 2A \cdot 1 + B \left(1 + 0 \cdot 1 \right) \qquad \Rightarrow \qquad B = 4 - 2A = 4 - 2 \cdot 2 = 0
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 1-3}
+	
+Vi har løst en differentialligning og fundet den generelle løsning
+\[
+y(t) = A \cdot e^{-2t} + B \cdot t \cdot e^{-2t}
+\]
+Bestem konstanterne $A$ og $B$ givet startbetingelserne $y(0)=4$ og $y'(0)=2$.
+
+
+$A$ = \answerbox{4}		$B$ = \answerbox{10}
+
+\hint
+
+Indsæt den første startbetingelse i den generelle løsning. 
+
+
+\hint
+
+Vi indsætter først $x=0$.
+
+\hint
+
+Det giver
+\[
+y(0)=  A \cdot e^{0} + B \cdot 0 \cdot e^{0}
+\]
+
+\hint
+
+Derefter indsættes $y(0)=4$.
+
+\hint 
+
+Det giver 
+\[
+4 = A \cdot 1 + B \cdot 0 \cdot 1 \qquad \Rightarrow \qquad A = 4
+\]
+
+\hint 
+
+Differentier den generelle løsning mht. $t$
+\[
+y'(t)= \left(A \cdot e^{-2t} + B \cdot t \cdot e^{-2t} \right)' = -2A e^{-2t} + B \left( e^{-2t} -2 t e^{-2t} \right)
+\]
+
+\hint 
+
+Indsæt den anden startbetingelse i den afledte af den generelle løsning
+
+\hint
+
+Vi indsætter $x=0$.
+
+\hint 
+
+Det giver
+\[
+y'(0) = -2A e^{0} + B \left( e^{0} - 0 \cdot e^{0} \right)
+\]
+
+\hint 
+
+Derefter indsættes $y'(0)=2$.
+
+\hint
+
+Det giver
+\[
+2 = -2A \cdot 1 + B \left(1- 0 \cdot 1 \right) \qquad \Rightarrow \qquad B = 2 + 2A = 2 + 2 \cdot 4 = 10
+\]
+
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 2-1}
+	
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(t) = A \cdot e^{3t} + B \cdot e^{2t}
+	\]
+	Bestem konstanterne $A$ og $B$ givet startbetingelserne $y(0)=2$ og $y'(0)=3$.
+	
+	
+	$A$ = \answerbox{-1}		$B$ = \answerbox{3}
+	
+	\hint
+	
+	Indsæt den første startbetingelse i den generelle løsning. 
+	
+	
+	\hint
+	
+	Vi indsætter først $x=0$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(0)=  A \cdot e^{0} + B \cdot e^{0}
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y(0)=2$.
+	
+	\hint 
+	
+	Det giver 
+	\[
+	2= A \cdot 1 + B \cdot 1 \qquad \Rightarrow \qquad A = 2 - B
+	\]
+	
+	\hint 
+	
+	Differentier den generelle løsning mht. $t$
+	\[
+	y'(t)= \left(A \cdot e^{3t} + B \cdot e^{2t} \right)' = 3A \cdot e^{3t} + 2B \cdot e^{2t} 
+	\]
+	
+	\hint 
+	
+	Indsæt den anden startbetingelse i den afledte af den generelle løsning
+	
+	\hint
+	
+	Vi indsætter $x=0$.
+	
+	\hint 
+	
+	Det giver
+	\[
+	y'(0) = 3A \cdot e^{0} + 2B \cdot e^{0} =  3A \cdot 1 + 2B \cdot 1  = 3A + 2B
+		\]
+	
+	\hint 
+	
+	Derefter indsættes $y'(0)=3$.	
+	\hint
+	
+	Det giver
+	\[
+	3 = 3A+ 2B 
+	\]
+	
+	\hint 
+	
+	Vi har nu 2 ligninger med to ubekendte, som løses ved at indsætte A i ovenstående ligning
+	\[
+	3 = 3(2-B) + 2B = 6 - 3B + 2B \qquad \Rightarrow \qquad B = 3
+	\]
+		
+	\hint
+	
+	Så indsættes B for at bestemme A
+	\[
+	A = 2 - 3 = -1
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 2-2}
+	
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(t) = A \cdot e^{9t} + B \cdot e^{t}
+	\]
+	Bestem konstanterne $A$ og $B$ givet startbetingelserne $y(0)=4$ og $y'(0)=-12$.
+	
+	
+	$A$ = \answerbox{-2}		$B$ = \answerbox{6}
+	
+	\hint
+	
+	Indsæt den første startbetingelse i den generelle løsning. 
+	
+	
+	\hint
+	
+	Vi indsætter først $x=0$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(0)=  A \cdot e^{0} + B \cdot e^{0}
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y(0)=4$.
+	
+	\hint 
+	
+	Det giver 
+	\[
+	4= A \cdot 1 + B \cdot 1 \qquad \Rightarrow \qquad A = 4 - B
+	\]
+	
+	\hint 
+	
+	Differentier den generelle løsning mht. $t$
+	\[
+	y'(t)= \left(A \cdot e^{9t} + B \cdot e^{t} \right)' = 9A \cdot e^{2t} + B \cdot e^{3t} 
+	\]
+	
+	\hint 
+	
+	Indsæt den anden startbetingelse i den afledte af den generelle løsning
+	
+	\hint
+	
+	Vi indsætter $x=0$.
+	
+	\hint 
+	
+	Det giver
+	\[
+	y'(0) = 9A \cdot e^{0} + B \cdot e^{0} =  9A \cdot 1 + B \cdot 1  = 9A + B
+	\]
+	
+	\hint 
+	
+	Derefter indsættes $y'(0)=-12$.	
+	\hint
+	
+	Det giver
+	\[
+	-12 = 9A+ B 
+	\]
+	
+	\hint 
+	
+	Vi har nu 2 ligninger med to ubekendte, som løses ved at indsætte A i ovenstående ligning
+	\[
+	-12 = 9(4-B) + B = 36 - 9B + B \qquad \Rightarrow \qquad B = 6
+	\]
+	
+	\hint
+	
+	Så indsættes B for at bestemme A
+	\[
+	A = 4 - 6 = -2
+	\]
+	
+\end{exercise}
+
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 2-3}
+	
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(t) = A \cdot e^{5t} + B \cdot e^{3t}
+	\]
+	Bestem konstanterne $A$ og $B$ givet startbetingelserne $y(0)=2$ og $y'(0)=4$.
+	
+	
+	$A$ = \answerbox{-1}		$B$ = \answerbox{3}
+	
+	\hint
+	
+	Indsæt den første startbetingelse i den generelle løsning. 
+	
+	
+	\hint
+	
+	Vi indsætter først $x=0$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(0)=  A \cdot e^{0} + B \cdot e^{0}
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y(0)=2$.
+	
+	\hint 
+	
+	Det giver 
+	\[
+	2= A \cdot 1 + B \cdot 1 \qquad \Rightarrow \qquad A = 2 - B
+	\]
+	
+	\hint 
+	
+	Differentier den generelle løsning mht. $t$
+	\[
+	y'(t)= \left(A \cdot e^{5t} + B \cdot e^{3t} \right)' = 5A \cdot e^{5t} + 3B \cdot e^{3t} 
+	\]
+	
+	\hint 
+	
+	Indsæt den anden startbetingelse i den afledte af den generelle løsning
+	
+	\hint
+	
+	Vi indsætter $x=0$.
+	
+	\hint 
+	
+	Det giver
+	\[
+	y'(0) = 5A \cdot e^{0} + 3B \cdot e^{0} =  5A \cdot 1 + 3B \cdot 1  = 5A + 3B
+	\]
+	
+	\hint 
+	
+	Derefter indsættes $y'(0)=5$.	
+	\hint
+	
+	Det giver
+	\[
+	4 = 5A+ 3B 
+	\]
+	
+	\hint 
+	
+	Vi har nu 2 ligninger med to ubekendte, som løses ved at indsætte A i ovenstående ligning
+	\[
+	4 = 5(2-B) + 3B = 10 - 5B + 3B \qquad \Rightarrow \qquad B = 3
+	\]
+	
+	\hint
+	
+	Så indsættes B for at bestemme A
+	\[
+	A = 2 - 3 = -1
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 3-1}
+	
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(t) = A \cdot e^{-2 t}  \cdot \cos(2 t)+ B \cdot e^{-2 t}  \cdot \sin(2 t)
+	\]
+	Bestem konstanterne $A$ og $B$ givet startbetingelserne $y(0)=2$ og $y'(0)=0$.
+	
+	
+	$A$ = \answerbox{2}		$B$ = \answerbox{2}
+	
+	\hint
+	
+	Indsæt den første startbetingelse i den generelle løsning. 
+	
+	
+	\hint
+	
+	Vi indsætter først $x=0$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(0)=  A \cdot e^{0}  \cdot \cos(0)+ B \cdot e^{0}  \cdot \sin(0)
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y(0)=2$ og udtrykket reduceres
+	
+	\hint 
+	
+	Det giver 
+	\[
+	2= A \cdot 1  \cdot 1+ B \cdot 1  \cdot 0  = A \qquad \Rightarrow \qquad A = 2
+	\]
+	
+	\hint 
+	
+	Differentier den generelle løsning mht. $t$
+	\begin{align*}
+	y'(t) &= \left(A \cdot e^{-2 t}  \cdot \cos(2 t)+ B \cdot e^{-2 t}  \cdot \sin(2 t)\right)' \\
+			&= A \left[-2 e^{-2t} \cdot \cos(2t) - 2e^{-2t} \cdot \sin(2t) \right] + B \left[ -2 e^{-2t} \cdot \sin(2t) + 2e^{-2t} \cdot \cos(2t) \right] \\
+	\end{align*}
+	
+	\hint
+	
+	Simplificer udtryk ved at sætte $-2 e^{-2t}$ uden for en parentes.
+	\[
+	= - 2 e^{-2t} \left[ A (\cos(2t)+\sin(2t)) + B (\sin(2t) -\cos(2t))   \right]
+	\]
+	
+	\hint 
+	
+	Indsæt den anden startbetingelse i den afledte af den generelle løsning
+	
+	\hint
+	
+	Vi indsætter $x=0$.
+	
+	\hint 
+	
+	Det giver
+	\[
+	y'(0) = - 2 e^{0} \left[ A (\cos(0)+\sin(0)) + B (\sin(0) -\cos(0))   \right]
+	\]
+	
+	\hint 
+	
+	Derefter indsættes $y'(0)=0$.	
+	\hint
+	
+	Det giver
+	\[
+	0 = - 2 \cdot 1 \left[ A (1+0) + B (0 -1)   \right] = - 2\left[ A -B    \right] = -2 A + 2B \qquad \Rightarrow \qquad A = B
+	\]
+	
+	\hint 
+	
+	Vi kan nu bestemme B ved at indsætte den fundne størrelse for A i ovenstående ligning
+	\[
+	B = A = 2 \qquad \Rightarrow \qquad B = 2
+	\]
+
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 3-2}
+	
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(t) = A \cdot e^{t}  \cdot \cos(3 t)+ B \cdot e^{t}  \cdot \sin(3 t)
+	\]
+	Bestem konstanterne $A$ og $B$ givet startbetingelserne $y(0)=5$ og $y'(0)=2$.
+	
+	
+	$A$ = \answerbox{5}		$B$ = \answerbox{-1}
+	
+	\hint
+	
+	Indsæt den første startbetingelse i den generelle løsning. 
+	
+	
+	\hint
+	
+	Vi indsætter først $x=0$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(0)=  A \cdot e^{0}  \cdot \cos(0)+ B \cdot e^{0}  \cdot \sin(0)
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y(0)=5$ og udtrykket reduceres
+	
+	\hint 
+	
+	Det giver 
+	\[
+	5= A \cdot 1  \cdot 1+ B \cdot 1  \cdot 0  = A \qquad \Rightarrow \qquad A = 5
+	\]
+	
+	\hint 
+	
+	Differentier den generelle løsning mht. $t$
+	\begin{align*}
+	y'(t) &= \left(A \cdot e^{ t}  \cdot \cos(3 t)+ B \cdot e^{t}  \cdot \sin(3t)\right)' \\
+			&= A \left[e^{t} \cdot \cos(3t) - 3e^{t} \cdot \sin(3t) \right] + B \left[e^{t} \cdot \sin(3t) + 3e^{t} \cdot \cos(3t) \right] \\
+	\end{align*}
+	
+	\hint
+	
+	Simplificer udtryk ved at sætte $e^{t}$ uden for en parentes.
+	\[
+	= e^{t} \left[ A (\cos(3t)-3\sin(3t)) + B (\sin(3t) + 3\cos(3t))   \right]
+	\]
+	
+	\hint 
+	
+	Indsæt den anden startbetingelse i den afledte af den generelle løsning
+	
+	\hint
+	
+	Vi indsætter $x=0$.
+	
+	\hint 
+	
+	Det giver
+	\[
+	y'(0) = e^{0} \left[ A (\cos(0)-3 \sin(0)) + B (\sin(0) + 3 \cos(0))   \right]
+	\]
+	
+	\hint 
+	
+	Derefter indsættes $y'(0)=2$.	
+	\hint
+	
+	Det giver
+	\[
+	2 = 1 \left[ A (1- 3 \cdot 0) + B (0 + 3 )   \right] = 1 \left[ A +  3B    \right] = A + 3B \qquad \Rightarrow \qquad A = 2 - 3B
+	\]
+	
+	\hint 
+	
+	Vi kan nu bestemme B ved at indsætte den fundne størrelse for A i ovenstående ligning
+	\[
+	2 - 3B = A = 5 \qquad \Rightarrow \qquad B = -1
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Homogen 2. ordens differentialligning 3-3}
+	
+	Vi har løst en differentialligning og fundet den generelle løsning
+	\[
+	y(t) = A \cdot e^{2 t}  \cdot \cos(t)+ B \cdot e^{2 t}  \cdot \sin(t)
+	\]
+	Bestem konstanterne $A$ og $B$ givet startbetingelserne $y(0)=8$ og $y'(0)=3$.
+	
+	
+	$A$ = \answerbox{8}		$B$ = \answerbox{-13}
+	
+	\hint
+	
+	Indsæt den første startbetingelse i den generelle løsning. 
+	
+	
+	\hint
+	
+	Vi indsætter først $x=0$.
+	
+	\hint
+	
+	Det giver
+	\[
+	y(0)=  A \cdot e^{0}  \cdot \cos(0)+ B \cdot e^{0}  \cdot \sin(0)
+	\]
+	
+	\hint
+	
+	Derefter indsættes $y(0)=8$ og udtrykket reduceres
+	
+	\hint 
+	
+	Det giver 
+	\[
+	8= A \cdot 1  \cdot 1+ B \cdot 1  \cdot 0  = A \qquad \Rightarrow \qquad A = 8
+	\]
+	
+	\hint 
+	
+	Differentier den generelle løsning mht. $t$
+	\begin{align*}
+	y'(t) &= \left(A \cdot e^{2 t}  \cdot \cos(t)+ B \cdot e^{2 t}  \cdot \sin(t)\right)' \\
+	&= A \left[2 e^{2t} \cdot \cos(t) - e^{2t} \cdot \sin(t) \right] + B \left[ 2 e^{2t} \cdot \sin(t) + e^{2t} \cdot \cos(t) \right] \\
+	\end{align*}
+	
+	\hint
+	
+	Simplificer udtryk ved at sætte $e^{2t}$ uden for en parentes.
+	\[
+	= e^{2t} \left[ A (2 \cos(t)-\sin(t)) + B (2 \sin(t) + \cos(t))   \right]
+	\]
+	
+	\hint 
+	
+	Indsæt den anden startbetingelse i den afledte af den generelle løsning
+	
+	\hint
+	
+	Vi indsætter $x=0$.
+	
+	\hint 
+	
+	Det giver
+	\[
+	y'(0) = e^{0} \left[ A (2 \cos(0)- \sin(0)) + B (2 \sin(0) + \cos(0))   \right]
+	\]
+	
+	\hint 
+	
+	Derefter indsættes $y'(0)=3$.	
+	\hint
+	
+	Det giver
+	\[
+	3 = 1 \cdot \left[ A (2 \cdot 1 - 0) + B (2 \cdot 0 + 1)   \right] = 1 \cdot \left[ 2A + B    \right] = 2 A + B \qquad \Rightarrow \qquad B = 3 - 2 A
+	\]
+	
+	\hint 
+	
+	Vi kan nu bestemme B ved at indsætte den fundne størrelse for A i ovenstående ligning
+	\[
+	B = 3 - 2 A = 3 - 2 \cdot 8  = 3 - 16  =  -13
+	\]
+	
+	
+\end{exercise}
+
+
+
+\end{document}
