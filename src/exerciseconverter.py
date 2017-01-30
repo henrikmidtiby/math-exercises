@@ -10,6 +10,7 @@ from ChangeMultiChoiceMarkup import *
 from ChangeAnswerBoxMarkup import *
 from ChangeHintMarkup import *
 from ChangeImageMarkup import *
+from ChangeAnswerMatrixMarkup import *
 
 raw_template = u"""
 {
@@ -36,6 +37,16 @@ raw_template = u"""
         "choices": "{% for item in multichoice.items %}{% endfor %}"
       },
       "name": "multichoice{{- multichoice.nr }}"
+    }{% endfor %}{% for answer_matrix in answermatrices %},
+    "answermatrix{{- answer_matrix.nr }}": {
+      "type": "matrix",
+      "properties": {
+        "answer": [{% for item in answer_matrix.items %}{% if item.rownr > 1 %},{% endif %}
+            [{% for element in item.elements %}{% if element.elementnr > 1 %},{% endif %}{{- '"' + element.content + '"' -}}{% endfor %}]{% endfor %}],
+        "height": {{ answer_matrix.number_of_rows }},
+        "width": {{ answer_matrix.number_of_columns }}
+      },
+      "name": "answermatrix{{- answer_matrix.nr }}"
     }{% endfor %}
   }
 }
@@ -104,11 +115,13 @@ def add_extra_backslashes(input_lines):
 def render_exercise(exercise):
     answer_box_parser = ChangeAnswerBoxMarkup()
     multi_choice_parser = ChangeMultiChoiceMarkup()
+    answer_matrix_parser = ChangeAnswerMatrixMarkup()
     image__parser = ChangeImageMarkup()
     hint_parser = ChangeHintMarkup()
 
     question = answer_box_parser.generator(exercise.content)
     question = multi_choice_parser.generator(question)
+    question = answer_matrix_parser.generator(question)
     question = image__parser.generator(question)
     hint_parser.parser(question)
 
@@ -116,6 +129,7 @@ def render_exercise(exercise):
 
     answers = list(answer_box_parser.get_answers())
     multi_choices = list(multi_choice_parser.get_multi_choices())
+    answer_matrices = list(answer_matrix_parser.get_answer_matrices())
     hints = list(hint_parser.get_hints())
 
     values = {}
@@ -124,6 +138,7 @@ def render_exercise(exercise):
     values['hints'] = hints
     values['answerboxes'] = answers
     values['multichoices'] = multi_choices
+    values['answermatrices'] = answer_matrices
 
     t = jinja2.Template(raw_template)
 

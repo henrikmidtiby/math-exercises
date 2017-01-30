@@ -82,6 +82,49 @@ def test_change_multi_choice_markup_2():
     assert_equals(detected_environments, temp.detected_multi_choice_markups)
 
 
+def test_change_answermatrix_markup_1():
+    input_values = ["\\begin{answermatrix}\n", "1\n", "\\end{answermatrix}\n"]
+    expected_output = ["[[ref answermatrix1]]\n"]
+    temp = ChangeAnswerMatrixMarkup()
+    output = list(temp.generator(input_values))
+    assert_equals(expected_output, output)
+    detected_environments = [AnswerMatrix(nr=1,
+                                          number_of_rows=1,
+                                          number_of_columns=1,
+                                          items=[AnswerMatrixRow(rownr=1,
+                                                                 nelements=1,
+                                                                 elements=[AnswerMatrixRowElement(1, '1')])
+                                                ]
+                                          )
+                             ]
+    assert_equals(detected_environments, temp.detected_answer_matrix_markups)
+
+
+def test_change_answermatrix_markup_2():
+    input_values = ["\\begin{answermatrix}\n", "1 & 2 & 4 \\\\\n", "3 & 5 & 4", "\\end{answermatrix}\n"]
+    expected_output = ["[[ref answermatrix1]]\n"]
+    temp = ChangeAnswerMatrixMarkup()
+    output = list(temp.generator(input_values))
+    assert_equals(expected_output, output)
+    detected_environments = [AnswerMatrix(nr=1,
+                                          number_of_rows=2,
+                                          number_of_columns=3,
+                                          items=[AnswerMatrixRow(rownr=1,
+                                                                 nelements=3,
+                                                                 elements=[AnswerMatrixRowElement(1, '1'),
+                                                                           AnswerMatrixRowElement(2, '2'),
+                                                                           AnswerMatrixRowElement(3, '4')]),
+                                                 AnswerMatrixRow(rownr=2,
+                                                                 nelements=3,
+                                                                 elements=[AnswerMatrixRowElement(1, '3'),
+                                                                           AnswerMatrixRowElement(2, '5'),
+                                                                           AnswerMatrixRowElement(3, '4')])
+                                                ]
+                                          )
+                             ]
+    assert_equals(detected_environments, temp.detected_answer_matrix_markups)
+
+
 def test_get_exercises_1():
     input_values = '''\\begin{exercise}{Name}\nLine\n\\end{exercise}'''
     expected_output = [Exercise(name = 'Name', content = ['Line'])]
