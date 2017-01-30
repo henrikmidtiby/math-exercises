@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Gauss elimination 1}
+
+Kør Gauss elimination på matricen herunder.
+
+\[
+A = \left[\begin{array}{rr|r}
+3 & 4 & 5 \\ 
+2 & 1 & 2
+\end{array} \right]
+\]
+
+Efter Gauss elimination ser matricen ud på følgende måde
+\begin{answermatrix}
+1 & 0 & \frac{3}{5} \\
+0 & 1 & \frac{4}{5}
+\end{answermatrix}
+
+\hint
+Få et et tal til at stå på $a_{11}$.
+
+\hint
+Træk række to fra række et.
+\[
+A = \left[\begin{array}{rr|r}
+1 & 3 & 3 \\ 
+2 & 1 & 2
+\end{array} \right]
+\]
+
+\hint
+Placer nuller under et tallet i $a_{11}$.
+
+\hint
+Træk to gange række et fra række to.
+\[
+A = \left[\begin{array}{rr|r}
+1 & 3 & 3 \\ 
+0 & -5 & -4
+\end{array} \right]
+\]
+
+\hint
+Lav et et tal på pladsen $a_{22}$.
+
+\hint
+Del række to med $-5$.
+\[
+A = \left[\begin{array}{rr|r}
+1 & 3 & 3 \\ 
+0 & 1 & \frac{4}{5}
+\end{array} \right]
+\]
+
+
+\hint
+Lav et nul på pladsen over $a_{22}$.
+
+\hint
+Del række to med $-5$.
+\[
+A = \left[\begin{array}{rr|r}
+1 & 0 & \frac{3}{5} \\ 
+0 & 1 & \frac{4}{5}
+\end{array} \right]
+\]
+
+
+\end{exercise}
+
+
+
+\begin{exercise}{Gauss elimination 2}
+
+Test
+
+$A = $
+\begin{answermatrix}
+1 & 0 \\
+0 & 1
+\end{answermatrix}
+
+\hint
+\[
+A = \left[\begin{array}{rr|r}
+1 & 0 \\ 
+0 & 1
+\end{array} \right]
+\]
+
+
+\end{exercise}
+
+
+
+\end{document}
