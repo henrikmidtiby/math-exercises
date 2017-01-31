@@ -11,26 +11,13 @@ from ChangeAnswerBoxMarkup import *
 from ChangeHintMarkup import *
 from ChangeImageMarkup import *
 from ChangeAnswerMatrixMarkup import *
+import WidgetRenderer
 
 raw_template = u"""
 {
   "name": "{{ exercisename }}",
   "document": "{{ question }}\\n\\n {% for hint in hints %}\\n\\n[[ref hint{{- hint['nr'] }}]] {% endfor %}",
-  "widgets": { {%- for answerbox in answerboxes %}{% if answerbox.nr > 1 %},{% endif %}
-    "input{{- answerbox.nr }}": {
-      "type": "equation-input",
-      "properties": {
-        "content": "{{ answerbox.content }}"
-      },
-      "name": "input{{- answerbox['nr']}}"
-    }{% endfor %}{% for hint in hints %},
-    "hint{{- hint.nr }}": {
-      "type": "hint",
-      "properties": {
-        "content": "{{ hint.content }}"
-      },
-      "name": "hint{{- hint.nr }}"
-    }{% endfor %}{% for multichoice in multichoices %},
+  "widgets": { {%- for rendered_widget in rendered_widgets %}{% if rendered_widget.nr > 1 %},{% endif %}{{ rendered_widget.content }}{% endfor %}{% for multichoice in multichoices %},
     "multichoice{{- multichoice.nr }}": {
       "type": "hint",
       "properties": {
@@ -132,11 +119,16 @@ def render_exercise(exercise):
     answer_matrices = list(answer_matrix_parser.get_answer_matrices())
     hints = list(hint_parser.get_hints())
 
+    widget_renderer = WidgetRenderer.WidgetRenderer()
+    widget_renderer.add_answerbox_widgets(answers)
+    widget_renderer.add_hint_widgets(hints)
+    rendered_widgets = widget_renderer.get_rendered_widgets()
+
     values = {}
     values['exercisename'] = exercise.name
     values['question'] = "".join(add_extra_backslashes(question_text)).replace("\n", "\\n")
+    values['rendered_widgets'] = rendered_widgets
     values['hints'] = hints
-    values['answerboxes'] = answers
     values['multichoices'] = multi_choices
     values['answermatrices'] = answer_matrices
 
