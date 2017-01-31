@@ -12,8 +12,8 @@ class ChangeMultiChoiceMarkup:
 
         self.start_environment = re.compile('\\\\begin\\{multichoice\\}(\\[(.*)\\])?')
         self.end_environment = re.compile('\\\\end\\{multichoice\\}')
-        self.item_true = re.compile('\\\\itemtrue\s*(.*)')
-        self.item_false = re.compile('\\\\itemfalse\s*(.*)')
+        self.item_true = re.compile('\s*\\\\itemtrue\s*(.*)')
+        self.item_false = re.compile('\s*\\\\itemfalse\s*(.*)')
 
         self.current_items = []
 
@@ -21,9 +21,9 @@ class ChangeMultiChoiceMarkup:
         res_true = self.item_true.match(line)
         res_false = self.item_false.match(line)
         if res_true:
-            self.current_items.append(MultiChoiceItem(res_true.group(1), True))
+            self.current_items.append(MultiChoiceItem(res_true.group(1), "true"))
         elif res_false:
-            self.current_items.append(MultiChoiceItem(res_false.group(1), False))
+            self.current_items.append(MultiChoiceItem(res_false.group(1), "false"))
         else:
             raise Exception('Bad markup, was expecting line to start with \itemtrue or \itemfalse.')
 
@@ -38,7 +38,7 @@ class ChangeMultiChoiceMarkup:
             if res_end_environment:
                 in_multi_choice_environment = False
                 count += 1
-                yield "[[ref multichoice%d]]\n" % count
+                yield "[[ref multi_choice%d]]\n" % count
                 self.detected_multi_choice_markups.append(MultiChoice(count, self.current_items, parameters))
                 self.current_items = []
             elif res_start_environment:

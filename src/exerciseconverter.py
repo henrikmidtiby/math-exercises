@@ -11,43 +11,13 @@ from ChangeAnswerBoxMarkup import *
 from ChangeHintMarkup import *
 from ChangeImageMarkup import *
 from ChangeAnswerMatrixMarkup import *
+import WidgetRenderer
 
 raw_template = u"""
 {
   "name": "{{ exercisename }}",
   "document": "{{ question }}\\n\\n {% for hint in hints %}\\n\\n[[ref hint{{- hint['nr'] }}]] {% endfor %}",
-  "widgets": { {%- for answerbox in answerboxes %}{% if answerbox.nr > 1 %},{% endif %}
-    "input{{- answerbox.nr }}": {
-      "type": "equation-input",
-      "properties": {
-        "content": "{{ answerbox.content }}"
-      },
-      "name": "input{{- answerbox['nr']}}"
-    }{% endfor %}{% for hint in hints %},
-    "hint{{- hint.nr }}": {
-      "type": "hint",
-      "properties": {
-        "content": "{{ hint.content }}"
-      },
-      "name": "hint{{- hint.nr }}"
-    }{% endfor %}{% for multichoice in multichoices %},
-    "multichoice{{- multichoice.nr }}": {
-      "type": "hint",
-      "properties": {
-        "choices": "{% for item in multichoice.items %}{% endfor %}"
-      },
-      "name": "multichoice{{- multichoice.nr }}"
-    }{% endfor %}{% for answer_matrix in answermatrices %},
-    "answermatrix{{- answer_matrix.nr }}": {
-      "type": "matrix",
-      "properties": {
-        "answer": [{% for item in answer_matrix.items %}{% if item.rownr > 1 %},{% endif %}
-            [{% for element in item.elements %}{% if element.elementnr > 1 %},{% endif %}{{- '"' + element.content + '"' -}}{% endfor %}]{% endfor %}],
-        "height": {{ answer_matrix.number_of_rows }},
-        "width": {{ answer_matrix.number_of_columns }}
-      },
-      "name": "answermatrix{{- answer_matrix.nr }}"
-    }{% endfor %}
+  "widgets": { {%- for rendered_widget in rendered_widgets %}{% if rendered_widget.nr > 1 %},{% endif %}{{ rendered_widget.content }}{% endfor %}
   }
 }
 """
@@ -132,13 +102,18 @@ def render_exercise(exercise):
     answer_matrices = list(answer_matrix_parser.get_answer_matrices())
     hints = list(hint_parser.get_hints())
 
+    widget_renderer = WidgetRenderer.WidgetRenderer()
+    widget_renderer.add_answerbox_widgets(answers)
+    widget_renderer.add_hint_widgets(hints)
+    widget_renderer.add_multi_choice_widgets(multi_choices)
+    widget_renderer.add_answer_matrix_widgets(answer_matrices)
+    rendered_widgets = widget_renderer.get_rendered_widgets()
+
     values = {}
     values['exercisename'] = exercise.name
     values['question'] = "".join(add_extra_backslashes(question_text)).replace("\n", "\\n")
+    values['rendered_widgets'] = rendered_widgets
     values['hints'] = hints
-    values['answerboxes'] = answers
-    values['multichoices'] = multi_choices
-    values['answermatrices'] = answer_matrices
 
     t = jinja2.Template(raw_template)
 
