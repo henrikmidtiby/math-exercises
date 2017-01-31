@@ -45,5 +45,45 @@ class WidgetRenderer:
             self.rendered_widgets.append(RenderedWidget(self.rendered_widgets_counter,
                                                         rendered_exercise))
 
+    def add_multi_choice_widgets(self, multichoices):
+        multichoice_template = """
+    "multi_choice{{- multi_choice.nr }}": {
+        "type": "hint",
+        "properties": {
+            "choices": "{% for item in multi_choice.items %}{% endfor %}"
+        },
+        "name": "multi_choice{{- multi_choice.nr }}"
+    }
+    """
+
+        for multi_choice in multichoices:
+            t = jinja2.Template(multichoice_template)
+            values = {'multi_choice': multi_choice}
+            rendered_exercise = t.render(values)
+            self.rendered_widgets_counter += 1
+            self.rendered_widgets.append(RenderedWidget(self.rendered_widgets_counter,
+                                                        rendered_exercise))
+
+    def add_answer_matrix_widgets(self, answer_matrices):
+        answer_matrix_template = """
+    "answermatrix{{- answer_matrix.nr }}": {
+      "type": "matrix",
+      "properties": {
+        "answer": [{% for item in answer_matrix.items %}{% if item.rownr > 1 %},{% endif %}
+            [{% for element in item.elements %}{% if element.elementnr > 1 %},{% endif %}{{- '"' + element.content + '"' -}}{% endfor %}]{% endfor %}],
+        "height": {{ answer_matrix.number_of_rows }},
+        "width": {{ answer_matrix.number_of_columns }}
+      },
+      "name": "answermatrix{{- answer_matrix.nr }}"
+    }"""
+
+        for answer_matrix in answer_matrices:
+            t = jinja2.Template(answer_matrix_template)
+            values = {'answer_matrix': answer_matrix}
+            rendered_exercise = t.render(values)
+            self.rendered_widgets_counter += 1
+            self.rendered_widgets.append(RenderedWidget(self.rendered_widgets_counter,
+                                                        rendered_exercise))
+
     def get_rendered_widgets(self):
         return self.rendered_widgets
