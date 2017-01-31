@@ -48,9 +48,15 @@ class WidgetRenderer:
     def add_multi_choice_widgets(self, multichoices):
         multichoice_template = """
     "multi_choice{{- multi_choice.nr }}": {
-        "type": "hint",
+        "type": "multiple-choice",
         "properties": {
-            "choices": "{% for item in multi_choice.items %}{% endfor %}"
+            "choices": [{
+                "title": "{{ multi_choice.items[0].text }}",
+                "correct": {{ multi_choice.items[0].is_correct_answer }}
+                }{% for item in multi_choice.items[1:] %},{
+                "title": "{{ item.text }}",
+                "correct": {{ item.is_correct_answer }}
+                }{% endfor %}]
         },
         "name": "multi_choice{{- multi_choice.nr }}"
     }
