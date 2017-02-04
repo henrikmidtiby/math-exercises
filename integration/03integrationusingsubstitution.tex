@@ -4,34 +4,578 @@
 \begin{document}
 \tableofcontents
 
-\begin{exercise}{Integration af basis funktioner 1-1}
 
-Bestem det værdien af det ubestemte integrale
-\[
-I = \int x^2 dx
-\]
-og kald den ukendte konstant for $K$.
+\begin{exercise}{Integration ved substitution 1-1}
+	
+	
+	Bestem værdien af det ubestemte integrale
+	\[
+	\int e^{(x^2)} \cdot x \, dx
+	\]
+	og kald den ukendte integrationskonstant for A.
+	
+	\answerbox{\frac{1}{2} e^{x^2} + A} \\
+	
+	
+	
+	\hint
+	
+	Se at integralet er på formen
+	\[
+	f'(g(x)) \cdot g'(x)
+	\]
+	
+	\hint
+	
+	Benyt substitutionsmetoden
+	
+	\hint
+	
+	Sæt $u=x^2$.
+	
+	
+	\hint
+	
+	Differentier $u$ mht. $x$.
+	\[
+	\frac{du}{dx} = 2x \qquad	\Rightarrow \qquad dx = \frac{du}{2x}
+	\]
+	
+	\hint
+	
+	Indsæt $dx$ og $u$ i integralet
+	\[
+	\int e^{u} \cdot \frac{x}{2x} \, du = \frac{1}{2} \int e^u \, du
+	\]
+	
+	\hint
+	
+	Bestem integralet
+	\[
+	= \frac{1}{2} \left( e^u + C_1 \right)
+	\]
+	
+	\hint
+	Forenkl udtryk ved at gange ind i parentesen.
+	
+	\hint
+	
+	\[
+	= \frac{1}{2} e^u + \frac{C_1}{2}
+	\]
+	
+	\hint
+	
+	Indsæt $u = x^2$ og omdøb konstanten  til A.
+	
+	\hint
+	
+	\[
+	= \frac{1}{2} e^{x^2} + A
+	\]
+	
+	
+\end{exercise}
 
-$I$ = \answerbox{\frac{1}{3} x^3 + K} \\
+\newpage
 
-\hint
-At integrere er det modsatte af at differentiere.
+\begin{exercise}{Integration ved substitution 1-2}
+	
+	
+	Bestem værdien af det ubestemte integrale
+	\[
+	\int \sin(x^3) \cdot x^2 \, dx
+	\]
+	og kald den ukendte integrationskonstant for A.
+	
+	\answerbox{- \frac{1}{3} \cos(x^3) + A} \\
+	
+	
+	
+	\hint
+	
+	Se at integralet er på formen
+	\[
+	f'(g(x)) \cdot g'(x)
+	\]
+	
+	\hint
+	
+	Benyt substitutionsmetoden
+	
+	\hint
+	
+	Sæt $u=x^3$.
+	
+	
+	\hint
+	
+	Differentier $u$ mht. $x$.
+	\[
+	\frac{du}{dx} = 3x^2 \qquad	\Rightarrow \qquad dx = \frac{du}{3x^2}
+	\]
+	
+	\hint
+	
+	Indsæt $dx$ og $u$ i integralet
+	\[
+	\int \sin(u) \cdot \frac{x^2}{3x^2} \, du = \frac{1}{3} \int \sin(u) \, du
+	\]
+	
+	\hint
+	
+	Bestem integralet
+	\[
+	= \frac{1}{3} \left( -\cos(u) + C_1 \right)
+	\]
+	
+	\hint
+	Forenkl udtryk ved at gange ind i parentesen.
+	
+	\hint
+	
+	\[
+	= - \frac{1}{2} \cos(u) + \frac{C_1}{3}
+	\]
+	
+	\hint
+	
+	Indsæt $u = x^3$ og omdøb konstanten  til A.
+	
+	\hint
+	
+	\[
+	= - \frac{1}{3} \cos(x^3) + A
+	\]
+	
+	
+\end{exercise}
 
-\hint
-Vi skal altså finde en funktion $f(x)$, hvor der gælder at
-\[
-f'(x) = x^2
-\]
+\newpage
 
-\hint
-Et polynomie differentieres efter formlen:
-\[
-\frac{d}{dx} x^n = n \cdot x^{n - 1}
-\]
+\begin{exercise}{Integration ved substitution 1-3}
+	
+	
+	Bestem værdien af det ubestemte integrale
+	\[
+	\int e^{\sin(x)} \cdot cos(x) \, dx
+	\]
+	og kald den ukendte integrationskonstant for A.
+	
+	\answerbox{e^{\sin(x)} + A} \\
+	
+	
+	
+	\hint
+	
+	Se at integralet er på formen
+	\[
+	f'(g(x)) \cdot g'(x)
+	\]
+	
+	\hint
+	
+	Benyt substitutionsmetoden
+	
+	\hint
+	
+	Sæt $u=\sin(x)$.
+	
+	
+	\hint
+	
+	Differentier $u$ mht. $x$.
+	\[
+	\frac{du}{dx} = \cos(x) \qquad	\Rightarrow \qquad dx = \frac{du}{\cos(x)}
+	\]
+	
+	\hint
+	
+	Indsæt $dx$ og $u$ i integralet
+	\[
+	\int e^{u} \cdot \frac{\cos(x)}{\cos(x)} \, du = \int e^u \, du
+	\]
+	
+	\hint
+	
+	Bestem integralet
+	\[
+	=  e^{u} + C_1
+	\]
+	
+	\hint
+	
+	Indsæt $u = \sin(x)$ og omdøb konstanten  til A.
+	
+	\hint
+	
+	\[
+	= e^{\sin(x)} + A
+	\]
+	
+	
+\end{exercise}
 
-\hint
-Løsningen er $f(x) = \frac{1}{3} x^3 + K$.
+\newpage
 
+\begin{exercise}{Integration ved substitution 1-4}
+	
+	
+	Bestem værdien af det ubestemte integrale
+	\[
+	\int e^{(x^2+1)} \cdot x \, dx
+	\]
+	og kald den ukendte integrationskonstant for A.
+	
+	\answerbox{\frac{1}{2} e^{x^2+1} + A} \\
+	
+	
+	
+	\hint
+	
+	Se at integralet er på formen
+	\[
+	f'(g(x)) \cdot g'(x)
+	\]
+	
+	\hint
+	
+	Benyt substitutionsmetoden
+	
+	\hint
+	
+	Sæt $u=x^2+1$.
+	
+	
+	\hint
+	
+	Differentier $u$ mht. $x$.
+	\[
+	\frac{du}{dx} = 2x \qquad	\Rightarrow \qquad dx = \frac{du}{2x}
+	\]
+	
+	\hint
+	
+	Indsæt $dx$ og $u$ i integralet
+	\[
+	\int e^{u} \cdot \frac{x}{2x} \, du = \frac{1}{2} \int e^u \, du
+	\]
+	
+	\hint
+	
+	Bestem integralet
+	\[
+	= \frac{1}{2} \left( e^u + C_1 \right)
+	\]
+	
+	\hint
+	Forenkl udtryk ved at gange ind i parentesen.
+	
+	\hint
+	
+	\[
+	= \frac{1}{2} e^u + \frac{C_1}{2}
+	\]
+	
+	\hint
+	
+	Indsæt $u = x^2+1$ og omdøb konstanten  til A.
+	
+	\hint
+	
+	\[
+	= \frac{1}{2} e^{x^2+1} + A
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration ved substitution 1-5}
+	
+	
+	Bestem værdien af det ubestemte integrale
+	\[
+	\int \sin(3x^2+2) \cdot 2x \, dx
+	\]
+	og kald den ukendte integrationskonstant for A.
+	
+	\answerbox{\frac{-1}{3} \cos(3x^2+2) + A} \\
+	
+	
+	
+	\hint
+	
+	Se at integralet er på formen
+	\[
+	f'(g(x)) \cdot g'(x)
+	\]
+	
+	\hint
+	
+	Benyt substitutionsmetoden
+	
+	\hint
+	
+	Sæt $u=3x^2+2$.
+	
+	
+	\hint
+	
+	Differentier $u$ mht. $x$.
+	\[
+	\frac{du}{dx} = 6x \qquad	\Rightarrow \qquad dx = \frac{du}{6x}
+	\]
+	
+	\hint
+	
+	Indsæt $dx$ og $u$ i integralet
+	\[
+	\int \sin(u) \cdot \frac{2x}{6x} \, du = \frac{1}{3} \int \sin(u) \, du
+	\]
+	
+	\hint
+	
+	Bestem integralet
+	\[
+	= \frac{1}{3} \left( -\cos(u) + C_1 \right)
+	\]
+	
+	\hint
+	Forenkl udtryk ved at gange ind i parentesen.
+	
+	\hint
+	
+	\[
+	= \frac{-1}{3} \cos(u) + \frac{C_1}{3}
+	\]
+	
+	\hint
+	
+	Indsæt $u = 3x^2+2$ og omdøb konstanten  til A.
+	
+	\hint
+	
+	\[
+	= \frac{-1}{3} \cos(3x^2+2) + A
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration ved substitution 1-6}
+	
+	
+	Bestem værdien af det ubestemte integrale
+	\[
+	\int \frac{1}{x^2+1}\cdot x \, dx
+	\]
+	og kald den ukendte integrationskonstant for A.
+	
+	\answerbox{\frac{1}{2} \ln(x^2+1) + A} \\
+	
+	
+	
+	\hint
+	
+	Se at integralet er på formen
+	\[
+	f'(g(x)) \cdot g'(x)
+	\]
+	
+	\hint
+	
+	Benyt substitutionsmetoden
+	
+	\hint
+	
+	Sæt $u=x^2+1$.
+	
+	
+	\hint
+	
+	Differentier $u$ mht. $x$.
+	\[
+	\frac{du}{dx} = 2x \qquad	\Rightarrow \qquad dx = \frac{du}{2x}
+	\]
+	
+	\hint
+	
+	Indsæt $dx$ og $u$ i integralet
+	\[
+	\int \frac{1}{u} \cdot \frac{x}{2x} \, du = \frac{1}{2} \int \frac{1}{u} \, du
+	\]
+	
+	\hint
+	
+	Bestem integralet
+	\[
+	= \frac{1}{2} \left( \ln(u) + C_1 \right)
+	\]
+	
+	\hint
+	Forenkl udtryk ved at gange ind i parentesen.
+	
+	\hint
+	
+	\[
+	= \frac{1}{2} \ln(u) + \frac{C_1}{2}
+	\]
+	
+	\hint
+	
+	Indsæt $u = x^2+1$ og omdøb konstanten  til A.
+	
+	\hint
+	
+	\[
+	= \frac{1}{2} \ln(x^2+1) + A
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration ved substitution 1-7}
+	
+	
+	Bestem værdien af det ubestemte integrale
+	\[
+	\int \frac{1}{\sin(x)+1} \cdot \cos(x) \, dx
+	\]
+	og kald den ukendte integrationskonstant for A.
+	
+	\answerbox{\ln(\sin(x)+1) + A} \\
+	
+	
+	
+	\hint
+	
+	Se at integralet er på formen
+	\[
+	f'(g(x)) \cdot g'(x)
+	\]
+	
+	\hint
+	
+	Benyt substitutionsmetoden
+	
+	\hint
+	
+	Sæt $u=\sin(x)+1$.
+	
+	
+	\hint
+	
+	Differentier $u$ mht. $x$.
+	\[
+	\frac{du}{dx} = \cos(x) \qquad	\Rightarrow \qquad dx = \frac{du}{\cos(x)}
+	\]
+	
+	\hint
+	
+	Indsæt $dx$ og $u$ i integralet
+	\[
+	\int \frac{1}{u} \cdot \frac{\cos(x)}{\cos(x)} \, du =  \int \frac{1}{u} \, du
+	\]
+	
+	\hint
+	
+	Bestem integralet
+	\[
+	=  \ln(u) + C_1 
+	\]
+	
+	
+	\hint
+	
+	Indsæt $u = \sin(x)+1$ og omdøb konstanten  til A.
+	
+	\hint
+	
+	\[
+	= \ln(\sin(x)+1) + A
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration ved substitution 1-8}
+	
+	
+	Bestem værdien af det ubestemte integrale
+	\[
+	\int \cos(2x^2) \cdot x \, dx
+	\]
+	og kald den ukendte integrationskonstant for A.
+	
+	\answerbox{ \frac{1}{4} \sin(2x^2) + A} \\
+	
+	
+	
+	\hint
+	
+	Se at integralet er på formen
+	\[
+	f'(g(x)) \cdot g'(x)
+	\]
+	
+	\hint
+	
+	Benyt substitutionsmetoden
+	
+	\hint
+	
+	Sæt $u=2x^2$.
+	
+	
+	\hint
+	
+	Differentier $u$ mht. $x$.
+	\[
+	\frac{du}{dx} = 4x \qquad	\Rightarrow \qquad dx = \frac{du}{4x}
+	\]
+	
+	\hint
+	
+	Indsæt $dx$ og $u$ i integralet
+	\[
+	\int \cos(u) \cdot \frac{x}{4x} \, du = \frac{1}{4} \int \cos(u) \, du
+	\]
+	
+	\hint
+	
+	Bestem integralet
+	\[
+	= \frac{1}{4} \left( \sin(u) + C_1 \right)
+	\]
+	
+	\hint
+	Forenkl udtryk ved at gange ind i parentesen.
+	
+	\hint
+	
+	\[
+	= \frac{1}{4} \sin(u) + \frac{C_1}{4}
+	\]
+	
+	\hint
+	
+	Indsæt $u = 2x^2$ og omdøb konstanten  til A.
+	
+	\hint
+	
+	\[
+	= \frac{1}{4} \sin(2x^2) + A
+	\]
+	
+	
 \end{exercise}
 
 
