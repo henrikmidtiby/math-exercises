@@ -1,0 +1,187 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Bestemme den inverse vha. Gauss elimination - 1}
+
+Bestem den inverse af matricen $A$, der er givet herunder
+\[
+A = \left[\begin{array}{cc}
+1 & 2 \\ 
+3 & 4
+\end{array} \right]
+\]
+
+Værdien af $A^{-1}$ er:
+\begin{answermatrix}
+-2 & 1 \\
+\frac{3}{2} & \frac{-1}{2}
+\end{answermatrix}
+
+\hint
+Vi ønsker at løse ligningssystemet
+\[
+A \cdot A^{-1} = I
+\]
+hvor $I$ er en identitetsmatrice.
+
+\hint
+Opskriv $A$ matricen og en $2 \times 2$ identitetsmatrice
+ved siden af hinanden, så de står op udviddet matrix form.
+
+\hint
+Det ser således ud
+\[
+\left[\begin{array}{cc|cc}
+1 & 2 & 1 & 0 \\ 
+3 & 4 & 0 & 1
+\end{array} \right]
+\]
+
+\hint
+Anvend Gauss-Jordan elimination på matricen.
+
+\hint
+Udfør rækkeoperationen: $\text{R2} - 3 \cdot \text{R1} \to \text{R2}$.
+
+\hint
+\[
+\left[\begin{array}{cc|cc}
+1 & 2 & 1 & 0 \\ 
+0 & -2 & -3 & 1
+\end{array} \right]
+\]
+
+\hint
+Udfør rækkeoperationen: $\text{R1} + \text{R2} \to \text{R1}$.
+
+\hint
+\[
+\left[\begin{array}{cc|cc}
+1 & 0 & -2 & 1 \\ 
+0 & -2 & -3 & 1
+\end{array} \right]
+\]
+
+\hint
+Udfør rækkeoperationen: $-\text{R2}/2 \to \text{R2}$.
+
+\hint
+\[
+\left[\begin{array}{cc|cc}
+1 & 0 & -2 & 1 \\ 
+0 & 1 & \frac{3}{2} & \frac{-1}{2}
+\end{array} \right]
+\]
+
+\hint
+Vi kan nu aflæse værdien af den inverse.
+\[
+A^{-1} = \left[\begin{array}{cc}
+-2 & 1 \\ 
+\frac{3}{2} & \frac{-1}{2}
+\end{array} \right]
+\]
+
+\end{exercise}
+
+
+\begin{exercise}{Bestemme den inverse vha. Gauss elimination - 2}
+
+Bestem den inverse af matricen $A$, der er givet herunder
+\[
+A = \left[\begin{array}{cc}
+4 & 2 \\ 
+3 & 3
+\end{array} \right]
+\]
+
+Værdien af $A^{-1}$ er:
+\begin{answermatrix}
+\frac{1}{2} & \frac{-1}{3} \\
+\frac{-1}{2} & \frac{2}{3}
+\end{answermatrix}
+
+\hint
+Vi ønsker at løse ligningssystemet
+\[
+A \cdot A^{-1} = I
+\]
+hvor $I$ er en identitetsmatrice.
+
+\hint
+Opskriv $A$ matricen og en $2 \times 2$ identitetsmatrice
+ved siden af hinanden, så de står op udviddet matrix form.
+
+\hint
+Det ser således ud
+\[
+\left[\begin{array}{cc|cc}
+4 & 2 & 1 & 0 \\ 
+3 & 3 & 0 & 1
+\end{array} \right]
+\]
+
+\hint
+Anvend Gauss-Jordan elimination på matricen.
+
+\hint
+Udfør rækkeoperationen: $\text{R1} - \text{R2} \to \text{R1}$.
+
+\hint
+\[
+\left[\begin{array}{cc|cc}
+1 & -1 & 1 & -1 \\ 
+3 & 3 & 0 & 1
+\end{array} \right]
+\]
+
+\hint
+Udfør rækkeoperationen: $\text{R2} - 3 \cdot \text{R1} \to \text{R2}$.
+
+\hint
+\[
+\left[\begin{array}{cc|cc}
+1 & -1 & 1 & -1 \\ 
+0 & 6 & -3 & 4
+\end{array} \right]
+\]
+
+\hint
+Udfør rækkeoperationen: $\text{R2} / 6 \to \text{R2}$.
+
+\hint
+\[
+\left[\begin{array}{cc|cc}
+1 & -1 & 1 & -1 \\ 
+0 & 1 & \frac{-1}{2} & \frac{2}{3}
+\end{array} \right]
+\]
+
+\hint
+Udfør rækkeoperationen: $\text{R1} + \text{R2} \to \text{R1}$.
+
+\hint
+\[
+\left[\begin{array}{cc|cc}
+1 & 0 & \frac{1}{2} & \frac{-1}{3} \\ 
+0 & 1 & \frac{-1}{2} & \frac{2}{3}
+\end{array} \right]
+\]
+
+\hint
+Vi kan nu aflæse værdien af den inverse.
+\[
+A^{-1} = \left[\begin{array}{cc}
+\frac{1}{2} & \frac{-1}{3} \\ 
+\frac{-1}{2} & \frac{2}{3}
+\end{array} \right]
+\]
+
+
+\end{exercise}
+
+\end{document}
