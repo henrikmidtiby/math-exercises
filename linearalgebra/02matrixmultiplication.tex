@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Matrix multiplikation - 1}
+
+Givet matricerne 
+
+\[
+A = \left[\begin{array}{rr}
+1 & 2 \\ 
+3 & 5 
+\end{array} \right]
+\]
+
+og 
+
+\[
+B = \left[\begin{array}{rr}
+1 & 3 \\ 
+-2 & -4 
+\end{array} \right]
+\]
+
+Bestem værdien af $C = A \cdot B$.
+
+\begin{answermatrix}
+-3 & -5  \\
+-7 & -11 
+\end{answermatrix}
+
+\hint
+Bestem størrelsen af $C$ matricen.
+
+\hint
+Størrelsen af $A$ og $B$ matricerne er $<{\color{red} 2} \times 2>$ og $<2 \times {\color{green}2}>$, 
+derfor har $C$ matricen størrelsen $<{\color{red} 2} \times {\color{green}2}>$.
+
+\hint
+Bestem værdien af $c_{11}$ vha. udtrykket:
+\[
+c_{11} = a_{11} \cdot b_{11} + a_{12} \cdot b_{21}
+\]
+
+\hint
+\[
+c_{11} = 1 \cdot 1 + 2 \cdot (-2) = -3
+\]
+
+\hint
+Gør det samme for de tre andre værdier i $C$.
+
+\hint
+\begin{align*}
+c_{21} & = a_{21} \cdot b_{11} + a_{22} \cdot b_{21} \\
+& = 3 \cdot 1 + 5 \cdot (-2) \\
+& = -7
+\end{align*}
+
+\hint
+\begin{align*}
+c_{12} & = a_{11} \cdot b_{12} + a_{12} \cdot b_{22} \\
+& = 1 \cdot 3 + 2 \cdot (-4) \\
+& = -5
+\end{align*}
+
+\hint
+\begin{align*}
+c_{22} & = a_{21} \cdot b_{12} + a_{22} \cdot b_{22} \\
+& = 3 \cdot 3 + 5 \cdot (-4) \\
+& = -11
+\end{align*}
+
+
+\hint
+Resultatet er så:
+\[
+C = \left[\begin{array}{rr}
+c_{11} & c_{12} \\
+c_{21} & c_{22} 
+\end{array} \right] = 
+\left[\begin{array}{rr}
+-3 & -5 \\
+-7 & -11 
+\end{array} \right]
+\]
+
+
+\end{exercise}
+
+
+
+\newpage
+
+Lav lign opgaver med forskellige matricer.
+
+Benyt gerne matricer med dimensionerne 2x2, 2x3, 3x2 og 3x3.
+
+
+\end{document}
