@@ -60,8 +60,8 @@ def test_change_multi_choice_markup_1():
     output = list(temp.generator(input_values))
     assert_equals(expected_output, output)
     detected_environments = [MultiChoice(nr=1,
-                                         items=[MultiChoiceItem(text='ja', is_correct_answer=True),
-                                                MultiChoiceItem(text='nej', is_correct_answer=False)],
+                                         items=[MultiChoiceItem(text='ja', is_correct_answer='true'),
+                                                MultiChoiceItem(text='nej', is_correct_answer='false')],
                                          parameters=['randomizeorder', 'selectmultiple'])]
     assert_equals(detected_environments, temp.detected_multi_choice_markups)
 
@@ -73,11 +73,11 @@ def test_change_multi_choice_markup_2():
     output = list(temp.generator(input_values))
     assert_equals(expected_output, output)
     detected_environments = [MultiChoice(nr=1,
-                                         items=[MultiChoiceItem(text='ja', is_correct_answer=True),
-                                                MultiChoiceItem(text='nej', is_correct_answer=False)],
+                                         items=[MultiChoiceItem(text='ja', is_correct_answer='true'),
+                                                MultiChoiceItem(text='nej', is_correct_answer='false')],
                                          parameters=['randomizeorder', 'selectmultiple']),
                              MultiChoice(nr=2,
-                                         items=[MultiChoiceItem(text='ja', is_correct_answer=True)],
+                                         items=[MultiChoiceItem(text='ja', is_correct_answer='true')],
                                          parameters=[])]
     assert_equals(detected_environments, temp.detected_multi_choice_markups)
 
@@ -189,11 +189,12 @@ def test_change_answer_box_markup_5():
 
 def test_change_image_markup_1():
     input_values = "Line 1\n"
-    temp = ChangeAnswerBoxMarkup()
+    temp = ChangeImageMarkup()
+    storage = []
     for line in temp.generator(input_values.split('\n')):
-        pass
-    detected_environments = [Answer(1, "test one"), Answer(2, "test two")]
-    assert_equals(detected_environments, list(temp.get_answers()))
+        storage.append(line)
+
+    assert_equals(["Line 1", ""], storage)
 
 
 def test_change_hint_markup_1():
