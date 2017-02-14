@@ -5,4 +5,5 @@ coveragereport:
 
 tests:
 	clear
-	python3 nose_starter.py
+	# python3 nose_starter.py
+	pytest
