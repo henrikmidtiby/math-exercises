@@ -1,0 +1,103 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+
+\begin{exercise}{Differentiering 4 - 01}
+% Adams 3.5.19
+Bestem $\frac{d}{dx} \arcsin\left( \frac{2x-1}{3} \right)$.
+
+\answerbox{(2+x-x^2)^{-1/2}}
+
+
+\hint
+\[
+\frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1 - x^ 2}}
+\]
+
+
+\hint
+Benyt kædereglen
+\[
+\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+\]
+
+\hint
+Sæt $f(x) = \arcsin(x)$ og $g(x) = \frac{2x - 1}{3}$.
+
+\hint
+Bestem $f'(x)$ og $g'(x)$.
+\[
+f'(x) = \frac{1}{\sqrt{1 - x^ 2}} \qquad g'(x) = 2/3
+\]
+
+\hint
+Indsæt i kædereglen
+\[
+\frac{d}{dx} \arcsin\left( \frac{2x-1}{3} \right) = \frac{1}{\sqrt{1 - \left( \frac{2x - 1}{3} \right)^ 2}} \cdot \frac{2}{3}
+\]
+
+\hint
+Fjern parentesen under kvadratrodstegnet
+\[
+\frac{1}{\sqrt{1 - \left( \frac{2x - 1}{3} \right)^ 2}} \cdot \frac{2}{3}
+= \frac{1}{\sqrt{\frac{9 - 4x^2 + 4x - 1}{9}}} \cdot \frac{2}{3}
+\]
+
+\hint
+Lidt forenklinger
+\[
+\frac{1}{\sqrt{\frac{9 - 4x^2 + 4x - 1}{9}}} \cdot \frac{2}{3}
+= \frac{2}{\sqrt{8 - 4x^2 + 4x}}
+= \frac{1}{\sqrt{2 - x^2 + x}}
+\]
+\end{exercise}
+
+
+
+
+\begin{exercise}{Differentiering 4 - 02}
+% Adams 3.5.20
+Differentier udtrykket $\arctan\left( a x + b \right)$ med hensyn til $x$.
+
+\answerbox{\frac{a}{1+(a \cdot x +b)^2}}
+
+\hint
+\[
+\frac{d}{dx} \arctan(x) = \frac{1}{1 + x^ 2}
+\]
+
+
+\hint
+Benyt kædereglen
+\[
+\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+\]
+
+\hint
+Sæt $f(x) = \arctan(x)$ og $g(x) = a \cdot x + b$.
+
+\hint
+Bestem $f'(x)$ og $g'(x)$.
+\[
+f'(x) = \frac{1}{1 + x^ 2} \qquad g'(x) = a
+\]
+
+\hint
+Indsæt i kædereglen
+\[
+\frac{d}{dx} \arctan\left( a \cdot x + b \right) = \frac{1}{1 + \left( a \cdot x + b \right)^2} \cdot a
+\]
+
+\hint
+Lidt forenklinger
+\[
+\frac{a}{1 + \left( a \cdot x + b \right)^2}
+\]
+\end{exercise}
+
+
+\end{document}

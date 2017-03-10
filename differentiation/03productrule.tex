@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Differentiering 3 - 01}
+Bestem $\frac{d}{dx} \left( x \cdot e^{2x^2} \right)$.
+
+\answerbox{e^{2x^2} \cdot (1 + 4x^2)}
+
+\hint
+Benyt produkt reglen
+\[
+\frac{d}{dx} \left( f(x) \cdot g(x) \right) = \frac{d}{dx} \left( f(x) \right) \cdot g(x) + f(x) \cdot \frac{d}{dx} \left( g(x) \right)
+\]
+
+\hint
+Sæt $f(x) = x$ og $g(x) = e^{2x^2}$
+\[
+\frac{d}{dx} \left( x \cdot e^{2x^2} \right) = \frac{d}{dx} \left( x \right) \cdot e^{2x^2} + x \cdot \frac{d}{dx} \left( e^{2x^2} \right)
+\]
+
+\hint
+Differentier delled 1.
+\[
+\frac{d}{dx} \left( x \right) = 1
+\]
+og delled 2, her skal kædereglen benyttes for at finde resultatet.
+\[
+\frac{d}{dx} \left( e^{2x^2} \right) = e^{2x^2} \cdot 4x
+\]
+
+
+\hint
+Delresultaterne indsættes og vi får
+\[
+\frac{d}{dx} \left( x \cdot e^{2x^2} \right) = 1 \cdot e^{2x^2} + x \cdot e^{2x^2} \cdot 4x
+\]
+
+\hint
+Der forenkles til 
+\[
+\frac{d}{dx} \left( x \cdot e^{2x^2} \right) = e^{2x^2} \cdot (1 + 4x^2) 
+\]
+
+\end{exercise}
+
+
+
+\begin{exercise}{Differentiering 3 - 02}
+Bestem $\frac{d}{dx} \left( e^x \cdot \sin(x) \right)$.
+
+\answerbox{e^x \cdot \sin(x) + e^x \cdot \cos(x)}
+
+\hint
+Benyt produkt reglen
+\[
+\frac{d}{dx} \left( f(x) \cdot g(x) \right) = \frac{d}{dx} \left( f(x) \right) \cdot g(x) + f(x) \cdot \frac{d}{dx} \left( g(x) \right)
+\]
+
+\hint
+Sæt $f(x) = e^x$ og $g(x) = \sin(x)$
+\[
+\frac{d}{dx} \left( e^x \cdot \sin(x) \right) = \frac{d}{dx} \left( e^x \right) \cdot \sin(x) + e^x \cdot \frac{d}{dx} \left( \sin(x) \right)
+\]
+
+\hint
+Differentier delled.
+\[
+\frac{d}{dx} \left( x \cdot \sin(x) \right) = e^x \cdot \sin(x) + e^x \cdot \cos(x)
+\]
+\end{exercise}
+
+\end{document}
