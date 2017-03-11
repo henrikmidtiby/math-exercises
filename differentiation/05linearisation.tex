@@ -1,0 +1,137 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+
+\begin{exercise}{Linearisering 1}
+% Adams 4.9.7
+Lineariser nedenstående funktion omkring punktet $x = \pi$.
+\[
+\sin(x)
+\]
+
+\answerbox{\pi - x}
+
+\hint
+Lineariseringen af en funktion $f(x)$
+omkring punktet $x_0$ er givet ved
+\[
+f(x_0) + f'(x_0) \cdot (x - x_0)
+\]
+
+\hint
+Vi anvender $f(x) = \sin(x)$ og $x_0 = \pi$.
+
+\hint
+$f'(x)$ bestemmes
+\[
+f'(x) = \cos(x)
+\]
+
+\hint
+Værdierne fra opgaven indsættes i udtrykket for lineariseringen.
+\[
+\sin(\pi) + \cos(\pi) \cdot (x - \pi)
+\]
+
+\hint
+Der forsimples
+\[
+\sin(\pi) = 0 \qquad 
+\cos(\pi) = -1
+\]
+og indsættes i udtrykket
+\[
+(0) + (-1) \cdot (x - \pi) = 
+\pi - x
+\]
+
+\end{exercise}
+
+
+\begin{exercise}{Linearisering 2}
+% Adams 4.9.19
+Benyt en passende linearisering til at approksimere
+\[
+\cos(49^\circ)
+\]
+angiv resultatet med fire decimalaer i boksen herunder.
+\answerbox{0.6577}
+
+\hint
+Først skal vi vælge den funktion der skal approksimeres
+og det punkt som der skal bruges som udgangspunkt for 
+approksimationen.
+For at vi kan bestemme approksimationen skal vi 
+kende funktionsværdien og dens afledte i punktet.
+
+\hint
+Vi vælger funktionen $f(x) = \cos(x)$ og at approksimere den 
+omkring $x_0 = 45^\circ = \pi / 4$.
+Så kan vi nemlig godt finde værdierne af $f(\pi / 4)$ og $f'(\pi / 4)$.
+\[
+f(\pi / 4) = \cos(\pi / 4) = \frac{1}{\sqrt{2}}
+\]
+\[
+f'(\pi / 4) = -\sin(\pi / 4) = \frac{-1}{\sqrt{2}}
+\]
+
+\hint
+Lineariseringen opskrives
+\[
+L(x) = \frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}} \cdot (x - \pi / 4)
+\]
+
+\hint
+Værdien i punktet bestemmes
+\[
+L(49 \cdot \pi / 180) = \frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}} \cdot (49 \cdot \pi / 180 - \pi / 4) 
+\]
+det forsimples til 
+\[
+\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}} \cdot \pi / 45
+\]
+som vha. lommeregner bestemmes til 
+\[
+0.657741 \simeq 0.6577
+\]
+
+\hint
+For at vurdere fejlen på approksimationen, ser på anden 
+ordens taylor udviklingen (en orden højere end den 
+anvendte linearisering).
+\[
+f(x_0) 
+	+ \frac{f'(x_0)}{1!} \cdot (x - x_0) 
+	+ \frac{f''(x_0)}{2!} \cdot (x - x_0)^2
+\]
+Fejlen er relateret til det sidste led i det ovenstående udtryk.
+Hvor $f''(x_0)$ udskiftes med $f''(c)$ hvor $c \in [x_0; x]$.
+\[
+\textrm{fejl} = \frac{f''(c)}{2!} \cdot (x - x_0)^2
+\]
+
+\hint 
+Antager man at $c = \pi/4$, fåes følgende fejlvurdering
+\[
+\textrm{fejl} = \frac{f''(\pi/4)}{2!} \cdot (49 \cdot \pi / 180 - \pi / 4)^2 = 
+-0.00172318\]
+
+\hint
+Sammenligning mellem reel værdi, approksimeret værdi og estimeret maksimal fejl.
+\[
+\cos(49 \cdot \pi/180) = 0.656059
+\]
+\[
+L(49 \cdot \pi/180) = 0.657741
+\]
+\[
+\cos(49 \cdot \pi/180) - L(49 \cdot \pi/180) = -0.001682
+\]
+
+\end{exercise}
+
+\end{document}

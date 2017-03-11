@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Differentiering 2 - 01}
+
+Bestem $\frac{d}{dx} (x + 3)^4$.
+
+\answerbox{4 (x + 3)^3}
+
+\hint
+Benyt kæde reglen
+\[
+\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+\]
+
+\hint
+Sæt $f(x) = x^4$ og $g(x) = x + 3$ og bestem $f'(x)$ og $g'(x)$.
+\[
+f'(x) = 4 x^3 \qquad g'(x) = 1
+\]
+
+\hint
+Indsæt i kædereglen
+\[
+\frac{d}{dx} (x + 3)^4 = 4 (x + 3)^3 \cdot 1 = 4 (x + 3)^3
+\]
+
+\end{exercise}
+
+\begin{exercise}{Differentiering 2 - 02}
+
+Bestem $\frac{d}{dx} e^{2x + x^2}$.
+
+\answerbox{e^{2x + x^2} \cdot (2 + 2x)}
+
+\hint
+Benyt kæde reglen
+\[
+\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+\]
+
+\hint
+Sæt $f(x) = e^x$ og $g(x) = 2x + x^2$ og bestem $f'(x)$ og $g'(x)$.
+\[
+f'(x) = e^x \qquad g'(x) = 2 + 2x
+\]
+
+\hint
+Indsæt i kædereglen
+\[
+\frac{d}{dx} e^{2x + x^2} = e^{2x + x^2} \cdot (2 + 2x)
+\]
+
+\end{exercise}
+
+\end{document}

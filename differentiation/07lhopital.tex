@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\begin{exercise}{LHopital 1 - Grænsen er ikke defineret}
+Bestem grænseværdien.
+\[
+\lim_{x \to 1} \frac{e^x - 1}{(x - 1)^2}
+\]
+
+Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
+
+\answerbox{uendelig}
+
+\hint
+Først undersøges det om vi må anvende L'Hopital.
+
+\hint
+Grænserne af tælleren og nævneren bestemmes.
+\begin{align*}
+\lim_{x \to 1} (e^x - 1) = e^1 - 1 = e - 1 \neq 0 \\
+\lim_{x \to 1} (x - 1)^2 = (1 - 1)^2 = 0
+\end{align*}
+
+\hint
+Da de to grænser ikke begge er nul eller uendelig, må vi ikke anvende L'Hopitals regel. 
+
+\hint
+Vi ender i følgende situtation.
+\[
+\left[ \frac{e - 1}{0} \right]
+\]
+
+\hint
+Hvor noget endeligt ($e - 1$) deles med noget der går mod nul.
+Bemærk at $(x - 1)^2$ altid er større eller lig med nul. 
+
+Derfor går hele værdien mod uendelig.
+\[
+\lim_{x \to 1} \frac{e^x - 1}{(x - 1)^2} = \infty
+\]
+
+\end{exercise}
+
+\end{document}

@@ -380,7 +380,7 @@ Bestem værdien af determinanten i udtrykket
 \begin{align*}
 & =(\lambda+1) \cdot (\lambda-3) \cdot (\lambda+5)+(12) \cdot (-2) \cdot (-2)+(6) \cdot (0) \cdot (0) \\
 & \qquad -(\lambda+1) \cdot (-2) \cdot (0)-(12) \cdot (0) \cdot (\lambda+5)-(6) \cdot (\lambda-3) \cdot (-2) \\
-& =\lambda3+3\lambda2-1\lambda-3
+& =\lambda^3+3\lambda^2-1\lambda-3
 \end{align*}
 
 \hint
@@ -400,60 +400,5 @@ $\lambda=-3$, $\lambda=-1$ og $\lambda=1$.
 
 
 
-
-\begin{exercise}{Bestem egenværdierne af 3x3 matricen - 8}
-
-Bestem egenværdierne $\lambda_i$ af 
-\[
-A=\begin{pmatrix}
-5 & 5 & 0 \\
--6 & 6 & 2 \\
-4 & 4 & 1
-\end{pmatrix}
-\]
-
-Angiv egenværdierne i nummerisk rækkefølge, så de
-opfylder $\lambda_1 \le \lambda_2 \le \lambda_3$.
-
-$\lambda_1 = $ \answerbox{-3}
-
-$\lambda_2 = $ \answerbox{0}
-
-$\lambda_3 = $ \answerbox{3}
-
-\hint
-Opskriv det karakteristiske polynomie.
-
-\hint
-\[
-p(\lambda)=\det\left(I \cdot \lambda - A \right)=\det\begin{pmatrix}
-\lambda - 5 & -5 & 0 \\
-6 & \lambda - 6 & -2 \\
--4 & -5 & \lambda-1
-\end{pmatrix}.
-\]
-
-\hint
-Bestem værdien af determinanten i udtrykket
-\begin{align*}
-&=(\lambda-5) \cdot (\lambda+6) \cdot (\lambda-1)+(6) \cdot (-4) \cdot (0)+(-4) \cdot (-5) \cdot (-2) \\
-& \qquad -(\lambda-5) \cdot (-4) \cdot (-2)-(6) \cdot (-5) \cdot (\lambda-1)-(-4) \cdot (\lambda+6) \cdot (0) \\
-&=\lambda3+0\lambda2-9\lambda+0
-\end{align*}
-
-\hint
-Faktoriser udtrykket
-
-\hint
-\[
-=(\lambda-0) \cdot (\lambda+3) \cdot (\lambda-3)
-\]
-
-\hint
-Egenværdierne er rødderne af det karakteristiske polynomie, 
-altså
-$\lambda=-3$, $\lambda=0$ og $\lambda=3$.
-
-\end{exercise}
 
 \end{document}
