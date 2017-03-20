@@ -53,6 +53,13 @@ def test_change_part_of_markup_7():
     assert_equals(expected_output, output)
 
 
+def test_change_part_of_markup_8():
+    input_values = [r"vis \underline{dette} en gang til"]
+    expected_output = ['vis **dette** en gang til']
+    output = list(change_part_of_markup(input_values))
+    assert_equals(expected_output, output)
+
+
 def test_change_multi_choice_markup_1():
     input_values = ["\\begin{multichoice}[randomizeorder, selectmultiple]\n", "\\itemtrue ja\n", "\\itemfalse nej\n", "\\end{multichoice}\n"]
     expected_output = ["[[ref multichoice1]]\n"]

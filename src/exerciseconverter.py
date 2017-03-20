@@ -32,11 +32,15 @@ def change_part_of_markup(input_lines):
     The function does not handle elements (like answer boxes) that are inserted using the reference markup.
     """
     inline_math = re.compile('(.*)\\$(.*)\\$(.*)')
+    underline = re.compile(r'(.*)\\underline{(.*)}(.*)')
     for line in input_lines:
         res = inline_math.match(line)
         while res:
             line = "%s[[eql %s]]%s\n" % (res.group(1), res.group(2), res.group(3))
             res = inline_math.match(line)
+        res = underline.match(line)
+        if res:
+            line = "%s**%s**%s" % (res.group(1), res.group(2), res.group(3))
         line = line.replace("\\(", "[[eql ")
         line = line.replace("\\)", "]]")
         line = line.replace("\\[", "[[eq ")
