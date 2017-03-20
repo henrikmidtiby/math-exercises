@@ -38,7 +38,7 @@ class ChangeMultiChoiceMarkup:
             if res_end_environment:
                 in_multi_choice_environment = False
                 count += 1
-                yield "[[ref multichoice%d]]\n" % count
+                yield "[[ref multi_choice%d]]\n" % count
                 self.detected_multi_choice_markups.append(MultiChoice(count, self.current_items, parameters))
                 self.current_items = []
             elif res_start_environment:

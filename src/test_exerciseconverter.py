@@ -62,7 +62,7 @@ def test_change_part_of_markup_8():
 
 def test_change_multi_choice_markup_1():
     input_values = ["\\begin{multichoice}[randomizeorder, selectmultiple]\n", "\\itemtrue ja\n", "\\itemfalse nej\n", "\\end{multichoice}\n"]
-    expected_output = ["[[ref multichoice1]]\n"]
+    expected_output = ["[[ref multi_choice1]]\n"]
     temp = ChangeMultiChoiceMarkup()
     output = list(temp.generator(input_values))
     assert_equals(expected_output, output)
@@ -75,7 +75,7 @@ def test_change_multi_choice_markup_1():
 
 def test_change_multi_choice_markup_2():
     input_values = ["\\begin{multichoice}[randomizeorder, selectmultiple]\n", "\\itemtrue ja\n", "\\itemfalse nej\n", "\\end{multichoice}\n", "\\begin{multichoice}\n", "\\itemtrue ja\n", "\\end{multichoice}\n"]
-    expected_output = ["[[ref multichoice1]]\n", "[[ref multichoice2]]\n"]
+    expected_output = ["[[ref multi_choice1]]\n", "[[ref multi_choice2]]\n"]
     temp = ChangeMultiChoiceMarkup()
     output = list(temp.generator(input_values))
     assert_equals(expected_output, output)
