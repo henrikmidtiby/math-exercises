@@ -4,6 +4,43 @@ import collections
 RenderedWidget = collections.namedtuple('RenderedWidget', ['nr', 'content'])
 
 
+def render_sorting_widget(sorting_widget):
+    template = """
+"sorting_widget{{- sorting_widget.nr -}}": {
+  "type": "sorter",
+  "properties": {
+    "values": [
+      [
+        {
+          "value": "{{- sorting_widget.matches[0].columna -}}"
+        },
+        {
+          "value": "{{- sorting_widget.matches[0].columnb -}}"
+        }
+      ]{% for match in sorting_widget.matches[1:] %},
+      [
+        {
+          "value": "{{ match.columna }}"
+        },
+        {
+          "value": "{{ match.columnb }}"
+        }
+      ]{% endfor %}
+    ],
+    "columnnamea": "{{- sorting_widget.columna -}}",
+    "columnnameb": "{{- sorting_widget.columnb -}}"
+  },
+  "name": "sorting_widget{{- sorting_widget.nr -}}"
+}
+
+"""
+
+    t = jinja2.Template(template)
+    values = {'sorting_widget': sorting_widget}
+    rendered_exercise = t.render(values)
+    return rendered_exercise
+
+
 class WidgetRenderer:
     def __init__(self):
         self.rendered_widgets = []
@@ -66,6 +103,13 @@ class WidgetRenderer:
             t = jinja2.Template(multichoice_template)
             values = {'multi_choice': multi_choice}
             rendered_exercise = t.render(values)
+            self.rendered_widgets_counter += 1
+            self.rendered_widgets.append(RenderedWidget(self.rendered_widgets_counter,
+                                                        rendered_exercise))
+
+    def add_sorting_widgets(self, sorting_widgets):
+        for sorting_widget in sorting_widgets:
+            rendered_exercise = render_sorting_widget(sorting_widget)
             self.rendered_widgets_counter += 1
             self.rendered_widgets.append(RenderedWidget(self.rendered_widgets_counter,
                                                         rendered_exercise))

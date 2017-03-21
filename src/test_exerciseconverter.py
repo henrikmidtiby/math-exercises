@@ -89,6 +89,20 @@ def test_change_multi_choice_markup_2():
     assert_equals(detected_environments, temp.detected_multi_choice_markups)
 
 
+def test_change_sorter_markup_1():
+    input_values = ["\\begin{sortingwidget}{a}{b}\n", "A&a\n", "B&b\n", "\\end{sortingwidget}\n"]
+    expected_output = ["[[ref sorting_widget1]]\n"]
+    temp = ChangeSorterMarkup()
+    output = list(temp.generator(input_values))
+    assert_equals(expected_output, output)
+    detected_environments = [SorterWidget(nr=1,
+                                          columna='a',
+                                          columnb='b',
+                                          matches=[SorterWidgetMatch(columna='A', columnb='a'),
+                                                   SorterWidgetMatch(columna='B', columnb='b')])]
+    assert_equals(detected_environments, temp.detected_sorting_widgets_markups)
+
+
 def test_change_answermatrix_markup_1():
     input_values = ["\\begin{answermatrix}\n", "1\n", "\\end{answermatrix}\n"]
     expected_output = ["[[ref answermatrix1]]\n"]

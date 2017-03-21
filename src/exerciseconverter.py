@@ -7,6 +7,7 @@ import codecs
 import argparse
 import collections
 from ChangeMultiChoiceMarkup import *
+from ChangeSorterMarkup import *
 from ChangeAnswerBoxMarkup import *
 from ChangeHintMarkup import *
 from ChangeImageMarkup import *
@@ -89,12 +90,14 @@ def add_extra_backslashes(input_lines):
 def render_exercise(exercise):
     answer_box_parser = ChangeAnswerBoxMarkup()
     multi_choice_parser = ChangeMultiChoiceMarkup()
+    sorting_widget_parser = ChangeSorterMarkup()
     answer_matrix_parser = ChangeAnswerMatrixMarkup()
     image__parser = ChangeImageMarkup()
     hint_parser = ChangeHintMarkup()
 
     question = answer_box_parser.generator(exercise.content)
     question = multi_choice_parser.generator(question)
+    question = sorting_widget_parser.generator(question)
     question = answer_matrix_parser.generator(question)
     question = image__parser.generator(question)
     hint_parser.parser(question)
@@ -103,6 +106,7 @@ def render_exercise(exercise):
 
     answers = list(answer_box_parser.get_answers())
     multi_choices = list(multi_choice_parser.get_multi_choices())
+    sorting_widgets = list(sorting_widget_parser.get_sorting_widgets())
     answer_matrices = list(answer_matrix_parser.get_answer_matrices())
     hints = list(hint_parser.get_hints())
 
@@ -110,6 +114,7 @@ def render_exercise(exercise):
     widget_renderer.add_answerbox_widgets(answers)
     widget_renderer.add_hint_widgets(hints)
     widget_renderer.add_multi_choice_widgets(multi_choices)
+    widget_renderer.add_sorting_widgets(sorting_widgets)
     widget_renderer.add_answer_matrix_widgets(answer_matrices)
     rendered_widgets = widget_renderer.get_rendered_widgets()
 
