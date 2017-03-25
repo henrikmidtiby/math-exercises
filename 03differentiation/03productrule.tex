@@ -1,4 +1,4 @@
-\documentclass{article}
+  \documentclass{article}
 \usepackage{tekvideoexercises}
 
 \begin{document}
@@ -48,7 +48,6 @@ Der forenkles til
 \end{exercise}
 
 
-
 \begin{exercise}{Differentiering 3 - 02}
 Bestem $\frac{d}{dx} \left( e^x \cdot \sin(x) \right)$.
 
@@ -69,8 +68,302 @@ Sæt $f(x) = e^x$ og $g(x) = \sin(x)$
 \hint
 Differentier delled.
 \[
-\frac{d}{dx} \left( x \cdot \sin(x) \right) = e^x \cdot \sin(x) + e^x \cdot \cos(x)
+\frac{d}{dx} \left( e^x \cdot \sin(x) \right) = e^x \cdot \sin(x) + e^x \cdot \cos(x)
 \]
 \end{exercise}
+
+
+\begin{exercise}{Differentiering 3 - 03}
+	Bestem $\frac{d}{dx} \left( x^2 \cdot \sin(x) \right)$.
+	
+	\answerbox{\cos(x) \cdot x^2 + 2x \cdot \sin(x)}
+	
+	\hint
+	Benyt produkt reglen
+	\[
+	\frac{d}{dx} \left( f(x) \cdot g(x) \right) = \frac{d}{dx} \left( f(x) \right) \cdot g(x) + f(x) \cdot \frac{d}{dx} \left( g(x) \right)
+	\]
+	
+	\hint
+	Sæt $f(x) = x^2$ og $g(x) = \sin(x)$
+	\[
+	\frac{d}{dx} \left( x^2 \cdot \sin(x) \right) = \frac{d}{dx} \left( x^2 \right) \cdot \sin(x) + x^2 \cdot \frac{d}{dx} \left( \sin(x) \right)
+	\]
+	
+	\hint
+	Differentier delled.
+	\[
+	\frac{d}{dx} \left( x^2 \cdot \sin(x) \right) = 2x \cdot \sin(x) + x^2 \cdot \cos(x)
+	\]
+\end{exercise}
+
+
+\begin{exercise}{Differentiering 3 - 04}
+	Bestem $\frac{d}{dx} \left( \ln(x) \cdot x^2 \right)$.
+	
+	\answerbox{x + 2x \cdot \ln(x)}
+	
+	\hint
+	Benyt produkt reglen
+	\[
+	\frac{d}{dx} \left( f(x) \cdot g(x) \right) = \frac{d}{dx} \left( f(x) \right) \cdot g(x) + f(x) \cdot \frac{d}{dx} \left( g(x) \right)
+	\]
+	
+	\hint
+	Sæt $f(x) = \ln(x)$ og $g(x) = x^2$
+	\[
+	\frac{d}{dx} \left( \ln(x) \cdot x^2  \right) = \frac{d}{dx} \left( \ln(x) \right) \cdot x^2 + \ln(x) \cdot \frac{d}{dx} \left( x^2 \right)
+	\]
+	
+	\hint
+	Differentier delled.
+	\[
+	\frac{d}{dx} \left( \ln(x) \cdot x^2 \right) = \frac{1}{x} \cdot x^2 + \ln(x) \cdot 2x 
+	\]
+	
+	\hint
+	Reducer udtryk.
+	\[
+	= x + 2x \cdot \ln(x)
+	\]
+\end{exercise}
+
+
+\begin{exercise}{Differentiering 3 - 05}
+	Bestem $\frac{d}{dx} \left( \cos(x) \cdot \sin(x) \right)$.
+	
+	\answerbox{\cos(x)^2 - \sin(x)^2}
+	
+	\hint
+	Benyt produkt reglen
+	\[
+	\frac{d}{dx} \left( f(x) \cdot g(x) \right) = \frac{d}{dx} \left( f(x) \right) \cdot g(x) + f(x) \cdot \frac{d}{dx} \left( g(x) \right)
+	\]
+	
+	\hint
+	Sæt $f(x) = \cos(x)$ og $g(x) = \sin(x)$
+	\[
+	\frac{d}{dx} \left( \cos(x) \cdot \sin(x) \right) = \frac{d}{dx} \left( \cos(x) \right) \cdot \sin(x) + \cos(x) \cdot \frac{d}{dx} \left( \sin(x) \right)
+	\]
+	
+	\hint
+	Differentier delled.
+	\[
+	\frac{d}{dx} \left( \cos(x) \cdot \sin(x) \right) = - \sin(x) \cdot \sin(x) + \cos(x) \cdot \cos(x)
+	\]
+	
+	\hint
+	Reducer udtryk.
+	\[
+	= \cos(x)^2 - \sin(x)^2	
+	\]
+	
+	
+\end{exercise}
+
+
+\begin{exercise}{Differentiering 3 - 06}
+	Bestem $\frac{d}{dx} \left( \ln(x) \cdot \cos(x) \right)$.
+	
+	\answerbox{\frac{\cos(x)}{x} - \ln(x) \cdot \sin(x)}
+	
+	\hint
+	Benyt produkt reglen
+	\[
+	\frac{d}{dx} \left( f(x) \cdot g(x) \right) = \frac{d}{dx} \left( f(x) \right) \cdot g(x) + f(x) \cdot \frac{d}{dx} \left( g(x) \right)
+	\]
+	
+	\hint
+	Sæt $f(x) = \ln(x)$ og $g(x) = \cos(x)$
+	\[
+	\frac{d}{dx} \left( \ln(x) \cdot \cos(x) \right) = \frac{d}{dx} \left( \ln(x) \right) \cdot \cos(x) + \ln(x) \cdot \frac{d}{dx} \left( \cos(x) \right)
+	\]
+	
+	\hint
+	Differentier delled.
+	\[
+	\frac{d}{dx} \left( \ln(x) \cdot \cos(x) \right) = \frac{1}{x} \cdot \cos(x) + \ln(x) \cdot( - \sin(x) )
+	\]
+	
+	\hint 
+	Reducer udtryk.
+	\[
+	= \frac{\cos(x)}{x} - \ln(x) \cdot \sin(x) 
+	\]
+
+\end{exercise}
+
+
+\begin{exercise}{Differentiering 3 - 07}
+	Bestem $\frac{d}{dx} \left( \sqrt{x^2+1} \cdot \cos(x) \right)$.
+	
+	\answerbox{\frac{x \cdot \cos(x)}{\sqrt{x^2+1}} - \sqrt{x^2 + 1} \cdot \sin(x) }
+	
+	\hint
+	Benyt produkt reglen
+	\[
+	\frac{d}{dx} \left( f(x) \cdot g(x) \right) = \frac{d}{dx} \left( f(x) \right) \cdot g(x) + f(x) \cdot \frac{d}{dx} \left( g(x) \right)
+	\]
+	
+	\hint
+	Sæt $f(x) = \sqrt{x^2 + 1}$ og $g(x) = \cos(x)$
+	\[
+	\frac{d}{dx} \left(  \sqrt{x^2+1} \cdot \cos(x) \right) = \frac{d}{dx} \left( \sqrt{x^2 + 1}\right) \cdot \cos(x) + \sqrt{x^2 + 1} \cdot \frac{d}{dx} \left( \cos(x) \right)
+	\]
+	
+	\hint
+	Differentier delled 1, her skal kædereglen benyttes for at finde resultatet.
+	\[
+	\frac{d}{dx} \left( \sqrt{x^2 + 1 }\right) = \frac{1}{2 \sqrt{x^2 + 1}} \cdot 2x  
+	\]
+	og delled 2.
+	\[
+	\frac{d}{dx} \left( \cos(x) \right) = -\sin(x)
+	\]
+	
+	
+	\hint
+	Delresultaterne indsættes og vi får
+	\[
+	\frac{d}{dx} \left( \sqrt{x^2+1} \cdot \cos(x) \right) = \frac{1}{\sqrt{x^2 + 1}} \cdot 2x \cdot \cos(x) +  \sqrt{x^2 + 1} \cdot (-\sin(x)) 
+	\]
+	
+	\hint
+	Der forenkles til 
+	\[
+	\frac{d}{dx} \left( \sqrt{x^2+1} \cdot \cos(x)\right) = \frac{x \cdot \cos(x)}{\sqrt{x^2 + 1}} - \sqrt{x^2 + 1 } \cdot \sin(x)
+	\]
+	
+\end{exercise}
+
+
+\begin{exercise}{Differentiering 3 - 08}
+	Bestem $\frac{d}{dx} \left( x^3 \cdot \sin(3x) \right)$.
+	
+	\answerbox{3x^2 \sin(3x) + 3x^3 \cdot \cos(3x)}
+	
+	\hint
+	Benyt produkt reglen
+	\[
+	\frac{d}{dx} \left( f(x) \cdot g(x) \right) = \frac{d}{dx} \left( f(x) \right) \cdot g(x) + f(x) \cdot \frac{d}{dx} \left( g(x) \right)
+	\]
+	
+	\hint
+	Sæt $f(x) = x^3$ og $g(x) = \sin(3x)$
+	\[
+	\frac{d}{dx} \left( x^3 \cdot \sin(3x) \right) = \frac{d}{dx} \left( x^3 \right) \cdot \sin(3x) + x^3 \cdot \frac{d}{dx} \left( \sin(3x)\right)
+	\]
+	
+	\hint
+	Differentier delled 1.
+	\[
+	\frac{d}{dx} \left( x^3 \right) = 3x^2
+	\]
+	og delled 2, her skal kædereglen benyttes for at finde resultatet.
+	\[
+	\frac{d}{dx} \left( \sin(3x) \right) = \cos(3x) \cdot 3
+	\]
+	
+	
+	\hint
+	Delresultaterne indsættes og vi får
+	\[
+	\frac{d}{dx} \left( x^3 \cdot \sin(3x) \right) = 3x^2 \cdot \sin(3x) + x^3 \cdot \cos(3x) \cdot 3
+	\]
+	
+	\hint
+	Der forenkles til 
+	\[
+	\frac{d}{dx} \left( x^3 \cdot \sin(3x) \right) = 3x^2 \cdot \sin(3x) + 3x^3 \cos(3x) 
+	\]
+	
+\end{exercise}
+
+
+\begin{exercise}{Differentiering 3 - 09}
+	Bestem $\frac{d}{dx} \left(e^{3x} \cdot (x^2 + 1)^2 \right)$.
+	
+	\answerbox{e^{3x} \left( 3 (x^2 +1)^2 + 4x^3 + 4x  \right) }
+	
+	\hint
+	Benyt produkt reglen
+	\[
+	\frac{d}{dx} \left( f(x) \cdot g(x) \right) = \frac{d}{dx} \left( f(x) \right) \cdot g(x) + f(x) \cdot \frac{d}{dx} \left( g(x) \right)
+	\]
+	
+	\hint
+	Sæt $f(x) = x$ og $g(x) = e^{2x^2}$
+	\[
+	\frac{d}{dx} \left( e^{3x} \cdot (x^2+1)^2 \right) = \frac{d}{dx} \left( e^{3x} \right) \cdot (x^2+1)^2 + e^{3x} \cdot \frac{d}{dx} \left( (x^2 + 1)^2 \right)
+	\]
+	
+	\hint
+	Differentier delled 1, her skal kædereglen benyttes for at finde resultatet.
+	\[
+	\frac{d}{dx} \left( e^{3x} \right) = e^{3x} \cdot 3 
+	\]
+	og delled 2, her skal kædereglen også benyttes for at finde resultatet.
+	\[
+	\frac{d}{dx} \left( (x^2+1)^2 \right) = 2 (x^2+1) \cdot 2x
+	\]
+	
+	
+	\hint
+	Delresultaterne indsættes og vi får
+	\[
+	\frac{d}{dx} \left( e^{3x} \cdot (x^2 + 1)^2 \right) = 3e^{3x} \cdot (x^2+1)^2 + e^{3x} \cdot 2 (x^2 + 1)  \cdot 2x
+	\]
+	
+	\hint
+	Der forenkles til 
+	\[
+	\frac{d}{dx} \left( e^{3x} \cdot (x^2 + 1)^2 \right) = e^{3x} \left( 3 (x^2 +1)^2 + 4x^3 + 4x  \right)
+	\]
+	
+\end{exercise}
+
+
+\begin{exercise}{Differentiering 3 - 10}
+	Bestem $\frac{d}{dx} \left( x^2 \cdot e^{3x} \right)$.
+	
+	\answerbox{e^{3x} \cdot (2x + 3x^2) }
+	
+	\hint
+	Benyt produkt reglen
+	\[
+	\frac{d}{dx} \left( f(x) \cdot g(x) \right) = \frac{d}{dx} \left( f(x) \right) \cdot g(x) + f(x) \cdot \frac{d}{dx} \left( g(x) \right)
+	\]
+	
+	\hint
+	Sæt $f(x) = x^2$ og $g(x) = e^{3x}$
+	\[
+	\frac{d}{dx} \left( x^2\cdot e^{3x} \right) = \frac{d}{dx} \left( x^2 \right) \cdot e^{3x} + x^2 \cdot \frac{d}{dx} \left( e^{3x} \right)
+	\]
+	
+	\hint
+	Differentier delled 1.
+	\[
+	\frac{d}{dx} \left( x^2 \right) = 2x
+	\]
+	og delled 2, her skal kædereglen benyttes for at finde resultatet.
+	\[
+	\frac{d}{dx} \left( e^{3x} \right) = e^{3x} \cdot 3
+	\]
+	
+	
+	\hint
+	Delresultaterne indsættes og vi får
+	\[
+	\frac{d}{dx} \left( x^2 \cdot e^{3x} \right) = 2x \cdot e^{3x} + x^2 \cdot e^{3x} \cdot 3
+	\]
+	
+	\hint
+	Der forenkles til 
+	\[
+	\frac{d}{dx} \left( x^2 \cdot e^{3x} \right) = e^{3x} \cdot (2x + 3x^2) 
+	\]
+	
+\end{exercise}
+
 
 \end{document}
