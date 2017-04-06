@@ -56,9 +56,6 @@ Lidt forenklinger
 \]
 \end{exercise}
 
-
-
-
 \begin{exercise}{Differentiering 4 - 02}
 % Adams 3.5.20
 Differentier udtrykket $\arctan\left( a x + b \right)$ med hensyn til $x$.
@@ -97,6 +94,299 @@ Lidt forenklinger
 \[
 \frac{a}{1 + \left( a \cdot x + b \right)^2}
 \]
+\end{exercise}
+
+\begin{exercise}{Differentiering 4 - 03}
+	
+	Differentier udtrykket $\arccos\left( \frac{x-2}{5} \right)$ med hensyn til $x$.
+	
+	\answerbox{\frac{-1}{\sqrt{21 -x^2 + 4x}}}
+	
+	\hint
+	\[
+	\frac{d}{dx} \arccos(x) = \frac{-1}{\sqrt{1 - x^2}}
+	\]
+	
+	
+	\hint
+	Benyt kædereglen
+	\[
+	\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+	\]
+	
+	\hint
+	Sæt $f(x) = \arccos(x)$ og $g(x) = \frac{x-2}{5}$.
+	
+	\hint
+	Bestem $f'(x)$ og $g'(x)$.
+	\[
+	f'(x) = \frac{-1}{\sqrt{1 - x^2}} \qquad g'(x) = \frac{1}{5}
+	\]
+
+	\hint
+	Indsæt i kædereglen
+	\[
+	\frac{d}{dx} \arccos\left( \frac{x - 2}{5} \right) = \frac{-1}{\sqrt{1 + \left( \frac{x - 2}{5} \right)^2}} \cdot \frac{1}{5}
+	\]
+	
+	\hint
+	Ophæv parentes under kvadratrodstegnet
+	\[
+	\frac{-1}{\sqrt{1 - \left( \frac{x - 2}{5} \right)^2}} \cdot \frac{1}{5} = \frac{-1}{\sqrt{1 - \frac{(x^2 - 4x + 4)}{25}}} \cdot \frac{1}{5}
+	\]
+	
+	\hint
+	Lidt forenklinger
+	\[
+	\frac{-1}{\sqrt{1 - \frac{\left( x^2 - 4x + 4 \right)}{25}}} \cdot \frac{1}{5} = \frac{-1}{\sqrt{25 - x^2 + 4x - 4}} = \frac{-1}{\sqrt{21 - x^2 + 4x}} 
+	\]
+\end{exercise}
+
+\begin{exercise}{Differentiering 4 - 04}
+
+	Differentier udtrykket $\arctan\left( 2x + 1\right) \cdot 3x^2 $ med hensyn til $x$.
+	
+	\answerbox{\frac{3x^2}{2x^2 + 2x + 1} + \arctan(2x + 1) \cdot 6x}
+	
+	\hint
+	\[
+	\frac{d}{dx} \arctan(x) = \frac{1}{1 + x^ 2}
+	\]
+	
+	
+	\hint
+	Benyt kædereglen
+	\[
+	\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+	\]
+	
+	\hint
+	Sæt $f(x) = \arctan(x)$ og $g(x) = 2x + 1$.
+	
+	\hint
+	Bestem $f'(x)$ og $g'(x)$.
+	\[
+	f'(x) = \frac{1}{1 + x^ 2} \qquad g'(x) = 2
+	\]
+	
+	\hint
+	Indsæt i kædereglen
+	\[
+	\frac{d}{dx} \arctan\left( 2x + 1 \right) = \frac{1}{1 + \left( 2x + 1 \right)^2} \cdot 2
+	\]
+	
+	\hint
+	Lidt forenklinger
+	\[
+	\frac{2}{4x^2 + 4x  + 2} = \frac{1}{2x^2 + 2x + 1}
+	\]
+	
+	\hint
+	Benyt produktreglen
+	\[
+	\frac{d}{dx} \left(f(x) \cdot g(x) \right) = f'(x) \cdot g(x) + f(x) \cdot g'(x)
+	\]
+	
+	\hint
+	Sæt $f(x) = \arctan(2x + 1)$ og $g(x) = 3x^2$.
+	
+	\hint
+	Bestem $g'(x)$.
+	\[
+	g'(x) = 6x
+	\]
+	
+	\hint
+	Indsæt i produktreglen
+	\[
+	 \frac{1}{2x^2 + 2x + 1} \cdot 3x^2 + \arctan(2x + 1) \cdot 6x = \frac{3x^2}{2x^2 + 2x + 1} +  \arctan(2x + 1) \cdot 6x
+	\]
+	
+
+\end{exercise}
+
+\begin{exercise}{Differentiering 4 - 05}
+	
+	Differentier udtrykket $\arcsin\left( \frac{3x - 2}{4} \right)$ med hensyn til $x$.
+	
+	\answerbox{\frac{1}{\sqrt{-x^2 + \frac{4x + 4}{3}}}}
+	
+	\hint
+	\[
+	\frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1 - x^2}}
+	\]
+	
+	
+	\hint
+	Benyt kædereglen
+	\[
+	\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+	\]
+	
+	\hint
+	Sæt $f(x) = \arcsin(x)$ og $g(x) = \frac{3x - 2}{4}$.
+	
+	\hint
+	Bestem $f'(x)$ og $g'(x)$.
+	\[
+	f'(x) = \frac{1}{\sqrt{1 - x^2}} \qquad g'(x) = \frac{3}{4}
+	\]
+	
+	\hint
+	Indsæt i kædereglen
+	\[
+	\frac{d}{dx} \arcsin\left( \frac{3x - 2}{4} \right) = \frac{1}{\sqrt{1 - \left( \frac{3x - 2}{4}\right)^2}} \cdot \frac{3}{4}
+	\]
+	
+	\hint
+	Ophæv parentes under kvadratrodstegnet
+	\[
+	\frac{1}{\sqrt{1 - \frac{9x^2 - 12x + 4}{16}}} \cdot \frac{3}{4} 
+	\]
+	
+	\hint
+	Lidt forenklinger
+	\[
+	\frac{1}{\sqrt{1 - \frac{ 9x^2 - 12x + 4}{16}}} \cdot \frac{3}{4} = \frac{3}{\sqrt{- 9x^2 + 12x + 12}}  = \frac{1}{\sqrt{-x^2 + \frac{4x + 4}{3}}}
+	\]
+\end{exercise}
+
+\begin{exercise}{Differentiering 4 - 06}
+
+	Differentier udtrykket $\arccos\left( x^2 + 3 \right)$ med hensyn til $x$.
+	
+	\answerbox{\frac{-2x}{\sqrt{-x^4 - 6x^2 -8}}}
+	
+	\hint
+	\[
+	\frac{d}{dx} \arccos(x) = \frac{-1}{\sqrt{1 - x^2}}
+	\]
+	
+	
+	\hint
+	Benyt kædereglen
+	\[
+	\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+	\]
+	
+	\hint
+	Sæt $f(x) = \arccos(x)$ og $g(x) = x^2 + 3$.
+	
+	\hint
+	Bestem $f'(x)$ og $g'(x)$.
+	\[
+	f'(x) = \frac{-1}{\sqrt{1 - x^2}} \qquad g'(x) = 2x
+	\]
+	
+	\hint
+	Indsæt i kædereglen
+	\[
+	\frac{d}{dx} \arccos\left( x^2 + 3 \right) = \frac{-1}{\sqrt{1 - \left( x^2 + 3 \right)^2}} \cdot 2x
+	\]
+	
+	\hint
+	Ophæv parentes under kvadratrodstegnet
+	\[
+	\frac{-1}{\sqrt{1 - \left( x^2 + 3 \right)^2}} \cdot 2x = \frac{-1}{\sqrt{1 - \left( x^4 + 6x^2 + 9 \right)}} \cdot 2x
+	\]
+	
+	\hint
+	Lidt forenklinger
+	\[
+	\frac{-2x}{\sqrt{1 - x^4 - 6x^2 - 9}} = \frac{-2x}{\sqrt{- x^4 - 6x^2 - 8}} 
+	\]
+\end{exercise}
+
+\begin{exercise}{Differentiering 4 - 07}
+
+	Differentier udtrykket $\arctan\left( \frac{5 x - 1}{2} \right)$ med hensyn til $x$.
+	
+	\answerbox{\frac{2}{5x^2 - 2x + 1}}
+	
+	\hint
+	\[
+	\frac{d}{dx} \arctan(x) = \frac{1}{1 + x^ 2}
+	\]
+	
+	
+	\hint
+	Benyt kædereglen
+	\[
+	\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+	\]
+	
+	\hint
+	Sæt $f(x) = \arctan(x)$ og $g(x) = \frac{5x - 1}{2}$.
+	
+	\hint
+	Bestem $f'(x)$ og $g'(x)$.
+	\[
+	f'(x) = \frac{1}{1 + x^ 2} \qquad g'(x) = \frac{5}{2}
+	\]
+	
+	\hint
+	Indsæt i kædereglen
+	\[
+	\frac{d}{dx} \arctan\left( \frac{5x - 1}{2} \right) = \frac{1}{1 + \left( \frac{5x  - 1}{2} \right)^2} \cdot \frac{5}{2}
+	\]
+	
+	\hint
+	Ophæv parentes i nævneren
+	\[
+	\frac{1}{1 + \left( \frac{5x  - 1}{2} \right)^2} \cdot \frac{5}{2} = \frac{1}{1 + \frac{25x^2 - 10 x  + 1}{4}} \cdot \frac{5}{2}
+	\]
+	
+	\hint
+	Lidt forenklinger
+	\[
+	\frac{5}{\frac{4 + 25x^2 - 10 x  + 1}{2}} = \frac{5 \cdot 2}{ 25x^2 - 10 x  + 5} = \frac{2}{5x^2 - 2 x  + 1}  
+ 	\]
+\end{exercise}
+
+\begin{exercise}{Differentiering 4 - 08}
+	
+	Differentier udtrykket $\arcsin\left( x^3 + 2\right)$ med hensyn til $x$.
+	
+	\answerbox{\frac{3x^2}{\sqrt{-x^6 - 4x^3 - 3}}}
+	
+	\hint
+	\[
+	\frac{d}{dx} \arcsin(x) = \frac{1}{\sqrt{1 - x^2}}
+	\]
+	
+	
+	\hint
+	Benyt kædereglen
+	\[
+	\frac{d}{dx} f(g(x)) = f'(g(x)) \cdot g'(x)
+	\]
+	
+	\hint
+	Sæt $f(x) = \arcsin(x)$ og $g(x) = x^3 + 2$.
+	
+	\hint
+	Bestem $f'(x)$ og $g'(x)$.
+	\[
+	f'(x) = \frac{1}{\sqrt{1 - x^2}} \qquad g'(x) = 3x^2
+	\]
+	
+	\hint
+	Indsæt i kædereglen
+	\[
+	\frac{d}{dx} \arcsin\left( x^3 + 2\right) = \frac{1}{\sqrt{1 - \left( x^3 + 2 \right)^2}} \cdot 3x^2
+	\]
+	
+	\hint
+	Ophæv parentes under kvadratrodstegnet
+	\[
+	\frac{1}{\sqrt{1 - (x^6 + 4x^3 + 4)}} \cdot 3x^2
+	\]
+	
+	\hint
+	Lidt forenklinger
+	\[
+	\frac{3x^2}{\sqrt{1 - x^6 - 4x^3 - 4}}  = \frac{3x^2}{\sqrt{-x^6 - 4x^3 - 3}}
+	\]
 \end{exercise}
 
 
