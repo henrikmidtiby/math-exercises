@@ -51,7 +51,6 @@ og indsættes i udtrykket
 
 \end{exercise}
 
-
 \begin{exercise}{Linearisering 2}
 % Adams 4.9.19
 Benyt en passende linearisering til at approksimere
@@ -133,5 +132,359 @@ L(49 \cdot \pi/180) = 0.657741
 \]
 
 \end{exercise}
+
+\begin{exercise}{Linearisering 3}
+
+	Benyt en passende linearisering til at approksimere
+	\[
+	\sqrt{50}
+	\]
+	angiv resultatet med fire decimalaer i boksen herunder.
+	\answerbox{7.0714}
+	
+	\hint
+	Først skal vi vælge den funktion der skal approksimeres
+	og det punkt som der skal bruges som udgangspunkt for 
+	approksimationen.
+	For at vi kan bestemme approksimationen skal vi 
+	kende funktionsværdien og dens afledte i punktet.
+	
+	\hint
+	Vi vælger funktionen $f(x) = \sqrt{x}$ og at approksimere den 
+	omkring $x_0 = 49$.
+	Så kan vi nemlig godt finde værdierne af $f(49)$ og $f'(49)$.
+	\[
+	f(49) = \sqrt{49} = 7
+	\]
+	\[
+	f'(49) = \frac{1}{2 \sqrt{49}} = \frac{1}{2 \cdot 7 } = \frac{1}{14}
+	\]
+	
+	\hint
+	Lineariseringen opskrives
+	\[
+	L(x) = 7 + \frac{1}{14} \cdot (x - 49) = \frac{x + 49}{14}
+	\]
+	
+	\hint
+	Værdien i punktet bestemmes
+	\[
+	L(50) = \frac{50 + 49}{14} = \frac{99}{14}
+	\]
+	som vha. lommeregner bestemmes til 
+	\[
+	7.071428 \simeq 7.0714
+	\]
+	
+	\hint
+	For at vurdere fejlen på approksimationen, ser vi på anden 
+	ordens taylor udviklingen (en orden højere end den 
+	anvendte linearisering).
+	\[
+	f(x_0) 
+	+ \frac{f'(x_0)}{1!} \cdot (x - x_0) 
+	+ \frac{f''(x_0)}{2!} \cdot (x - x_0)^2
+	\]
+	Fejlen er relateret til det sidste led i det ovenstående udtryk.
+	Hvor $f''(x_0)$ udskiftes med $f''(c)$ hvor $c \in [x_0; x]$.
+	\[
+	\textrm{fejl} = \frac{f''(c)}{2!} \cdot (x - x_0)^2
+	\]
+	
+	\hint 
+	Antager man at $c = 49$, fåes følgende fejlvurdering
+	\[
+	\textrm{fejl} = \frac{f''(49)}{2!} \cdot (50 - 49)^2 = 
+	-0.0003644\]
+	
+	\hint
+	Sammenligning mellem reel værdi, approksimeret værdi og estimeret maksimal fejl.
+	\[
+	\sqrt{50}= 7.071067
+	\]
+	\[
+	L(50) = 7.071428
+	\]
+	\[
+	\sqrt{50} - L(50)  = -0.000361
+	\]
+	
+\end{exercise}
+
+\begin{exercise}{Linearisering 4}
+	
+	Benyt en passende linearisering til at approksimere
+	\[
+	\sqrt{17}
+	\]
+	angiv resultatet med fire decimalaer i boksen herunder.
+	\answerbox{4.1250}
+	
+	\hint
+	Først skal vi vælge den funktion der skal approksimeres
+	og det punkt som der skal bruges som udgangspunkt for 
+	approksimationen.
+	For at vi kan bestemme approksimationen skal vi 
+	kende funktionsværdien og dens afledte i punktet.
+	
+	\hint
+	Vi vælger funktionen $f(x) = \sqrt{x}$ og at approksimere den 
+	omkring $x_0 = 16$.
+	Så kan vi nemlig godt finde værdierne af $f(16)$ og $f'(16)$.
+	\[
+	f(16) = \sqrt{16} = 4
+	\]
+	\[
+	f'(16) = \frac{1}{2 \sqrt{16}} = \frac{1}{2 \cdot 4 } = \frac{1}{8}
+	\]
+	
+	\hint
+	Lineariseringen opskrives
+	\[
+	L(x) = 4 + \frac{1}{8} \cdot (x - 16) = \frac{x + 16}{8}
+	\]
+	
+	\hint
+	Værdien i punktet bestemmes
+	\[
+	L(17) = \frac{17 + 16}{8} = \frac{33}{8}
+	\]
+	som vha. lommeregner bestemmes til 
+	\[
+	4.125000 \simeq 4.1250
+	\]
+	
+	\hint
+	For at vurdere fejlen på approksimationen, ser vi på anden 
+	ordens taylor udviklingen (en orden højere end den 
+	anvendte linearisering).
+	\[
+	f(x_0) 
+	+ \frac{f'(x_0)}{1!} \cdot (x - x_0) 
+	+ \frac{f''(x_0)}{2!} \cdot (x - x_0)^2
+	\]
+	Fejlen er relateret til det sidste led i det ovenstående udtryk.
+	Hvor $f''(x_0)$ udskiftes med $f''(c)$ hvor $c \in [x_0; x]$.
+	\[
+	\textrm{fejl} = \frac{f''(c)}{2!} \cdot (x - x_0)^2
+	\]
+	
+	\hint 
+	Antager man at $c = 16$, fåes følgende fejlvurdering
+	\[
+	\textrm{fejl} = \frac{f''(16)}{2!} \cdot (17 - 16)^2 = 
+	-0.0019531\]
+	
+	\hint
+	Sammenligning mellem reel værdi, approksimeret værdi og estimeret maksimal fejl.
+	\[
+	\sqrt{17}= 4.123106
+	\]
+	\[
+	L(17) = 4.125000
+	\]
+	\[
+	\sqrt{17} - L(17)  = -0.001894
+	\]
+	
+\end{exercise}
+
+\begin{exercise}{Linearisering 5}
+	
+	Benyt en passende linearisering til at approksimere
+	\[
+	\sqrt{37}
+	\]
+	angiv resultatet med fire decimalaer i boksen herunder.
+	\answerbox{6.0833}
+	
+	\hint
+	Først skal vi vælge den funktion der skal approksimeres
+	og det punkt som der skal bruges som udgangspunkt for 
+	approksimationen.
+	For at vi kan bestemme approksimationen skal vi 
+	kende funktionsværdien og dens afledte i punktet.
+	
+	\hint
+	Vi vælger funktionen $f(x) = \sqrt{x}$ og at approksimere den 
+	omkring $x_0 = 36$.
+	Så kan vi nemlig godt finde værdierne af $f(36)$ og $f'(36)$.
+	\[
+	f(36) = \sqrt{36} = 6
+	\]
+	\[
+	f'(36) = \frac{1}{2 \sqrt{36}} = \frac{1}{2 \cdot 6 } = \frac{1}{12}
+	\]
+	
+	\hint
+	Lineariseringen opskrives
+	\[
+	L(x) = 6 + \frac{1}{12} \cdot (x - 36) = \frac{x + 36}{12}
+	\]
+	
+	\hint
+	Værdien i punktet bestemmes
+	\[
+	L(37) = \frac{37 + 36}{12} = \frac{73}{12}
+	\]
+	som vha. lommeregner bestemmes til 
+	\[
+	6.083333 \simeq 6.0833
+	\]
+	
+	\hint
+
+	For at vurdere fejlen på approksimationen, ser vi på anden 
+	ordens taylor udviklingen (en orden højere end den 
+	anvendte linearisering).
+	\[
+	f(x_0) 
+	+ \frac{f'(x_0)}{1!} \cdot (x - x_0) 
+	+ \frac{f''(x_0)}{2!} \cdot (x - x_0)^2
+	\]
+	Fejlen er relateret til det sidste led i det ovenstående udtryk.
+	Hvor $f''(x_0)$ udskiftes med $f''(c)$ hvor $c \in [x_0; x]$.
+	\[
+	\textrm{fejl} = \frac{f''(c)}{2!} \cdot (x - x_0)^2
+	\]
+	
+	\hint 
+	Antager man at $c = 36$, fåes følgende fejlvurdering
+	\[
+	\textrm{fejl} = \frac{f''(36)}{2!} \cdot (37 - 36)^2 = 
+	-0.0005780
+	\]
+	
+	\hint
+	Sammenligning mellem reel værdi, approksimeret værdi og estimeret maksimal fejl.
+	\[
+	\sqrt{37}= 6.0827625
+	\]
+	\[
+	L(37) = 6.083333
+	\]
+	\[
+	\sqrt{37} - L(37)  = -0.0005708
+	\]
+	
+\end{exercise}
+
+\begin{exercise}{Linearisering 6}
+
+	Lineariser nedenstående funktion omkring punktet $x = 5$.
+	\[
+	\sqrt{9-x}
+	\]
+	
+	\answerbox{\frac{13 - x}{4}}
+	
+	\hint
+	Lineariseringen af en funktion $f(x)$
+	omkring punktet $x_0$ er givet ved
+	\[
+	f(x_0) + f'(x_0) \cdot (x - x_0)
+	\]
+	
+	\hint
+	Vi anvender $f(x) = \sqrt{9-x}$ og $x_0 = 5$.
+	
+	\hint
+	$f'(x)$ bestemmes
+	\[
+	f'(x) = \frac{-1}{2 \sqrt{9 - x}}
+	\]
+	
+	\hint
+	Værdierne fra opgaven indsættes i udtrykket for lineariseringen.
+	\[
+	\sqrt{9 - 5} - \frac{1}{2 \sqrt{9 - 5}} \cdot (x - 5) = \sqrt{4} - \frac{(x-5)}{2 \sqrt{4}} 
+	\]
+	
+	\hint
+	Der reduceres
+	\[
+	= 2 + \frac{-x + 5}{4} = \frac{13 - x}{4}
+	\]
+	
+\end{exercise}
+
+\begin{exercise}{Linearisering 7}
+	
+	Lineariser nedenstående funktion omkring punktet $x = 3$.
+	\[
+	\frac{1}{(1+x)^2}
+	\]
+	
+	\answerbox{\frac{5 - x}{32}}
+	
+	\hint
+	Lineariseringen af en funktion $f(x)$
+	omkring punktet $x_0$ er givet ved
+	\[
+	f(x_0) + f'(x_0) \cdot (x - x_0)
+	\]
+	
+	\hint
+	Vi anvender $f(x) = \frac{1}{(1+x)^2}$ og $x_0 = 3$.
+	
+	\hint
+	$f'(x)$ bestemmes
+	\[
+	f'(x) = \frac{-2}{(1+x)^3}
+	\]
+	
+	\hint
+	Værdierne fra opgaven indsættes i udtrykket for lineariseringen.
+	\[
+	\frac{1}{(1+3)^2} - \frac{2}{(1+3)^3} \cdot (x-3)^2 = \frac{1}{16} - \frac{2 \cdot (x - 3)}{64}
+	\]
+	
+	\hint
+	Der reduceres
+	\[
+	= \frac{1}{16} + \frac{6 - 2x}{64} = \frac{10 - 2x}{64} = \frac{5-x}{32}
+	\]
+	
+\end{exercise}
+
+\begin{exercise}{Linearisering 8}
+	
+	Lineariser nedenstående funktion omkring punktet $x = \frac{1}{2}$.
+	\[
+	e^{2x}
+	\]
+	
+	\answerbox{2x \cdot e}
+	
+	\hint
+	Lineariseringen af en funktion $f(x)$
+	omkring punktet $x_0$ er givet ved
+	\[
+	f(x_0) + f'(x_0) \cdot (x - x_0)
+	\]
+	
+	\hint
+	Vi anvender $f(x) = e^{2x}$ og $x_0 = \frac{1}{2}$.
+	
+	\hint
+	$f'(x)$ bestemmes
+	\[
+	f'(x) = 2 e^{2x}
+	\]
+	
+	\hint
+	Værdierne fra opgaven indsættes i udtrykket for lineariseringen.
+	\[
+	e^{2 \cdot \frac{1}{2}} + 2 e^{2 \cdot \frac{1}{2}} \cdot (x - \frac{1}{2}) = e + 2 e \cdot (x - \frac{1}{2})
+	\]
+	
+	\hint
+	Der reduceres
+	\[
+	= e + 2x \cdot e - e = 2x \cdot e
+	\]
+	
+\end{exercise}
+
 
 \end{document}
