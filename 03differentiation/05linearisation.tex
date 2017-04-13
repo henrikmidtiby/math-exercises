@@ -57,7 +57,7 @@ Benyt en passende linearisering til at approksimere
 \[
 \cos(49^\circ)
 \]
-angiv resultatet med fire decimalaer i boksen herunder.
+angiv resultatet med fire decimaler i boksen herunder.
 \answerbox{0.6577}
 
 \hint
@@ -139,7 +139,7 @@ L(49 \cdot \pi/180) = 0.657741
 	\[
 	\sqrt{50}
 	\]
-	angiv resultatet med fire decimalaer i boksen herunder.
+	angiv resultatet med fire decimaler i boksen herunder.
 	\answerbox{7.0714}
 	
 	\hint
@@ -217,7 +217,7 @@ L(49 \cdot \pi/180) = 0.657741
 	\[
 	\sqrt{17}
 	\]
-	angiv resultatet med fire decimalaer i boksen herunder.
+	angiv resultatet med fire decimaler i boksen herunder.
 	\answerbox{4.1250}
 	
 	\hint
@@ -295,7 +295,7 @@ L(49 \cdot \pi/180) = 0.657741
 	\[
 	\sqrt{37}
 	\]
-	angiv resultatet med fire decimalaer i boksen herunder.
+	angiv resultatet med fire decimaler i boksen herunder.
 	\answerbox{6.0833}
 	
 	\hint
@@ -482,6 +482,244 @@ L(49 \cdot \pi/180) = 0.657741
 	Der reduceres
 	\[
 	= e + 2x \cdot e - e = 2x \cdot e
+	\]
+	
+\end{exercise}
+
+\begin{exercise}{Linearisering 9}
+	
+	Lineariser nedenstående funktion omkring punktet $x = 1$.
+	\[
+	\ln(x)	
+	\]
+	
+	\answerbox{x-1}
+	
+	\hint
+	Lineariseringen af en funktion $f(x)$
+	omkring punktet $x_0$ er givet ved
+	\[
+	f(x_0) + f'(x_0) \cdot (x - x_0)
+	\]
+	
+	\hint
+	Vi anvender $f(x) = \ln(x)$ og $x_0 = 1$.
+	
+	\hint
+	$f'(x)$ bestemmes
+	\[
+	f'(x) = \frac{1}{x}
+	\]
+	
+	\hint
+	Værdierne fra opgaven indsættes i udtrykket for lineariseringen.
+	\[
+	\ln(1) + \frac{1}{1} \cdot (x - 1) 
+	\]
+	
+	\hint
+	Der reduceres, idet
+	\[
+	\ln(1) = 0
+	\]
+	og derved fås
+	\[
+	= x - 1
+	\]
+	
+\end{exercise}
+
+\begin{exercise}{Linearisering 10}
+	
+	Lineariser nedenstående funktion omkring punktet $x = \frac{\pi}{2}$.
+	\[
+	\cos(x)
+	\]
+	
+	\answerbox{\frac{\pi}{2} -x}
+	
+	\hint
+	Lineariseringen af en funktion $f(x)$
+	omkring punktet $x_0$ er givet ved
+	\[
+	f(x_0) + f'(x_0) \cdot (x - x_0)
+	\]
+	
+	\hint
+	Vi anvender $f(x) = \cos(x)$ og $x_0 = \frac{\pi}{2}$.
+	
+	\hint
+	$f'(x)$ bestemmes
+	\[
+	f'(x) = - \sin(x)
+	\]
+	
+	\hint
+	Værdierne fra opgaven indsættes i udtrykket for lineariseringen.
+	\[
+	\cos \left(\frac{\pi}{2}\right) - \sin \left(\frac{\pi}{2} \right) \left(x - \frac{\pi}{2} \right) 
+	\]
+	
+	\hint
+	Udtrykket reduceres, idet
+	\begin{align*}
+	\cos\left(  \frac{\pi}{2}\right) &= 0  \\
+	\sin\left(  \frac{\pi}{2}\right) &= 1 
+	\end{align*}
+	og derved fås
+	\[
+	= \frac{\pi}{2} - x
+	\]
+	
+\end{exercise}
+
+\begin{exercise}{Linearisering 11}
+	
+	Benyt en passende linearisering til at approksimere
+	\[
+	\ln(1.2)
+	\]
+	angiv resultatet med fire decimaler i boksen herunder.
+	\answerbox{0.2000}
+	
+	\hint
+	Først skal vi vælge den funktion der skal approksimeres
+	og det punkt som der skal bruges som udgangspunkt for 
+	approksimationen.
+	For at vi kan bestemme approksimationen skal vi 
+	kende funktionsværdien og dens afledte i punktet.
+	
+	\hint
+	Vi vælger funktionen $f(x) = \ln(x)$ og at approksimere den 
+	omkring $x_0 = 1$.
+	Så kan vi nemlig godt finde værdierne af $f(1)$ og $f'(1)$.
+	\[
+	f(1) = \ln(1) = 0  
+	\]
+	\[
+	f'(1) = \frac{1}{1} = 1
+	\]
+	
+	\hint
+	Lineariseringen opskrives
+	\[
+	L(x) = 0 + 1 \cdot (x - 1) = x - 1
+	\]
+	
+	\hint
+	Værdien i punktet bestemmes
+	\[
+	L(1.2) = 1.2 - 1 = 0.2000
+	\]
+
+	
+	\hint
+	For at vurdere fejlen på approksimationen, ser vi på anden 
+	ordens taylor udviklingen (en orden højere end den 
+	anvendte linearisering).
+	\[
+	f(x_0) 
+	+ \frac{f'(x_0)}{1!} \cdot (x - x_0) 
+	+ \frac{f''(x_0)}{2!} \cdot (x - x_0)^2
+	\]
+	Fejlen er relateret til det sidste led i det ovenstående udtryk.
+	Hvor $f''(x_0)$ udskiftes med $f''(c)$ hvor $c \in [x_0; x]$.
+	\[
+	\textrm{fejl} = \frac{f''(c)}{2!} \cdot (x - x_0)^2
+	\]
+	
+	\hint 
+	Antager man at $c = 1$, fåes følgende fejlvurdering
+	\[
+	\textrm{fejl} = \frac{f''(1)}{2!} \cdot (1.2 - 1)^2 = 
+	- 0.02000
+	\]
+	
+	\hint
+	Sammenligning mellem reel værdi, approksimeret værdi og estimeret maksimal fejl.
+	\[
+	\ln(1.2)= 0.1823
+	\]
+	\[
+	L(1.2) = 0.2000
+	\]
+	\[
+	\ln(1.2) - L(1.2)  = -0.017678
+	\]
+	
+\end{exercise}
+
+\begin{exercise}{Linearisering 12}
+	
+	Benyt en passende linearisering til at approksimere
+	\[
+	\frac{1}{107}
+	\]
+	angiv resultatet med fire decimaler i boksen herunder.
+	\answerbox{0.0093}
+	
+	\hint
+	Først skal vi vælge den funktion der skal approksimeres
+	og det punkt som der skal bruges som udgangspunkt for 
+	approksimationen.
+	For at vi kan bestemme approksimationen skal vi 
+	kende funktionsværdien og dens afledte i punktet.
+	
+	\hint
+	Vi vælger funktionen $f(x) = \frac{1}{x}$ og at approksimere den 
+	omkring $x_0 = 100$.
+	Så kan vi nemlig godt finde værdierne af $f(100)$ og $f'(100)$.
+	\[
+	f(100) = \frac{1}{100} 
+	\]
+	\[
+	f'(100) = \frac{-1}{100^2} = \frac{-1}{10^4}
+	\]
+	
+	\hint
+	Lineariseringen opskrives
+	\[
+	L(x) = \frac{1}{100} - \frac{1}{10^4} \cdot (x - 100) = \frac{1}{100} + \frac{-x+100}{10^4} = \frac{200 - x}{10^4}
+	\]
+	
+	\hint
+	Værdien i punktet bestemmes
+	\[
+	L(107) = \frac{200 - 107}{10^4} = \frac{93}{10^4} = 93 \cdot 10^{-4} = 0.00930
+	\]
+
+	
+	\hint
+	For at vurdere fejlen på approksimationen, ser vi på anden 
+	ordens taylor udviklingen (en orden højere end den 
+	anvendte linearisering).
+	\[
+	f(x_0) 
+	+ \frac{f'(x_0)}{1!} \cdot (x - x_0) 
+	+ \frac{f''(x_0)}{2!} \cdot (x - x_0)^2
+	\]
+	Fejlen er relateret til det sidste led i det ovenstående udtryk.
+	Hvor $f''(x_0)$ udskiftes med $f''(c)$ hvor $c \in [x_0; x]$.
+	\[
+	\textrm{fejl} = \frac{f''(c)}{2!} \cdot (x - x_0)^2
+	\]
+	
+	\hint 
+	Antager man at $c = 100$, fåes følgende fejlvurdering
+	\[
+	\textrm{fejl} = \frac{f''(100)}{2!} \cdot (107 - 100)^2 = 
+	-0.0000490\]
+	
+	\hint
+	Sammenligning mellem reel værdi, approksimeret værdi og estimeret maksimal fejl.
+	\[
+	\frac{1}{107} = 0.00934579
+	\]
+	\[
+	L(107) = 0.0093000
+	\]
+	\[
+	\frac{1}{107} - L(107)  = -0.00004579
 	\]
 	
 \end{exercise}
