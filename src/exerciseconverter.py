@@ -63,8 +63,8 @@ def get_exercises(input_lines):
     storage = []
     exercise_name = "unknown"
     adding_tings_to_storage = False
-    start_exercise = re.compile('\\\\begin\\{exercise\\}\\{(.*)\\}')
-    end_exercise = re.compile('\\\\end\\{exercise\\}')
+    start_exercise = re.compile('\\s*\\\\begin\\{exercise\\}\\{(.*)\\}')
+    end_exercise = re.compile('\\s*\\\\end\\{exercise\\}')
     comment_line = re.compile('%.*')
 
     for line in input_lines:

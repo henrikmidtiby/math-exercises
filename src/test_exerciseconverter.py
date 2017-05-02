@@ -160,6 +160,13 @@ def test_get_exercises_2():
     assert_equals(expected_output, output)
 
 
+def test_get_exercises_3():
+    input_values = ''' \\begin{exercise}{NameWithÆØÅæøå}\n% Comment\nLine\n\\end{exercise}'''
+    expected_output = [Exercise(name = 'NameWithÆØÅæøå', content = ['Line'])]
+    output = list(get_exercises(input_values.split('\n')))
+    assert_equals(expected_output, output)
+
+
 def test_change_answer_box_markup_1():
     input_values = '''Question\n\\answerbox{2}\n\\hint\nHints'''
     expected_output = 'Question\n[[ref input1]]\n\n\\hint\nHints'
