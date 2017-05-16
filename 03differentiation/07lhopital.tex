@@ -47,717 +47,717 @@ Derfor går hele værdien mod uendelig.
 \end{exercise}
 
 \begin{exercise}{LHopital 2}
-	Bestem grænseværdien.
-	\[
-	\lim_{x \to 1} \frac{\ln(x)}{x^2 - 1}
-	\] 
-	\\
-	Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
+Bestem grænseværdien.
+\[
+\lim_{x \to 1} \frac{\ln(x)}{x^2 - 1}
+\] 
 	
-	\answerbox{\frac{1}{2}}
+Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
 	
-	\hint
-	Først undersøges det om vi må anvende L'Hopital.
-	
-	\hint
-	Grænserne af tælleren og nævneren bestemmes.
-	\begin{align*}
-		&\lim_{x \to 1} (\ln(x)) = \ln(1) = 0 \\
-		&\lim_{x \to 1} (x^2 - 1) = (1^2 - 1) = 0
-	\end{align*}
-	
-	\hint
-	Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
-	
-	\hint
-	L'Hopitals regel er givet ved
-	\[
-	\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
-	\]
-	hvor $a$  er en konstant.
-	
-	\hint
-	Sæt $f(x) = \ln(x)$ og $g(x) = x^2-1$. 
-	
-	\hint
-	Bestem $f'(x)$ og $g'(x)$
-	\begin{align*}
-		f'(x) &= \frac{1}{x} \\
-		g'(x) &= 2x
-	\end{align*}
-	
-	\hint
-	Indsæt i udtryk og reducer. 
-	\[
-	\lim_{x \to 1} \frac{1/x}{2x} = \lim_{x \to 1} \frac{1}{2x^2} 
-	\]
-	
-	\hint
-	Indsæt grænseværdi i udtryk
-	\[
-	\lim_{x \to 1} \frac{1}{2 \cdot 1^2}  = \left[ \frac{1}{2}  \right] 
-	\]
-	Altså går udtrykket mod $\frac{1}{2}$, når $x$ går mod $1$. 
-			
+\answerbox{\frac{1}{2}}
+
+\hint
+Først undersøges det om vi må anvende L'Hopital.
+
+\hint
+Grænserne af tælleren og nævneren bestemmes.
+\begin{align*}
+	&\lim_{x \to 1} (\ln(x)) = \ln(1) = 0 \\
+	&\lim_{x \to 1} (x^2 - 1) = (1^2 - 1) = 0
+\end{align*}
+
+\hint
+Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
+
+\hint
+L'Hopitals regel er givet ved
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
+\]
+hvor $a$  er en konstant.
+
+\hint
+Sæt $f(x) = \ln(x)$ og $g(x) = x^2-1$. 
+
+\hint
+Bestem $f'(x)$ og $g'(x)$
+\begin{align*}
+	f'(x) &= \frac{1}{x} \\
+	g'(x) &= 2x
+\end{align*}
+
+\hint
+Indsæt i udtryk og reducer. 
+\[
+\lim_{x \to 1} \frac{1/x}{2x} = \lim_{x \to 1} \frac{1}{2x^2} 
+\]
+
+\hint
+Indsæt grænseværdi i udtryk
+\[
+\lim_{x \to 1} \frac{1}{2 \cdot 1^2}  = \left[ \frac{1}{2}  \right] 
+\]
+Altså går udtrykket mod $\frac{1}{2}$, når $x$ går mod $1$. 
+		
 \end{exercise}
 
 \begin{exercise}{LHopital 3}
-	Bestem grænseværdien.
-	\[
-	\lim_{x \to 0+} \frac{e^x - 1}{x^2}
-	\] 
-	\\
-	Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
-	
-	\answerbox{uendelig}
-	
-	\hint
-	Først undersøges det om vi må anvende L'Hopital.
-	
-	\hint
-	Grænserne af tælleren og nævneren bestemmes.
-	\begin{align*}
-		&\lim_{x \to 0+} (e^x - 1) = e^0 - 1 = 0 \\
-		&\lim_{x \to 0+} (x^2) = 0^2  = 0
-	\end{align*}
-	
-	\hint
-	Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
-	
-	\hint
-	L'Hopitals regel er givet ved
-	\[
-	\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
-	\]
-	hvor $a$ er en konstant.
-	
-	\hint
-	Sæt $f(x) = e^x - 1$ og $g(x) = x^2$. 
-	
-	\hint
-	Bestem $f'(x)$ og $g'(x)$
-	\begin{align*}
-		f'(x) &= e^x \\
-		g'(x) &= 2x
-	\end{align*}
-	
-	\hint
-	Indsæt i udtryk 
-	\[
-	\lim_{x \to 0+} \frac{e^x}{2x} 
-	\]
-	
-	\hint
-	Indsæt grænseværdi i udtryk
-	\[
-	\lim_{x \to 0+} \frac{e^0}{2 \cdot 0}  = \left[ \frac{1}{0}  \right] 
-	\]
-	
-	\hint
-	Altså ender vi i en situation, hvor noget endeligt $(1)$ deles med noget, der går mod nul. Bemærk at $x^2$ altid er større eller lig med nul. Derfor går hele værdien mod uendelig, dvs
- 	\[
-	\lim_{x \to 0+} \frac{e^x-1}{x^2} = \infty
-	\]
+Bestem grænseværdien.
+\[
+\lim_{x \to 0+} \frac{e^x - 1}{x^2}
+\] 
+
+Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
+
+\answerbox{uendelig}
+
+\hint
+Først undersøges det om vi må anvende L'Hopital.
+
+\hint
+Grænserne af tælleren og nævneren bestemmes.
+\begin{align*}
+	&\lim_{x \to 0+} (e^x - 1) = e^0 - 1 = 0 \\
+	&\lim_{x \to 0+} (x^2) = 0^2  = 0
+\end{align*}
+
+\hint
+Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
+
+\hint
+L'Hopitals regel er givet ved
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
+\]
+hvor $a$ er en konstant.
+
+\hint
+Sæt $f(x) = e^x - 1$ og $g(x) = x^2$. 
+
+\hint
+Bestem $f'(x)$ og $g'(x)$
+\begin{align*}
+	f'(x) &= e^x \\
+	g'(x) &= 2x
+\end{align*}
+
+\hint
+Indsæt i udtryk 
+\[
+\lim_{x \to 0+} \frac{e^x}{2x} 
+\]
+
+\hint
+Indsæt grænseværdi i udtryk
+\[
+\lim_{x \to 0+} \frac{e^0}{2 \cdot 0}  = \left[ \frac{1}{0}  \right] 
+\]
+
+\hint
+Altså ender vi i en situation, hvor noget endeligt $(1)$ deles med noget, der går mod nul. Bemærk at $x^2$ altid er større eller lig med nul. Derfor går hele værdien mod uendelig, dvs
+\[
+\lim_{x \to 0+} \frac{e^x-1}{x^2} = \infty
+\]
 \end{exercise}
 
 \begin{exercise}{LHopital 4}
-	Bestem grænseværdien.
-	\[
-	\lim_{x \to 0+} \frac{x - \sin(x)}{x^3}
-	\] 
-	\\
-	Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
-	
-	\answerbox{\frac{1}{6}}
-	
-	\hint
-	Først undersøges det om vi må anvende L'Hopital.
-	
-	\hint
-	Grænserne af tælleren og nævneren bestemmes.
-	\begin{align*}
-		&\lim_{x \to 0+} (x - \sin(x)) = 0 - \sin(0) =  0 \\
-		&\lim_{x \to 0+} (x^3) = 0^3 = 0
-	\end{align*}
-	
-	\hint
-	Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
-	
-	\hint
-	L'Hopitals regel er givet ved
-	\[
-	\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
-	\]
-	hvor $a$ er en konstant.
-	
-	\hint
-	Sæt $f(x) = x - \sin(x)$ og $g(x) = x^3$. 
-	
-	\hint
-	Bestem $f'(x)$ og $g'(x)$
-	\begin{align*}
-		f'(x) &= 1 - \cos(x) \\
-		g'(x) &= 3x^2
-	\end{align*}
-	
-	\hint
-	Indsæt i udtryk
-	\[
-	\lim_{x \to 0+} \frac{1 - \cos(x)}{3x^2} 
-	\]
-	
-	\hint
-	Grænser af tæller og nævner bestemmes igen
-	\begin{align*}
-		&\lim_{x \to 0+} (1 - \cos(x)) = 1 - \cos(0) =  0 \\
-		&\lim_{x \to 0+} (3x^2) = 3 \cdot 0^2 = 0
-	\end{align*}
-	
-	\hint
-	Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
-	
-	\hint
-	Sæt $f(x) = 1 - \cos(x)$ og $g(x) = 3x^2$. 
-	
-	\hint
-	Bestem $f'(x)$ og $g'(x)$
-	\begin{align*}
-		f'(x) &=  \sin(x) \\
-		g'(x) &= 6x
-	\end{align*}
-	
-	\hint
-	Indsæt i udtryk
-	\[
-	\lim_{x \to 0+} \frac{\sin(x)}{6x} 
-	\]
-	
-	\hint
-	Grænser af tæller og nævner bestemmes igen
-	\begin{align*}
-		&\lim_{x \to 0+} (\sin(x)) = \sin(0) =  0 \\
-		&\lim_{x \to 0+} (6x) = 6 \cdot 0 = 0
-	\end{align*}
-	
-	\hint
-	Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
-	
-	\hint
-	Sæt $f(x) = \sin(x)$ og $g(x) = 6x$. 
-	
-	\hint
-	Bestem $f'(x)$ og $g'(x)$
-	\begin{align*}
-		f'(x) &=  \cos(x) \\
-		g'(x) &= 6
-	\end{align*}
-	
-	\hint
-	Indsæt i udtryk
-	\[
-	\lim_{x \to 0+} \frac{\cos(x)}{6} 
-	\]
-	
-	\hint
-	Indsæt grænseværdi i udtryk
-	\[
-	\lim_{x \to 0+} \frac{\cos(0)}{6}  = \left[ \frac{1}{6}  \right] 
-	\]
-	Altså går udtrykket mod $\frac{1}{6}$, når $x$ går mod $0+$. 
-	
+Bestem grænseværdien.
+\[
+\lim_{x \to 0+} \frac{x - \sin(x)}{x^3}
+\] 
+
+Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
+
+\answerbox{\frac{1}{6}}
+
+\hint
+Først undersøges det om vi må anvende L'Hopital.
+
+\hint
+Grænserne af tælleren og nævneren bestemmes.
+\begin{align*}
+	&\lim_{x \to 0+} (x - \sin(x)) = 0 - \sin(0) =  0 \\
+	&\lim_{x \to 0+} (x^3) = 0^3 = 0
+\end{align*}
+
+\hint
+Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
+
+\hint
+L'Hopitals regel er givet ved
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
+\]
+hvor $a$ er en konstant.
+
+\hint
+Sæt $f(x) = x - \sin(x)$ og $g(x) = x^3$. 
+
+\hint
+Bestem $f'(x)$ og $g'(x)$
+\begin{align*}
+	f'(x) &= 1 - \cos(x) \\
+	g'(x) &= 3x^2
+\end{align*}
+
+\hint
+Indsæt i udtryk
+\[
+\lim_{x \to 0+} \frac{1 - \cos(x)}{3x^2} 
+\]
+
+\hint
+Grænser af tæller og nævner bestemmes igen
+\begin{align*}
+	&\lim_{x \to 0+} (1 - \cos(x)) = 1 - \cos(0) =  0 \\
+	&\lim_{x \to 0+} (3x^2) = 3 \cdot 0^2 = 0
+\end{align*}
+
+\hint
+Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
+
+\hint
+Sæt $f(x) = 1 - \cos(x)$ og $g(x) = 3x^2$. 
+
+\hint
+Bestem $f'(x)$ og $g'(x)$
+\begin{align*}
+	f'(x) &=  \sin(x) \\
+	g'(x) &= 6x
+\end{align*}
+
+\hint
+Indsæt i udtryk
+\[
+\lim_{x \to 0+} \frac{\sin(x)}{6x} 
+\]
+
+\hint
+Grænser af tæller og nævner bestemmes igen
+\begin{align*}
+	&\lim_{x \to 0+} (\sin(x)) = \sin(0) =  0 \\
+	&\lim_{x \to 0+} (6x) = 6 \cdot 0 = 0
+\end{align*}
+
+\hint
+Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
+
+\hint
+Sæt $f(x) = \sin(x)$ og $g(x) = 6x$. 
+
+\hint
+Bestem $f'(x)$ og $g'(x)$
+\begin{align*}
+	f'(x) &=  \cos(x) \\
+	g'(x) &= 6
+\end{align*}
+
+\hint
+Indsæt i udtryk
+\[
+\lim_{x \to 0+} \frac{\cos(x)}{6} 
+\]
+
+\hint
+Indsæt grænseværdi i udtryk
+\[
+\lim_{x \to 0+} \frac{\cos(0)}{6}  = \left[ \frac{1}{6}  \right] 
+\]
+Altså går udtrykket mod $\frac{1}{6}$, når $x$ går mod $0+$. 
+
 \end{exercise}
 
 \begin{exercise}{LHopital 5}
-	Bestem grænseværdien.
-	\[
-	\lim_{x \to \pi} \frac{\sin(x)}{x - \pi}
-	\] 
-	\\
-	Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
-	
-	\answerbox{-1}
-	
-	\hint
-	Først undersøges det om vi må anvende L'Hopital.
-	
-	\hint
-	Grænserne af tælleren og nævneren bestemmes.
-	\begin{align*}
-		&\lim_{x \to \pi} (\sin(x)) = \sin(\pi) = 0 \\
-		&\lim_{x \to \pi} (x - \pi) = (\pi - \pi) = 0
-	\end{align*}
-	
-	\hint
-	Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
-	
-	\hint
-	L'Hopitals regel er givet ved
-	\[
-	\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
-	\]
-	hvor $a$  er en konstant.
-	
-	\hint
-	Sæt $f(x) = \sin(x)$ og $g(x) = x - \pi$. 
-	
-	\hint
-	Bestem $f'(x)$ og $g'(x)$
-	\begin{align*}
-		f'(x) &= \cos(x) \\
-		g'(x) &= 1
-	\end{align*}
-	
-	\hint
-	Indsæt i udtryk
-	\[
-	\lim_{x \to \pi} \frac{\cos(x)}{1}  = \lim_{x \to \pi} \cos(x)
-	\]
-	
-	\hint
-	Indsæt grænseværdi i udtryk
-	\[
-	\lim_{x \to \pi} \cos(\pi) = -1
-	\]
-	Altså går udtrykket mod $-1$, når $x$ går mod $\pi$. 
-	
+Bestem grænseværdien.
+\[
+\lim_{x \to \pi} \frac{\sin(x)}{x - \pi}
+\] 
+
+Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
+
+\answerbox{-1}
+
+\hint
+Først undersøges det om vi må anvende L'Hopital.
+
+\hint
+Grænserne af tælleren og nævneren bestemmes.
+\begin{align*}
+	&\lim_{x \to \pi} (\sin(x)) = \sin(\pi) = 0 \\
+	&\lim_{x \to \pi} (x - \pi) = (\pi - \pi) = 0
+\end{align*}
+
+\hint
+Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
+
+\hint
+L'Hopitals regel er givet ved
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
+\]
+hvor $a$  er en konstant.
+
+\hint
+Sæt $f(x) = \sin(x)$ og $g(x) = x - \pi$. 
+
+\hint
+Bestem $f'(x)$ og $g'(x)$
+\begin{align*}
+	f'(x) &= \cos(x) \\
+	g'(x) &= 1
+\end{align*}
+
+\hint
+Indsæt i udtryk
+\[
+\lim_{x \to \pi} \frac{\cos(x)}{1}  = \lim_{x \to \pi} \cos(x)
+\]
+
+\hint
+Indsæt grænseværdi i udtryk
+\[
+\lim_{x \to \pi} \cos(\pi) = -1
+\]
+Altså går udtrykket mod $-1$, når $x$ går mod $\pi$. 
+
 \end{exercise}
 
 \begin{exercise}{LHopital 6}
-	Bestem grænseværdien.
-	\[
-	\lim_{x \to 0+} \frac{e^x - e^{-x}}{x^2}
-	\] 
-	\\
-	Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
-	
-	\answerbox{uendelig}
-	
-	\hint
-	Først undersøges det om vi må anvende L'Hopital.
-	
-	\hint
-	Grænserne af tælleren og nævneren bestemmes.
-	\begin{align*}
-		&\lim_{x \to 0+} (e^x - e^{-x}) = e^0 - e^0 = 0 \\
-		&\lim_{x \to 0+} (x^2)  = 0^2  = 0
-	\end{align*}
-	
-	\hint
-	Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
-	
-	\hint
-	L'Hopitals regel er givet ved
-	\[
-	\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
-	\]
-	hvor $a$  er en konstant.
-	
-	\hint
-	Sæt $f(x) = e^x - e^{-x} $ og $g(x) = x^2$. 
-	
-	\hint
-	Bestem $f'(x)$ og $g'(x)$
-	\begin{align*}
-		f'(x) &= e^x - \left(- e^{-x} \right) = e^x + e^{-x} \\
-		g'(x) &= 2x
-	\end{align*}
-	
-	\hint
-	Indsæt i udtryk. 
-	\[
-	\lim_{x \to 0+} \frac{e^x + e^{-x}}{2x} 
-	\]
-	
-	\hint
-	Indsæt grænseværdi i udtryk
-	\[
-	\lim_{x \to 0+} \frac{e^0 + e^0}{2 \cdot 0}  = \left[ \frac{2}{0}  \right] 
-	\]
-	
-	\hint 
-	Altså ender vi i en situation, hvor noget endeligt $(2)$ deles med noget, der går mod nul. Bemærk at $x^2$ altid er større eller lig med nul. Derfor går hele værdien mod uendelig, dvs
-	\[
-	\lim_{x \to 0+} \frac{e^x - e^{-x}}{x^2} = \infty
-	\]
-	
+Bestem grænseværdien.
+\[
+\lim_{x \to 0+} \frac{e^x - e^{-x}}{x^2}
+\] 
+
+Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
+
+\answerbox{uendelig}
+
+\hint
+Først undersøges det om vi må anvende L'Hopital.
+
+\hint
+Grænserne af tælleren og nævneren bestemmes.
+\begin{align*}
+	&\lim_{x \to 0+} (e^x - e^{-x}) = e^0 - e^0 = 0 \\
+	&\lim_{x \to 0+} (x^2)  = 0^2  = 0
+\end{align*}
+
+\hint
+Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
+
+\hint
+L'Hopitals regel er givet ved
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
+\]
+hvor $a$  er en konstant.
+
+\hint
+Sæt $f(x) = e^x - e^{-x} $ og $g(x) = x^2$. 
+
+\hint
+Bestem $f'(x)$ og $g'(x)$
+\begin{align*}
+	f'(x) &= e^x - \left(- e^{-x} \right) = e^x + e^{-x} \\
+	g'(x) &= 2x
+\end{align*}
+
+\hint
+Indsæt i udtryk. 
+\[
+\lim_{x \to 0+} \frac{e^x + e^{-x}}{2x} 
+\]
+
+\hint
+Indsæt grænseværdi i udtryk
+\[
+\lim_{x \to 0+} \frac{e^0 + e^0}{2 \cdot 0}  = \left[ \frac{2}{0}  \right] 
+\]
+
+\hint 
+Altså ender vi i en situation, hvor noget endeligt $(2)$ deles med noget, der går mod nul. Bemærk at $x^2$ altid er større eller lig med nul. Derfor går hele værdien mod uendelig, dvs
+\[
+\lim_{x \to 0+} \frac{e^x - e^{-x}}{x^2} = \infty
+\]
+
 \end{exercise}
 
 \begin{exercise}{LHopital 7}
-	Bestem grænseværdien.
-	\[
-	\lim_{x \to 0+} \frac{e^{2x} - 1}{\sin(x)}
-	\] 
-	\\
-	Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
-	
-	\answerbox{2}
-	
-	\hint
-	Først undersøges det om vi må anvende L'Hopital.
-	
-	\hint
-	Grænserne af tælleren og nævneren bestemmes.
-	\begin{align*}
-		&\lim_{x \to 0+} (e^{2x} - 1) = e^{0} - 1 = 0 \\
-		&\lim_{x \to 0+} (\sin(x)) = \sin(0) = 0
-	\end{align*}
-	
-	\hint
-	Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
-	
-	\hint
-	L'Hopitals regel er givet ved
-	\[
-	\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
-	\]
-	hvor $a$  er en konstant.
-	
-	\hint
-	Sæt $f(x) = e^{2x} - 1 $ og $g(x) = \sin(x)$. 
-	
-	\hint
-	Bestem $f'(x)$ og $g'(x)$
-	\begin{align*}
-		f'(x) &= 2 e^{2x} \\
-		g'(x) &= \cos(x)
-	\end{align*}
-	
-	\hint
-	Indsæt i udtryk.
-	\[
-	\lim_{x \to 0+} \frac{2 e^{2x}}{\cos(x)} 
-	\]
-	
-	\hint
-	Indsæt grænseværdi i udtryk
-	\[
-	\lim_{x \to 0+} \frac{2 e^{0}}{\cos(0)}  =  \frac{2}{1} = 2 
-	\]
-	Altså går udtrykket mod $2$, når $x$ går mod $0+$. 
-	
+Bestem grænseværdien.
+\[
+\lim_{x \to 0+} \frac{e^{2x} - 1}{\sin(x)}
+\] 
+
+Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
+
+\answerbox{2}
+
+\hint
+Først undersøges det om vi må anvende L'Hopital.
+
+\hint
+Grænserne af tælleren og nævneren bestemmes.
+\begin{align*}
+	&\lim_{x \to 0+} (e^{2x} - 1) = e^{0} - 1 = 0 \\
+	&\lim_{x \to 0+} (\sin(x)) = \sin(0) = 0
+\end{align*}
+
+\hint
+Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
+
+\hint
+L'Hopitals regel er givet ved
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
+\]
+hvor $a$  er en konstant.
+
+\hint
+Sæt $f(x) = e^{2x} - 1 $ og $g(x) = \sin(x)$. 
+
+\hint
+Bestem $f'(x)$ og $g'(x)$
+\begin{align*}
+	f'(x) &= 2 e^{2x} \\
+	g'(x) &= \cos(x)
+\end{align*}
+
+\hint
+Indsæt i udtryk.
+\[
+\lim_{x \to 0+} \frac{2 e^{2x}}{\cos(x)} 
+\]
+
+\hint
+Indsæt grænseværdi i udtryk
+\[
+\lim_{x \to 0+} \frac{2 e^{0}}{\cos(0)}  =  \frac{2}{1} = 2 
+\]
+Altså går udtrykket mod $2$, når $x$ går mod $0+$. 
+
 \end{exercise}
 
 \begin{exercise}{LHopital 8}
-	Bestem grænseværdien.
-	\[
-	\lim_{x \to 2} \frac{4 - x^2}{\ln(x - 1)}
-	\] 
-	\\
-	Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
-	
-	\answerbox{-4}
-	
-	\hint
-	Først undersøges det om vi må anvende L'Hopital.
-	
-	\hint
-	Grænserne af tælleren og nævneren bestemmes.
-	\begin{align*}
-		&\lim_{x \to 2} (4 - x^2) = 4 - 2^2 = 0 \\
-		&\lim_{x \to 2} \ln(x - 1) = \ln(2 - 1) = 0
-	\end{align*}
-	
-	\hint
-	Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
-	
-	\hint
-	L'Hopitals regel er givet ved
-	\[
-	\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
-	\]
-	hvor $a$  er en konstant.
-	
-	\hint
-	Sæt $f(x) = 4 - x^2$ og $g(x) = \ln(x-1)$. 
-	
-	\hint
-	Bestem $f'(x)$ og $g'(x)$
-	\begin{align*}
-		f'(x) &= -2 x \\
-		g'(x) &= \frac{1}{x-1}
-	\end{align*}
-	
-	\hint
-	Indsæt i udtryk og reducer. 
-	\[
-	\lim_{x \to 2} \frac{-2x}{\frac{1}{x-1}} = \lim_{x \to 2} \frac{-2x \cdot (x-1)}{1} = \lim_{x \to 2} -2x^2 + 2x
-	\]
-	
-	\hint
-	Indsæt grænseværdi i udtryk
-	\[
-	\lim_{x \to 2} -2 \cdot 2^2 + 2 \cdot 2 = -8 + 4 = -4
-	\]
-	Altså går udtrykket mod $-4$, når $x$ går mod $2$. 
-	
+Bestem grænseværdien.
+\[
+\lim_{x \to 2} \frac{4 - x^2}{\ln(x - 1)}
+\] 
+
+Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
+
+\answerbox{-4}
+
+\hint
+Først undersøges det om vi må anvende L'Hopital.
+
+\hint
+Grænserne af tælleren og nævneren bestemmes.
+\begin{align*}
+	&\lim_{x \to 2} (4 - x^2) = 4 - 2^2 = 0 \\
+	&\lim_{x \to 2} \ln(x - 1) = \ln(2 - 1) = 0
+\end{align*}
+
+\hint
+Da de to grænser begge går mod nul må vi  anvende L'Hopitals regel. 
+
+\hint
+L'Hopitals regel er givet ved
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
+\]
+hvor $a$  er en konstant.
+
+\hint
+Sæt $f(x) = 4 - x^2$ og $g(x) = \ln(x-1)$. 
+
+\hint
+Bestem $f'(x)$ og $g'(x)$
+\begin{align*}
+	f'(x) &= -2 x \\
+	g'(x) &= \frac{1}{x-1}
+\end{align*}
+
+\hint
+Indsæt i udtryk og reducer. 
+\[
+\lim_{x \to 2} \frac{-2x}{\frac{1}{x-1}} = \lim_{x \to 2} \frac{-2x \cdot (x-1)}{1} = \lim_{x \to 2} -2x^2 + 2x
+\]
+
+\hint
+Indsæt grænseværdi i udtryk
+\[
+\lim_{x \to 2} -2 \cdot 2^2 + 2 \cdot 2 = -8 + 4 = -4
+\]
+Altså går udtrykket mod $-4$, når $x$ går mod $2$. 
+
 \end{exercise}
 
 \begin{exercise}{LHopital 9}
-	Bestem grænseværdien.
-	\[
-	\lim_{x \to \infty} \frac{x^2}{e^x}
-	\] 
-	\\
-	Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
-	
-	\answerbox{0}
-	
+Bestem grænseværdien.
+\[
+\lim_{x \to \infty} \frac{x^2}{e^x}
+\] 
+
+Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
+
+\answerbox{0}
+
+\hint
+Først undersøges det om vi må anvende L'Hopital.
+
+\hint
+Grænserne af tælleren og nævneren bestemmes.
+\begin{align*}
+	&\lim_{x \to \infty} (x^2) = \infty ^2 = \infty \\
+	&\lim_{x \to \infty} (e^x) = e^\infty = \infty
+\end{align*}
+
+\hint
+Da de to grænser begge går mod $\infty$ må vi  anvende L'Hopitals regel. 
+
+\hint
+L'Hopitals regel er givet ved
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
+\]
+hvor $a$  er en konstant.
+
+\hint
+Sæt $f(x) = x^2$ og $g(x) = e^x$. 
+
+\hint
+Bestem $f'(x)$ og $g'(x)$
+\begin{align*}
+	f'(x) &= 2x \\
+	g'(x) &= e^x
+\end{align*}
+
+\hint
+Indsæt i udtryk.
+\[
+\lim_{x \to \infty} \frac{2x}{e^x}.
+\]
+
+\hint
+Grænserne af tælleren og nævneren bestemmes.
+\begin{align*}
+	&\lim_{x \to \infty} (2x) = 2 \cdot \infty  = \infty \\
+	&\lim_{x \to \infty} (e^x) = e^\infty = \infty
+\end{align*}
+
+\hint
+Da de to grænser begge går mod $\infty$ må vi  anvende L'Hopitals regel. 
+
 	\hint
-	Først undersøges det om vi må anvende L'Hopital.
-	
-	\hint
-	Grænserne af tælleren og nævneren bestemmes.
-	\begin{align*}
-		&\lim_{x \to \infty} (x^2) = \infty ^2 = \infty \\
-		&\lim_{x \to \infty} (e^x) = e^\infty = \infty
-	\end{align*}
-	
-	\hint
-	Da de to grænser begge går mod $\infty$ må vi  anvende L'Hopitals regel. 
-	
-	\hint
-	L'Hopitals regel er givet ved
-	\[
-	\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
-	\]
-	hvor $a$  er en konstant.
-	
-	\hint
-	Sæt $f(x) = x^2$ og $g(x) = e^x$. 
-	
-	\hint
-	Bestem $f'(x)$ og $g'(x)$
-	\begin{align*}
-		f'(x) &= 2x \\
-		g'(x) &= e^x
-	\end{align*}
-	
-	\hint
-	Indsæt i udtryk.
-	\[
-	\lim_{x \to \infty} \frac{2x}{e^x}.
-	\]
-	
-	\hint
-	Grænserne af tælleren og nævneren bestemmes.
-	\begin{align*}
-		&\lim_{x \to \infty} (2x) = 2 \cdot \infty  = \infty \\
-		&\lim_{x \to \infty} (e^x) = e^\infty = \infty
-	\end{align*}
-	
-	\hint
-	Da de to grænser begge går mod $\infty$ må vi  anvende L'Hopitals regel. 
-	
-		\hint
-	Sæt $f(x) = 2x$ og $g(x) = e^x$. 
-	
-	\hint
-	Bestem $f'(x)$ og $g'(x)$
-	\begin{align*}
-		f'(x) &= 2 \\
-		g'(x) &= e^x
-	\end{align*}
-	
-	\hint
-	Indsæt i udtryk.
-	\[
-	\lim_{x \to \infty} \frac{2}{e^x}.
-	\]
-	
-	
-	\hint
-	Indsæt grænseværdi i udtryk
-	\[
-	\lim_{x \to \infty} \frac{2}{e^\infty}  = \left[ \frac{2}{\infty}  \right] 
-	\]
-	
-	\hint
-	Altså ender vi i en situation, hvor noget endeligt (2) deles med uendelig. Dette medfører at værdien går mod nul, når $x$ går mod $\infty$, dvs.
-	\[
-	\lim_{x \to \infty} \frac{x^2}{e^x} = 0
-	\]
-	
+Sæt $f(x) = 2x$ og $g(x) = e^x$. 
+
+\hint
+Bestem $f'(x)$ og $g'(x)$
+\begin{align*}
+	f'(x) &= 2 \\
+	g'(x) &= e^x
+\end{align*}
+
+\hint
+Indsæt i udtryk.
+\[
+\lim_{x \to \infty} \frac{2}{e^x}.
+\]
+
+
+\hint
+Indsæt grænseværdi i udtryk
+\[
+\lim_{x \to \infty} \frac{2}{e^\infty}  = \left[ \frac{2}{\infty}  \right] 
+\]
+
+\hint
+Altså ender vi i en situation, hvor noget endeligt (2) deles med uendelig. Dette medfører at værdien går mod nul, når $x$ går mod $\infty$, dvs.
+\[
+\lim_{x \to \infty} \frac{x^2}{e^x} = 0
+\]
+
 \end{exercise}
 
 \begin{exercise}{LHopital 10}
-	Bestem grænseværdien.
-	\[
-	\lim_{x \to 1} \frac{\ln(x)}{x^2-1}
-	\] 
-	\\
-	Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
-	
-	\answerbox{0}
-	
-	\hint
-	Først undersøges det om vi må anvende L'Hopital.
-	
-	\hint
-	Grænserne af tælleren og nævneren bestemmes.
-	\begin{align*}
-		&\lim_{x \to \infty} (\ln(x)) = \ln(\infty) = \infty \\
-		&\lim_{x \to \infty} (x^2 - 1) = \infty^2 - 1 = \infty
-	\end{align*}
-	
-	\hint
-	Da de to grænser begge går mod uendelig må vi  anvende L'Hopitals regel. 
-	
-	\hint
-	L'Hopitals regel er givet ved
-	\[
-	\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
-	\]
-	hvor $a$  er en konstant.
-	
-	\hint
-	Sæt $f(x) = \ln(x)$ og $g(x) = x^2-1$. 
-	
-	\hint
-	Bestem $f'(x)$ og $g'(x)$
-	\begin{align*}
-		f'(x) &= \frac{1}{x} \\
-		g'(x) &= 2x
-	\end{align*}
-	
-	\hint
-	Indsæt i udtryk og reducer. 
-	\[
-	\lim_{x \to \infty} \frac{1/x}{2x} = \lim_{x \to \infty} \frac{1}{2x^2} 
-	\]
-	
-	\hint
-	Indsæt grænseværdi i udtryk
-	\[
-	\lim_{x \to \infty} \frac{1}{2 \cdot \infty^2}  = \left[ \frac{1}{\infty}  \right] 
-	\]
-	
-	\hint
-	Altså ender vi i en situation, hvor noget endeligt (1) deles med uendelig. Dette medfører at værdien går mod nul, når $x$ går mod $\infty$, dvs.
-	\[
-	\lim_{x \to \infty} \frac{\ln(x)}{x^2 - 1} = 0
-	\]
+Bestem grænseværdien.
+\[
+\lim_{x \to 1} \frac{\ln(x)}{x^2-1}
+\] 
 
-	
+Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
+
+\answerbox{0}
+
+\hint
+Først undersøges det om vi må anvende L'Hopital.
+
+\hint
+Grænserne af tælleren og nævneren bestemmes.
+\begin{align*}
+	&\lim_{x \to \infty} (\ln(x)) = \ln(\infty) = \infty \\
+	&\lim_{x \to \infty} (x^2 - 1) = \infty^2 - 1 = \infty
+\end{align*}
+
+\hint
+Da de to grænser begge går mod uendelig må vi  anvende L'Hopitals regel. 
+
+\hint
+L'Hopitals regel er givet ved
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
+\]
+hvor $a$  er en konstant.
+
+\hint
+Sæt $f(x) = \ln(x)$ og $g(x) = x^2-1$. 
+
+\hint
+Bestem $f'(x)$ og $g'(x)$
+\begin{align*}
+	f'(x) &= \frac{1}{x} \\
+	g'(x) &= 2x
+\end{align*}
+
+\hint
+Indsæt i udtryk og reducer. 
+\[
+\lim_{x \to \infty} \frac{1/x}{2x} = \lim_{x \to \infty} \frac{1}{2x^2} 
+\]
+
+\hint
+Indsæt grænseværdi i udtryk
+\[
+\lim_{x \to \infty} \frac{1}{2 \cdot \infty^2}  = \left[ \frac{1}{\infty}  \right] 
+\]
+
+\hint
+Altså ender vi i en situation, hvor noget endeligt (1) deles med uendelig. Dette medfører at værdien går mod nul, når $x$ går mod $\infty$, dvs.
+\[
+\lim_{x \to \infty} \frac{\ln(x)}{x^2 - 1} = 0
+\]
+
+
 \end{exercise}
 
 \begin{exercise}{LHopital 11}
-	Bestem grænseværdien.
-	\[
-	\lim_{x \to \infty} \frac{\sqrt{x}}{\ln(x)}
-	\] 
-	\\
-	Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
-	
-	\answerbox{uendelig}
-	
-	\hint
-	Først undersøges det om vi må anvende L'Hopital.
-	
-	\hint
-	Grænserne af tælleren og nævneren bestemmes.
-	\begin{align*}
-		&\lim_{x \to \infty} (\sqrt{x}) = \sqrt{\infty} = \infty \\
-		&\lim_{x \to \infty} (\ln(x)) = \ln(\infty) = \infty
-	\end{align*}
-	
-	\hint
-	Da de to grænser begge går mod uendelig må vi  anvende L'Hopitals regel. 
-	
-	\hint
-	L'Hopitals regel er givet ved
-	\[
-	\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
-	\]
-	hvor $a$  er en konstant.
-	
-	\hint
-	Sæt $f(x) = \sqrt{x}$ og $g(x) = \ln(x)$. 
-	
-	\hint
-	Bestem $f'(x)$ og $g'(x)$
-	\begin{align*}
-		f'(x) &= \frac{1}{2\sqrt{x}} \\
-		g'(x) &= \frac{1}{x}
-	\end{align*}
-	
-	\hint
-	Indsæt i udtryk og reducer. 
-	\[
-	\lim_{x \to \infty} \frac{ \frac{1}{2 \sqrt{x}} }{ \frac{1}{x} } = \lim_{x \to \infty} \frac{x}{2 \sqrt{x}} = 	\lim_{x \to \infty} \frac{\sqrt{x}}{2}
-	\]
-	
-	\hint
-	Indsæt grænseværdi i udtryk
-	\[
-	\lim_{x \to \infty} \frac{\sqrt{\infty}}{2}  = \left[ \frac{\infty}{2}  \right] 
-	\]
-	
-	\hint
-	Altså ender vi i en situation, hvor uendelig deles med noget endeligt (2). Dette medfører at værdien går mod uendelig, når $x$ går mod $\infty$, dvs.
-	\[
-	\lim_{x \to \infty} \frac{\sqrt{x}}{\ln(x)} = \infty
-	\]
-	
+Bestem grænseværdien.
+\[
+\lim_{x \to \infty} \frac{\sqrt{x}}{\ln(x)}
+\] 
+
+Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
+
+\answerbox{uendelig}
+
+\hint
+Først undersøges det om vi må anvende L'Hopital.
+
+\hint
+Grænserne af tælleren og nævneren bestemmes.
+\begin{align*}
+	&\lim_{x \to \infty} (\sqrt{x}) = \sqrt{\infty} = \infty \\
+	&\lim_{x \to \infty} (\ln(x)) = \ln(\infty) = \infty
+\end{align*}
+
+\hint
+Da de to grænser begge går mod uendelig må vi  anvende L'Hopitals regel. 
+
+\hint
+L'Hopitals regel er givet ved
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
+\]
+hvor $a$  er en konstant.
+
+\hint
+Sæt $f(x) = \sqrt{x}$ og $g(x) = \ln(x)$. 
+
+\hint
+Bestem $f'(x)$ og $g'(x)$
+\begin{align*}
+	f'(x) &= \frac{1}{2\sqrt{x}} \\
+	g'(x) &= \frac{1}{x}
+\end{align*}
+
+\hint
+Indsæt i udtryk og reducer. 
+\[
+\lim_{x \to \infty} \frac{ \frac{1}{2 \sqrt{x}} }{ \frac{1}{x} } = \lim_{x \to \infty} \frac{x}{2 \sqrt{x}} = 	\lim_{x \to \infty} \frac{\sqrt{x}}{2}
+\]
+
+\hint
+Indsæt grænseværdi i udtryk
+\[
+\lim_{x \to \infty} \frac{\sqrt{\infty}}{2}  = \left[ \frac{\infty}{2}  \right] 
+\]
+
+\hint
+Altså ender vi i en situation, hvor uendelig deles med noget endeligt (2). Dette medfører at værdien går mod uendelig, når $x$ går mod $\infty$, dvs.
+\[
+\lim_{x \to \infty} \frac{\sqrt{x}}{\ln(x)} = \infty
+\]
+
 \end{exercise}
 
 \begin{exercise}{LHopital 12}
-	Bestem grænseværdien.
-	\[
-	\lim_{x \to \infty} \frac{x^2 + 2}{x^3 - 3}
-	\] 
-	\\
-	Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
-	
-	\answerbox{0}
-	
-	\hint
-	Først undersøges det om vi må anvende L'Hopital.
-	
-	\hint
-	Grænserne af tælleren og nævneren bestemmes.
-	\begin{align*}
-		&\lim_{x \to \infty} (x^2 + 2) = \infty ^2 + 2 = \infty \\
-		&\lim_{x \to \infty} (x^3 - 3) = \infty ^3 - 3 = \infty
-	\end{align*}
-	
-	\hint
-	Da de to grænser begge går mod uendelig må vi  anvende L'Hopitals regel. 
-	
-	\hint
-	L'Hopitals regel er givet ved
-	\[
-	\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
-	\]
-	hvor $a$  er en konstant.
-	
-	\hint
-	Sæt $f(x) = x^2 + 2$ og $g(x) = x^3 - 3$. 
-	
-	\hint
-	Bestem $f'(x)$ og $g'(x)$
-	\begin{align*}
-		f'(x) &= 2x \\
-		g'(x) &= 3x^2
-	\end{align*}
-	
-	\hint
-	Indsæt i udtryk.
-	\[
-	\lim_{x \to \infty} \frac{2x}{3x^2} = \lim_{x \to \infty} \frac{2}{3x} 
-	\]
-	
-	\hint
-	Indsæt grænseværdi i udtryk
-	\[
-	\lim_{x \to \infty} \frac{2}{3 \cdot \infty}  = \left[ \frac{2}{\infty}  \right] 
-	\]
-	
-	\hint
-	Altså ender vi i en situation, hvor noget endeligt (2) deles med uendelig. Dette medfører at værdien går mod nul, når $x$ går mod $\infty$, dvs.
-	\[
-	\lim_{x \to \infty} \frac{x^2 + 2}{x^3 - 3} = 0
-	\]
-	
+Bestem grænseværdien.
+\[
+\lim_{x \to \infty} \frac{x^2 + 2}{x^3 - 3}
+\] 
+
+Er svaret $\infty$ skrives der \emph{uendelig} i svarboksen.
+
+\answerbox{0}
+
+\hint
+Først undersøges det om vi må anvende L'Hopital.
+
+\hint
+Grænserne af tælleren og nævneren bestemmes.
+\begin{align*}
+	&\lim_{x \to \infty} (x^2 + 2) = \infty ^2 + 2 = \infty \\
+	&\lim_{x \to \infty} (x^3 - 3) = \infty ^3 - 3 = \infty
+\end{align*}
+
+\hint
+Da de to grænser begge går mod uendelig må vi  anvende L'Hopitals regel. 
+
+\hint
+L'Hopitals regel er givet ved
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)} 
+\]
+hvor $a$  er en konstant.
+
+\hint
+Sæt $f(x) = x^2 + 2$ og $g(x) = x^3 - 3$. 
+
+\hint
+Bestem $f'(x)$ og $g'(x)$
+\begin{align*}
+	f'(x) &= 2x \\
+	g'(x) &= 3x^2
+\end{align*}
+
+\hint
+Indsæt i udtryk.
+\[
+\lim_{x \to \infty} \frac{2x}{3x^2} = \lim_{x \to \infty} \frac{2}{3x} 
+\]
+
+\hint
+Indsæt grænseværdi i udtryk
+\[
+\lim_{x \to \infty} \frac{2}{3 \cdot \infty}  = \left[ \frac{2}{\infty}  \right] 
+\]
+
+\hint
+Altså ender vi i en situation, hvor noget endeligt (2) deles med uendelig. Dette medfører at værdien går mod nul, når $x$ går mod $\infty$, dvs.
+\[
+\lim_{x \to \infty} \frac{x^2 + 2}{x^3 - 3} = 0
+\]
+
 \end{exercise}
 
 \end{document}
