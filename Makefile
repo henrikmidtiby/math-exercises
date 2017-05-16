@@ -6,3 +6,10 @@ cleanallexercises:
 
 extractallexercises:
 	find . -name "*.tex"  | sort | xargs -n1 sh -c 'python3 src/exerciseconverter.py $$0'
+
+collectalljsonfiles:
+	rm -f combinedjsonfiles.txt
+	find . -name "*.json"  | sort | xargs -n1 sh -c 'cat $$0 >> combinedjsonfiles.txt'
+
+finderrorsinjsonfiles:
+	find . -name "*.json"  | sort | xargs -n1 sh -c 'grep -H emph "$$0"'
