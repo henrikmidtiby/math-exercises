@@ -25,6 +25,7 @@ finderrorsinjsonfiles:
 	@echo "               =================================="
 	@echo ""
 	find . -name "*.json"  | sort | xargs -n1 sh -c 'grep -H emph "$$0" || true'
+	find . -name "*.json"  | sort | xargs -n1 sh -c 'grep -H "begin.answermatrix" "$$0" || true'
 	# The lines below are commented out as they result in a very large amount of output.
 	# echo "Maybe issues with forced newline"
 	# find . -name "*.json"  | sort | xargs -n1 sh -c 'grep -H \\\\\\\\\\\\\\\\ "$$0" || true'
