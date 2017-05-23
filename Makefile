@@ -28,3 +28,6 @@ finderrorsinjsonfiles:
 	# The lines below are commented out as they result in a very large amount of output.
 	# echo "Maybe issues with forced newline"
 	# find . -name "*.json"  | sort | xargs -n1 sh -c 'grep -H \\\\\\\\\\\\\\\\ "$$0" || true'
+
+pdfwithallexercises.pdf:
+	pdftk `find . -name "*.pdf" -print | sort | xargs echo` cat output out.pdf
