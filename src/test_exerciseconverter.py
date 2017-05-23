@@ -60,6 +60,13 @@ def test_change_part_of_markup_8():
     assert_equals(expected_output, output)
 
 
+def test_change_part_of_markup_9():
+    input_values = [r"vis \emph{dette} en gang til"]
+    expected_output = ['vis *dette* en gang til']
+    output = list(change_part_of_markup(input_values))
+    assert_equals(expected_output, output)
+
+
 def test_change_multi_choice_markup_1():
     input_values = ["\\begin{multichoice}[randomizeorder, selectmultiple]\n", "\\itemtrue ja\n", "\\itemfalse nej\n", "\\end{multichoice}\n"]
     expected_output = ["[[ref multi_choice1]]\n"]
@@ -123,6 +130,31 @@ def test_change_answermatrix_markup_1():
 
 def test_change_answermatrix_markup_2():
     input_values = ["\\begin{answermatrix}\n", "1 & 2 & 4 \\\\\n", "3 & 5 & 4", "\\end{answermatrix}\n"]
+    expected_output = ["[[ref answermatrix1]]\n"]
+    temp = ChangeAnswerMatrixMarkup()
+    output = list(temp.generator(input_values))
+    assert_equals(expected_output, output)
+    detected_environments = [AnswerMatrix(nr=1,
+                                          number_of_rows=2,
+                                          number_of_columns=3,
+                                          items=[AnswerMatrixRow(rownr=1,
+                                                                 nelements=3,
+                                                                 elements=[AnswerMatrixRowElement(1, '1'),
+                                                                           AnswerMatrixRowElement(2, '2'),
+                                                                           AnswerMatrixRowElement(3, '4')]),
+                                                 AnswerMatrixRow(rownr=2,
+                                                                 nelements=3,
+                                                                 elements=[AnswerMatrixRowElement(1, '3'),
+                                                                           AnswerMatrixRowElement(2, '5'),
+                                                                           AnswerMatrixRowElement(3, '4')])
+                                                ]
+                                          )
+                             ]
+    assert_equals(detected_environments, temp.detected_answer_matrix_markups)
+
+
+def test_change_answermatrix_markup_3():
+    input_values = [" \\begin{answermatrix}\n", "1 & 2 & 4 \\\\\n", "3 & 5 & 4", "  \\end{answermatrix}\n"]
     expected_output = ["[[ref answermatrix1]]\n"]
     temp = ChangeAnswerMatrixMarkup()
     output = list(temp.generator(input_values))

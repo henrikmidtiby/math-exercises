@@ -32,16 +32,10 @@ def change_part_of_markup(input_lines):
     This function does the main part of changing latex markup to the markup used for tekvideo.sdu.dk.
     The function does not handle elements (like answer boxes) that are inserted using the reference markup.
     """
-    inline_math = re.compile('(.*)\\$(.*)\\$(.*)')
-    underline = re.compile(r'(.*)\\underline{(.*)}(.*)')
     for line in input_lines:
-        res = inline_math.match(line)
-        while res:
-            line = "%s[[eql %s]]%s\n" % (res.group(1), res.group(2), res.group(3))
-            res = inline_math.match(line)
-        res = underline.match(line)
-        if res:
-            line = "%s**%s**%s" % (res.group(1), res.group(2), res.group(3))
+        line = convert_inline_math_markup(line)
+        line = convert_underline_markup(line)
+        line = convert_emphasis_markup(line)
         line = line.replace("\\(", "[[eql ")
         line = line.replace("\\)", "]]")
         line = line.replace("\\[", "[[eq ")
@@ -51,6 +45,31 @@ def change_part_of_markup(input_lines):
         line = line.replace("\n\t", " ")
         line = line.replace("\t", " ")
         yield line
+
+
+def convert_inline_math_markup(line):
+    inline_math = re.compile('(.*)\\$(.*)\\$(.*)')
+    res = inline_math.match(line)
+    while res:
+        line = "%s[[eql %s]]%s\n" % (res.group(1), res.group(2), res.group(3))
+        res = inline_math.match(line)
+    return line
+
+
+def convert_underline_markup(line):
+    underline = re.compile(r'(.*)\\underline{(.*)}(.*)')
+    res = underline.match(line)
+    if res:
+        line = "%s**%s**%s" % (res.group(1), res.group(2), res.group(3))
+    return line
+
+
+def convert_emphasis_markup(line):
+    emph = re.compile(r'(.*)\\emph{(.*)}(.*)')
+    res = emph.match(line)
+    if res:
+        line = "%s*%s*%s" % (res.group(1), res.group(2), res.group(3))
+    return line
 
 
 def get_exercises(input_lines):

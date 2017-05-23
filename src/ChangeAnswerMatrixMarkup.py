@@ -6,12 +6,13 @@ AnswerMatrix = collections.namedtuple('AnswerMatrix', ['nr', 'number_of_rows', '
 AnswerMatrixRow = collections.namedtuple('AnswerMatrixRow', ['rownr', 'nelements', 'elements'])
 AnswerMatrixRowElement = collections.namedtuple('AnswerMatrixRowElement', ['elementnr', 'content'])
 
+
 class ChangeAnswerMatrixMarkup:
     def __init__(self):
         self.detected_answer_matrix_markups = []
 
-        self.start_environment = re.compile('\\\\begin\\{answermatrix\\}(\\[(.*)\\])?')
-        self.end_environment = re.compile('\\\\end\\{answermatrix\\}')
+        self.start_environment = re.compile('\s*\\\\begin\\{answermatrix\\}(\\[(.*)\\])?')
+        self.end_environment = re.compile('\s*\\\\end\\{answermatrix\\}')
 
         self.number_of_seen_rows = 0
         self.rows = []
