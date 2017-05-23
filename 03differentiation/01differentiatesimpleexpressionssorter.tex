@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\newenvironment{sortingwidget}[2]{\begin{tabular}{|r|l|}
+\hline #1 & #2 \\ \hline}{\hline
+\end{tabular}}
+
+\begin{document}
+\tableofcontents
+\newpage
+
+
+\begin{exercise}{Differentiering 1 - 01}
+
+Match følgende udtryk, så funktioner ($f(x)$) står 
+ud for deres afledte ($f'(x)$).
+
+
+\begin{sortingwidget}{$f(x)$}{$f'(x)$}
+$\frac{d}{dx} \cos(x)$ & $-\sin(x)$\\
+$\frac{d}{dx} \sin(x)$ & $\cos(x)$ \\
+$\frac{d}{dx} \left( - \cos(x) \right)$ & $\sin(x)$ \\
+$\frac{d}{dx} \left( - \sin(x) \right)$ & $-\cos(x)$ \\
+$\frac{d}{dx} \exp(x)$ & $\exp(x)$ \\
+$\frac{d}{dx} \ln(x)$ & $\frac{1}{x}$ \\
+\end{sortingwidget}
+
+
+\hint
+Benyt formlen
+\[
+\frac{d}{dx} \cos(x) = -\sin(x)
+\]
+
+
+\hint
+Benyt formlen
+\[
+\frac{d}{dx} \sin(x) = \cos(x)
+\]
+
+
+\hint
+Benyt formlen
+\[
+\frac{d}{dx} \exp(x) = \exp(x)
+\]
+
+\hint
+Benyt formlen
+\[
+\frac{d}{dx} \ln(x) = \frac{1}{x}
+\]
+
+
+
+\end{exercise}
+
+\end{document}
