@@ -1,6 +1,9 @@
 allexercises:
 	find . -name "Makefile" | awk ' {gsub(/\/Makefile/, ""); print}' | sort | xargs -n1 sh -c 'cd $$0 && make exercises'
 
+listallexercises:
+	find . -name "*.tex" | sort 
+
 cleanallexercises:
 	find . -name "Makefile" | awk ' {gsub(/\/Makefile/, ""); print}' | sort | xargs -n1 sh -c 'cd $$0 && make clean'
 
