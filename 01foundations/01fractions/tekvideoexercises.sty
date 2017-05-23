@@ -2,7 +2,14 @@
 \usepackage{todonotes}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage[abspath]{currfile}
 \usepackage[colorlinks, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+\pagestyle{fancy}
+\lhead{\currfilepath}
+\rhead{}
+\cfoot{}
 
 
 \newenvironment{exercise}[1]{\newpage\section{#1}}{}
