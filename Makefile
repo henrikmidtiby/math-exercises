@@ -31,4 +31,11 @@ finderrorsinjsonfiles:
 	# find . -name "*.json"  | sort | xargs -n1 sh -c 'grep -H \\\\\\\\\\\\\\\\ "$$0" || true'
 
 pdfwithallexercises.pdf:
-	pdftk `find . -name "*.pdf" -print | sort | xargs echo` cat output out.pdf
+	rm -f pdfwithallexercises.pdf
+	pdftk `find . -name "*.pdf" -print | sort | xargs echo` cat output pdfwithallexercises.pdf
+
+checkstylefiles:
+	find . -name "*.sty" | sort | xargs -n1 sh -c 'md5sum $$0'
+	
+overviewofexercises:
+	python3 src/createOverviewOfExercises.py
