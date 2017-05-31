@@ -1,5 +1,5 @@
-from ChangeSorterMarkup import *
-from WidgetRenderer import *
+from ..ChangeSorterMarkup import *
+from ..WidgetRenderer import *
 from nose.tools import assert_equals
 
 

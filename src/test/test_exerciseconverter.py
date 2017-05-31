@@ -1,4 +1,4 @@
-from exerciseconverter import *
+from ..exerciseconverter import *
 from nose.tools import assert_equals
 
 assert_equals.__self__.maxDiff = None

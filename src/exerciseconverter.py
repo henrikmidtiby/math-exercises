@@ -6,13 +6,13 @@ import jinja2
 import codecs
 import argparse
 import collections
-from ChangeMultiChoiceMarkup import *
-from ChangeSorterMarkup import *
-from ChangeAnswerBoxMarkup import *
-from ChangeHintMarkup import *
-from ChangeImageMarkup import *
-from ChangeAnswerMatrixMarkup import *
-import WidgetRenderer
+from .ChangeMultiChoiceMarkup import *
+from .ChangeSorterMarkup import *
+from .ChangeAnswerBoxMarkup import *
+from .ChangeHintMarkup import *
+from .ChangeImageMarkup import *
+from .ChangeAnswerMatrixMarkup import *
+from .WidgetRenderer import WidgetRenderer
 
 raw_template = u"""
 {
@@ -129,7 +129,7 @@ def render_exercise(exercise):
     answer_matrices = list(answer_matrix_parser.get_answer_matrices())
     hints = list(hint_parser.get_hints())
 
-    widget_renderer = WidgetRenderer.WidgetRenderer()
+    widget_renderer = WidgetRenderer()
     widget_renderer.add_answerbox_widgets(answers)
     widget_renderer.add_hint_widgets(hints)
     widget_renderer.add_multi_choice_widgets(multi_choices)
