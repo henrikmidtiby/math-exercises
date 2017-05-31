@@ -328,7 +328,7 @@ Sæt $n = 2$
     "hint2": {
       "type": "hint",
       "properties": {
-        "content": "Sæt [[eql n = 2]]\n\n[[eq \n\\frac{d}{dx} x^2 = 2 \\cdot x^{2 - 1} = 2 x\n]]"
+        "content": "Sæt [[eql n = 2]]\n[[eq \n\\frac{d}{dx} x^2 = 2 \\cdot x^{2 - 1} = 2 x\n]]"
       },
       "name": "hint2"
     }
@@ -400,7 +400,7 @@ Der forenkles til
     "hint2": {
       "type": "hint",
       "properties": {
-        "content": "Sæt [[eql f(x) = x]] og [[eql g(x) = \\sin(x)]]\n\n[[eq \n\\frac{d}{dx} \\left( x \\cdot \\sin(x) \\right) = \\frac{d}{dx} \\left( x \\right) \\cdot \\sin(x) + x \\cdot \\frac{d}{dx} \\left( \\sin(x) \\right)\n]]"
+        "content": "Sæt [[eql f(x) = x]] og [[eql g(x) = \\sin(x)]]\n[[eq \n\\frac{d}{dx} \\left( x \\cdot \\sin(x) \\right) = \\frac{d}{dx} \\left( x \\right) \\cdot \\sin(x) + x \\cdot \\frac{d}{dx} \\left( \\sin(x) \\right)\n]]"
       },
       "name": "hint2"
     },
@@ -422,6 +422,59 @@ Der forenkles til
 }"""
     for exercise in get_exercises(change_part_of_markup(input_values.splitlines())):
         rendered_exercise = render_exercise(exercise)
+        assert_equals(expected_output, rendered_exercise)
+        return
+    assert False
+
+
+def test_full_example_3():
+    input_values = r"""
+\begin{exercise}{Linearisering 6}
+
+	Lineariser nedenstående funktion omkring punktet $x = 5$.
+	\[
+	\sqrt{9-x}
+	\]
+
+	\answerbox{\frac{13 - x}{4}}
+
+	\hint
+	Lineariseringen af en funktion $f(x)$
+	omkring punktet $x_0$ er givet ved
+	\[
+	f(x_0) + f'(x_0) \cdot (x - x_0)
+	\]
+
+\end{exercise}
+
+
+
+
+"""
+    expected_output = r"""
+{
+  "name": "Linearisering 6",
+  "document": " Lineariser nedenstående funktion omkring punktet [[eql x = 5]].\n [[eq  \\sqrt{9-x} ]] [[ref input1]]\n\n\n \n\n[[ref hint1]] ",
+  "widgets": {
+    "input1": {
+      "type": "equation-input",
+      "properties": {
+        "content": "\\frac{13 - x}{4}"
+      },
+      "name": "input1"
+    },
+    "hint1": {
+      "type": "hint",
+      "properties": {
+        "content": "Lineariseringen af en funktion [[eql f(x)]]\nomkring punktet [[eql x_0]] er givet ved\n[[eq \nf(x_0) + f'(x_0) \\cdot (x - x_0)\n]]"
+      },
+      "name": "hint1"
+    }
+  }
+}"""
+    for exercise in get_exercises(change_part_of_markup(input_values.splitlines())):
+        rendered_exercise = render_exercise(exercise)
+        print(rendered_exercise)
         assert_equals(expected_output, rendered_exercise)
         return
     assert False
