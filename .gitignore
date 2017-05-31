@@ -1,7 +1,10 @@
 .idea/
 src/__pycache__/
 src/htmlcov/
+src/cov_html/
 src/.coverage
+*__pycache__
+*.cache
 *.swp
 *.bbl
 *.aux
@@ -12,3 +15,5 @@ src/.coverage
 *.toc
 *.log
 *.json
+combinedjsonfiles.txt
+exerciseOverview.txt
