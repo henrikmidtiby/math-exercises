@@ -5,6 +5,28 @@ import collections
 Hint = collections.namedtuple('Hint', ['nr', 'content'])
 
 
+def remove_empty_lines_from_start_of_storage(storage):
+    while storage[0] == '' or storage[0] == '\n':
+        storage = storage[1:]
+    return storage
+
+
+def remove_empty_lines_from_end_of_storage(storage):
+    while storage[-1] == '' or storage[-1] == '\n':
+        storage = storage[0:-1]
+    return storage
+
+
+def remove_whitespace_from_start_of_lines(storage):
+    storage = [line.lstrip() for line in storage]
+    return storage
+
+
+def remove_newlines_at_end_of_lines(storage):
+    storage = [line.rstrip('\n') for line in storage]
+    return storage
+
+
 class ChangeHintMarkup:
     def __init__(self):
         self.question = ""
@@ -12,10 +34,10 @@ class ChangeHintMarkup:
         self.hint_matcher = re.compile('\s*\\\\hint')
 
     def add_hint(self, count, storage):
-        while storage[0] == '' or storage[0] == '\n':
-            storage = storage[1:]
-        while storage[-1] == '' or storage[-1] == '\n':
-            storage = storage[0:-1]
+        storage = remove_empty_lines_from_start_of_storage(storage)
+        storage = remove_empty_lines_from_end_of_storage(storage)
+        storage = remove_whitespace_from_start_of_lines(storage)
+        storage = remove_newlines_at_end_of_lines(storage)
         lines = "\n".join(storage)
         lines = lines.replace('\\', '\\\\')
         lines = lines.replace("\n", "\\n")
