@@ -6,13 +6,13 @@ import jinja2
 import codecs
 import argparse
 import collections
-from .ChangeMultiChoiceMarkup import *
-from .ChangeSorterMarkup import *
-from .ChangeAnswerBoxMarkup import *
-from .ChangeHintMarkup import *
-from .ChangeImageMarkup import *
-from .ChangeAnswerMatrixMarkup import *
-from .WidgetRenderer import WidgetRenderer
+from ChangeMultiChoiceMarkup import *
+from ChangeSorterMarkup import *
+from ChangeAnswerBoxMarkup import *
+from ChangeHintMarkup import *
+from ChangeImageMarkup import *
+from ChangeAnswerMatrixMarkup import *
+from WidgetRenderer import WidgetRenderer
 
 raw_template = u"""
 {
