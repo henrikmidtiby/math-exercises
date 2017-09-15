@@ -25,7 +25,7 @@ raw_template = u"""
 
 # Definition of used data structures.
 Exercise = collections.namedtuple('Exercise', ['name', 'content'])
-
+ExerciseMetaInformation = collections.namedtuple('ExerciseMetaInformation', ['name', 'description', 'streak'])
 
 def change_part_of_markup(input_lines):
     """
@@ -157,22 +157,96 @@ def render_exercises(exercises):
     return rendered_exercises
 
 
-def write_exercises_to_file(output_file, rendered_exercises):
-    output_file.write("[")
+def get_start_of_json_file(values):
+    json_file_start_template = u"""{
+    "name": "{{ exercise_type_name }}",
+    "description": "{{ exercise_type_description }}",
+    "thumbnailUrl": "",
+    "exercises": [
+    """
+    t = jinja2.Template(json_file_start_template)
+    return t.render(values)
+
+
+def get_end_of_json_file(values):
+    json_file_end_template = u"""],
+        "streakToPass":{{ streak_to_pass }}
+}
+
+
+
+"""
+    t = jinja2.Template(json_file_end_template)
+    return t.render(values)
+
+
+def write_exercises_to_file(output_file, exercise_meta_information, rendered_exercises):
+    values = {}
+    values['exercise_type_name'] = exercise_meta_information.name
+    values['exercise_type_description'] = exercise_meta_information.description
+    values['streak_to_pass'] = exercise_meta_information.streak
+
+    output_file.write(get_start_of_json_file(values))
     for exercise_number, exercise in enumerate(rendered_exercises):
         if exercise_number > 0:
             output_file.write(",")
         output_file.write(exercise)
-    output_file.write("\n]\n\n")
+    output_file.write(get_end_of_json_file(values))
+
+
+def get_name_of_first_exercise_in_file(filename):
+    pattern_exercise_name = re.compile("\\\\exercisename{(.*)}")
+    with open(filename) as fh:
+        for line in fh:
+            res = pattern_exercise_name.match(line)
+            if res:
+                return res.group(1)
+
+    return None
+
+
+def get_name_of_first_exercise_in_file(filename):
+    pattern_exercise_name = re.compile("\\\\exercisename{(.*)}")
+    with open(filename) as fh:
+        for line in fh:
+            res = pattern_exercise_name.match(line)
+            if res:
+                return res.group(1)
+
+    return None
+
+
+def get_description_of_first_exercise_in_file(filename):
+    pattern_exercise_name = re.compile("\\\\exercisedescription{(.*)}")
+    with open(filename) as fh:
+        for line in fh:
+            res = pattern_exercise_name.match(line)
+            if res:
+                return res.group(1)
+
+    return None
+
+
+def get_exercise_meta_information(input_filename):
+    exercise_type_name = get_name_of_first_exercise_in_file(input_filename)
+    assert(exercise_type_name is not None)
+    exercise_type_description = get_description_of_first_exercise_in_file(input_filename)
+    if exercise_type_description is None:
+        exercise_type_description = exercise_type_name
+    # Todo: Remove hardcoded streak length
+    streak_length = 5
+    meta_information = ExerciseMetaInformation(exercise_type_name, exercise_type_description, streak_length)
+    return meta_information
 
 
 def extract_exercises_from_file(input_filename):
+    exercise_meta_information = get_exercise_meta_information(input_filename)
     output_filename = re.sub('\.tex', '.json', input_filename)
     with codecs.open(input_filename, "r", "utf-8") as fh, \
             codecs.open(output_filename, 'w', 'utf-8') as output_file:
         exercises = list(get_exercises(change_part_of_markup(fh)))
         rendered_exercises = render_exercises(exercises)
-        write_exercises_to_file(output_file, rendered_exercises)
+        write_exercises_to_file(output_file, exercise_meta_information, rendered_exercises)
 
     print()
     print("found %d exercises" % exercises.__len__())
