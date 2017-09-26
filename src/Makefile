@@ -5,5 +5,4 @@ coveragereport:
 
 tests:
 	clear
-	# python3 nose_starter.py
-	pytest
+	py.test --cov-report html:cov_html --cov=src test/*.py
