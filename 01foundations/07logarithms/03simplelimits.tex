@@ -1,0 +1,438 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\exercisename{Grænseværdier - Simple udtryk}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Grænseværdier - Simple udtryk 1}
+
+Bestem 
+\[
+\lim_{x \to 3} \frac{(x+1)(x-3)}{(x-3)(x+3)}
+\]
+
+\answerbox{\frac{2}{3}}
+
+\hint
+Indsæt $x=3$ i udtrykket. Giver udtrykket nu mening?
+
+\hint
+\[
+\frac{(x+1)(x-3)}{(x-3)(x+3)} = \frac{(3+1)(3-3)}{(3-3)(3+3)} = \frac{4 \cdot 0}{0 \cdot 6}
+\]
+
+\hint
+$\frac{0}{0}$ giver problemer...
+
+\hint
+Prøv at forkorte udtrykket inden $x=3$ indsættes.
+
+\hint
+Der er en faktor $(x-3)$ i både tæller og nævner.
+
+\hint
+\[
+\lim_{x \to 3} \frac{(x+1)(x-3)}{(x-3)(x+3)} = \lim_{x \to 3} \frac{x+1}{x+3}
+\]
+
+\hint
+Indsæt $x=3$ i udtrykket.
+
+\hint
+\[
+\lim_{x \to 3} \frac{x+1}{x+3} = \frac{3+1}{3+3}
+\]
+
+\hint
+\[
+\frac{3+1}{3+3} = \frac{4}{6} = \frac{2}{3}
+\]
+
+
+\end{exercise}
+
+\newpage
+\begin{exercise}{Grænseværdier - Simple udtryk 2}
+	
+	Bestem 
+	\[
+	\lim_{x \to 5} \frac{(2x-10)(x+2)}{(x-2)(x-5)}
+	\]
+	
+	\answerbox{\frac{14}{3}}
+	
+	\hint
+	Indsæt $x=5$ i udtrykket. Giver udtrykket nu mening?
+	
+	\hint
+	\[
+	\frac{(2x-10)(x+2)}{(x-2)(x-5)} = \frac{(2 \cdot 5-10)(5+2)}{(5-2)(5-5)} = \frac{0 \cdot 7}{3 \cdot 0}
+	\]
+	
+	\hint
+	$\frac{0}{0}$ giver problemer...
+	
+	\hint
+	Prøv at forkorte udtrykket inden $x=5$ indsættes.
+	
+	\hint
+	Benyt at $(2x-10) = 2 (x-5)$ og indsæt dette.
+	
+	\hint
+	\[
+	\lim_{x \to 5} \frac{(2x-10)(x+2)}{(x-2)(x-5)} = \lim_{x \to 5} \frac{2(x-5)(x+2)}{(x-2)(x-5)}
+	\]
+	
+	\hint
+	Der er en faktor $(x-5)$ i både tæller og nævner.
+	
+	\hint
+	\[
+	\lim_{x \to 5} \frac{2(x-5)(x+2)}{(x-2)(x-5)} = \lim_{x \to 5} \frac{2(x+2)}{x-2}
+	\]
+	
+	\hint
+	Indsæt $x=5$ i udtrykket.
+	
+	\hint
+	\[
+	 \lim_{x \to 5} \frac{2(x+2)}{x-2} = \frac{2(5+2)}{5-2} 
+	\]
+	
+	\hint
+	\[
+	 \frac{2(5+2)}{5-2} = \frac{2 \cdot 7}{3} = \frac{14}{3}
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+\begin{exercise}{Grænseværdier - Simple udtryk 3}
+	
+	Bestem 
+	\[
+	\lim_{x \to 1} \frac{(5x-5)(x-2)}{(x+3)(2x-2)}
+	\]
+	
+	\answerbox{\frac{-5}{8}}
+	
+	\hint
+	Indsæt $x=1$ i udtrykket. Giver udtrykket nu mening?
+	
+	\hint
+	\[
+	\frac{(5x-5)(x-2)}{(x+3)(2x-2)} = \frac{(5\cdot 1-5)(1-2)}{(1+3)(2 \cdot 1-2)} = \frac{0 \cdot (-1)}{4 \cdot 0}
+	\]
+	
+	\hint
+	$\frac{0}{0}$ giver problemer...
+	
+	\hint
+	Prøv at forkorte udtrykket inden $x=1$ indsættes.
+	
+	\hint
+	Benyt at $(5x-5) = 5 (x-1)$ og $(2x-2) = 2(x-1)$ og indsæt dette.
+	
+	\hint
+	\[
+	\lim_{x \to 1} \frac{(5x-5)(x-2)}{(x+3)(2x-2)} = \lim_{x \to 1} \frac{5(x-1)(x-2)}{(x+3) \cdot 2(x-1)}
+	\]
+	
+	
+	\hint
+	Der er en faktor $(x-1)$ i både tæller og nævner.
+	
+	\hint
+	\[
+	\lim_{x \to 1} \frac{5(x-1)(x-2)}{(x+3)\cdot 2(x-1)} = \lim_{x \to 1} \frac{5(x-2)}{2(x+3)}
+	\]
+	
+	\hint
+	Indsæt $x=1$ i udtrykket.
+	
+	\hint
+	\[
+	 \lim_{x \to 1} \frac{5(x-2)}{2(x+3)} = \frac{5(1-2)}{2(1+3)}
+	\]
+	
+	\hint
+	\[
+	\frac{5(1-2)}{2(1+3)} = \frac{5 \cdot (-1)}{2 \cdot 4} = \frac{-5}{8}
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+\begin{exercise}{Grænseværdier - Simple udtryk 4}
+	
+	Bestem 
+	\[
+	\lim_{x \to 2} \frac{(x-2)(x^2+1)}{(x+2)(x-2)}
+	\]
+	
+	\answerbox{\frac{5}{4}}
+	
+	\hint
+	Indsæt $x=2$ i udtrykket. Giver udtrykket nu mening?
+	
+	\hint
+	\[
+	\frac{(x-2)(x^2+1)}{(x+2)(x-2)} = \frac{(2-2)(2^2+1)}{(2+2)(2-2)} = \frac{0 \cdot 5}{4 \cdot 0}
+	\]
+	
+	\hint
+	$\frac{0}{0}$ giver problemer...
+	
+	\hint
+	Prøv at forkorte udtrykket inden $x=2$ indsættes.
+	
+	\hint
+	Der er en faktor $(x-2)$ i både tæller og nævner.
+	
+	\hint
+	\[
+	\lim_{x \to 2} \frac{(x-2)(x^2+1)}{(x+2)(x-2)} = \lim_{x \to 2} \frac{x^2+1}{x+2}
+	\]
+	
+	
+	\hint
+	Indsæt $x=2$ i udtrykket.
+	
+	\hint
+	\[
+	\lim_{x \to 2} \frac{x^2+1}{x+2} =  \frac{2^2+1}{2+2}
+	\]
+	
+	\hint
+	\[
+	\frac{2^2+1}{2+2} = \frac{5}{4}
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+\begin{exercise}{Grænseværdier - Simple udtryk 5}
+	
+	Bestem 
+	\[
+	\lim_{x \to -3} \frac{(x+3)(x+1)}{(x+5)(2x+6)}
+	\]
+	
+	\answerbox{\frac{-1}{2}}
+	
+	\hint
+	Indsæt $x=-3$ i udtrykket. Giver udtrykket nu mening?
+	
+	\hint
+	\[
+	\frac{(x+3)(x+1)}{(x+5)(2x+6)} = \frac{(-3+3)(-3+1)}{(-3+5)(2 \cdot (-3)+6)} = \frac{0 \cdot (-2)}{2 \cdot 0}
+	\]
+	
+	\hint
+	$\frac{0}{0}$ giver problemer...
+	
+	\hint
+	Prøv at forkorte udtrykket inden $x=3$ indsættes.
+	
+	\hint
+	Benyt at $(2x+6) = 2 (x+3)$ og indsæt dette.
+	
+	\hint
+	\[
+	\lim_{x \to -3} \frac{(x+3)(x+1)}{(x+5)(2x+6)} = \lim_{x \to -3} \frac{(x+3)(x+1)}{(x+5) \cdot 2(x+3)}
+	\]
+	
+	\hint
+	Der er en faktor $(x+3)$ i både tæller og nævner.
+	
+	\hint
+	\[
+	\lim_{x \to -3} \frac{(x+3)(x+1)}{(x+5) \cdot 2(x+3)} = \lim_{x \to -3} \frac{(x+1)}{2(x+5)}
+	\]
+	
+	\hint
+	Indsæt $x=-3$ i udtrykket.
+	
+	\hint
+	\[
+	\lim_{x \to -3} \frac{(x+1)}{2(x+5)} = \frac{(-3+1)}{2(-3+5)} 
+	\]
+	
+	\hint
+	\[
+	 \frac{(-3+1)}{2(-3+5)} = \frac{-2}{2 \cdot 2} = \frac{-2}{4} = \frac{-1}{2}  
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+\begin{exercise}{Grænseværdier - Simple udtryk 6}
+	
+	Bestem 
+	\[
+	\lim_{x \to 6} \frac{(x+2)(x-6)}{(x-6)(x+3)}
+	\]
+	
+	\answerbox{\frac{8}{9}}
+	
+	\hint
+	Indsæt $x=6$ i udtrykket. Giver udtrykket nu mening?
+	
+	\hint
+	\[
+	\frac{(x+2)(x-6)}{(x-6)(x+3)} = \frac{(6+2)(6-6)}{(6-6)(6+3)} = \frac{8 \cdot 0}{0 \cdot 9}
+	\]
+	
+	\hint
+	$\frac{0}{0}$ giver problemer...
+	
+	\hint
+	Prøv at forkorte udtrykket inden $x=6$ indsættes.
+	
+	\hint
+	Der er en faktor $(x-6)$ i både tæller og nævner.
+	
+	\hint
+	\[
+	\lim_{x \to 6} \frac{(x+2)(x-6)}{(x-6)(x+3)} = \lim_{x \to 6} \frac{x+2}{x+3}
+	\]
+	
+	\hint
+	Indsæt $x=6$ i udtrykket.
+	
+	\hint
+	\[
+	\lim_{x \to 6} \frac{x+2}{x+3} = \frac{6+2}{6+3}
+	\]
+	
+	\hint
+	\[
+	\frac{6+2}{6+3} = \frac{8}{9}
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+\begin{exercise}{Grænseværdier - Simple udtryk 7}
+	
+	Bestem 
+	\[
+	\lim_{x \to -1} \frac{(x+1)(x-2)}{(3x+3)(x-1)}
+	\]
+	
+	\answerbox{\frac{1}{2}}
+	
+	\hint
+	Indsæt $x=-1$ i udtrykket. Giver udtrykket nu mening?
+	
+	\hint
+	\[
+	\frac{(x+1)(x-2)}{(3x+3)(x-1)} = \frac{(-1+1)(-1-2)}{(3 \cdot (-1)+3)(-1-1)} = \frac{0 \cdot (-3)}{0 \cdot (-2)}
+	\]
+	
+	\hint
+	$\frac{0}{0}$ giver problemer...
+	
+	\hint
+	Prøv at forkorte udtrykket inden $x=-1$ indsættes.
+	
+	\hint
+	Benyt at $(3x+3) = 3 (x+1)$ og indsæt dette.
+	
+	\hint
+	\[
+	\lim_{x \to -1} \frac{(x+1)(x-2)}{(3x+3)(x-1)} = \lim_{x \to -1} \frac{(x+1)(x-2)}{3(x+1)(x-1)}
+	\]
+	
+	\hint
+	Der er en faktor $(x+1)$ i både tæller og nævner.
+	
+	\hint
+	\[
+	\lim_{x \to -1} \frac{(x+1)(x-2)}{3(x+1)(x-1)} = \lim_{x \to -1} \frac{(x-2)}{3(x-1)}
+	\]
+	
+	\hint
+	Indsæt $x=-1$ i udtrykket.
+	
+	\hint
+	\[
+	\lim_{x \to -1} \frac{(x-2)}{3(x-1)} = \frac{-1-2}{3(-1-1)}
+	\]
+	
+	\hint
+	\[
+	\frac{-1-2}{3(-1-1)}  = \frac{-3}{3\cdot (-2)} = \frac{-3}{-6} = \frac{1}{2}	
+	\]                    
+	
+	
+\end{exercise}
+
+\newpage
+\begin{exercise}{Grænseværdier - Simple udtryk 8}
+	
+	Bestem 
+	\[
+	\lim_{x \to 2} \frac{(2x-4)(x+3)}{(x+1)(x-2)}
+	\]
+	
+	\answerbox{\frac{10}{3}}
+	
+	\hint
+	Indsæt $x=2$ i udtrykket. Giver udtrykket nu mening?
+	
+	\hint
+	\[
+	\frac{(2x-4)(x+3)}{(x+1)(x-2)} = \frac{(2 \cdot 2-4)(2+3)}{(2+1)(2-2)} = \frac{0 \cdot 5}{3 \cdot 0}
+	\]
+	
+	\hint
+	$\frac{0}{0}$ giver problemer...
+	
+	\hint
+	Prøv at forkorte udtrykket inden $x=2$ indsættes.
+	
+	\hint
+	Benyt at $(2x-4) = 2 (x-2)$ og indsæt dette.
+	
+	\hint
+	\[
+	\lim_{x \to 2} \frac{(2x-4)(x+3)}{(x+1)(x-2)} = \lim_{x \to 2} \frac{2(x-2)(x+3)}{(x+1)(x-2)}
+	\]
+	
+	
+	\hint
+	Der er en faktor $(x-2)$ i både tæller og nævner.
+	
+	\hint
+	\[
+	\lim_{x \to 2} \frac{2(x-2)(x+3)}{(x+1)(x-2)} = \lim_{x \to 2} \frac{2(x+3)}{x+1}
+	\]
+	
+	\hint
+	Indsæt $x=2$ i udtrykket.
+	
+	\hint
+	\[
+	\lim_{x \to 2} \frac{2(x+3)}{x+1} = \lim_{x \to 2} \frac{2(2+3)}{2+1}
+	\]
+	
+	\hint
+	\[
+	\frac{2(2+3)}{2+1} = \frac{2 \cdot 5}{3} = \frac{10}{3}
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+
+
+\end{document}

@@ -1,0 +1,425 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\exercisename{Grænseværdier og differentialkvotienten}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Grænseværdier og differentialkvotienten 1}
+
+Bestem grænseværdien 
+\[
+\lim_{h \to 0} \frac{(x+h)^2-x^2}{h}
+\]
+
+\answerbox{2x}
+
+\hint
+Indsæt $h=0$ og se om udtrykket giver mening.
+
+\hint
+\[
+\lim_{h \to 0} \frac{(x+h)^2-x^2}{h} = \frac{(x+0)^2-x^2}{0} = \frac{0}{0}
+\]
+
+\hint
+$\frac{0}{0}$ kan vi ikke håndtere.
+
+\hint
+Omskriv udtrykket og prøv at forenkle det.
+
+\hint
+\[
+\lim_{h \to 0} \frac{(x+h)^2-x^2}{h} = \lim_{h \to 0} \frac{x^2+h^2+2xh-x^2}{h}
+\]
+
+\hint
+\[
+\lim_{h \to 0} \frac{x^2+h^2+2xh-x^2}{h} = \lim_{h \to 0} \frac{h^2+2xh}{h}
+\]
+
+\hint
+Forkort med h.
+
+\hint
+\[
+\lim_{h \to 0} \frac{h^2+2xh}{h} = \lim_{h \to 0} (h + 2x)
+\]
+
+\hint
+Indsæt $h=0$ og se om udtrykket giver mening.
+
+\hint
+\[
+\lim_{h \to 0} (h + 2x) = 2x
+\]
+
+\end{exercise}
+
+\newpage
+\begin{exercise}{Grænseværdier og differentialkvotienten 2}
+	
+	Bestem grænseværdien 
+	\[
+	\lim_{h \to 0} \frac{(x+h)-x}{h}
+	\]
+	
+	\answerbox{1}
+	
+	\hint
+	Indsæt $h=0$ og se om udtrykket giver mening.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{(x+h)-x}{h}  =	\lim_{h \to 0} \frac{(x+0)-x}{0} = \frac{0}{0}
+	\]
+	
+	\hint
+	$\frac{0}{0}$ kan vi ikke håndtere.
+	
+	\hint
+	Omskriv udtrykket og prøv at forenkle det.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{(x+h)-x}{h} = \lim_{h \to 0} \frac{h}{h}
+	\]
+	
+	\hint
+	Forkort med h.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{h}{h} = \lim_{h \to 0} 1 
+	\]
+	
+	\hint
+	Indsæt $h=0$ og se om udtrykket giver mening.
+	
+	\hint
+	\[
+	\lim_{h \to 0} 1  = 1
+	\]
+	
+\end{exercise}
+
+\newpage
+\begin{exercise}{Grænseværdier og differentialkvotienten 3}
+	
+	Bestem grænseværdien 
+	\[
+	\lim_{h \to 0} \frac{(x+h)^3-x^3}{h}
+	\]
+	
+	\answerbox{3x^2}
+	
+	\hint
+	Indsæt $h=0$ og se om udtrykket giver mening.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{(x+h)^3-x^3}{h} = \lim_{h \to 0} \frac{(x+0)^3-x^3}{0} = \frac{0}{0}
+	\]
+	
+	\hint
+	$\frac{0}{0}$ kan vi ikke håndtere.
+	
+	\hint
+	Omskriv udtrykket og prøv at forenkle det.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{(x+h)^3-x^3}{h} = \lim_{h \to 0} \frac{(x+h)(x^2+h^2+2xh)-x^3}{h} 
+	\]
+	
+	\hint
+	\[
+	= \lim_{h \to 0} \frac{x^3+xh^2+2x^2h+x^2h+h^3+2xh^2-x^3}{h}  = \lim_{h \to 0} \frac{x^3+3xh^2+3x^2h+h^3-x^3}{h}
+	\]
+	
+	
+	\hint
+	\[
+ 	\lim_{h \to 0} \frac{x^3+3xh^2+3x^2h+h^3-x^3}{h} =  \lim_{h \to 0} \frac{3xh^2+3x^2h+h^3}{h}
+	\]
+	
+	\hint
+	Forkort med h.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{3xh^2+3x^2h+h^3}{h} = \lim_{h \to 0} \left(3xh+3x^2+h^2\right)
+	\]
+	
+	\hint
+	Indsæt $h=0$ og se om udtrykket giver mening.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \left(3xh+3x^2+h^2\right) = 3x^2
+	\]
+	
+\end{exercise}
+
+\newpage
+\begin{exercise}{Grænseværdier og differentialkvotienten 4}
+	
+	Bestem grænseværdien 
+	\[
+	\lim_{h \to 0} \frac{2(x+h)^3-2x^3}{h}
+	\]
+	
+	\answerbox{6x^2}
+	
+	\hint
+	Indsæt $h=0$ og se om udtrykket giver mening.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{2(x+h)^3-2x^3}{h} = \lim_{h \to 0} \frac{2(x+0)^3-2x^3}{0} = \frac{0}{0}
+	\]
+	
+	\hint
+	$\frac{0}{0}$ kan vi ikke håndtere.
+	
+	\hint
+	Omskriv udtrykket og prøv at forenkle det.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{2(x+h)^3-2x^3}{h} = \lim_{h \to 0} \frac{2\left((x+h)(x^2+h^2+2xh)-x^3\right)}{h} 
+	\]
+	
+	\hint
+	\[
+	= \lim_{h \to 0} \frac{2\left(x^3+xh^2+2x^2h+x^2h+h^3+2xh^2-x^3\right)}{h}  = \lim_{h \to 0} \frac{2\left(x^3+3xh^2+3x^2h+h^3-x^3\right)}{h}
+	\]
+	
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{2\left(x^3+3xh^2+3x^2h+h^3-x^3\right)}{h} =  \lim_{h \to 0} \frac{2\left(3xh^2+3x^2h+h^3\right)}{h}
+	\]
+	
+	\hint
+	Forkort med h.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{2\left(3xh^2+3x^2h+h^3\right)}{h} = \lim_{h \to 0} \left(2\left(3xh+3x^2+h^2\right)\right)
+	\]
+	
+	\hint
+	Indsæt $h=0$ og se om udtrykket giver mening.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \left(2\left(3xh+3x^2+h^2\right)\right) = 2(3x^2) = 6x^2
+	\]
+	
+\end{exercise}
+
+\newpage
+\begin{exercise}{Grænseværdier og differentialkvotienten 5}
+	
+	Bestem grænseværdien 
+	\[
+	\lim_{h \to 0} \frac{2(x+h)^2-2x^2}{h}
+	\]
+	
+	\answerbox{4x}
+	
+	\hint
+	Indsæt $h=0$ og se om udtrykket giver mening.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{2(x+h)^2-2x^2}{h} = \frac{2(x+0)^2-2x^2}{0} = \frac{0}{0}
+	\]
+	
+	\hint
+	$\frac{0}{0}$ kan vi ikke håndtere.
+	
+	\hint
+	Omskriv udtrykket og prøv at forenkle det.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{2(x+h)^2-2x^2}{h} = \lim_{h \to 0} \frac{2\left(x^2+h^2+2xh-x^2\right)}{h}
+	\]
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{2\left(x^2+h^2+2xh-x^2\right)}{h} = \lim_{h \to 0} \frac{2\left(h^2+2xh\right)}{h}
+	\]
+	
+	\hint
+	Forkort med h.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{2\left(h^2+2xh\right)}{h} = \lim_{h \to 0} \left(2(h + 2x)\right)
+	\]
+	
+	\hint
+	Indsæt $h=0$ og se om udtrykket giver mening.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \left(2(h + 2x)\right) = 2(2x) = 4x
+	\]
+	
+\end{exercise}
+
+\newpage
+\begin{exercise}{Grænseværdier og differentialkvotienten 6}
+	
+	Bestem grænseværdien 
+	\[
+	\lim_{h \to 0} \frac{3(x+h)-3x}{h}
+	\]
+	
+	\answerbox{3}
+	
+	\hint
+	Indsæt $h=0$ og se om udtrykket giver mening.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{3(x+h)-3x}{h}  =	\lim_{h \to 0} \frac{3(x+0)-3x}{0} = \frac{0}{0}
+	\]
+	
+	\hint
+	$\frac{0}{0}$ kan vi ikke håndtere.
+	
+	\hint
+	Omskriv udtrykket og prøv at forenkle det.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{3(x+h)-3x}{h} =  \lim_{h \to 0} \frac{3x+3h-3x}{h} = \lim_{h \to 0} \frac{3h}{h}
+	\]
+	
+	\hint
+	Forkort med h.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{3h}{h} = \lim_{h \to 0} 3 
+	\]
+	
+	\hint
+	Indsæt $h=0$ og se om udtrykket giver mening.
+	
+	\hint
+	\[
+	\lim_{h \to 0} 3  = 3
+	\]
+	
+\end{exercise}
+
+\newpage
+\begin{exercise}{Grænseværdier og differentialkvotienten 7}
+	
+	Bestem grænseværdien 
+	\[
+	\lim_{h \to 0} \frac{5(x+h)^2-5x^2}{h}
+	\]
+	
+	\answerbox{10x}
+	
+	\hint
+	Indsæt $h=0$ og se om udtrykket giver mening.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{5(x+h)^2-5x^2}{h} = \frac{5(x+0)^2-5x^2}{0} = \frac{0}{0}
+	\]
+	
+	\hint
+	$\frac{0}{0}$ kan vi ikke håndtere.
+	
+	\hint
+	Omskriv udtrykket og prøv at forenkle det.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{5(x+h)^2-5x^2}{h} = \lim_{h \to 0} \frac{5\left(x^2+h^2+2xh-x^2\right)}{h}
+	\]
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{5\left(x^2+h^2+2xh-x^2\right)}{h} = \lim_{h \to 0} \frac{5\left(h^2+2xh\right)}{h}
+	\]
+	
+	\hint
+	Forkort med h.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{5\left(h^2+2xh\right)}{h} = \lim_{h \to 0} \left(5(h + 2x)\right)
+	\]
+	
+	\hint
+	Indsæt $h=0$ og se om udtrykket giver mening.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \left(5(h + 2x)\right) = 5(2x) = 10x
+	\]
+	
+\end{exercise}
+
+\newpage
+\begin{exercise}{Grænseværdier og differentialkvotienten 8}
+	
+	Bestem grænseværdien 
+	\[
+	\lim_{h \to 0} \frac{8(x+h)-8x}{h}
+	\]
+	
+	\answerbox{8}
+	
+	\hint
+	Indsæt $h=0$ og se om udtrykket giver mening.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{8(x+h)-8x}{h}  =	\lim_{h \to 0} \frac{8(x+0)-8x}{0} = \frac{0}{0}
+	\]
+	
+	\hint
+	$\frac{0}{0}$ kan vi ikke håndtere.
+	
+	\hint
+	Omskriv udtrykket og prøv at forenkle det.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{8(x+h)-8x}{h} =  \lim_{h \to 0} \frac{8x+8h-8x}{h} = \lim_{h \to 0} \frac{8h}{h}
+	\]
+	
+	\hint
+	Forkort med h.
+	
+	\hint
+	\[
+	\lim_{h \to 0} \frac{8h}{h} = \lim_{h \to 0} 8
+	\]
+	
+	\hint
+	Indsæt $h=0$ og se om udtrykket giver mening.
+	
+	\hint
+	\[
+	\lim_{h \to 0} 8 = 8
+	\]
+	
+\end{exercise}
+
+
+\newpage
+
+
+\end{document}
