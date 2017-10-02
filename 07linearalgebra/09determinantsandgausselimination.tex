@@ -1,0 +1,790 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\exercisename{Bestem determinanter ved hjælp af Gauss elimination}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Determinanter - 1}
+
+Givet matricen
+
+\[
+A = \left[\begin{array}{rr}
+1 & 2 \\ 
+3 & 5 
+\end{array} \right]
+\]
+
+Bestem værdien af determinanten vha. Gauss elimination.
+
+$\det(A)$ = \answerbox{-1}
+
+\hint
+Benyt Gauss elimination til at omskrive matricen til 
+øvre triangulær form.
+
+\hint
+Udfør række operationen
+$R2 - 3R1 \to R2$.
+
+\hint
+Det giver matricen
+\[
+\left[\begin{array}{rr}
+1 & 2 \\ 
+0 & -1 
+\end{array} \right]
+\]
+
+\hint
+Nu er matricen på øvre triangulær form.
+
+\hint
+Når matricen er på øvre triangulær form, er determinanten 
+produktet af diagonal elementerne.
+
+\hint
+\[
+\det(A) = 1 \cdot (-1) = -1
+\]
+
+
+\end{exercise}
+
+
+\begin{exercise}{Determinanter - 2}
+
+Givet matricen
+
+\[
+A = \left[\begin{array}{rr}
+-3 & 4 \\ 
+3 & 2 
+\end{array} \right]
+\]
+
+Bestem værdien af determinanten vha. Gauss elimination.
+
+$\det(A)$ = \answerbox{-18}
+
+\hint
+Benyt Gauss elimination til at omskrive matricen til 
+øvre triangulær form.
+
+\hint
+Udfør række operationen
+$R2 + R1 \to R2$.
+
+\hint
+Det giver matricen
+\[
+A = \left[\begin{array}{rr}
+-3 & 4 \\ 
+0 & 6 
+\end{array} \right]
+\]
+
+\hint
+Nu er matricen på øvre triangulær form.
+
+\hint
+Når matricen er på øvre triangulær form, er determinanten 
+produktet af diagonal elementerne.
+
+\hint
+\[
+\det(A) = (-3) \cdot 6 = -18
+\]
+
+
+\end{exercise}
+
+
+\begin{exercise}{Determinanter - 3}
+
+Givet matricen
+
+\[
+A = \left[\begin{array}{rrr}
+5 & 2 & 1 \\ 
+3 & 3 & 2 \\
+1 & 1 & 2
+\end{array} \right]
+\]
+
+Bestem værdien af determinanten vha. Gauss elimination.
+
+$\det(A)$ = \answerbox{12}
+
+\hint
+Benyt Gauss elimination til at omskrive matricen til 
+øvre triangulær form.
+
+\hint
+Udfør række operationerne
+$R1 - 5 R3 \to R1$ og 
+$R2 - 3 R3 \to R2$.
+
+\hint
+Det giver matricen
+\[
+\left[\begin{array}{rrr}
+0 & -3 & -9 \\ 
+0 & 0 & -4 \\
+1 & 1 & 2
+\end{array} \right]
+\]
+
+\hint
+Byt række et og række to.
+
+\hint
+Det giver matricen
+\[
+\left[\begin{array}{rrr}
+0 & 0 & -4 \\
+0 & -3 & -9 \\ 
+1 & 1 & 2
+\end{array} \right]
+\]
+
+\hint 
+Byt række et med række tre.
+
+\hint
+Det giver matricen
+\[
+\left[\begin{array}{rrr}
+1 & 1 & 2 \\
+0 & -3 & -9 \\ 
+0 & 0 & -4
+\end{array} \right]
+\]
+
+\hint
+Nu er matricen på øvre triangulær form.
+
+\hint
+Når matricen er på øvre triangulær form, er determinanten 
+produktet af diagonal elementerne.
+
+\hint
+\[
+\det(A) = 1 \cdot (-3) \cdot (-4) = 12
+\]
+
+\hint
+Korriger fortegnet på determinanten ud fra antal række ombytninger.
+
+\hint
+Der er byttet rækker to gange, derfor skal fortegnet justeres med
+faktoren $(-1)^2 = 1$.
+Da faktoren er $1$, vedbliver determinanten at være 12.
+
+\end{exercise}
+
+
+\begin{exercise}{Determinanter - 4}
+	
+Givet matricen
+
+\[
+A = \left[\begin{array}{rr}
+2 & 5 \\ 
+1 & 5 
+\end{array} \right]
+\]
+	
+Bestem værdien af determinanten vha. Gauss elimination.
+
+$\det(A)$ = \answerbox{5}
+
+\hint
+Benyt Gauss elimination til at omskrive matricen til 
+øvre triangulær form.
+
+\hint
+Udfør række operationen
+$R1 - 2 R2 \to R1$.
+
+\hint
+Det giver matricen
+\[
+\left[\begin{array}{rr}
+0 & -5 \\ 
+1 & 5 
+\end{array} \right]
+\]
+	
+\hint
+Byt om på række et og række to.
+
+\hint
+Det giver matricen
+\[
+\left[\begin{array}{rr}
+1 & 5 \\
+0 & -5
+\end{array} \right]
+\]
+
+\hint
+Nu er matricen på øvre triangulær form.
+
+\hint
+Når matricen er på øvre triangulær form, er determinanten 
+produktet af diagonal elementerne ganget med en korrektionsfaktor.
+
+\hint
+Korrektionsfaktoren er bestemt ud fra antal ombytninger af rækker
+der er foretaget under gauss eliminationen.
+Vi har foretaget en rækkeombytning, faktoren er derfor: $(-1)^1 = -1$.
+
+\hint
+\[
+\det(A) = 1 \cdot (-5) \cdot (-1) = 5
+\]
+	
+\end{exercise}
+
+
+
+
+\begin{exercise}{Determinanter - 5}
+	
+Givet matricen
+	
+\[
+A = \left[\begin{array}{rrr}
+2 & 3 & 7 \\ 
+5 & -2 & 1 \\
+3 & 4 & 2
+\end{array} \right]
+\]
+	
+Bestem værdien af determinanten vha. Gauss elimination.
+
+$\det(A)$ = \answerbox{145}
+
+\hint
+Benyt Gauss elimination til at omskrive matricen til 
+øvre triangulær form.
+
+\hint
+Udfør række operationen
+$R1 - R3 \to R1$.
+
+\hint
+Det giver matricen
+\[
+\left[\begin{array}{rrr}
+-1 & -1 & 5 \\ 
+5 & -2 & 1 \\
+3 & 4 & 2
+\end{array} \right]
+\]
+	
+\hint
+Udfør række operationerne
+$R2 + 5R1 \to R2$ og $R3 + 3R1 \to R3$.
+
+\hint
+Det giver matricen
+\[
+\left[\begin{array}{rrr}
+-1 & -1 & 5 \\ 
+0 & -7 & 26 \\
+0 & 1 & 17
+\end{array} \right]
+\]
+	
+\hint
+Udfør række operationerne
+$R2 + 7R3 \to R2$.
+
+\hint
+Det giver matricen
+\[
+\left[\begin{array}{rrr}
+-1 & -1 & 5 \\ 
+0 & 0 & 145 \\
+0 & 1 & 17
+\end{array} \right]
+\]
+	
+\hint
+Byt om på række to og række tre.
+
+\hint
+Det giver matricen
+\[
+\left[\begin{array}{rrr}
+-1 & -1 & 5 \\ 
+0 & 1 & 17 \\
+0 & 0 & 145
+\end{array} \right]
+\]
+
+\hint
+Nu er matricen på øvre triangulær form.
+
+\hint
+Når matricen er på øvre triangulær form, er determinanten 
+produktet af diagonal elementerne ganget med en korrektionsfaktor.
+
+\hint
+Korrektionsfaktoren er bestemt ud fra antal ombytninger af rækker
+der er foretaget under gauss eliminationen.
+Vi har foretaget en rækkeombytning, faktoren er derfor: $(-1)^1 = -1$.
+
+\hint
+\[
+\det(A) = (-1) \cdot 1 \cdot 145 \cdot (-1) = 145
+\]
+	
+\end{exercise}
+
+
+
+
+
+\begin{exercise}{Determinanter og Gauss elimination - 1}
+	
+Givet matricen
+
+\[
+A = \left[\begin{array}{rrr}
+-2 & 1 & 4 \\ 
+7 & 8 & -1 \\
+5 & -4 & 2
+\end{array} \right]
+\]
+
+Bestem værdien af determinanten vha. Gauss elimination.
+
+$\det(A)$ = \answerbox{-315}
+
+
+\hint
+\[
+\det(A) = \left|\begin{array}{rrr}
+-2 & 1 & 4 \\ 
+7 & 8 & -1 \\
+5 & -4 & 2
+\end{array} \right|
+\]
+
+
+\hint
+Udfør række operationen
+$R3 + 2R1 \to R3$.
+
+\hint
+Det giver 
+\[
+\left|\begin{array}{rrr}
+-2 & 1 & 4 \\ 
+7 & 8 & -1 \\
+5 & -4 & 2
+\end{array} \right|
+=
+\left|\begin{array}{rrr}
+-2 & 1 & 4 \\ 
+7 & 8 & -1 \\
+1 & -2 & 10
+\end{array} \right|
+\]
+	
+\hint
+Udfør række operationerne
+$R1 + 2R3 \to R1$ og $R2 - 7R3 \to R2$.
+
+\hint
+Det giver matricen
+\[
+\left|\begin{array}{rrr}
+-2 & 1 & 4 \\ 
+7 & 8 & -1 \\
+1 & -2 & 10
+\end{array} \right| = 
+\left|\begin{array}{rrr}
+0 & -3 & 24 \\ 
+0 & 22 & -71 \\
+1 & -2 & 10
+\end{array} \right|
+\]
+	
+\hint
+Udfør række operationerne
+$\frac{-1}{3} R1 \to R1$.
+Det ændrer determinanten med en faktor $\frac{-1}{3}$, 
+dette korrigeres der for ved at gange med $-3$.
+
+\hint
+Det giver 
+\[
+\left|\begin{array}{rrr}
+0 & -3 & 24 \\ 
+0 & 22 & -71 \\
+1 & -2 & 10
+\end{array} \right| = 
+\left|\begin{array}{rrr}
+0 & 1 & -8 \\ 
+0 & 22 & -71 \\
+1 & -2 & 10
+\end{array} \right| \cdot (-3)
+\]
+	
+\hint
+Udfør række operationerne
+$R2 - 22R1 \to R2$.
+
+\hint
+Det giver matricen
+\[
+\left|\begin{array}{rrr}
+0 & 1 & -8 \\ 
+0 & 22 & -71 \\
+1 & -2 & 10
+\end{array} \right| \cdot (-3) = 
+\left|\begin{array}{rrr}
+0 & 1 & -8 \\ 
+0 & 0 & 105 \\
+1 & -2 & 10
+\end{array} \right| \cdot (-3)
+\]
+
+\hint
+Byt om på række to og række tre, det skifter fortegnet på determinanten.
+Korriger derfor for dette ved at gange med -1.
+
+\hint
+Det giver 
+\[
+\left|\begin{array}{rrr}
+0 & 1 & -8 \\ 
+0 & 0 & 105 \\
+1 & -2 & 10
+\end{array} \right| \cdot (-3) = 
+\left|\begin{array}{rrr}
+0 & 1 & -8 \\ 
+1 & -2 & 10 \\
+0 & 0 & 105
+\end{array} \right| \cdot 3
+\]
+
+\hint
+Byt om på række et og række to, det skifter fortegnet på determinanten.
+Korriger derfor for dette ved at gange med -1.
+
+\hint
+Det giver matricen
+\[
+\left|\begin{array}{rrr}
+0 & 1 & -8 \\ 
+1 & -2 & 10 \\
+0 & 0 & 105
+\end{array} \right| \cdot 3 = 
+\left|\begin{array}{rrr}
+1 & -2 & 10 \\
+0 & 1 & -8 \\ 
+0 & 0 & 105
+\end{array} \right| \cdot (-3)
+\]
+
+\hint
+Nu er matricen på øvre triangulær form.
+
+\hint
+Når matricen er på øvre triangulær form, er determinanten 
+produktet af diagonal elementerne.
+
+\hint
+\[
+\left|\begin{array}{rrr}
+1 & -2 & 10 \\
+0 & 1 & -8 \\ 
+0 & 0 & 105
+\end{array} \right| \cdot (-3)
+= 1 \cdot 1 \cdot 105 \cdot (-3)
+= -315
+\]
+	
+\end{exercise}
+
+
+\begin{exercise}{Determinanter og Gauss elimination - 2}
+	
+Givet matricen
+	
+\[
+A = \left[\begin{array}{rrr}
+4 & 5 & 9 \\ 
+3 & 4 & 8 \\
+-2 & 1 & 0
+\end{array} \right]
+\]
+
+Bestem værdien af determinanten vha. Gauss elimination.
+
+$\det(A)$ = \answerbox{-13}
+
+
+\hint
+\[
+\det(A) = \left|\begin{array}{rrr}
+4 & 5 & 9 \\ 
+3 & 4 & 8 \\
+-2 & 1 & 0
+\end{array} \right|
+\]
+
+
+\hint
+Udfør række operationen
+$R1 - R2 \to R1$.
+
+\hint
+Det giver 
+\[
+\left|\begin{array}{rrr}
+4 & 5 & 9 \\ 
+3 & 4 & 8 \\
+-2 & 1 & 0
+\end{array} \right|
+=
+\left|\begin{array}{rrr}
+1 & 1 & 1 \\ 
+3 & 4 & 8 \\
+-2 & 1 & 0
+\end{array} \right|
+\]
+	
+\hint
+Udfør række operationerne
+$R2 - 3R1 \to R2$ og $R3 + 2R1 \to R3$.
+
+\hint
+Det giver
+\[
+\left|\begin{array}{rrr}
+1 & 1 & 1 \\ 
+3 & 4 & 8 \\
+-2 & 1 & 0
+\end{array} \right|
+=
+\left|\begin{array}{rrr}
+1 & 1 & 1 \\ 
+0 & 1 & 5 \\
+0 & 3 & 2
+\end{array} \right|
+\]
+
+\hint
+Udfør rækkeoperationen
+$R3 - 3R2 \to R3$.
+
+\hint
+Det giver
+\[
+\left|\begin{array}{rrr}
+1 & 1 & 1 \\ 
+0 & 1 & 5 \\
+0 & 3 & 2
+\end{array} \right|
+=
+\left|\begin{array}{rrr}
+1 & 1 & 1 \\ 
+0 & 1 & 5 \\
+0 & 0 & -13
+\end{array} \right|
+\]
+
+\hint
+Matricen er nu på øvre triangulær form.
+
+\hint
+\[
+\left|\begin{array}{rrr}
+1 & 1 & 1 \\ 
+0 & 1 & 5 \\
+0 & 0 & -13
+\end{array} \right|
+= 1 \cdot 1 \cdot (-13) = -13
+\]
+	
+\end{exercise}
+
+
+\begin{exercise}{Determinanter og Gauss elimination - 3}
+	
+Givet matricen
+
+\[
+A = \left[\begin{array}{rrr}
+-2 & 5 & 8 \\ 
+9 & -3 & 2 \\
+1 & 6 & 7
+\end{array} \right]
+\]
+
+Bestem værdien af determinanten vha. Gauss elimination.
+
+$\det(A)$ = \answerbox{217}
+
+
+\hint
+\[
+\det(A) = \left|\begin{array}{rrr}
+-2 & 5 & 8 \\ 
+9 & -3 & 2 \\
+1 & 6 & 7
+\end{array} \right|
+\]
+
+
+\hint
+Udfør række operationerne
+$R1 + 2R3 \to R1$ og
+$R2 - 9R3 \to R2$.
+
+\hint
+Det giver 
+\[
+\left|\begin{array}{rrr}
+-2 & 5 & 8 \\ 
+9 & -3 & 2 \\
+1 & 6 & 7
+\end{array} \right|
+=
+\left|\begin{array}{rrr}
+0 & 17 & 22 \\ 
+0 & -57 & -61 \\
+1 & 6 & 7
+\end{array} \right|
+\]
+
+\hint
+Udfør række operationen
+$R2 + 3R1 \to R2$.
+
+\hint
+Det giver 
+\[
+\left|\begin{array}{rrr}
+0 & 17 & 22 \\ 
+0 & -57 & -61 \\
+1 & 6 & 7
+\end{array} \right|
+=
+\left|\begin{array}{rrr}
+0 & 17 & 22 \\ 
+0 & -6 & 5 \\
+1 & 6 & 7
+\end{array} \right|
+\]
+
+\hint
+Udfør række operationen
+$R1 + 3R2 \to R1$.
+
+\hint
+Det giver 
+\[
+\left|\begin{array}{rrr}
+0 & 17 & 22 \\ 
+0 & -6 & 5 \\
+1 & 6 & 7
+\end{array} \right|
+=
+\left|\begin{array}{rrr}
+0 & -1 & 37 \\ 
+0 & -6 & 5 \\
+1 & 6 & 7
+\end{array} \right|
+\]
+
+\hint
+Udfør række operationen
+$R2 - 6R1 \to R2$.
+
+\hint
+Det giver 
+\[
+\left|\begin{array}{rrr}
+0 & -1 & 37 \\ 
+0 & -6 & 5 \\
+1 & 6 & 7
+\end{array} \right|
+=
+\left|\begin{array}{rrr}
+0 & -1 & 37 \\ 
+0 & 0 & -217 \\
+1 & 6 & 7
+\end{array} \right|
+\]
+
+\hint
+Byt række et og række to.
+Korriger derefter skiftet i fortegn på determinanten ved at
+gange med (-1).
+
+\hint
+Det giver 
+\[
+\left|\begin{array}{rrr}
+0 & -1 & 37 \\ 
+0 & 0 & -217 \\
+1 & 6 & 7
+\end{array} \right|
+=
+\left|\begin{array}{rrr}
+0 & 0 & -217 \\
+0 & -1 & 37 \\ 
+1 & 6 & 7
+\end{array} \right| \cdot (-1)
+\]
+
+\hint
+Byt række et og række tre.
+Korriger derefter skiftet i fortegn på determinanten ved at
+gange med (-1).
+
+\hint
+Det giver 
+\[
+\left|\begin{array}{rrr}
+0 & 0 & -217 \\
+0 & -1 & 37 \\ 
+1 & 6 & 7
+\end{array} \right| \cdot (-1)
+=
+\left|\begin{array}{rrr}
+1 & 6 & 7 \\
+0 & -1 & 37 \\ 
+0 & 0 & -217
+\end{array} \right|
+\]
+
+\hint
+Matricen er nu på øvre triangulær form.
+
+\hint
+\[
+\left|\begin{array}{rrr}
+1 & 6 & 7 \\
+0 & -1 & 37 \\ 
+0 & 0 & -217
+\end{array} \right|
+= 1 \cdot (-1) \cdot (-217) = -217
+\]
+
+
+\end{exercise}
+
+
+
+
+\end{document}
