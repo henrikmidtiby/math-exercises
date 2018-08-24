@@ -81,23 +81,23 @@ def get_exercises(input_lines):
     """
     storage = []
     exercise_name = "unknown"
-    adding_tings_to_storage = False
+    adding_things_to_storage = False
     start_exercise = re.compile('\\s*\\\\begin\\{exercise\\}\\{(.*)\\}')
     end_exercise = re.compile('\\s*\\\\end\\{exercise\\}')
     comment_line = re.compile('%.*')
 
     for line in input_lines:
         if end_exercise.match(line):
-            adding_tings_to_storage = False
+            adding_things_to_storage = False
             yield Exercise(exercise_name, storage)
             storage = [""]
-        if adding_tings_to_storage:
+        if adding_things_to_storage:
             if not comment_line.match(line):
                 storage.append(line)
         res = start_exercise.match(line)
         if res:
             exercise_name = res.group(1)
-            adding_tings_to_storage = True
+            adding_things_to_storage = True
 
 
 def add_extra_backslashes(input_lines):
