@@ -20,6 +20,7 @@ def checksum_md5(filename):
             md5.update(chunk)
     return md5.digest()
 
+
 def get_image_data(path_to_image):
     result = {}
     result['path'] = path_to_image
@@ -29,6 +30,7 @@ def get_image_data(path_to_image):
         print("Could not open file: '%s'" % e.filename)
         result['md5checksum'] = ''
     return result
+
 
 @imgur_upload_cache
 def upload_to_imgur(image_information):
