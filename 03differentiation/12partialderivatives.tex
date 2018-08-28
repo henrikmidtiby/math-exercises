@@ -1,0 +1,386 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\exercisename{Partial differentiering}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Partial afledte - 01}
+Bestem $\frac{df}{dz}$ når funktionen $f(x,y,z)$ er givet ved:
+$f(x,y,z) = 2x^2 z \cdot \sin(y+z)$ 
+
+\answerbox{2x^2 \sin(y+z) + 2x^2z \cos(y+z)}
+
+\hint
+\[
+\frac{df}{dz} = \frac{d}{dz} \left( 2x^2 z \cdot \sin(y+z)\right) 
+\]
+
+\hint
+Brug produktreglen
+
+\hint
+\[
+\frac{df}{dz} = \frac{d}{dz} \left( 2x^2 z \cdot \sin(y+z)\right) = \frac{d}{dz} \left( 2x^2 z \right) \cdot \sin(y+z) + 2x^2z \cdot \frac{d}{dz}\left( \sin(y+z)\right)
+\]
+
+\hint
+\[
+\frac{d}{dz} \left( 2x^2 z \right) = 2x^2
+\]
+
+\hint
+\[
+\frac{d}{dz}\left( \sin(y+z)\right) = \cos(y+z)
+\]
+
+\hint
+\[
+\frac{df}{dz}  = 2x^2 \sin(y+z) + 2x^2z \cos(y+z)
+\]
+
+
+\end{exercise}
+
+\begin{exercise}{Partial afledte - 02}
+	Bestem $\frac{df}{dy}$ når funktionen $f(x,y,z)$ er givet ved:
+	$f(x,y,z) = 4xy \cdot \cos(y+z)$ 
+	
+	\answerbox{4x \cdot \cos(y+z) - 4xy \cdot \sin(y+z) }
+	
+	\hint
+	\[
+	\frac{df}{dy} = \frac{d}{dy} \left( 4xy \cdot \cos(y+z)\right) 
+	\]
+	
+	\hint
+	Brug produktreglen
+	
+	\hint
+	\[
+	\frac{df}{dy} = \frac{d}{dy} \left( 4xy \cdot \cos(y+z)\right) = \frac{d}{dy} \left(4xy \right) \cdot \cos(y+z) + 4xy \cdot \frac{d}{dy}\left( \cos(y+z)\right)
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dy} \left(4xy\right) = 4x
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dy}\left( \cos(y+z)\right) = -\sin(y+z)
+	\]
+	
+	\hint
+	\[
+	\frac{df}{dy}  = 4x \cos(y+z) - 4xy \sin(y+z)
+	\]
+	
+	
+\end{exercise}
+
+\begin{exercise}{Partial afledte - 03}
+	Bestem $\frac{df}{dz}$ når funktionen $f(x,y,z)$ er givet ved:
+	$f(x,y,z) =x(y+z^2) \cdot e^{x z}$ 
+	
+	\answerbox{2xz \cdot e^{x z} + x^2(y+z^2) \cdot e^{x  z} }
+	
+	\hint
+	\[
+	\frac{df}{dz} = \frac{d}{dz} \left( x(y+z^2) \cdot e^{x z}\right) 
+	\]
+	
+	\hint
+	Brug produktreglen
+	
+	\hint
+	\[
+	\frac{df}{dz} = \frac{d}{dz} \left( x(y+z^2) \cdot e^{x z}\right) = \frac{d}{dz} \left(x(y+z^2) \right) \cdot e^{xz} + x(y+z^2) \cdot \frac{d}{dz}\left(e^{xz} \right)
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dz} \left(x(y+z^2)\right) = 2xz
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dz}\left( e^{xz}\right) =x \cdot e^{xz}
+	\]
+	
+	\hint
+	\[
+	\frac{df}{dz}  = 2xz \cdot e^{xz} + x^2(y+z^2) \cdot e^{xz}
+	\]
+	
+	
+\end{exercise}
+
+\begin{exercise}{Partial afledte - 04}
+	Bestem $\frac{df}{dx}$ når funktionen $f(x,y,z)$ er givet ved: \\
+	$f(x,y,z) = \sin(2xyz) \cdot \cos(3xy)$ 
+	
+	\answerbox{2yz \cdot \cos(2xyz) \cdot \cos(3xy) - 3y \cdot \sin(2xyz) \cdot \sin(3xy) }
+	
+	\hint
+	\[
+	\frac{df}{dx} = \frac{d}{dx} \left(  \sin(2xyz) \cdot \cos(3xy)\right) 
+	\]
+	
+	\hint
+	Brug produktreglen
+	
+	\hint
+	\[
+	\frac{df}{dx} = \frac{d}{dx} \left( \sin(2xyz) \cdot \cos(3xy)\right) = \frac{d}{dx} \left(\sin(2xyz) \right) \cdot \cos(3xy) + \sin(2xyz) \cdot \frac{d}{dx}\left( \cos(3xy)\right)
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dx} \left(\sin(2xyz) \right) = 2yz \cdot \cos(2xyz)
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dx}\left( \cos(3xy)\right) = -3y \cdot \sin(3xy)
+	\]
+	
+	\hint
+	\[
+	\frac{df}{dx}  =  2yz \cdot \cos(2xyz) \cdot \cos(3xy) - 3y \cdot \sin(2xyz) \cdot \sin(3xy) 
+	\]
+	
+	
+\end{exercise}
+
+\begin{exercise}{Partial afledte - 05}
+	Bestem $\frac{df}{dx}$ når funktionen $f(x,y,z)$ er givet ved:
+	$f(x,y,z) = 2z^3x  \cdot \sin(xy)$ 
+	
+	\answerbox{2z^3 \cdot \sin(xy) + 2z^3xy \cdot \cos(xy) }
+	
+	\hint
+	\[
+	\frac{df}{dx} = \frac{d}{dx} \left(2z^3x  \cdot \sin(xy)\right) 
+	\]
+	
+	\hint
+	Brug produktreglen
+	
+	\hint
+	\[
+	\frac{df}{dx} = \frac{d}{dx} \left( 2z^3x  \cdot \sin(xy)\right) = \frac{d}{dx} \left( 2z^3x\right) \cdot \sin(xy) + 2z^3x \cdot \frac{d}{dx}\left( \sin(xy)\right)
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dx} \left( 2z^3x\right) = 2z^3
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dx}\left( \sin(xy)\right) = y \cdot \cos(xy)
+	\]
+	
+	\hint
+	\[
+	\frac{df}{dx}  = 2z^3 \cdot \sin(xy) + 2z^3xy \cdot \cos(xy) 
+	\]
+	
+	
+\end{exercise}
+
+\begin{exercise}{Partial afledte - 06}
+	Bestem $\frac{df}{dx}$ når funktionen $f(x,y,z)$ er givet ved:
+	$f(x,y,z) = \cos(xy+z)  \cdot x^3 + z$ 
+	
+	\answerbox{-y \cdot \sin(xy+z) \cdot x^3 + 3 \cos(xy+z) \cdot x^2}
+	
+	\hint
+	\[
+	\frac{df}{dx} = \frac{d}{dx} \left(  \cos(xy+z)  \cdot x^3 + z\right) 
+	\]
+	
+	\hint
+	Brug produktreglen
+	
+	\hint
+	\[
+	\frac{df}{dx} = \frac{d}{dx} \left( \cos(xy+z)  \cdot x^3 + z\right) = \frac{d}{dx} \left(\cos(xy+z) \right) \cdot x^3 + \cos(xy+z) \cdot \frac{d}{dx}\left( x^3\right) + \frac{d}{dx} (z)
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dx} \left( \cos(xy+z)\right) = -y \cdot \sin(xy+z)
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dx}\left( x^3\right) = 3x^2
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dx} (z) = 0
+	\]
+	
+	\hint
+	\[
+	\frac{df}{dx}  = -y \cdot \sin(xy+z) \cdot x^3 + 3 \cos(xy+z) \cdot x^2
+	\]
+	
+	
+\end{exercise}
+
+\begin{exercise}{Partial afledte - 07}
+	Bestem $\frac{df}{dy}$ når funktionen $f(x,y,z)$ er givet ved:
+	$f(x,y,z) = e^{2xy} \cdot y^2$ 
+	
+	\answerbox{2x \cdot e^{2xy} \cdot y^2 + e^{2xy} \cdot 2y}
+	
+	\hint
+	\[
+	\frac{df}{dy} = \frac{d}{dy} \left(e^{2xy} \cdot y^2\right) 
+	\]
+	
+	\hint
+	Brug produktreglen
+	
+	\hint
+	\[
+	\frac{df}{dy} = \frac{d}{dy} \left( e^{2xy} \cdot y^2\right) = \frac{d}{dy} \left( e^{2xy} \right) \cdot y^2 + e^{2xy} \cdot \frac{d}{dy}\left( y^2\right)
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dy} \left(e^{2xy} \right) = 2x \cdot e^{2xy}
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dy}\left( y^2\right) = 2y
+	\]
+	
+	\hint
+	\[
+	\frac{df}{dy}  = 2x \cdot e^{2xy} \cdot y^2 + e^{2xy} \cdot 2y
+	\]
+	
+	
+\end{exercise}
+
+\begin{exercise}{Partial afledte - 08}
+	Bestem $\frac{df}{dx}$ når funktionen $f(x,y,z)$ er givet ved:
+	$f(x,y,z) = e^{3xz+x} \cdot xyz$ 
+	
+	\answerbox{(3z+1) e^{3xz+x} \cdot xyz + e^{3xz+x} \cdot yz}
+	
+	\hint
+	\[
+	\frac{df}{dx} = \frac{d}{dx} \left( e^{3xz+x} \cdot xyz\right) 
+	\]
+	
+	\hint
+	Brug produktreglen
+	
+	\hint
+	\[
+	\frac{df}{dx} = \frac{d}{dx} \left( e^{3xz+x} \cdot xyz\right) = \frac{d}{dx} \left(e^{3xz+x} \right) \cdot xyz + e^{3xz+x} \cdot \frac{d}{dx}\left( xyz\right)
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dx} \left( e^{3xz+x}\right) = (3z+1) e^{3xz+x}
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dx}\left( xyz\right) = yz
+	\]
+	
+	\hint
+	\[
+	\frac{df}{dx}  = (3z+1) e^{3xz+x} \cdot xyz + e^{3xz+x} \cdot yz
+	\]
+	
+	
+\end{exercise}
+
+\begin{exercise}{Partial afledte - 09}
+	Bestem $\frac{df}{dy}$ når funktionen $f(x,y,z)$ er givet ved:
+	$f(x,y,z) = \cos(xyz) \cdot x^2 y^2$ 
+	
+	\answerbox{-x^3y^2 z \cdot  \sin(xyz)+ \cos(xyz) \cdot 2x^2 y}
+	
+	\hint
+	\[
+	\frac{df}{dy} = \frac{d}{dy} \left(\cos(xyz) \cdot x^2 y^2\right) 
+	\]
+	
+	\hint
+	Brug produktreglen
+	
+	\hint
+	\[
+	\frac{df}{dy} = \frac{d}{dy} \left( \cos(xyz) \cdot x^2 y^2\right) = \frac{d}{dy} \left( \cos(xyz) \right) \cdot x^2 y^2 + \cos(xyz) \cdot \frac{d}{dy}\left( x^2 y^2\right)
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dy} \left( \cos(xyz) \right) = -xz \cdot \sin(xyz)
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dy}\left( x^2 y^2\right) =2x^2 y
+	\]
+	
+	\hint
+	\[
+	\frac{df}{dy}  = -x^3y^2 z \cdot  \sin(xyz)+ \cos(xyz) \cdot 2x^2 y
+	\]
+	
+	
+\end{exercise}
+
+\begin{exercise}{Partial afledte - 10}
+	Bestem $\frac{df}{dy}$ når funktionen $f(x,y,z)$ er givet ved:
+	$f(x,y,z) = \ln(xy+z) \cdot e^{x+yz}$ 
+	
+	\answerbox{\frac{x \cdot e^{x+yz}}{xy+z} + z \cdot \ln(xy+z) e^{x+yz}}
+	
+	\hint
+	\[
+	\frac{df}{dy} = \frac{d}{dy} \left(\ln(xy+z) \cdot e^{x+yz}\right) 
+	\]
+	
+	\hint
+	Brug produktreglen
+	
+	\hint
+	\[
+	\frac{df}{dy} = \frac{d}{dy} \left( \ln(xy+z) \cdot e^{x+yz}\right) = \frac{d}{dy} \left( \ln(xy+z) \right) \cdot e^{x+yz} + \ln(xy+z) \cdot \frac{d}{dy}\left( e^{x+yz} \right)
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dy} \left( \ln(xy+z)\right) = \frac{1}{xy+z} \cdot x
+	\]
+	
+	\hint
+	\[
+	\frac{d}{dy}\left( e^{x+yz} \right) = z \cdot e^{x+yz}
+	\]
+	
+	\hint
+	\[
+	\frac{df}{dy}  = \frac{x \cdot e^{x+yz}}{xy+z} + z \cdot \ln(xy+z) e^{x+yz}
+	\]
+	
+	
+\end{exercise}
+
+
+
+\end{document}
