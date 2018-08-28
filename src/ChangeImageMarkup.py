@@ -5,7 +5,10 @@ import percache
 import hashlib
 import pyimgur
 
-CLIENT_ID = os.environ['IMGUR_CLIENT_ID']
+try:
+    CLIENT_ID = os.environ['IMGUR_CLIENT_ID']
+except KeyError:
+    CLIENT_ID = None
 
 imgur_upload_cache = percache.Cache('images_on_imgur.bin', livesync=True)
 
