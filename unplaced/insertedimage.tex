@@ -1,25 +1,16 @@
 \documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{todonotes}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage[colorlinks, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+\usepackage{tekvideoexercises}
 
-
-\newenvironment{exercise}[1]{\newpage\section{#1}}{}
-
-\newcommand{\answerbox}[1]{\fbox{$#1$}}
-\newcommand{\image}[2]{\includegraphics[scale=#1]{#2}}
-
-\newcommand{\hint}{\subsection*{Hint}}
 
 \begin{document}
+\exercisename{Øvelse med billede}
+
 \tableofcontents
 \newpage
 
 \begin{exercise}{Øvelse med billede}
 
-\image{0.25}{mathexerciseimages/complexnumbers/modulusandargument/modulusandargument.png}
+\image{modulusandargument.png}
 
 
 Tester
@@ -31,6 +22,31 @@ Skriv et i feltet herunder.
 
 \hint
 Skriv $1$.
+\end{exercise}
+
+
+
+\begin{exercise}{Øvelse med billede}
+
+\image{argandplot.png}
+
+Hvad er den største reelle værdi af de viste punkter?
+
+\answerbox{4}
+
+\hint
+De fire punkter svarer til de komplekse tal: 
+$0 + 5i$, $2 + 3i$, $2 - 3i$ og $4 + i$.
+
+\hint
+Find de reelle dele af de fire tal.
+
+\hint
+De reelle dele af tallene er:
+$0$, $2$, $2$ og $4$.
+
+\hint
+Den største reelle værdi er $4$.
 \end{exercise}
 
 \end{document}
