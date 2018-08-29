@@ -17,3 +17,4 @@ src/.coverage
 *.json
 combinedjsonfiles.txt
 exerciseOverview.txt
+*.pyc
