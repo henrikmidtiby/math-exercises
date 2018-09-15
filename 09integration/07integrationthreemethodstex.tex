@@ -1,0 +1,560 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\exercisename{Integration vha. 3 metoder}
+\tableofcontents
+
+
+\begin{exercise}{Integration vha. 3 metoder - 01}
+	
+	Bestem værdien af udtrykket
+	\[
+	A = \int x \cdot \sin(x^2) \ dx
+	\]
+	Kald en evt. ukendt konstant for $K$.
+	
+	\answerbox{- \frac{1}{2} \cos(x^2) + K} 
+	
+	
+	\hint
+	Se på udtrykket, er det et simpelt integrale, der står i en tabel?
+	
+	\hint
+	Det er ikke et simpelt integrale.
+	
+	\hint
+	Kan integralet løses vha. substitution?
+	
+	\hint
+	Ja, det ser ud til at være muligt at løse vha. substitution med $u=x^2$
+	
+	\hint
+	Bestem et udtryk for $dx$ givet substitutionen $u=x^2$.
+	
+	\hint
+	\[
+	\frac{du}{dx} = \frac{d}{dx} \left(x^2 \right) = 2x \quad \Leftrightarrow \quad dx = \frac{du}{2x}
+	\]
+	
+	\hint
+	Indsæt substitutionen i integralet $\left(x^2 \rightarrow u \textrm{ og } dx = \frac{du}{2x} \right)$
+	
+	\hint
+	\[
+	A =  \int x \cdot \sin(u) \cdot \frac{du}{2x}
+	\]
+	
+	\hint
+	Forenkl udtrykket.
+	
+	\hint
+	\[
+	A= \frac{1}{2} \int \sin(u) \ du
+	\]
+	
+	\hint
+	Løs integralet vha. et opslag i en integral tabel.
+	
+	\hint
+	\[
+	A = - \frac{1}{2} \cos(u) + K = - \frac{1}{2} \cos(x^2) + K
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration vha. 3 metoder - 02}
+	
+	Bestem værdien af udtrykket
+	\[
+	A = \int x^2 \cdot e^{x^3+2} \ dx
+	\]
+	Kald en evt. ukendt konstant for $K$.
+	
+	\answerbox{\frac{1}{3} e^{x^3+2} + K} 
+	
+	\hint
+	Se på udtrykket, er det et simpelt integrale, der står i en tabel?
+	
+	\hint
+	Det er ikke et simpelt integrale.
+	
+	\hint
+	Kan integralet løses vha. substitution?
+	
+	\hint
+	Ja, det ser ud til at være muligt at løse vha. substitution med $u=x^3+2$
+	
+	\hint
+	Bestem et udtryk for $dx$ givet substitutionen $u=x^3+2$.
+	
+	\hint
+	\[
+	\frac{du}{dx} = \frac{d}{dx} \left(x^3+2 \right) = 3x^2 \quad \Leftrightarrow \quad dx = \frac{du}{3x^2}
+	\]
+	
+	\hint
+	Indsæt substitutionen i integralet $\left(x^3+2 \rightarrow u \textrm{ og } dx = \frac{du}{3x^2} \right)$
+	
+	\hint
+	\[
+	A = \int x^2 \cdot e^{u} \frac{du}{3x^2} 
+	\]
+	
+	\hint
+	Forenkl udtrykket.
+	
+	\hint
+	\[
+	A =  \frac{1}{3} \int e^{u} \ du 
+	\]
+	
+	\hint
+	Løs integralet vha. et opslag i en integral tabel.
+	
+	\hint
+	\[
+	A = \frac{1}{3} e^{u} + K =  \frac{1}{3} e^{x^3+2} + K
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration vha. 3 metoder - 03}
+	
+	Bestem værdien af udtrykket
+	\[
+	A = \int x^2 \cdot \cos(x^3+3) \ dx
+	\]
+	Kald en evt. ukendt konstant for $K$.
+	
+	\answerbox{\frac{1}{3} \sin(x^3+3) + K} 
+	
+	
+	\hint
+	Se på udtrykket, er det et simpelt integrale, der står i en tabel?
+	
+	\hint
+	Det er ikke et simpelt integrale.
+	
+	\hint
+	Kan integralet løses vha. substitution?
+	
+	\hint
+	Ja, det ser ud til at være muligt at løse vha. substitution med $u=x^3+3$
+	
+	\hint
+	Bestem et udtryk for $dx$ givet substitutionen $u=x^3+3$.
+	
+	\hint
+	\[
+	\frac{du}{dx} = \frac{d}{dx} \left(x^3+3 \right) = 3x^2 \quad \Leftrightarrow \quad dx = \frac{du}{3x^2}
+	\]
+	
+	\hint
+	Indsæt substitutionen i integralet $\left(x^3+3 \rightarrow u \textrm{ og } dx = \frac{du}{3x^2} \right)$
+	
+	\hint
+	\[
+	A =  \int x^2 \cdot \cos(u) \cdot \frac{du}{3x^2}
+	\]
+	
+	\hint
+	Forenkl udtrykket.
+	
+	\hint
+	\[
+	A= \frac{1}{3} \int \cos(u) \ du
+	\]
+	
+	\hint
+	Løs integralet vha. et opslag i en integral tabel.
+	
+	\hint
+	\[
+	A = \frac{1}{3} \sin(u) + K =  \frac{1}{3} \sin(x^3+3) + K
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration vha. 3 metoder - 04}
+	
+	Bestem værdien af udtrykket
+	\[
+	A = \int x \cdot \ln(x^2) \ dx
+	\]
+	Kald en evt. ukendt konstant for $K$.
+	
+	\answerbox{\frac{1}{2} \ln(x^2) \cdot x^2 -  \frac{1}{2} x^2 + K} 
+	
+	
+	\hint
+	Se på udtrykket, er det et simpelt integrale, der står i en tabel?
+	
+	\hint
+	Det er ikke et simpelt integrale.
+	
+	\hint
+	Kan integralet løses vha. substitution?
+	
+	\hint
+	Ja, det ser ud til at være muligt at løse vha. substitution med $u=x^2$
+	
+	\hint
+	Bestem et udtryk for $dx$ givet substitutionen $u=x^2$.
+	
+	\hint
+	\[
+	\frac{du}{dx} = \frac{d}{dx} \left(x^2 \right) = 2x \quad \Leftrightarrow \quad dx = \frac{du}{2x}
+	\]
+	
+	\hint
+	Indsæt substitutionen i integralet $\left(x^2 \rightarrow u \textrm{ og } dx = \frac{du}{2x} \right)$
+	
+	\hint
+	\[
+	A =  \int x \cdot \ln(u) \cdot \frac{du}{2x}
+	\]
+	
+	\hint
+	Forenkl udtrykket.
+	
+	\hint
+	\[
+	A= \frac{1}{2} \int \ln(u) \ du
+	\]
+	
+	\hint
+	Er det et simpelt integrale?
+	
+	\hint
+	Det er ikke et simpelt integrale.
+	
+	\hint
+	Kan integralet løses vha. partiel integration?
+	
+	\hint
+	Ja, det ser ud til at være muligt at løse vha. partiel integration med $v(u) = \ln(u)$ og $w'(u) = 1$
+	
+	\hint
+	Bestem $v'(u)$ ved differentiering og $w(u)$ ved integration.
+	
+	\hint
+	\[
+	v'(u) = \frac{1}{u} \qquad \textrm{og} \qquad w(u) = u
+	\]	
+	
+	\hint
+	Indsæt i formlen for partiel integration
+	\[
+	 \int v(u) w'(u) \ du = v(u)  w(u) - \int v'(u) w(u) \ du
+	\]
+	
+	\hint
+	\[
+	A = \frac{1}{2} \left[  \ln(u) \cdot u - \int \frac{1}{u} \cdot u \ du \right] =  \frac{1}{2} \left[ \ln(u) \cdot u - \int 1 \ du \right]
+	\]
+	
+	\hint
+	Løs integralet.
+	
+	\hint
+	\[
+	A = \frac{1}{2} \left[  \ln(u) \cdot u - u + K \right] = \frac{1}{2} \ln(x^2) \cdot x^2 -  \frac{1}{2} x^2 + K
+	\]
+
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration vha. 3 metoder - 05}
+	
+	Bestem værdien af udtrykket
+	\[
+	A = \int \sin(x)\cdot x^2 \ dx
+	\]
+	Kald en evt. ukendt konstant for $K$.
+	
+	\answerbox{-x^2 \cos(x) + 2x \cdot \sin(x) + 2\cos(x) + K} 
+	
+	\hint
+	Se på udtrykket, er det et simpelt integrale, der står i en tabel?
+	
+	\hint
+	Det er ikke et simpelt integrale.
+	
+	\hint
+	Kan integralet løses vha. partiel integration?
+	
+	\hint
+	Ja, det ser ud til at være muligt at løse vha. partiel integration med $u(x)=x^2$ og $v'(x)=\sin(x)$
+	
+	\hint
+	Bestem $u'(x)$ ved differentiering og $v(x)$ ved integration.
+	
+	\hint
+	\[
+	u'(x) = \frac{d}{dx} \left( x^2 \right) = 2x \qquad \textrm{og} \qquad v(x) = \int v'(x) \ dx = \int \sin(x) \ dx = -\cos(x)
+	\]	
+	
+	\hint
+	Indsæt i formlen for partiel integration
+	\[
+	\int u(x) v'(x) \ dx = u(x) v(x)  - \int u'(x) v(x) \ dx
+	\]
+	
+	\hint
+	\[
+	A = x^2 (-\cos(x)) - \int  2x (-\cos(x)) \ dx = -x^2 \cos(x) + 2 \int x \cos(x) \ dx
+	\]
+	
+	\hint
+	Se på udtrykket, er det et simpelt integrale, der står i en tabel?
+	
+	\hint
+	Det er ikke et simpelt integrale.
+	
+	\hint
+	Kan integralet løses vha. partiel integration?
+	
+	\hint
+	Ja, det ser ud til at være muligt at løse vha. partiel integration med $u(x)=x$ og $v'(x)=\cos(x)$
+	
+	\hint
+	Bestem $u'(x)$ ved differentiering og $v(x)$ ved integration.
+	
+	\hint
+	\[
+	u'(x) = \frac{d}{dx} \left( x \right) = 1 \qquad \textrm{og} \qquad v(x) = \int v'(x) \ dx = \int \cos(x) \ dx = \sin(x)
+	\]	
+	
+	\hint
+	Indsæt i formlen for partiel integration
+	\[
+	\int u(x) v'(x) \ dx = u(x) v(x)  - \int u'(x) v(x) \ dx
+	\]
+	
+	\hint
+	\[
+	\int x \cos(x) \ dx = x \cdot \sin(x) - \int 1 \cdot \sin(x) \ dx = x \cdot \sin(x) - \int \sin(x) \ dx 
+	\]
+	
+	\hint
+	Løs integralet.
+	
+	\hint
+	\[
+	x \cdot \sin(x) - \int \sin(x) \ dx  = x \cdot \sin(x) + \cos(x) + K	
+	\]
+	
+	\hint
+	Indsæt i det samlede udtryk.
+	
+	\hint
+	\[
+	A =  -x^2 \cos(x) + 2 \left[x \cdot \sin(x) + \cos(x) + K  \right]
+	\]
+	
+	\hint
+	Forenkl udtrykket.
+	
+	\hint
+	\[
+	A = -x^2 \cos(x) + 2x \cdot \sin(x) + 2\cos(x) + K
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration vha. 3 metoder - 06}
+	
+	Bestem værdien af udtrykket
+	\[
+	A = \int x \cos(x) \ dx
+	\]
+	Kald en evt. ukendt konstant for $K$.
+	
+	\answerbox{x \sin(x) + \cos(x) + K} 
+	
+	\hint
+	Se på udtrykket, er det et simpelt integrale, der står i en tabel?
+	
+	\hint
+	Det er ikke et simpelt integrale.
+	
+	\hint
+	Kan integralet løses vha. partiel integration?
+	
+	\hint
+	Ja, det ser ud til at være muligt at løse vha. partiel integration med $u(x)=x$ og $v'(x)=\cos(x)$
+	
+	\hint
+	Bestem $u'(x)$ ved differentiering og $v(x)$ ved integration.
+	
+	\hint
+	\[
+	u'(x) = \frac{d}{dx} \left( x \right) = 1 \qquad \textrm{og} \qquad v(x) = \int v'(x) \ dx = \int \cos(x) \ dx = \sin(x)
+	\]	
+	
+	\hint
+	Indsæt i formlen for partiel integration
+	\[
+	\int u(x) v'(x) \ dx = u(x) v(x)  - \int u'(x) v(x) \ dx
+	\]
+	
+	\hint
+	\[
+	A = x \cdot \sin(x) - \int  1 \cdot  \sin(x) \ dx = x \cdot \sin(x) - \int \sin(x) \ dx
+	\]
+	
+	\hint
+	Løs integralet vha. et opslag i en integral tabel.
+	
+	\hint
+	\[
+	A = x \sin(x) - (-\cos(x)) + K
+	\]
+	
+	\hint
+	Forenkl udtryk.
+	
+	\hint
+	\[
+	A = x \sin(x) + \cos(x) + K
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration vha. 3 metoder - 07}
+	
+	Bestem værdien af udtrykket
+	\[
+	A = \int (x^2+1) \cdot \sin(x^3+3x) \ dx
+	\]
+	Kald en evt. ukendt konstant for $K$.
+	
+	\answerbox{-\frac{1}{3} \cos(x^3+3x) + K} 
+	
+	\hint
+	Se på udtrykket, er det et simpelt integrale, der står i en tabel?
+	
+	\hint
+	Det er ikke et simpelt integrale.
+	
+	\hint
+	Kan integralet løses vha. substitution?
+	
+	\hint
+	Ja, det ser ud til at være muligt at løse vha. substitution med $u=x^3+3x$
+	
+	\hint
+	Bestem et udtryk for $dx$ givet substitutionen $u=x^3+3x$.
+	
+	\hint
+	\[
+	\frac{du}{dx} = \frac{d}{dx} \left(x^3+3x \right) = 3x^2 +3 \quad \Leftrightarrow \quad dx = \frac{du}{3x^2+3}
+	\]
+	
+	\hint
+	Indsæt substitutionen i integralet $\left(x^3+3x \rightarrow u \textrm{ og } dx = \frac{du}{3x^2+3} \right)$
+	
+	\hint
+	\[
+	A =  \int (x^2+1) \cdot \sin(u) \cdot \frac{du}{3x^2+3}
+	\]
+	
+	\hint
+	Forenkl udtrykket.
+	
+	\hint
+	\[
+	A=  \int (x^2+1) \cdot \sin(u) \cdot \frac{du}{3(x^2+1)}  = \frac{1}{3} \int \sin(u) \ du
+	\]
+	
+	\hint
+	Løs integralet vha. et opslag i en integral tabel.
+	
+	\hint
+	\[
+	A = -\frac{1}{3} \cos(u) + K =  -\frac{1}{3} \cos(x^3+3x) + K
+	\]
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration vha. 3 metoder - 08}
+	
+	Bestem værdien af udtrykket
+	\[
+	A = \int \sin(x) \cdot e^{\cos(x)} \ dx
+	\]
+	Kald en evt. ukendt konstant for $K$.
+	
+	\answerbox{ -e^{\cos(x)} + K} 
+	
+	\hint
+	Se på udtrykket, er det et simpelt integrale, der står i en tabel?
+	
+	\hint
+	Det er ikke et simpelt integrale.
+	
+	\hint
+	Kan integralet løses vha. substitution?
+	
+	\hint
+	Ja, det ser ud til at være muligt at løse vha. substitution med $u=\cos(x)$
+	
+	\hint
+	Bestem et udtryk for $dx$ givet substitutionen $u=\cos(x)$.
+	
+	\hint
+	\[
+	\frac{du}{dx} = \frac{d}{dx} \left(\cos(x) \right) = -\sin(x) \quad \Leftrightarrow \quad dx = \frac{du}{-\sin(x)}
+	\]
+	
+	\hint
+	Indsæt substitutionen i integralet $\left(\cos(x) \rightarrow u \textrm{ og } dx = \frac{du}{-\sin(x)} \right)$
+	
+	\hint
+	\[
+	A =  \int \sin(x) \cdot e^{u} \cdot \frac{du}{-\sin(x)}
+	\]
+	
+	\hint
+	Forenkl udtrykket.
+	
+	\hint
+	\[
+	A=  - \int e^{u} \ du
+	\]
+	
+	\hint
+	Løs integralet vha. et opslag i en integral tabel.
+	
+	\hint
+	\[
+	A = - e^{u} + K = -e^{\cos(x)} + K
+	\]
+	
+	
+\end{exercise}
+
+
+
+
+\end{document}

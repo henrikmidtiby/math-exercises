@@ -1,0 +1,518 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\exercisename{Partiel differentiering}
+\tableofcontents
+\newpage
+
+\begin{exercise}{Partielt afledte - 01}
+Bestem $\frac{df}{dx}$ når $f(x,y) = x^2y^2\left(1+x^2+y^2\right)$ 
+
+\answerbox{2xy^2+2xy^4 + 4x^3y^2}
+
+\hint
+Indsæt funktionen i udtrykket for den partielt afledte.
+
+\hint
+
+\[
+\frac{\partial f}{\partial x} = \frac{\partial }{\partial x} \left[ x^2y^2\left(1+x^2+y^2 \right)\right]
+\]
+
+\hint
+Betragt alt andet end $x$ som konstanter.
+
+\hint
+\[
+\frac{\partial f}{\partial x} = y^2 \cdot \frac{\partial }{\partial x} \left[ x^2\left(1+x^2+y^2 \right) \right]
+\]
+
+\hint
+
+Benyt produktreglen.
+
+\hint
+\[
+\frac{\partial f}{\partial x} = y^2\left[\frac{\partial }{\partial x}\left(x^2 \right) \cdot \left( 1+x^2+y^2 \right) + x^2 \cdot \frac{\partial}{\partial x} \left( 1+x^2+y^2\right) \right]
+\]
+
+\hint
+\[\frac{\partial }{\partial x} \left(x^2\right) = 2x \textrm{\qquad og \qquad} \frac{\partial }{\partial x} \left(1+x^2+y^2\right) = 2x
+\]
+
+\hint
+Indsæt i formlen.
+
+\hint
+\[
+\frac{\partial f}{\partial x} = y^2\left[2x \cdot \left( 1+x^2+y^2 \right) + x^2 \cdot 2x \right]
+\]
+
+\hint
+Forenkl udtrykket ved at gange ind i parenteserne.
+
+\hint
+\[
+\frac{\partial f}{\partial x} = y^2 \left[ 2x+2x^3+2xy^2 + 2x^3 \right]
+\]
+
+\hint Forenkl ved at samle ens led.
+
+\hint
+\[
+\frac{\partial f}{\partial x} = 2xy^2+2xy^4 + 4x^3y^2
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Partielt afledte - 02}
+	Bestem $\frac{df}{dx}$ når $f(x,y.z) =xyz+3x^2(1+xz) $ 
+	
+	\answerbox{yz + 6x + 9x^2z}
+	
+	\hint
+	Indsæt funktionen i udtrykket for den partielt afledte.
+	
+	\hint
+	
+	\[
+	\frac{\partial f}{\partial x} = \frac{\partial }{\partial x} \left[ xyz+3x^2(1+xz)\right]
+	\]
+	
+	\hint
+	Betragt alt andet end $x$ som konstanter og differentier de to led separat.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial x} = yz \cdot \frac{\partial}{\partial x} \left( x \right) + 3 \cdot \frac{\partial }{\partial x} \left[ x^2\left(1+xz \right) \right]
+	\]
+	
+	\hint
+	$\frac{\partial}{\partial x} (x) = 1$
+	
+	\hint
+	
+	Benyt produktreglen på det andet led.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial x} = yz + 3 \cdot \left[\frac{\partial }{\partial x}\left(x^2 \right) \cdot \left(1+xz \right) + x^2 \cdot \frac{\partial}{\partial x} \left( 1+xz\right) \right]
+	\]
+	
+	\hint
+	\[ \frac{\partial }{\partial x} \left(x^2\right) = 2x \textrm{\qquad og \qquad}  \frac{\partial }{\partial x} \left(1+xz\right) = z
+	\]
+	
+	\hint
+	Indsæt i formlen.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial x} = yz +  3 \cdot \left[2x \cdot \left( 1+xz\right) + x^2 \cdot z \right]
+	\]
+	
+	\hint
+	Forenkl udtrykket ved at gange ind i parenteserne.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial x} = yz +  6x+6x^2z + 3x^2z 
+	\]
+	
+	\hint Forenkl ved at samle ens led.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial x} = yz + 6x + 9x^2z
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Partielt afledte - 03}
+	Bestem $\frac{df}{dz}$ når $f(x,y,z) = xy^2z^3\left(y-xz^2\right)$ 
+	
+	\answerbox{3xy^3z^2 - 5x^2y^2z^4}
+	
+	\hint
+	Indsæt funktionen i udtrykket for den partielt afledte.
+	
+	\hint
+	
+	\[
+	\frac{\partial f}{\partial z} = \frac{\partial }{\partial z} \left[xy^2z^3\left(y-xz^2\right)\right]
+	\]
+	
+	\hint
+	Betragt alt andet end $z$ som konstanter.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial z} = xy^2 \cdot \frac{\partial }{\partial z} \left[ z^3\left(y-xz^2 \right) \right]
+	\]
+	
+	\hint
+	
+	Benyt produktreglen.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial z} = xy^2 \cdot \left[\frac{\partial }{\partial z}\left(z^3 \right) \cdot \left( y-xz^2 \right) + z^3 \cdot \frac{\partial}{\partial z} \left(y-xz^2\right) \right]
+	\]
+	
+	\hint
+	\[\frac{\partial }{\partial z} \left(z^3\right) = 3z^2 \textrm{\qquad og \qquad} \frac{\partial }{\partial z} \left(y-xz^2\right) = -2xz
+	\]
+	
+	\hint
+	Indsæt i formlen.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial z} = xy^2 \cdot \left[3z^2 \cdot \left( y-xz^2 \right) + z^3 \cdot (-2xz) \right]
+	\]
+	
+	\hint
+	Forenkl udtrykket ved at gange ind i parenteserne.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial z} = xy^2 \cdot \left[3yz^2 - 3xz^4 -2xz^4 \right]
+	\]
+	
+	\hint Forenkl ved at samle ens led.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial z} = xy^2 \cdot \left[3yz^2 - 5xz^4\right] = 3xy^3z^2 - 5x^2y^2z^4
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Partielt afledte - 04}
+	Bestem $\frac{df}{dy}$ når $f(y,z) = y^2z\left(2+yz-y^2z^2\right)$ 
+	
+	\answerbox{4yz + 3y^2z^2 -4y^3z^3  }
+	
+	\hint
+	Indsæt funktionen i udtrykket for den partielt afledte.
+	
+	\hint
+	
+	\[
+	\frac{\partial f}{\partial y} = \frac{\partial }{\partial y} \left[y^2z\left(2+yz-y^2z^2\right)\right]
+	\]
+	
+	\hint
+	Betragt alt andet end $y$ som konstanter.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial y} = z \cdot \frac{\partial }{\partial y} \left[ y^2\left(2+yz-y^2z^2\right) \right]
+	\]
+	
+	\hint
+	
+	Benyt produktreglen.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial y} = z \cdot \left[\frac{\partial }{\partial y}\left(y^2 \right) \cdot \left(2 + yz -y^2z^2 \right) + y^2 \cdot \frac{\partial}{\partial y} \left(2+yz-y^2z^2\right) \right]
+	\]
+	
+	\hint
+	\[\frac{\partial }{\partial y} \left(y^2\right) = 2y \textrm{\qquad og \qquad} \frac{\partial }{\partial y} \left(2 + yz-y^2z^2\right) = z-2yz^2
+	\]
+	
+	\hint
+	Indsæt i formlen.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial y} = z \cdot \left[2y \cdot \left(2+yz-y^2z^2\right)  + y^2 \cdot (z-2yz^2) \right]
+	\]
+	
+	\hint
+	Forenkl udtrykket ved at gange ind i parenteserne.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial y} = z \cdot \left[4y + 2y^2z -2y^3z^2 + y^2z -2y^3z^2 \right]
+	\]
+	
+	\hint Forenkl ved at samle ens led.
+
+	\hint
+	\[
+	\frac{\partial f}{\partial y} = z \cdot \left[4y + 3y^2z -4y^3z^2 \right] = 4yz + 3y^2z^2 -4y^3z^3 
+	\]
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Partielt afledte - 05}
+	Bestem $\frac{df}{dx}$ når $f(x,y) = x^2 \cdot \sin(x+y)$ 
+	
+	\answerbox{ 2x \cdot \sin(x+y)+ x^2 \cdot \cos(x+y)}
+	
+	\hint
+	Indsæt funktionen i udtrykket for den partielt afledte.
+	
+	\hint
+	
+	\[
+	\frac{\partial f}{\partial x} = \frac{\partial }{\partial x} \left[ x^2 \cdot \sin(x+y) \right]
+	\]
+	
+	\hint
+	
+	Benyt produktreglen.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial x} = \frac{\partial }{\partial x}\left(x^2 \right) \cdot \sin(x+y)+ x^2 \cdot \frac{\partial}{\partial x} \left( \sin(x+y)\right) 
+	\]
+	
+	\hint
+	\[\frac{\partial }{\partial x} \left(x^2\right) = 2x
+	\]
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial x} = 2x \cdot \sin(x+y)+ x^2 \cdot \frac{\partial}{\partial x} \left( \sin(x+y)\right) 
+	\]	
+
+	\hint
+	Benyt kædereglen. 
+	
+	\hint
+	\[
+	\frac{\partial u}{\partial z} = \frac{\partial u}{\partial v} \cdot \frac{\partial v}{\partial z}
+	\]
+	
+	\hint
+	Sæt $u=\sin(x+y)$ og $v = x+y$
+	
+	\hint
+	\[
+	\frac{\partial}{\partial x} \left( \sin(x+y)\right) = \frac{\partial}{\partial v} \left( \sin(v) \right) \cdot \frac{\partial}{\partial x} (x+y) = \cos(v) \cdot 1 = \cos(x+y)
+	\]
+	
+	\hint
+	Indsæt i formlen.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial x} = 2x \cdot \sin(x+y)+ x^2 \cdot \cos(x+y)
+	\]	
+
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Partielt afledte - 06}
+	Bestem $\frac{df}{dx}$ når $f(x,y,z) = \sin(x)\sin(y) + e^{x^2+z}$
+	
+	\answerbox{ \sin(y) \cdot \cos(x) +2x\cdot e^{x^2+z}}
+	
+	\hint
+	Indsæt funktionen i udtrykket for den partielt afledte.
+	
+	\hint
+	
+	\[
+	\frac{\partial f}{\partial x} = \frac{\partial }{\partial x} \left[  \sin(x)\sin(y) + e^{x^2+z} \right]
+	\]
+	
+	\hint
+	Opdel udtrykket i to led og differentier hvert led separat.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial x} = \frac{\partial }{\partial x} \left[  \sin(x)\sin(y)\right] + \frac{\partial }{\partial x} \left[ e^{x^2+z} \right]
+	\]
+	
+	\hint 
+	Betragt alt andet end $x$ som konstanter.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial x} = \sin(y) \cdot \frac{\partial }{\partial x} \left[  \sin(x)\right] + \frac{\partial }{\partial x} \left[ e^{x^2+z} \right]
+	\]
+	
+	\hint
+	Benyt kædereglen. 
+	
+	\hint
+	\[
+	\frac{\partial u}{\partial z} = \frac{\partial u}{\partial v} \cdot \frac{\partial v}{\partial z}
+	\]
+	
+	\hint
+	Sæt $u=e^{x^2+z}$ og $v = x^2+z$	
+	
+	\hint
+	\[
+	\frac{\partial}{\partial x} \left( e^{x^2+z}\right) = \frac{\partial}{\partial v} \left( e^{v} \right) \cdot \frac{\partial}{\partial x} (x^2+z) = e^{v} \cdot 2x = 2x \cdot e^{x^2+z}
+	\]
+	
+	\hint
+	\[
+	\frac{\partial}{\partial x} \left(\sin(x) \right) = \cos(x)
+	\]
+	
+	\hint
+	Indsæt i formlen
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial x} = \sin(y) \cdot \cos(x) +2x\cdot e^{x^2+z}
+	\]
+	
+	
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Partielt afledte - 07}
+	Bestem $\frac{df}{dz}$ når $f(x,y,z) = xy \ln(z^2)$ 
+	
+	\answerbox{ \frac{2xy}{z}}
+	
+	\hint
+	Indsæt funktionen i udtrykket for den partielt afledte.
+	
+	\hint
+	
+	\[
+	\frac{\partial f}{\partial z} = \frac{\partial }{\partial x} \left[ xy \ln(z^2) \right]
+	\]
+	
+	\hint
+	
+	Betragt alt andet end $z$ som konstanter.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial z} = xy \cdot \frac{\partial }{\partial x} \left[\ln(z^2) \right]
+	\]
+
+	\hint 
+	Benyt kædereglen
+	
+	\hint
+	\[
+	\frac{\partial u}{\partial z} = \frac{\partial u}{\partial v} \cdot \frac{\partial v}{\partial z}
+	\]
+	
+	\hint
+	Sæt $u=\ln(z^2) = \ln(v)$ og $v = z^2$
+		
+	\hint
+	\[
+	\frac{\partial}{\partial z} \left( \ln(z^2)\right) = \frac{\partial}{\partial v} \left( \ln(v) \right) \cdot \frac{\partial}{\partial z} (z^2) = \frac{1}{v} \cdot 2z = \frac{1}{z^2} \cdot 2z = \frac{2}{z}
+	\]
+	
+	\hint
+	Indsæt i formlen.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial z} = xy \cdot \frac{2}{z} = \frac{2xy}{z}
+	\]	
+	
+	
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Partielt afledte - 08}
+	Bestem $\frac{df}{dz}$ når $f(y,z) = x \sin(z+y)\ln(z+y)$
+	
+	\answerbox{x \cos(z+y) \ln(z+y)  +  \frac{x \sin(z+y)}{z+y}}
+	
+	\hint
+	Indsæt funktionen i udtrykket for den partielt afledte.
+	
+	\hint
+	
+	\[
+	\frac{\partial f}{\partial z} = \frac{\partial }{\partial z} \left[ x \sin(z+y)\ln(z+y) \right]
+	\]
+	
+	\hint 
+	Betragt alt andet end $z$ som konstanter.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial z} = x \cdot \frac{\partial }{\partial z} \left[\sin(z+y)\ln(z+y) \right]
+	\]	
+		
+	\hint
+	Benyt produktreglen.
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial z} = x \cdot \left[ \frac{\partial }{\partial z} (\sin(z+y)) \cdot \ln(z+y)  + \sin(z+y) \cdot \frac{\partial }{\partial z} (\ln(z+y))\right] 
+	\]
+	
+	\hint
+	Benyt kædereglen på det første led.
+	
+	\hint
+	\[
+	\frac{\partial u}{\partial z} = \frac{\partial u}{\partial v} \cdot \frac{\partial v}{\partial z}
+	\]
+	
+	\hint
+	Sæt $u=\sin(z+y) = \sin(v)$ og $v = z+y$
+	
+	\hint
+	\[
+	\frac{\partial}{\partial z} \left(\sin(z+y)\right) = \frac{\partial}{\partial v} \left( \sin(v) \right) \cdot \frac{\partial}{\partial z} (z+y) = \cos(v) \cdot 1 = \cos(z+y)
+	\]
+	
+	\hint
+	Benyt kædereglen på det andet led
+	
+	\hint
+	Sæt $u=\ln(z+y) = \ln(v)$ og $v = z+y$
+	\[
+	\frac{\partial u}{\partial z} = \frac{\partial u}{\partial v} \cdot \frac{\partial v}{\partial z}
+	\]
+	
+	\hint
+	\[
+	\frac{\partial}{\partial z} \left(\ln(z+y)\right) = \frac{\partial}{\partial v} \left( \ln(v) \right) \cdot \frac{\partial}{\partial z} (z+y) = \frac{1}{v} \cdot 1 = \frac{1}{z+y}
+	\]
+		
+	\hint
+	Indsæt i formlen
+	
+	\hint
+	\[
+	\frac{\partial f}{\partial z} = x \cdot \left[ \cos(z+y) \cdot \ln(z+y)  + \sin(z+y) \cdot \frac{1}{z+y}\right] 
+	\]
+	
+	\hint
+	Gang ind i parentesen
+	\[
+	\frac{\partial f}{\partial z} = x \cos(z+y) \ln(z+y)  +  \frac{x \sin(z+y)}{z+y}
+	\]	
+	
+	
+	
+	
+\end{exercise}
+
+\end{document}
