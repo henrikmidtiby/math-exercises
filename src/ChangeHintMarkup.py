@@ -4,10 +4,17 @@ import collections
 
 Hint = collections.namedtuple('Hint', ['nr', 'content'])
 
+class BadlyFormattedHint(Exception):
+    pass
+
 
 def remove_empty_lines_from_start_of_storage(storage):
-    while storage[0] == '' or storage[0] == '\n':
-        storage = storage[1:]
+    try:
+        while storage[0] == '' or storage[0] == '\n':
+            storage = storage[1:]
+    except IndexError as e:
+        raise BadlyFormattedHint
+
     return storage
 
 
@@ -34,14 +41,19 @@ class ChangeHintMarkup:
         self.hint_matcher = re.compile('\s*\\\\hint')
 
     def add_hint(self, count, storage):
-        storage = remove_empty_lines_from_start_of_storage(storage)
-        storage = remove_empty_lines_from_end_of_storage(storage)
-        storage = remove_whitespace_from_start_of_lines(storage)
-        storage = remove_newlines_at_end_of_lines(storage)
-        lines = "\n".join(storage)
-        lines = lines.replace('\\', '\\\\')
-        lines = lines.replace("\n", "\\n")
-        self.detected_hints.append(Hint(count, lines))
+        try:
+            storage = remove_empty_lines_from_start_of_storage(storage)
+            storage = remove_empty_lines_from_end_of_storage(storage)
+            storage = remove_whitespace_from_start_of_lines(storage)
+            storage = remove_newlines_at_end_of_lines(storage)
+            lines = "\n".join(storage)
+            lines = lines.replace('\\', '\\\\')
+            lines = lines.replace("\n", "\\n")
+            self.detected_hints.append(Hint(count, lines))
+        except BadlyFormattedHint:
+            print("The program is having trouble with parsing a hint.")
+            print("The issue appears after the following hints:")
+            print(self.detected_hints)
 
     def parser(self, input_lines):
         count = 0
