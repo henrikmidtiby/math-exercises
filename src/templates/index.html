@@ -2,9 +2,9 @@
    <body>
       <form action = "http://localhost:5000/submit" method = "post">
          <p>Enter latex code for the exercise:</p>
-         <p><textarea name = "exercise_input" ></textarea></p>
+         <p><textarea name = "exercise_input" >{{ original_input | safe }}</textarea></p>
          <p><input type = "submit" value = "submit" /></p>
       </form>
-      <p><textarea name = "exercise_output" >{{ converted_exercise }}</textarea></p>
+      <p><textarea name = "exercise_output" >{{ converted_exercise | safe }}</textarea></p>
    </body>
 </html>
