@@ -1,5 +1,5 @@
-from ..helper.ChangeMultiChoiceMarkup import *
-from ..helper.WidgetRenderer import *
+from ..exercise_converter.helper.ChangeMultiChoiceMarkup import *
+from ..exercise_converter.helper.WidgetRenderer import *
 from nose.tools import assert_equal
 
 

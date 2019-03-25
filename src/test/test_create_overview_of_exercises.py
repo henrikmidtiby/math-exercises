@@ -1,4 +1,4 @@
-from ..createOverviewOfExercises import *
+from ..exercise_converter.createOverviewOfExercises import *
 
 
 def test_get_all_sub_paths():

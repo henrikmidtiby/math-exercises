@@ -1,4 +1,4 @@
-from .. helper.exerciseconverterfunctions import *
+from ..exercise_converter.helper.exerciseconverterfunctions import *
 from nose.tools import assert_equal
 
 
