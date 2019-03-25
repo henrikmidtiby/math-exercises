@@ -203,17 +203,6 @@ def get_name_of_first_exercise_in_file(filename):
     return None
 
 
-def get_name_of_first_exercise_in_file(filename):
-    pattern_exercise_name = re.compile("\\\\exercisename{(.*)}")
-    with open(filename) as fh:
-        for line in fh:
-            res = pattern_exercise_name.match(line)
-            if res:
-                return res.group(1)
-
-    return None
-
-
 def get_description_of_first_exercise_in_file(filename):
     pattern_exercise_name = re.compile("\\\\exercisedescription{(.*)}")
     with open(filename) as fh:
