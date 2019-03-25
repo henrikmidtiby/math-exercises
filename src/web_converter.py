@@ -1,5 +1,6 @@
 # from app import app
-from .exercise_converter.helper.exerciseconverterfunctions import get_exercises, render_exercises, change_part_of_markup
+from .exercise_converter.helper.exerciseconverterfunctions import get_exercises, render_exercises, change_part_of_markup, get_exercise_meta_information_from_string, write_exercises_to_file 
+from io import StringIO
 
 from flask import Flask, request, redirect, url_for, render_template
 app = Flask(__name__)
@@ -17,14 +18,21 @@ def hello_world_named(name):
 @app.route('/submit', methods=['POST', 'GET'])
 def submit():
     if request.method == 'POST':
+        outfile = StringIO()
         converted_exercise = request.form['exercise_input']
         rendered_exercises = converted_exercise
+        print("converted_exercise")
+        print(converted_exercise)
+        exercise_meta_information = get_exercise_meta_information_from_string(converted_exercise.split('\n'))
         exercises = list(get_exercises(change_part_of_markup(converted_exercise.split('\n'))))
         rendered_exercises = render_exercises(exercises)
-        print(str(rendered_exercises))
-        my_bytes = str(rendered_exercises).encode("utf-8")
-        simplified = my_bytes.decode("unicode-escape")
+        write_exercises_to_file(outfile, exercise_meta_information,
+                rendered_exercises)
+        outfile.seek(0)
+        simplified=outfile.read()
+        print("simplified")
         print(simplified)
+
         return render_template('index.html',
                 converted_exercise=simplified, 
                 original_input=converted_exercise)
