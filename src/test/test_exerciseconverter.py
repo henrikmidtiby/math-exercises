@@ -1,70 +1,68 @@
 from ..exerciseconverter import *
-from nose.tools import assert_equals
-
-assert_equals.__self__.maxDiff = None
+from nose.tools import assert_equal
 
 
 def test_change_part_of_markup_1():
     input_values = ['$x^2$\n']
     expected_output = ['[[eql x^2]]\n']
     output = list(change_part_of_markup(input_values))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
 
 
 def test_change_part_of_markup_2():
     input_values = ['$x^2$ test $y \cdot x$\n']
     expected_output = ['[[eql x^2]] test [[eql y \\cdot x]]\n']
     output = list(change_part_of_markup(input_values))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
 
 
 def test_change_part_of_markup_3():
     input_values = '''\\[x^2\\]'''
     expected_output = ['[[eq x^2]]']
     output = list(change_part_of_markup(input_values.split('\n')))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
 
 
 def test_change_part_of_markup_4():
     input_values = ["Bestem $f'(x)$ og $g'(x)$.\n", '\[\n', "f'(x) = \\frac{1}{\\sqrt{1 - x^ 2}} \\qquad g'(x) = 2/3\n", '\]\n']
     expected_output = ["Bestem [[eql f'(x)]] og [[eql g'(x)]].\n", '[[eq \n', "f'(x) = \\frac{1}{\\sqrt{1 - x^ 2}} \\qquad g'(x) = 2/3\n", ']]\n']
     output = list(change_part_of_markup(input_values))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
 
 
 def test_change_part_of_markup_5():
     input_values = ['$g(x)$\n', '\[\n', 'f\n', '\]\n']
     expected_output = ["[[eql g(x)]]\n", '[[eq \n', "f\n", ']]\n']
     output = list(change_part_of_markup(input_values))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
 
 
 def test_change_part_of_markup_6():
     input_values = ["Bestem $f'(x)$ og $g'(x)$.\n", '\\begin{align*}\n', "f'(x) = \\frac{1}{\\sqrt{1 - x^ 2}} \\qquad g'(x) = 2/3\n", '\\end{align*}\n']
     expected_output = ["Bestem [[eql f'(x)]] og [[eql g'(x)]].\n", '[[eq \n', "f'(x) = \\frac{1}{\\sqrt{1 - x^ 2}} \\qquad g'(x) = 2/3\n", ']]\n']
     output = list(change_part_of_markup(input_values))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
 
 
 def test_change_part_of_markup_7():
     input_values = ["Bestem \(f'(x)\) og \(g'(x)\).\n", '\\begin{align*}\n', "f'(x) = \\frac{1}{\\sqrt{1 - x^ 2}} \\qquad g'(x) = 2/3\n", '\\end{align*}\n']
     expected_output = ["Bestem [[eql f'(x)]] og [[eql g'(x)]].\n", '[[eq \n', "f'(x) = \\frac{1}{\\sqrt{1 - x^ 2}} \\qquad g'(x) = 2/3\n", ']]\n']
     output = list(change_part_of_markup(input_values))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
 
 
 def test_change_part_of_markup_8():
     input_values = [r"vis \underline{dette} en gang til"]
     expected_output = ['vis **dette** en gang til']
     output = list(change_part_of_markup(input_values))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
 
 
 def test_change_part_of_markup_9():
     input_values = [r"vis \emph{dette} en gang til"]
     expected_output = ['vis *dette* en gang til']
     output = list(change_part_of_markup(input_values))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
 
 
 def test_change_multi_choice_markup_1():
@@ -72,12 +70,12 @@ def test_change_multi_choice_markup_1():
     expected_output = ["[[ref multi_choice1]]\n"]
     temp = ChangeMultiChoiceMarkup()
     output = list(temp.generator(input_values))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
     detected_environments = [MultiChoice(nr=1,
                                          items=[MultiChoiceItem(text='ja', is_correct_answer='true'),
                                                 MultiChoiceItem(text='nej', is_correct_answer='false')],
                                          parameters=['randomizeorder', 'selectmultiple'])]
-    assert_equals(detected_environments, temp.detected_multi_choice_markups)
+    assert_equal(detected_environments, temp.detected_multi_choice_markups)
 
 
 def test_change_multi_choice_markup_2():
@@ -85,7 +83,7 @@ def test_change_multi_choice_markup_2():
     expected_output = ["[[ref multi_choice1]]\n", "[[ref multi_choice2]]\n"]
     temp = ChangeMultiChoiceMarkup()
     output = list(temp.generator(input_values))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
     detected_environments = [MultiChoice(nr=1,
                                          items=[MultiChoiceItem(text='ja', is_correct_answer='true'),
                                                 MultiChoiceItem(text='nej', is_correct_answer='false')],
@@ -93,7 +91,7 @@ def test_change_multi_choice_markup_2():
                              MultiChoice(nr=2,
                                          items=[MultiChoiceItem(text='ja', is_correct_answer='true')],
                                          parameters=[])]
-    assert_equals(detected_environments, temp.detected_multi_choice_markups)
+    assert_equal(detected_environments, temp.detected_multi_choice_markups)
 
 
 def test_change_sorter_markup_1():
@@ -101,13 +99,13 @@ def test_change_sorter_markup_1():
     expected_output = ["[[ref sorting_widget1]]\n"]
     temp = ChangeSorterMarkup()
     output = list(temp.generator(input_values))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
     detected_environments = [SorterWidget(nr=1,
                                           columna='a',
                                           columnb='b',
                                           matches=[SorterWidgetMatch(columna='A', columnb='a'),
                                                    SorterWidgetMatch(columna='B', columnb='b')])]
-    assert_equals(detected_environments, temp.detected_sorting_widgets_markups)
+    assert_equal(detected_environments, temp.detected_sorting_widgets_markups)
 
 
 def test_change_answermatrix_markup_1():
@@ -115,7 +113,7 @@ def test_change_answermatrix_markup_1():
     expected_output = ["[[ref answermatrix1]]\n"]
     temp = ChangeAnswerMatrixMarkup()
     output = list(temp.generator(input_values))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
     detected_environments = [AnswerMatrix(nr=1,
                                           number_of_rows=1,
                                           number_of_columns=1,
@@ -125,7 +123,7 @@ def test_change_answermatrix_markup_1():
                                                 ]
                                           )
                              ]
-    assert_equals(detected_environments, temp.detected_answer_matrix_markups)
+    assert_equal(detected_environments, temp.detected_answer_matrix_markups)
 
 
 def test_change_answermatrix_markup_2():
@@ -133,7 +131,7 @@ def test_change_answermatrix_markup_2():
     expected_output = ["[[ref answermatrix1]]\n"]
     temp = ChangeAnswerMatrixMarkup()
     output = list(temp.generator(input_values))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
     detected_environments = [AnswerMatrix(nr=1,
                                           number_of_rows=2,
                                           number_of_columns=3,
@@ -150,7 +148,7 @@ def test_change_answermatrix_markup_2():
                                                 ]
                                           )
                              ]
-    assert_equals(detected_environments, temp.detected_answer_matrix_markups)
+    assert_equal(detected_environments, temp.detected_answer_matrix_markups)
 
 
 def test_change_answermatrix_markup_3():
@@ -158,7 +156,7 @@ def test_change_answermatrix_markup_3():
     expected_output = ["[[ref answermatrix1]]\n"]
     temp = ChangeAnswerMatrixMarkup()
     output = list(temp.generator(input_values))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
     detected_environments = [AnswerMatrix(nr=1,
                                           number_of_rows=2,
                                           number_of_columns=3,
@@ -175,28 +173,28 @@ def test_change_answermatrix_markup_3():
                                                 ]
                                           )
                              ]
-    assert_equals(detected_environments, temp.detected_answer_matrix_markups)
+    assert_equal(detected_environments, temp.detected_answer_matrix_markups)
 
 
 def test_get_exercises_1():
     input_values = '''\\begin{exercise}{Name}\nLine\n\\end{exercise}'''
     expected_output = [Exercise(name = 'Name', content = ['Line'])]
     output = list(get_exercises(input_values.split('\n')))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
 
 
 def test_get_exercises_2():
     input_values = '''\\begin{exercise}{Name}\n% Comment\nLine\n\\end{exercise}'''
     expected_output = [Exercise(name = 'Name', content = ['Line'])]
     output = list(get_exercises(input_values.split('\n')))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
 
 
 def test_get_exercises_3():
     input_values = ''' \\begin{exercise}{NameWithÆØÅæøå}\n% Comment\nLine\n\\end{exercise}'''
     expected_output = [Exercise(name = 'NameWithÆØÅæøå', content = ['Line'])]
     output = list(get_exercises(input_values.split('\n')))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
 
 
 def test_change_answer_box_markup_1():
@@ -204,9 +202,9 @@ def test_change_answer_box_markup_1():
     expected_output = 'Question\n[[ref input1]]\n\n\\hint\nHints'
     temp = ChangeAnswerBoxMarkup()
     output = "\n".join(list(temp.generator(input_values.split('\n'))))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
     detected_environments = [Answer(nr=1, content='2')]
-    assert_equals(detected_environments, list(temp.get_answers()))
+    assert_equal(detected_environments, list(temp.get_answers()))
 
 
 def test_change_answer_box_markup_2():
@@ -214,9 +212,9 @@ def test_change_answer_box_markup_2():
     expected_output = ''
     temp = ChangeAnswerBoxMarkup()
     output = "\n".join(list(temp.generator(input_values.split('\n'))))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
     detected_environments = []
-    assert_equals(detected_environments, list(temp.get_answers()))
+    assert_equal(detected_environments, list(temp.get_answers()))
 
 
 def test_change_answer_box_markup_3():
@@ -224,9 +222,9 @@ def test_change_answer_box_markup_3():
     expected_output = "Line 1\n[[ref input1]]\n\n"
     temp = ChangeAnswerBoxMarkup()
     output = "\n".join(list(temp.generator(input_values.split('\n'))))
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
     detected_environments = [Answer(1, "test")]
-    assert_equals(detected_environments, list(temp.get_answers()))
+    assert_equal(detected_environments, list(temp.get_answers()))
 
 
 def test_change_answer_box_markup_4():
@@ -235,7 +233,7 @@ def test_change_answer_box_markup_4():
     for line in temp.generator(input_values.split('\n')):
         pass
     detected_environments = [Answer(1, "test one"), Answer(2, "test two")]
-    assert_equals(detected_environments, list(temp.get_answers()))
+    assert_equal(detected_environments, list(temp.get_answers()))
 
 
 def test_change_answer_box_markup_5():
@@ -244,7 +242,7 @@ def test_change_answer_box_markup_5():
     for line in temp.generator(input_values.split('\n')):
         pass
     detected_environments = [Answer(1, "test one"), Answer(2, "test two")]
-    assert_equals(detected_environments, list(temp.get_answers()))
+    assert_equal(detected_environments, list(temp.get_answers()))
 
 
 def test_change_image_markup_1():
@@ -254,7 +252,7 @@ def test_change_image_markup_1():
     for line in temp.generator(input_values.split('\n')):
         storage.append(line)
 
-    assert_equals(["Line 1", ""], storage)
+    assert_equal(["Line 1", ""], storage)
 
 
 def test_change_hint_markup_1():
@@ -263,19 +261,19 @@ def test_change_hint_markup_1():
     temp.parser(input_values.split('\n'))
     expected_output = [Hint(nr = 1, content = 'Line 2')]
     output = list(temp.get_hints())
-    assert_equals(expected_output, output)
+    assert_equal(expected_output, output)
 
 
 def test_add_extra_backslashes_1():
     input_values = ["line with no markup"]
     output = ["line with no markup"]
-    assert_equals(output, list(add_extra_backslashes(input_values)))
+    assert_equal(output, list(add_extra_backslashes(input_values)))
 
 
 def test_add_extra_backslashes_2():
     input_values = ["line with no \\ markup"]
     output = ["line with no \\\\ markup"]
-    assert_equals(output, list(add_extra_backslashes(input_values)))
+    assert_equal(output, list(add_extra_backslashes(input_values)))
 
 
 def test_full_example_1():
@@ -336,7 +334,7 @@ Sæt $n = 2$
 }"""
     for exercise in get_exercises(change_part_of_markup(input_values.splitlines())):
         rendered_exercise = render_exercise(exercise)
-        assert_equals(expected_output, rendered_exercise)
+        assert_equal(expected_output, rendered_exercise)
         return
     assert False
 
@@ -422,7 +420,7 @@ Der forenkles til
 }"""
     for exercise in get_exercises(change_part_of_markup(input_values.splitlines())):
         rendered_exercise = render_exercise(exercise)
-        assert_equals(expected_output, rendered_exercise)
+        assert_equal(expected_output, rendered_exercise)
         return
     assert False
 
@@ -475,7 +473,7 @@ def test_full_example_3():
     for exercise in get_exercises(change_part_of_markup(input_values.splitlines())):
         rendered_exercise = render_exercise(exercise)
         print(rendered_exercise)
-        assert_equals(expected_output, rendered_exercise)
+        assert_equal(expected_output, rendered_exercise)
         return
     assert False
 
