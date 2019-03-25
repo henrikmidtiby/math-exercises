@@ -5,13 +5,13 @@ import jinja2
 import codecs
 import argparse
 import collections
-from .helper.ChangeMultiChoiceMarkup import *
-from .helper.ChangeSorterMarkup import *
-from .helper.ChangeAnswerBoxMarkup import *
-from .helper.ChangeHintMarkup import *
-from .helper.ChangeImageMarkup import *
-from .helper.ChangeAnswerMatrixMarkup import *
-from .helper.WidgetRenderer import WidgetRenderer
+from helper.ChangeMultiChoiceMarkup import *
+from helper.ChangeSorterMarkup import *
+from helper.ChangeAnswerBoxMarkup import *
+from helper.ChangeHintMarkup import *
+from helper.ChangeImageMarkup import *
+from helper.ChangeAnswerMatrixMarkup import *
+from helper.WidgetRenderer import WidgetRenderer
 
 raw_template = u"""
 {
