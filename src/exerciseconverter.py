@@ -1,18 +1,17 @@
 # -*- coding: utf-8 -*-
 
-
 import re
 import jinja2
 import codecs
 import argparse
 import collections
-from ChangeMultiChoiceMarkup import *
-from ChangeSorterMarkup import *
-from ChangeAnswerBoxMarkup import *
-from ChangeHintMarkup import *
-from ChangeImageMarkup import *
-from ChangeAnswerMatrixMarkup import *
-from WidgetRenderer import WidgetRenderer
+from .helper.ChangeMultiChoiceMarkup import *
+from .helper.ChangeSorterMarkup import *
+from .helper.ChangeAnswerBoxMarkup import *
+from .helper.ChangeHintMarkup import *
+from .helper.ChangeImageMarkup import *
+from .helper.ChangeAnswerMatrixMarkup import *
+from .helper.WidgetRenderer import WidgetRenderer
 
 raw_template = u"""
 {
@@ -241,7 +240,7 @@ def get_streak_for_exercises_in_file(filename):
 
 def get_exercise_meta_information(input_filename):
     exercise_type_name = get_name_of_first_exercise_in_file(input_filename)
-    assert(exercise_type_name is not None)
+    assert(exercise_type_name is not None, "No exercise name was specified in the latex file")
     exercise_type_description = get_description_of_first_exercise_in_file(input_filename)
     if exercise_type_description is None:
         exercise_type_description = exercise_type_name
