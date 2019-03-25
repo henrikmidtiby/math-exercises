@@ -193,54 +193,71 @@ def write_exercises_to_file(output_file, exercise_meta_information, rendered_exe
 
 
 def get_name_of_first_exercise_in_file(filename):
+    filecontent = list(open(input_filename))
+    return get_name_of_first_exercise_in_string(filecontent)
+
+
+def get_name_of_first_exercise_in_string(filecontent):
     pattern_exercise_name = re.compile("\\\\exercisename{(.*)}")
-    with open(filename) as fh:
-        for line in fh:
-            res = pattern_exercise_name.match(line)
-            if res:
-                return res.group(1)
+    for line in filecontent:
+        res = pattern_exercise_name.match(line)
+        if res:
+            return res.group(1)
 
     return None
 
 
 def get_description_of_first_exercise_in_file(filename):
+    filecontent = list(open(input_filename))
+    return get_description_of_first_exercise_in_string(filecontent)
+
+
+def get_description_of_first_exercise_in_string(filecontent):
     pattern_exercise_name = re.compile("\\\\exercisedescription{(.*)}")
-    with open(filename) as fh:
-        for line in fh:
-            res = pattern_exercise_name.match(line)
-            if res:
-                return res.group(1)
+    for line in filecontent:
+        res = pattern_exercise_name.match(line)
+        if res:
+            return res.group(1)
 
     return None
 
 
 def get_streak_for_exercises_in_file(filename):
-    pattern_exercise_name = re.compile("\\\\streaklength{(\d+)}")
-    with open(filename) as fh:
-        for line in fh:
-            res = pattern_exercise_name.match(line)
-            if res:
-                return int(res.group(1))
+    filecontent = list(open(input_filename))
+    return get_streak_for_exercises_in_string(filecontent)
+
+
+def get_streak_for_exercises_in_string(filecontent):
+    pattern_exercise_name = re.compile("\\\\streaklength{(\\d+)}")
+    for line in filecontent:
+        res = pattern_exercise_name.match(line)
+        if res:
+            return int(res.group(1))
 
     # If pattern not found, return default value of five.
     return 5
 
 
 def get_exercise_meta_information(input_filename):
-    exercise_type_name = get_name_of_first_exercise_in_file(input_filename)
+    filecontent = list(open(input_filename))
+    return get_exercise_meta_information_from_string(filecontent)
+
+
+def get_exercise_meta_information_from_string(filecontent):
+    exercise_type_name = get_name_of_first_exercise_in_string(filecontent)
     assert exercise_type_name is not None, "No exercise name was specified in the latex file"
-    exercise_type_description = get_description_of_first_exercise_in_file(input_filename)
+    exercise_type_description = get_description_of_first_exercise_in_string(filecontent)
     if exercise_type_description is None:
         exercise_type_description = exercise_type_name
     # Todo: Remove hardcoded streak length
-    streak_length = get_streak_for_exercises_in_file(input_filename)
+    streak_length = get_streak_for_exercises_in_string(filecontent)
     meta_information = ExerciseMetaInformation(exercise_type_name, exercise_type_description, streak_length)
     return meta_information
 
 
 def extract_exercises_from_file(input_filename):
     exercise_meta_information = get_exercise_meta_information(input_filename)
-    output_filename = re.sub('\.tex', '.json', input_filename)
+    output_filename = re.sub('.tex', '.json', input_filename)
     with codecs.open(input_filename, "r", "utf-8") as fh, \
             codecs.open(output_filename, 'w', 'utf-8') as output_file:
         exercises = list(get_exercises(change_part_of_markup(fh)))
