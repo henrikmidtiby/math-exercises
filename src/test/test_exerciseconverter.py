@@ -1,5 +1,6 @@
-from ..exerciseconverter import *
+from .. helper.exerciseconverterfunctions import *
 from nose.tools import assert_equal
+
 
 
 def test_change_part_of_markup_1():

@@ -1,6 +1,6 @@
 from ..helper.ChangeMultiChoiceMarkup import *
 from ..helper.WidgetRenderer import *
-from nose.tools import assert_equals
+from nose.tools import assert_equal
 
 
 def test_render_sorting_widget_1():
@@ -30,5 +30,5 @@ def test_render_sorting_widget_1():
 
     print(expected_output)
     print(actual_output[0].content)
-    assert_equals(expected_output, actual_output[0].content)
+    assert_equal(expected_output, actual_output[0].content)
 
