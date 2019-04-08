@@ -1,12 +1,16 @@
 files := $(shell ls *.tex)
 
 clean:
-	rm *.pdf *.aux *.log *.toc *.out
+	rm -f *.aux *.log *.toc *.out
+
+cleanall: clean
+	rm -f *.pdf *.json
 
 exercises: 
-	echo $(files)
 	for filename in $(files); do \
 	  pdflatex $$filename ; \
 	  pdflatex $$filename ; \
 	  pdflatex $$filename ; \
+	  python3 ../../src/exercise_converter/exerciseconverter.py $$filename ; \
 	done
+

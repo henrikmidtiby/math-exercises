@@ -11,6 +11,6 @@ exercises:
 	  pdflatex $$filename ; \
 	  pdflatex $$filename ; \
 	  pdflatex $$filename ; \
-	  python3 ../../src/exerciseconverter.py $$filename ; \
+	  python3 ../../src/exercise_converter/exerciseconverter.py $$filename ; \
 	done
 
