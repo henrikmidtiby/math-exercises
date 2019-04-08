@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import sys
+assert sys.version_info >= (3, 0), "The exercise converter requires python3 to run."
 
 import re
 import jinja2
