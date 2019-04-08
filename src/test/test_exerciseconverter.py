@@ -11,7 +11,7 @@ def test_change_part_of_markup_1():
 
 
 def test_change_part_of_markup_2():
-    input_values = ['$x^2$ test $y \cdot x$\n']
+    input_values = ['$x^2$ test $y \\cdot x$\n']
     expected_output = ['[[eql x^2]] test [[eql y \\cdot x]]\n']
     output = list(change_part_of_markup(input_values))
     assert_equal(expected_output, output)
@@ -25,14 +25,14 @@ def test_change_part_of_markup_3():
 
 
 def test_change_part_of_markup_4():
-    input_values = ["Bestem $f'(x)$ og $g'(x)$.\n", '\[\n', "f'(x) = \\frac{1}{\\sqrt{1 - x^ 2}} \\qquad g'(x) = 2/3\n", '\]\n']
+    input_values = ["Bestem $f'(x)$ og $g'(x)$.\n", '\\[\n', "f'(x) = \\frac{1}{\\sqrt{1 - x^ 2}} \\qquad g'(x) = 2/3\n", '\\]\n']
     expected_output = ["Bestem [[eql f'(x)]] og [[eql g'(x)]].\n", '[[eq \n', "f'(x) = \\frac{1}{\\sqrt{1 - x^ 2}} \\qquad g'(x) = 2/3\n", ']]\n']
     output = list(change_part_of_markup(input_values))
     assert_equal(expected_output, output)
 
 
 def test_change_part_of_markup_5():
-    input_values = ['$g(x)$\n', '\[\n', 'f\n', '\]\n']
+    input_values = ['$g(x)$\n', '\\[\n', 'f\n', '\\]\n']
     expected_output = ["[[eql g(x)]]\n", '[[eq \n', "f\n", ']]\n']
     output = list(change_part_of_markup(input_values))
     assert_equal(expected_output, output)
@@ -46,7 +46,7 @@ def test_change_part_of_markup_6():
 
 
 def test_change_part_of_markup_7():
-    input_values = ["Bestem \(f'(x)\) og \(g'(x)\).\n", '\\begin{align*}\n', "f'(x) = \\frac{1}{\\sqrt{1 - x^ 2}} \\qquad g'(x) = 2/3\n", '\\end{align*}\n']
+    input_values = ["Bestem \\(f'(x)\\) og \\(g'(x)\\).\n", '\\begin{align*}\n', "f'(x) = \\frac{1}{\\sqrt{1 - x^ 2}} \\qquad g'(x) = 2/3\n", '\\end{align*}\n']
     expected_output = ["Bestem [[eql f'(x)]] og [[eql g'(x)]].\n", '[[eq \n', "f'(x) = \\frac{1}{\\sqrt{1 - x^ 2}} \\qquad g'(x) = 2/3\n", ']]\n']
     output = list(change_part_of_markup(input_values))
     assert_equal(expected_output, output)
@@ -244,16 +244,6 @@ def test_change_answer_box_markup_5():
         pass
     detected_environments = [Answer(1, "test one"), Answer(2, "test two")]
     assert_equal(detected_environments, list(temp.get_answers()))
-
-
-def test_change_image_markup_1():
-    input_values = "Line 1\n"
-    temp = ChangeImageMarkup()
-    storage = []
-    for line in temp.generator(input_values.split('\n')):
-        storage.append(line)
-
-    assert_equal(["Line 1", ""], storage)
 
 
 def test_change_hint_markup_1():

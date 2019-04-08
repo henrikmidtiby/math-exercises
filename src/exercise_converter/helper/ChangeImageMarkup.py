@@ -54,7 +54,7 @@ def upload_to_imgur(image_information):
 
 class ChangeImageMarkup:
     def __init__(self):
-        self.image = re.compile('(.*)\\\\image\{(.*)\}(.*)')
+        self.image = re.compile('(.*)\\\\image{(.*)}(.*)')
         self.external_url = 'https://raw.githubusercontent.com/henrikmidtiby/mathexerciseimages/master/'
 
     def generator(self, input_lines):
