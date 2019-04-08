@@ -34,7 +34,7 @@ def submit():
         print(simplified)
 
         return render_template('index.html',
-                converted_exercise=simplified, 
+                converted_exercise=simplified.replace("\r", "\\n"), 
                 original_input=converted_exercise)
     else:
         return render_template('index.html')
