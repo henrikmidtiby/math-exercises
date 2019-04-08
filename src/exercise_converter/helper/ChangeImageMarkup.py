@@ -7,10 +7,19 @@ import pyimgur
 
 try:
     CLIENT_ID = os.environ['IMGUR_CLIENT_ID']
+    UPLOAD_IMAGES_TO_IMGUR = True
 except KeyError:
     CLIENT_ID = None
+    UPLOAD_IMAGES_TO_IMGUR = False
 
-imgur_upload_cache = percache.Cache('images_on_imgur.bin', livesync=True)
+
+if UPLOAD_IMAGES_TO_IMGUR:
+    imgur_upload_cache = percache.Cache('images_on_imgur.bin', livesync=True)
+else:
+    def imgur_upload_cache(func):
+        def wrapper():
+            func()
+        return wrapper
 
 
 Image = collections.namedtuple('Image', ['nr', 'content'])
@@ -52,6 +61,10 @@ class ChangeImageMarkup:
         for line in input_lines:
             res_image = self.image.match(line)
             if res_image:
+                assert UPLOAD_IMAGES_TO_IMGUR, ("Not configured to upload "
+                        "images to IMGUR. To configure this, set the environment "
+                        "variable IMGUR_CLIENT_ID to the app secret from "
+                        "imgur.com.")
                 path_to_inserted_file = res_image.group(2)
                 image_data = get_image_data(path_to_inserted_file)
                 image_data = upload_to_imgur(image_data)
