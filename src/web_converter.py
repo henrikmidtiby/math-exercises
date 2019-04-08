@@ -21,8 +21,6 @@ def submit():
         outfile = StringIO()
         converted_exercise = request.form['exercise_input']
         rendered_exercises = converted_exercise
-        print("converted_exercise")
-        print(converted_exercise)
         exercise_meta_information = get_exercise_meta_information_from_string(converted_exercise.split('\n'))
         exercises = list(get_exercises(change_part_of_markup(converted_exercise.split('\n'))))
         rendered_exercises = render_exercises(exercises)
@@ -30,9 +28,6 @@ def submit():
                 rendered_exercises)
         outfile.seek(0)
         simplified=outfile.read()
-        print("simplified")
-        print(simplified)
-
         return render_template('index.html',
                 converted_exercise=simplified.replace("\r", "\\n"), 
                 original_input=converted_exercise)
