@@ -11,6 +11,6 @@ exercises:
 	  pdflatex $$filename ; \
 	  pdflatex $$filename ; \
 	  pdflatex $$filename ; \
-	  pipenv run python3 ../../src/exercise_converter/exerciseconverter.py $$filename ; \
+	  python ../../src/exercise_converter/exerciseconverter.py $$filename ; \
 	done
 
