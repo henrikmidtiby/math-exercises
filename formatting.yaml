@@ -1,0 +1,27 @@
+modifyLineBreaks:
+  textWrapOptions:
+    columns: 70
+  oneSentencePerLine:
+    manipulateSentences: 1
+    removeSentenceLineBreaks: 1
+    multipleSpacesToSingle: 1           # 0/1
+    textWrapSentences: 1                # 1 disables main textWrap
+    sentenceIndent: ""
+    sentencesFollow:
+      par: 1                            # 0/1
+      blankLine: 1                      # 0/1
+      fullStop: 1                       # 0/1
+      exclamationMark: 1                # 0/1
+      questionMark: 1                   # 0/1
+      rightBrace: 1                     # 0/1
+      commentOnPreviousLine: 1          # 0/1
+      other: 0                          # regex
+    sentencesEndWith:
+      basicFullStop: 0                  # 0/1
+      betterFullStop: 1                 # 0/1
+      exclamationMark: 1                # 0/1
+      questionMark: 1                   # 0/1
+      other: 0   
+    sentencesDoNotContain:
+      other: \[
+defaultIndent: ""
