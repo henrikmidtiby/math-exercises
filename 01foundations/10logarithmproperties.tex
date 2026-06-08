@@ -1,0 +1,204 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\exercisename{Logaritme egenskaber og udværgede regneregler}
+\tableofcontents
+\newpage
+
+% ======== Grundlæggende egenskaber ==========
+\section*{Grundl\ae{}ggende egenskaber}
+
+\begin{exercise}{Logaritme egenskaber 1}
+Bestem $\log_{7}(7)$.
+\answerbox{1}
+\hint
+Benyt egenskaben $\log_a(a) = 1$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Logaritme egenskaber 2}
+Bestem $\log_{10}(1)$.
+\answerbox{0}
+\hint
+Benyt egenskaben $\log_a(1) = 0$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Logaritme egenskaber 3}
+Bestem $\log_{5}(5^3)$.
+\answerbox{3}
+\hint
+Benyt egenskaben $\log_a(a^k) = k$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Logaritme egenskaber 4}
+Bestem $\log_{3}(\sqrt{3})$.
+\answerbox{1/2}
+\hint
+Benyt at $\sqrt{3} = 3^{1/2}$ og egenskaben $\log_a(a^k) = k$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Logaritme egenskaber 5}
+Bestem $2^{\log_2(8)}$.
+\answerbox{8}
+\hint
+Benyt egenskaben $a^{\log_a(x)} = x$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Logaritme egenskaber 6}
+Bestem $\log_{4}(4^{-2})$. 
+\answerbox{-2}
+\hint
+Benyt egenskaben $\log_a(a^k) = k$.
+\end{exercise}
+
+\newpage
+
+% ======== Udvidelse af regneregler ==========
+\section*{Udvidelse af regneregler}
+
+\begin{exercise}{Logaritme regneregler 7}
+Forenk $\log_2(\sqrt[3]{8})$. 
+\answerbox{1}
+\hint
+Benyt at $\sqrt[3]{8} = 8^{1/3} = 2$.
+\hint
+Derfor er $\log_2(2) = 1$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Logaritme regneregler 8}
+Forenk $\log_3(1/27)$. 
+\answerbox{-3}
+\hint
+Benyt at $1/27 = 3^{-3}$.
+\hint
+Derfor er $\log_3(3^{-3}) = -3$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Logaritme regneregler 9}
+Forenk $\log_5(25) + \log_5(1/5) - \log_5(5)$. 
+\answerbox{1}
+\hint
+Benyt at $\log_5(25) = 2$, $\log_5(1/5) = -1$, og $\log_5(5) = 1$.
+\hint
+$2 + (-1) - 1 = 0$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Logaritme regneregler 10}
+Forenk $\log_2(4^3) + \log_2(8)$. 
+\answerbox{7}
+\hint
+Benyt potensreglen: $\log_2(4^3) = 3 \cdot \log_2(4) = 3 \cdot 2 = 6$.
+\hint
+$\log_2(8) = 3$.
+\hint
+$6 + 3 = 7$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Logaritme regneregler 11}
+Skift basis for $\log_{x}(x^2)$ til basis $x$. 
+\answerbox{2}
+\hint
+Benyt egenskaben $\log_a(a^k) = k$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Logaritme regneregler 12}
+Forenk $\log_6(1/6)$. 
+\answerbox{-1}
+\hint
+Benyt at $1/6 = 6^{-1}$.
+\hint
+Derfor er $\log_6(6^{-1}) = -1$.
+\end{exercise}
+
+\newpage
+
+% ======== Kombinerede opgaver ==========
+\section*{Kombinerede opgaver}
+
+\begin{exercise}{Kombineret 13}
+Forenk $\log_2(16) - \log_2(4) + \log_2(1)$. 
+\answerbox{2}
+\hint
+Benyt regnereglerne: $\log(a) - \log(b) = \log(a/b)$ og $\log(a) + \log(b) = \log(a \cdot b)$.
+\hint
+$\log_2(16/4) + \log_2(1) = \log_2(4) + 0 = \log_2(4) = 2$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Kombineret 14}
+Forenk $\log_3(\sqrt{9}) + \log_3(\sqrt[3]{27})$. 
+\answerbox{2}
+\hint
+Benyt at $\sqrt{9} = 3$ og $\sqrt[3]{27} = 3$.
+\hint
+$\log_3(3) + \log_3(3) = 1 + 1 = 2$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Kombineret 15}
+Forenk $\log_5(125) \cdot \log_{125}(5)$. 
+\answerbox{1/3}
+\hint
+Benyt basis-skift-formlen: $\log_{125}(5) = \frac{\log_5(5)}{\log_5(125)} = \frac{1}{3}$.
+\hint
+$\log_5(125) = \log_5(5^3) = 3$.
+\hint
+$3 \cdot (1/3) = 1$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Kombineret 16}
+Bestem $\log_{a}(a^4)$. 
+\answerbox{4}
+\hint
+Benyt egenskaben $\log_a(a^k) = k$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Kombineret 17}
+Forenk $\log_{2}(2x)$. 
+\answerbox{1 + \log_2(x)}
+\hint
+Benyt regnereglerne: $\log(a \cdot b) = \log(a) + \log(b)$.
+\hint
+$\log_2(2x) = \log_2(2) + \log_2(x) = 1 + \log_2(x)$.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Kombineret 18}
+Forenk $\log_3(x^2) + \log_3(1/x)$. 
+\answerbox{\log_3(x)}
+\hint
+Benyt regnereglerne: $\log(a^b) = b \cdot \log(a)$ og $\log(1/x) = -\log(x)$.
+\hint
+$\log_3(x^2) + \log_3(1/x) = 2 \cdot \log_3(x) - \log_3(x) = \log_3(x)$.
+\end{exercise}
+
+\newpage
+
+\end{document}
