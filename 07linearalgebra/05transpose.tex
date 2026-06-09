@@ -1,0 +1,158 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\exercisename{Transponering af matrice}
+\streaklength{5}
+
+\tableofcontents
+\newpage
+
+\begin{exercise}{Transponering 1-1}
+
+Bestem den transponerede matrix af
+\[
+A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
+\]
+
+\answerbox{A^T = \begin{pmatrix} 1 & 3 \\ 2 & 4 \end{pmatrix}}
+
+\hint
+
+Den transponerede matrix opnås ved at bytte rækker og søjler.
+
+\hint
+
+Original matrix:
+\[
+\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}  \quad \text{(række 1: 1, 2; række 2: 3, 4)}
+\]
+
+\hint
+
+Bytt rækker og søjler:
+- Nyt element (1,1) = Originalt element (1,1) = 1
+- Nyt element (1,2) = Originalt element (2,1) = 3
+- Nyt element (2,1) = Originalt element (1,2) = 2
+- Nyt element (2,2) = Originalt element (2,2) = 4
+
+\hint
+
+Resultat:
+\[
+A^T = \begin{pmatrix} 1 & 3 \\ 2 & 4 \end{pmatrix}
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Transponering 1-2}
+
+Bestem den transponerede matrix af
+\[
+B = \begin{pmatrix} 2 & 0 \\ -1 & 3 \end{pmatrix}
+\]
+
+\answerbox{B^T = \begin{pmatrix} 2 & -1 \\ 0 & 3 \end{pmatrix}}
+
+\hint
+
+Bytt rækker og søjler:
+
+\hint
+\[
+B^T = \begin{pmatrix} 2 & -1 \\ 0 & 3 \end{pmatrix}
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Transponering 1-3}
+
+Bestem den transponerede matrix af
+\[
+C = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix}
+\]
+
+\answerbox{C^T = \begin{pmatrix} 1 & 4 \\ 2 & 5 \\ 3 & 6 \end{pmatrix}}
+
+\hint
+
+Bytt rækker og søjler for en 2x3 matrix:
+
+\hint
+\[
+C^T = \begin{pmatrix} 1 & 4 \\ 2 & 5 \\ 3 & 6 \end{pmatrix}
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Transponering 1-4}
+
+Bestem den transponerede matrix af
+\[
+D = \begin{pmatrix} 3 \\ 1 \\ -2 \end{pmatrix}
+\]
+
+\answerbox{D^T = \begin{pmatrix} 3 & 1 & -2 \end{pmatrix}}
+
+\hint
+
+Bytt rækker og søjler for en 3x1 matrix (søjlevektor til rækkevektor):
+
+\hint
+\[
+D^T = \begin{pmatrix} 3 & 1 & -2 \end{pmatrix}
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Transponering 1-5}
+
+Bestem den transponerede matrix af
+\[
+E = \begin{pmatrix} 5 & -3 \\ 0 & 2 \end{pmatrix}
+\]
+
+\answerbox{E^T = \begin{pmatrix} 5 & 0 \\ -3 & 2 \end{pmatrix}}
+
+\hint
+
+Bytt rækker og søjler:
+
+\hint
+\[
+E^T = \begin{pmatrix} 5 & 0 \\ -3 & 2 \end{pmatrix}
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Transponering 1-6}
+
+Bestem den transponerede matrix af
+\[
+F = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}
+\]
+
+\answerbox{F^T = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}}
+
+\hint
+
+For en symmetrisk matrix er den transponerede matrix den samme som den originale.
+
+\hint
+\[
+F^T = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}
+\]
+
+\end{exercise}
+
+\end{document}

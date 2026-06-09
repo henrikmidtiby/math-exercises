@@ -1,0 +1,208 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\exercisename{Integration af polynomier}
+\streaklength{5}
+
+\tableofcontents
+\newpage
+
+\begin{exercise}{Integration af polynomier 1-1}
+
+Bestem det ubestemte integral $\int (3x^2 + 4x + 5) \, dx$.
+
+\answerbox{x^3 + 2x^2 + 5x + C}
+
+\hint
+
+Integrer hvert led separat.
+
+\hint
+
+Regel: $\int x^n \, dx = \frac{x^{n+1}}{n+1} + C$ for $n \neq -1$
+
+\hint
+
+For $3x^2$:
+\\[\int 3x^2 \, dx = 3 \cdot \frac{x^{2+1}}{2+1} = 3 \cdot \frac{x^3}{3} = x^3 \]
+
+\hint
+
+For $4x$:
+\\[\int 4x \, dx = 4 \cdot \frac{x^{1+1}}{1+1} = 4 \cdot \frac{x^2}{2} = 2x^2 \]
+
+\hint
+
+For $5$:
+\\[\int 5 \, dx = 5x \]
+
+\hint
+
+Sammt alle led og tilføj integrationskonstanten $C$:
+\\[x^3 + 2x^2 + 5x + C
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration af polynomier 1-2}
+
+Bestem det ubestemte integral $\int (2x^3 - x^2 + 3x - 7) \, dx$.
+
+\answerbox{\frac{1}{2}x^4 - \frac{1}{3}x^3 + \frac{3}{2}x^2 - 7x + C}
+
+\hint
+
+Integrer hvert led separat:
+
+\hint
+\[
+\int 2x^3 \, dx = 2 \cdot \frac{x^4}{4} = \frac{1}{2}x^4
+\]
+
+\hint
+\[
+\int -x^2 \, dx = -\frac{x^3}{3}
+\]
+
+\hint
+\[
+\int 3x \, dx = \frac{3x^2}{2}
+\]
+
+\hint
+\[
+\int -7 \, dx = -7x
+\]
+
+\hint
+
+Sammt alle led med integrationskonstanten $C$:
+\\[\frac{1}{2}x^4 - \frac{1}{3}x^3 + \frac{3}{2}x^2 - 7x + C
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration af polynomier 1-3}
+
+Bestem det ubestemte integral $\int (x^4 + 5) \, dx$.
+
+\answerbox{\frac{1}{5}x^5 + 5x + C}
+
+\hint
+
+Integrer hvert led:
+
+\hint
+\[
+\int x^4 \, dx = \frac{x^5}{5}, \quad \int 5 \, dx = 5x
+\]
+
+\hint
+
+Sammt med integrationskonstanten:
+\\[\frac{1}{5}x^5 + 5x + C
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration af polynomier 1-4}
+
+Bestem det ubestemte integral $\int (6x^5 - 2x^3 + x) \, dx$.
+
+\answerbox{x^6 - \frac{1}{2}x^4 + \frac{1}{2}x^2 + C}
+
+\hint
+
+Integrer hvert led med reglen $\int x^n \, dx = \frac{x^{n+1}}{n+1} + C$:
+
+\hint
+\[
+\int 6x^5 \, dx = 6 \cdot \frac{x^6}{6} = x^6
+\]
+
+\hint
+\[
+\int -2x^3 \, dx = -2 \cdot \frac{x^4}{4} = -\frac{1}{2}x^4
+\]
+
+\hint
+\[
+\int x \, dx = \frac{x^2}{2}
+\]
+
+\hint
+
+Sammt alle led:
+\\[x^6 - \frac{1}{2}x^4 + \frac{1}{2}x^2 + C
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration af polynomier 1-5}
+
+Bestem det ubestemte integral $\int (4x + 7) \, dx$.
+
+\answerbox{2x^2 + 7x + C}
+
+\hint
+
+Integrer begge led:
+
+\hint
+\[
+\int 4x \, dx = 2x^2, \quad \int 7 \, dx = 7x
+\]
+
+\hint
+
+Sammt med integrationskonstanten:
+\\[2x^2 + 7x + C
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration af polynomier 1-6}
+
+Bestem det ubestemte integral $\int (-x^2 - 3x + 8) \, dx$.
+
+\answerbox{-\frac{1}{3}x^3 - \frac{3}{2}x^2 + 8x + C}
+
+\hint
+
+Integrer hvert led, husk at bevare fortegnene:
+
+\hint
+\[
+\int -x^2 \, dx = -\frac{x^3}{3}
+\]
+
+\hint
+\[
+\int -3x \, dx = -\frac{3x^2}{2}
+\]
+
+\hint
+\[
+\int 8 \, dx = 8x
+\]
+
+\hint
+
+Sammt alle led:
+\\[-\frac{1}{3}x^3 - \frac{3}{2}x^2 + 8x + C
+\]
+
+\end{exercise}
+
+\end{document}
