@@ -1,0 +1,178 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\exercisename{Integration ved substitution}
+\streaklength{5}
+
+\tableofcontents
+\newpage
+
+\begin{exercise}{Integration ved substitution 1-1}
+
+Bestem det ubestemte integral $\int 2x e^{x^2} \, dx$ ved substitution.
+
+\answerbox{e^{x^2} + C}
+
+\hint
+
+Lad $u = x^2$, så er $du = 2x dx$.
+
+\hint
+
+Substituer:
+\\[\int 2x e^{x^2} \, dx = \int e^u \, du\]
+
+\hint
+
+Integrer:
+\\[\int e^u \, du = e^u + C\]
+
+\hint
+
+Substituer tilbage:
+\\[e^u + C = e^{x^2} + C\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration ved substitution 1-2}
+
+Bestem det ubestemte integral $\int (3x^2 + 2x)(x^3 + x^2 + 1)^4 \, dx$ ved substitution.
+
+\answerbox{\frac{1}{5}(x^3 + x^2 + 1)^5 + C}
+
+\hint
+
+Lad $u = x^3 + x^2 + 1$, så er $du = (3x^2 + 2x) dx$.
+
+\hint
+
+Substituer:
+\\[\int (3x^2 + 2x)(x^3 + x^2 + 1)^4 \, dx = \int u^4 \, du\]
+
+\hint
+
+Integrer:
+\\[\int u^4 \, du = \frac{u^5}{5} + C\]
+
+\hint
+
+Substituer tilbage:
+\\[\frac{u^5}{5} + C = \frac{1}{5}(x^3 + x^2 + 1)^5 + C\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration ved substitution 1-3}
+
+Bestem det ubestemte integral $\int \frac{x}{x^2 + 1} \, dx$ ved substitution.
+
+\answerbox{\frac{1}{2}\ln|x^2 + 1| + C}
+
+\hint
+
+Lad $u = x^2 + 1$, så er $du = 2x dx$ eller $x dx = \frac{1}{2} du$.
+
+\hint
+
+Substituer:
+\\[\int \frac{x}{x^2 + 1} \, dx = \int \frac{1}{u} \cdot \frac{1}{2} \, du = \frac{1}{2} \int \frac{1}{u} \, du\]
+
+\hint
+
+Integrer:
+\\[\frac{1}{2} \ln|u| + C\]
+
+\hint
+
+Substituer tilbage:
+\\[\frac{1}{2}\ln|x^2 + 1| + C\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration ved substitution 1-4}
+
+Bestem det ubestemte integral $\int \sin(3x) \, dx$ ved substitution.
+
+\answerbox{-\frac{1}{3}\cos(3x) + C}
+
+\hint
+
+Lad $u = 3x$, så er $du = 3 dx$ eller $dx = \frac{1}{3} du$.
+
+\hint
+
+Substituer:
+\\[\int \sin(3x) \, dx = \int \sin(u) \cdot \frac{1}{3} \, du = \frac{1}{3} \int \sin(u) \, du\]
+
+\hint
+
+Integrer:
+\\[\frac{1}{3} (-\cos(u)) + C = \frac{1}{3} (-\cos(3x)) + C \]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration ved substitution 1-5}
+
+Bestem det ubestemte integral $\int \frac{1}{\sqrt{2x + 3}} \, dx$ ved substitution.
+
+\answerbox{\sqrt{2x + 3} + C}
+
+\hint
+
+Lad $u = 2x + 3$, så er $du = 2 dx$ eller $dx = \frac{1}{2} du$.
+
+\hint
+
+Substituer:
+\\[\int \frac{1}{\sqrt{u}} \cdot \frac{1}{2} \, du = \frac{1}{2} \int u^{-1/2} \, du\]
+
+\hint
+
+Integrer:
+\\[\frac{1}{2} \cdot \frac{u^{1/2}}{1/2} + C = \frac{1}{2} \cdot 2u^{1/2} + C = u^{1/2} + C\]
+
+\hint
+
+Substituer tilbage:
+\\[\sqrt{u} + C = \sqrt{2x + 3} + C\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration ved substitution 1-6}
+
+Bestem det ubestemte integral $\int x \sqrt{x^2 + 5} \, dx$ ved substitution.
+
+\answerbox{\frac{1}{3}(x^2 + 5)^{3/2} + C}
+
+\hint
+
+Lad $u = x^2 + 5$, så er $du = 2x dx$ eller $x dx = \frac{1}{2} du$.
+
+\hint
+
+Substituer:
+\\[\int x \sqrt{x^2 + 5} \, dx = \int \sqrt{u} \cdot \frac{1}{2} \, du = \frac{1}{2} \int u^{1/2} \, du\]
+
+\hint
+
+Integrer:
+\\[\frac{1}{2} \cdot \frac{u^{3/2}}{3/2} + C = \frac{1}{2} \cdot \frac{2}{3} u^{3/2} + C = \frac{1}{3} u^{3/2} + C\]
+
+\hint
+
+Substituer tilbage:
+\\[\frac{1}{3}(x^2 + 5)^{3/2} + C\]
+
+\end{exercise}
+
+\end{document}

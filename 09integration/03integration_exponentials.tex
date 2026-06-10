@@ -1,0 +1,156 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\exercisename{Integration af eksponentielle funktioner}
+\streaklength{5}
+
+\tableofcontents
+\newpage
+
+\begin{exercise}{Integration af eksponentielle funktioner 1-1}
+
+Bestem det ubestemte integral $\int e^x \, dx$.
+
+\answerbox{e^x + C}
+
+\hint
+
+Integralet af $e^x$ er $e^x$ plus en konstant.
+
+\hint
+
+Regel: $\int e^x \, dx = e^x + C$
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration af eksponentielle funktioner 1-2}
+
+Bestem det ubestemte integral $\int e^{3x} \, dx$.
+
+\answerbox{\frac{1}{3}e^{3x} + C}
+
+\hint
+
+Brug substitutionsmetoden med $u = 3x$ og $du = 3 dx$.
+
+\hint
+
+Regel: $\int e^{ax} \, dx = \frac{1}{a}e^{ax} + C$
+
+\hint
+
+For $a = 3$:
+
+\hint
+\[
+\int e^{3x} \, dx = \frac{1}{3}e^{3x} + C
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration af eksponentielle funktioner 1-3}
+
+Bestem det ubestemte integral $\int e^{2x + 5} \, dx$.
+
+\answerbox{\frac{1}{2}e^{2x + 5} + C}
+
+\hint
+
+Identificer $a = 2$ i eksponenten $2x + 5$.
+
+\hint
+
+Regel: $\int e^{ax + b} \, dx = \frac{1}{a}e^{ax + b} + C$
+
+\hint
+
+Anvend reglen:
+
+\hint
+\[
+\int e^{2x + 5} \, dx = \frac{1}{2}e^{2x + 5} + C
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration af eksponentielle funktioner 1-4}
+
+Bestem det ubestemte integral $\int 4e^x \, dx$.
+
+\answerbox{4e^x + C}
+
+\hint
+
+Konstanten kan trækkes udenfor integralet:
+
+\hint
+\[
+\int 4e^x \, dx = 4 \int e^x \, dx
+\]
+
+\hint
+
+Integrer $e^x$ og multiplicer med konstanten:
+
+\hint
+\[
+4 \int e^x \, dx = 4e^x + C
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration af eksponentielle funktioner 1-5}
+
+Bestem det ubestemte integral $\int (e^x + e^{2x}) \, dx$.
+
+\answerbox{e^x + \frac{1}{2}e^{2x} + C}
+
+\hint
+
+Integrer hvert led separat:
+
+\hint
+\[
+\int e^x \, dx + \int e^{2x} \, dx = e^x + \frac{1}{2}e^{2x} + C
+\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Integration af eksponentielle funktioner 1-6}
+
+Bestem det ubestemte integral $\int -e^{-x} \, dx$.
+
+\answerbox{e^{-x} + C}
+
+\hint
+
+Skriv som en potens med positiv eksponent:
+
+\hint
+\[
+-e^{-x} = -\frac{1}{e^x}
+\]
+
+\hint
+
+Integrer:
+
+\hint
+\[
+\int -e^{-x} \, dx = e^{-x} + C
+\]
+
+\end{exercise}
+
+\end{document}

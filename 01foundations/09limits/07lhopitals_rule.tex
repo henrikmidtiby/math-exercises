@@ -1,0 +1,167 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\exercisename{l'Hôpital's regel}
+\streaklength{5}
+
+\tableofcontents
+\newpage
+
+\begin{exercise}{l'Hôpital's regel 1-1}
+
+Bestem $\lim\limits_{x \to 0} \frac{\sin x}{x}$ ved hjælp af l'Hôpital's regel.
+
+\answerbox{1}
+
+\hint
+
+Både tæller og nævner går mod 0 når $x \to 0$ (0/0 form).
+
+\hint
+
+Diferentiér tæller: $\frac{d}{dx} \sin x = \cos x$.
+
+\hint
+
+Diferentiér nævner: $\frac{d}{dx} x = 1$.
+
+\hint
+
+Anvend l'Hôpital's regel:
+\\[\lim\limits_{x \to 0} \frac{\cos x}{1} = \cos(0) = 1\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{l'Hôpital's regel 1-2}
+
+Bestem $\lim\limits_{x \to 0} \frac{e^x - 1}{x}$ ved hjælp af l'Hôpital's regel.
+
+\answerbox{1}
+
+\hint
+
+Både tæller og nævner går mod 0 (0/0 form).
+
+\hint
+
+Diferentiér tæller: $\frac{d}{dx} (e^x - 1) = e^x$.
+
+\hint
+
+Diferentiér nævner: $\frac{d}{dx} x = 1$.
+
+\hint
+
+Anvend l'Hôpital's regel:
+\\[\lim\limits_{x \to 0} \frac{e^x}{1} = e^0 = 1\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{l'Hôpital's regel 1-3}
+
+Bestem $\lim\limits_{x \to \infty} \frac{\ln x}{x}$ ved hjælp af l'Hôpital's regel.
+
+\answerbox{0}
+
+\hint
+
+Både tæller og nævner går mod \infty (\infty/\infty form).
+
+\hint
+
+Diferentiér tæller: $\frac{d}{dx} \ln x = \frac{1}{x}$.
+
+\hint
+
+Diferentiér nævner: $\frac{d}{dx} x = 1$.
+
+\hint
+
+Anvend l'Hôpital's regel:
+\\[\lim\limits_{x \to \infty} \frac{1/x}{1} = \lim\limits_{x \to \infty} \frac{1}{x} = 0\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{l'Hôpital's regel 1-4}
+
+Bestem $\lim\limits_{x \to 0} \frac{x^2}{\sin x}$ ved hjælp af l'Hôpital's regel.
+
+\answerbox{0}
+
+\hint
+
+Diferentiér tæller: $\frac{d}{dx} x^2 = 2x$.
+
+\hint
+
+Diferentiér nævner: $\frac{d}{dx} \sin x = \cos x$.
+
+\hint
+
+Anvend l'Hôpital's regel:
+\\[\lim\limits_{x \to 0} \frac{2x}{\cos x} = \frac{0}{1} = 0\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{l'Hôpital's regel 1-5}
+
+Bestem $\lim\limits_{x \to \infty} \frac{e^x}{x}$ ved hjælp af l'Hôpital's regel.
+
+\answerbox{\infty}
+
+\hint
+
+Både tæller og nævner går mod \infty (\infty/\infty form).
+
+\hint
+
+Diferentiér tæller: $\frac{d}{dx} e^x = e^x$.
+
+\hint
+
+Diferentiér nævner: $\frac{d}{dx} x = 1$.
+
+\hint
+
+Anvend l'Hôpital's regel:
+\\[\lim\limits_{x \to \infty} \frac{e^x}{1} = \lim\limits_{x \to \infty} e^x = \infty\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{l'Hôpital's regel 1-6}
+
+Bestem $\lim\limits_{x \to 0} \frac{1 - \cos x}{x^2}$ ved hjælp af l'Hôpital's regel.
+
+\answerbox{\frac{1}{2}}
+
+\hint
+
+Både tæller og nævner går mod 0 (0/0 form).
+
+\hint
+
+Diferentiér tæller: $\frac{d}{dx} (1 - \cos x) = \sin x$.
+
+\hint
+
+Diferentiér nævner: $\frac{d}{dx} x^2 = 2x$.
+
+\hint
+
+Anvend l'Hôpital's regel:
+\\[\lim\limits_{x \to 0} \frac{\sin x}{2x} = \frac{1}{2} \cdot \lim\limits_{x \to 0} \frac{\sin x}{x} = \frac{1}{2} \cdot 1 = \frac{1}{2}\]
+
+\end{exercise}
+
+\end{document}

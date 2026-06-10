@@ -1,0 +1,166 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\exercisename{Vækstmodeller}
+\streaklength{5}
+
+\tableofcontents
+\newpage
+
+\begin{exercise}{Eksponentiel vækst 1-1}
+
+En population vokser eksponentielt med en vækstrate på 5% per år. Startpopulationen er 1000. 
+Find populationen efter 10 år ved hjælp af formlen $P(t) = P_0 e^{rt}$, hvor $P_0$ er startpopulationen, $r$ er vækstraten, og $t$ er tiden.
+
+\answerbox{1648}
+
+\hint
+
+Identificer de kendte værdier:
+\\[P_0 = 1000, \quad r = 0.05, \quad t = 10\]
+
+\hint
+
+Indsæt i formlen:
+\\[P(10) = 1000 \cdot e^{0.05 \cdot 10} = 1000 \cdot e^{0.5}\]
+
+\hint
+
+Beregn $e^{0.5} \approx 1.64872$:
+
+\hint
+\[
+1000 \cdot 1.64872 \approx 1648.72
+\]
+
+\hint
+
+Afrund til heltal: 1648
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Eksponentiel vækst 1-2}
+
+En bakteriekultur vokser eksponentielt med en fordoblingskonstant på 3 timer. 
+Find vækstraten $r$ ved hjælp af formlen $T_d = \frac{\ln 2}{r}$, hvor $T_d$ er fordoblingskonstanten.
+
+\answerbox{r = \frac{\ln 2}{3} \approx 0.231}
+
+\hint
+
+Brug formlen for fordoblingskonstanten:
+\\[T_d = \frac{\ln 2}{r}\]
+
+\hint
+
+Løs for $r$:
+\\[r = \frac{\ln 2}{T_d} = \frac{\ln 2}{3}\]
+
+\hint
+
+Beregn den numeriske værdi:
+\\[r \approx \frac{0.693}{3} \approx 0.231\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Eksponentiel vækst 1-3}
+
+En radioaktiv substans nedbrydes med en halveringskonstant på 5 år. Find mængden af substansen efter 15 år, hvis startmængden er 500g.
+
+\answerbox{62.5g}
+
+\hint
+
+Halveringskonstanten $T_h = 5$ år.
+
+\hint
+
+Efter 15 år (3 halveringstider):
+\\[500g \rightarrow 250g \rightarrow 125g \rightarrow 62.5g\]
+
+\hint
+
+Alternativt ved hjælp af formlen $N(t) = N_0 (\frac{1}{2})^{t/T_h}$:
+\\[N(15) = 500 \cdot (\frac{1}{2})^{15/5} = 500 \cdot (\frac{1}{2})^3 = 500 \cdot \frac{1}{8} = 62.5g\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Eksponentiel vækst 1-4}
+
+En population vokser fra 1000 til 2000 på 10 år. Find vækstraten $r$ ved hjælp af formlen $P(t) = P_0 e^{rt}$.
+
+\answerbox{r = \frac{\ln 2}{10} \approx 0.0693}
+
+\hint
+
+Brug formlen $P(t) = P_0 e^{rt}$:
+\\[2000 = 1000 \cdot e^{10r}\]
+
+\hint
+
+Divider med 1000:
+\\[2 = e^{10r}\]
+
+\hint
+
+Tag naturlig logaritme:
+\\[\ln 2 = 10r\]
+
+\hint
+
+Løs for $r$:
+\\[r = \frac{\ln 2}{10} \approx 0.0693\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Eksponentiel vækst 1-5}
+
+En vækstmodel beskrives ved $P(t) = 5000 (1 + 0.1t)$. Find populationen når $t = 10$.
+
+\answerbox{10000}
+
+\hint
+
+Indsæt $t = 10$:
+\\[P(10) = 5000 (1 + 0.1 \cdot 10) = 5000 (1 + 1) = 5000 \cdot 2 = 10000\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Eksponentiel vækst 1-6}
+
+En vækstmodel beskrives ved $P(t) = 200 \cdot 1.05^t$. Find populationen når $t = 20$.
+
+\answerbox{530}
+
+\hint
+
+Indsæt $t = 20$:
+\\[P(20) = 200 \cdot 1.05^{20}\]
+
+\hint
+
+Beregn $1.05^{20} \approx 2.653$:
+
+\hint
+\[
+200 \cdot 2.653 \approx 530.6
+\]
+
+\hint
+
+Afrund til heltal: 530
+
+\end{exercise}
+
+\end{document}

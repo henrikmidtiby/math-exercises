@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\exercisename{Gauss elimination}
+\streaklength{5}
+
+\tableofcontents
+\newpage
+
+\begin{exercise}{Gauss elimination 1-1}
+
+Løs følgende ligningssystem ved Gauss elimination:
+\\[
+\begin{cases}
+ x + 2y = 5 \\\n 3x + 4y = 11
+ \end{cases}
+\\]
+
+\answerbox{x = 3, y = 1}
+
+\hint
+
+Skriv det udvidete koefficientmatrix:
+\\[
+\begin{pmatrix}
+1 & 2 & 5 \\\n3 & 4 & 11
+\end{pmatrix}
+\\]
+
+\hint
+
+Eliminér x fra anden række ved at trække 3 gange første række fra anden række:
+\\[R_2 \rightarrow R_2 - 3R_1\\]
+
+\hint
+
+Ny matrix:
+\\[
+\begin{pmatrix}
+1 & 2 & 5 \\\n0 & -2 & -4
+\end{pmatrix}
+\\]
+
+\hint
+
+Løs for y fra anden række:
+\\[-2y = -4 \implies y = 2\\]
+
+\hint
+Korrektion: Fejl. -2y = -4 giver y = 2, men svaret var opgivet som y = 1.
+
+\end{exercise}

@@ -1,0 +1,143 @@
+\documentclass{article}
+\usepackage{tekvideoexercises}
+
+\begin{document}
+\exercisename{Matrix multiplikation}
+\streaklength{5}
+
+\tableofcontents
+\newpage
+
+\begin{exercise}{Matrix multiplikation 1-1}
+
+Bestem
+\[
+\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix}
+\]
+
+\answerbox{\begin{pmatrix} 19 & 22 \\ 43 & 50 \end{pmatrix}}
+
+\hint
+
+Multiplicer række 1 med søjle 1:
+\\[(1 \cdot 5) + (2 \cdot 7) = 5 + 14 = 19\]
+
+\hint
+
+Multiplicer række 1 med søjle 2:
+\\[(1 \cdot 6) + (2 \cdot 8) = 6 + 16 = 22\]
+
+\hint
+
+Multiplicer række 2 med søjle 1:
+\\[(3 \cdot 5) + (4 \cdot 7) = 15 + 28 = 43\]
+
+\hint
+
+Multiplicer række 2 med søjle 2:
+\\[(3 \cdot 6) + (4 \cdot 8) = 18 + 32 = 50\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Matrix multiplikation 1-2}
+
+Bestem
+\[
+\begin{pmatrix} 2 & 3 \\ 1 & 4 \end{pmatrix} \begin{pmatrix} -1 & 2 \\ 3 & -2 \end{pmatrix}
+\]
+
+\answerbox{\begin{pmatrix} 7 & -2 \\ 11 & 6 \end{pmatrix}}
+
+\hint
+
+Multiplicer række 1 med søjle 1:
+\\[(2 \cdot -1) + (3 \cdot 3) = -2 + 9 = 7\]
+
+\hint
+
+Multiplicer række 1 med søjle 2:
+\\[(2 \cdot 2) + (3 \cdot -2) = 4 - 6 = -2\]
+
+\hint
+
+Multiplicer række 2 med søjle 1:
+\\[(1 \cdot -1) + (4 \cdot 3) = -1 + 12 = 11\]
+
+\hint
+
+Multiplicer række 2 med søjle 2:
+\\[(1 \cdot 2) + (4 \cdot -2) = 2 - 8 = -6\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Matrix multiplikation 1-3}
+
+Bestem
+\[
+\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} \begin{pmatrix} -1 \\ 1 \end{pmatrix}
+\]
+
+\answerbox{\begin{pmatrix} 1 \\ -1 \end{pmatrix}}
+
+\hint
+
+Multiplicer række 1 med søjle 1:
+\\[(1 \cdot -1) + (2 \cdot 1) = -1 + 2 = 1\]
+
+\hint
+
+Multiplicer række 2 med søjle 1:
+\\[(3 \cdot -1) + (4 \cdot 1) = -3 + 4 = 1\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Matrix multiplikation 1-4}
+
+Bestem
+\[
+\begin{pmatrix} 2 & 1 \\ -1 & 3 \end{pmatrix} \begin{pmatrix} 2 \\ -2 \end{pmatrix}
+\]
+
+\answerbox{\begin{pmatrix} 2 \\ -8 \end{pmatrix}}
+
+\hint
+
+Multiplicer række 1 med søjle 1:
+\\[(2 \cdot 2) + (1 \cdot -2) = 4 - 2 = 2\]
+
+\hint
+
+Multiplicer række 2 med søjle 1:
+\\[(-1 \cdot 2) + (3 \cdot -2) = -2 - 6 = -8\]
+
+\end{exercise}
+
+\newpage
+
+\begin{exercise}{Matrix multiplikation 1-5}
+
+Bestem
+\[
+\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} a & b \\ c & d \end{pmatrix}
+\]
+
+\answerbox{\begin{pmatrix} a & b \\ c & d \end{pmatrix}}
+
+\hint
+
+Dette er identitetsmatrixen multipliceret med en vilkårlig 2x2 matrix.
+
+\hint
+
+Identitetsmatrixen ændrer ikke matrixen:
+\\[\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} a & b \\ c & d \end{pmatrix} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\]
+
+\end{exercise}
+
+\end{document}
