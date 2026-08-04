@@ -8,7 +8,7 @@ cleanallexercises:
 	find . -name "Makefile" | awk ' {gsub(/\/Makefile/, ""); print}' | sort | xargs -n1 sh -c 'cd $$0 && make clean'
 
 extractallexercises:
-	find . -name "*.tex"  | sort | xargs -n1 sh -c 'pipenv run python src/exercise_converter/exerciseconverter.py $$0'
+	find . -name "*.tex"  | sort | xargs -n1 sh -c 'uv run python src/exercise_converter/exerciseconverter.py $$0'
 
 collectalljsonfiles:
 	rm -f combinedjsonfiles.txt
@@ -39,4 +39,4 @@ checkstylefiles:
 	find . -name "*.sty" | sort | xargs -n1 sh -c 'md5sum $$0'
 	
 overviewofexercises:
-	pipenv run pyhton src/createOverviewOfExercises.py
+	uv run pyhton src/createOverviewOfExercises.py
