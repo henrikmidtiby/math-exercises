@@ -6,11 +6,13 @@ clean:
 cleanall: clean
 	rm -f *.pdf *.json
 
-exercises: 
+pdfs:
 	for filename in $(files); do \
 	  pdflatex $$filename ; \
-	  pdflatex $$filename ; \
-	  pdflatex $$filename ; \
-	  python3 ../../src/exercise_converter/exerciseconverter.py $$filename ; \
+	done
+
+exercises:
+	for filename in $(files); do \
+	  uv run python ../../src/exercise_converter/exerciseconverter.py $$filename ; \
 	done
 
