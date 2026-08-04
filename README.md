@@ -14,34 +14,21 @@ Enter the directory
 cd math-exercises
 ```
 
-## Create a virtual environment for the program
-
-Create a virtual environment
-```
-python3 -m venv env
-```
-
-Activate the virtual environment
-```
-source env/bin/activate
-```
-
-Install requirements
-```
-pip install -r requirements.txt
-```
-
-
-## Convert the first exercise
-
-
+Locate the exercise to convert and call the conversion script
 ```
 cd 01foundations/01fractions/
-python ../../src/exercise_converter/exerciseconverter.py 01simplicification.tex
+uv run python ../../src/exercise_converter/exerciseconverter.py 01simplicification.tex
 ```
 
 A new file 01simplicification.json should now be present next to the input file 01simplicification.tex.
 The .json file is now ready to be uploaded to [tekvideo.sdu.dk].
+
+There are also several makefiles distributed in the subdirectories.
+With these it is possible to compile the documents to pdf and extract the exercises in the json format with the following commands
+```
+make pdfs
+make exercises
+```
 
 
 ## Set up the system to handle images in the exercises
@@ -75,7 +62,7 @@ It is now possible to convert exercises containing images.
 
 ```
 cd unplaced
-python ../src/exercise_converter/exerciseconverter.py insertedimage.tex
+uv run python ../src/exercise_converter/exerciseconverter.py insertedimage.tex
 ```
 
 
